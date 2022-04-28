@@ -25,3 +25,5 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "undefined", 
 Iñiguez Mariano
 
 Di Mauro Madeleine
+
+Lorenzo Aldana
