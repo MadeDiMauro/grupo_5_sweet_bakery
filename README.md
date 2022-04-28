@@ -23,4 +23,5 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "undefined", 
 ### Participantes
 
 Iñiguez Mariano
+
 Di Mauro Madeleine
