@@ -1,4 +1,4 @@
-# Pastelería "undefined"
+# Pastelería "Sweet Bakery"
 
 Proyecto integrador realizado grupalmente para el curso de Programador Web Full Stack de Digital House.
 
