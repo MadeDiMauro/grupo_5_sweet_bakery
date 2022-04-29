@@ -18,7 +18,7 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "undefined", 
 
 ### Público objetivo
 
-- Personas mayores de 18 años.
+- Publico en general
 
 ### Participantes
 
