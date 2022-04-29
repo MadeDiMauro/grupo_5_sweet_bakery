@@ -2,7 +2,7 @@
 
 Proyecto integrador realizado grupalmente para el curso de Programador Web Full Stack de Digital House.
 
-En este proyecto vamos a realizar un e-commerce para la pasteleria "undefined", desde la misma los usuarios van a poder ver los productos, filtrar por categorias, realizar pedidos, registrarse como clientes y tambien pagar por los productos adheridos a su carrito.
+En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery", desde la misma los usuarios van a poder ver los productos, filtrar por categorias, realizar pedidos, registrarse como clientes y tambien pagar por los productos adheridos a su carrito.
 
 ### Listado de productos
 
