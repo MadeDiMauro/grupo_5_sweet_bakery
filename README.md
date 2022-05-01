@@ -15,6 +15,8 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery
 - Facturas
 - Galletitas
 - Masas secas
+- Cursos online
+- Giftcards
 
 ### Público objetivo
 
