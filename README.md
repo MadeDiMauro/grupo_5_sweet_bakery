@@ -18,6 +18,14 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery
 - Cursos online
 - Giftcards
 
+### Páginas de referencia
+Las páginas elegidas fueron porque nos gustó el diseño de interfaz, la combinación de colores, la interacción y las funcionalidades que brindan.
+https://ayulem.com.ar/
+https://sentio.com.ar/
+https://www.mauricioasta.com/
+https://stevenbaker.de/
+http://www.tantesara.com/
+
 ### Público objetivo
 
 - Publico en general
