@@ -6,17 +6,20 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery
 
 ### Listado de productos
 
-- Tortas
-- Tartas
-- Cupcakes
-- Crossaints
-- Bombones
 - Postres
-- Facturas
-- Galletitas
-- Masas secas
-- Cursos online
+- Mini postres
+- Budines
+- Alfajores
+- Cookies
+- Croissant
+- Macarons
+- Productos secos
+- Desayunos y boxes
 - Giftcards
+
+### Servicios ofrecidos
+
+- Cursos virtuales
 
 ### Páginas de referencia
 Las páginas elegidas fueron porque nos gustó el diseño de interfaz, la combinación de colores, la interacción y las funcionalidades que brindan.
