@@ -45,3 +45,8 @@ María Eugenia Brest
 
 ### Tablero de trabajo
 Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
+
+### Resoluciones de pantalla
+- Mobile: 0px a 480px
+- Tablet: 481px a 768px
+- Desktop: 769px a 1279px
