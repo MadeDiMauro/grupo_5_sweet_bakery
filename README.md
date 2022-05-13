@@ -42,3 +42,6 @@ Di Mauro Madeleine
 Lorenzo Aldana
 
 María Eugenia Brest
+
+### Tablero de trabajo
+Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
