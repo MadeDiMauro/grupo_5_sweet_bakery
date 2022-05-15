@@ -31,7 +31,7 @@ http://www.tantesara.com/
 
 ### Público objetivo
 
-- Publico en general
+- Público en general
 
 ### Participantes
 
