@@ -1,0 +1,14 @@
+*{
+    font-family: 'Catamaran', sans-serif;
+}
+
+main section article .img-product {
+    width: 100%;
+}
+
+.products button {
+    width: 100px;
+    height: 40px;
+    background-color: lightgrey;
+    color: black;
+}

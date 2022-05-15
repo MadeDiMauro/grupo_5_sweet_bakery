@@ -16,3 +16,7 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
 	res.sendFile(homePath);
 });
+
+app.get("/products", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "./views/products.html"));
+});
