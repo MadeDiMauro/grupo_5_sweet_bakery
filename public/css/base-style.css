@@ -1,0 +1,220 @@
+* {
+	box-sizing: border-box;
+}
+
+/*Tipografias y configuraciones comunes*/
+body {
+    font-family: "Catamaran", sans-serif;
+	
+}
+
+.principal {
+    background-image: url(/images/mini-frutos-del-bosque.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    width: 100%;
+    height: 400px;
+}
+
+/*----------------HEADER------------------------------*/
+
+/*Estilos del Iframe Header*/
+.ifHeader {
+	width: 100% !important;
+    height: auto;
+}
+
+/*Estilos propios del menu header*/
+.menu-listado {
+	width: 100% !important;
+	height: auto;
+	font-size: medium;
+	font-weight: bold;
+	margin: auto;
+	color: white;
+	padding: 20px 200px 20px 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.66);
+        -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.66);
+        -moz-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.66);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(2, 0, 33, 0.7203256302521008) 100%);
+}
+
+.menu-logo {
+	width: 12vw;
+}
+
+.menu-nav {
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+
+.menu-accesos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-accesos li {
+    margin: 12px;
+    font-size:larger;
+}
+
+.menu-accesos a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-accesos a:hover {
+    color: rgb(218, 165, 32, 0.5);
+}
+
+li {
+	list-style: none;
+}
+
+.menu-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-cart li {
+    margin:10px;
+}
+
+.menu-cart button {
+	background-color: rgba(218, 165, 32, 0.8);
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.menu-cart button:hover {
+    background-color: rgb(218, 165, 32, 0.5);
+}
+
+.menu-cart i:hover {
+    color: rgb(218, 165, 32, 0.5);
+}
+
+.menu-cart .fa-shopping-bag{
+    color:rgba(218, 165, 32, 0.8);
+    font-size: 2em;
+}
+
+
+/*---------------------FOOTER-----------------------*/
+
+/*Estilos del Iframe footer*/
+.ifFooter {
+    width: 100% !important;
+    height:400px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+/*Estilos propios del footer*/
+
+.footer-nav {
+    width: 100% !important;
+    height: auto;
+    background: black;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    padding: 30px 200px 20px 200px;
+    box-shadow: 1px -6px 5px -3px rgba(0, 0, 0, 0.61);
+        -webkit-box-shadow: 1px -6px 5px -3px rgba(0, 0, 0, 0.61);
+        -moz-box-shadow: 1px -6px 5px -3px rgba(0, 0, 0, 0.61);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(2, 0, 33, 0.7203256302521008) 100%);
+}
+
+.footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    
+}
+
+.footer-logo {
+    width: 10vw;
+}
+
+.footer-menu div section {
+    max-width: 60%;
+}
+
+.footer-contacto {
+    line-height: 25px;
+}
+
+.footer-secciones {
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.footer-redes {
+    text-align: center;
+    line-height: 25px;
+}
+
+.footer-redes li {
+    margin-bottom: 10px 
+}
+
+.footer-redes button {
+    background-color: rgba(218, 165, 32, 0.8);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.footer-redes button:hover {
+    background-color: rgb(218, 165, 32, 0.5);
+}
+
+input[type=text]{
+    width: 60%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: none;
+}
+
+.footer-redes  i {
+    font-size: 2em;
+    padding: 10px;
+}
+
+.footer-redes i:hover {
+    color: rgb(218, 165, 32, 0.5);
+}
+
+.footer-redes-texto {
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+}
+
+.footer-firma {
+    margin-top: 50px;
+}
+
