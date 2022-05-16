@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 const publicPath = path.join(__dirname, "./public");
-const homePath = path.join(__dirname, "./views/products.html");
+const homePath = path.join(__dirname, "./views/home.html");
 const productPath = path.join(__dirname, "./views/products.html");
 
 const PORT = process.env.PORT || 3000;
