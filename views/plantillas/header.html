@@ -5,28 +5,34 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-        <link href="/css/normalize.css" rel="stylesheet">
-        <link href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
+            rel="stylesheet">
+        <link href="/css/normalize.css" rel="stylesheet"> 
+        <link href="/css/base-style.css" rel="stylesheet"> 
 		<title>Header</title>
 	</head>
 	<body>
 		<header>
-                <nav class="menu">
-                    <ul>
-                        <section class="menu-logo">
-                            <li><img src="/css/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery"></li>
-                        </section>
-                        <section class="menu-accesos">
-                            <li>INICIO</li>
-                            <li>PRODUCTOS</li>
-                            <li>CONTACTO</li>
-                            <li>CURSOS</li>
-                            <li><i class="fas fa-search"></i></li>
-                        </section>
-                        <section class="menu-ingreso">
-                            <li><button></button>Ingresá | Registrate</li>
-                            <li><i class="fas fa-shopping-bag"></i></li>
-                        </section>
+                <nav class="menu-nav">
+                    <ul class="menu-listado">
+                        <li>
+                            <a href="#"><img class="menu-logo"
+                            src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery"></a>
+                        </li> 
+                        <div class="menu-accesos">
+                            <li><h4><a href="#">Inicio</h4></li>
+                            <li><h4><a href="#">Productos</a></h4></li>
+                            <li><h4><a href="#">Contacto</a></h4></li>
+                            <li><h4><a href="#">Cursos</a></h4></li>
+                            <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        </div>
+                        <div class="menu-cart">
+                            <li><a href="#"><button>Ingresá</button></a> <a href="#"><button>Registrate</button></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                        </div>
                     </ul>
                 </nav>
         </header>
