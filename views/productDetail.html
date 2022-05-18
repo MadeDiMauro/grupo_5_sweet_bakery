@@ -1,17 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Producto</title>
-    <link rel="stylesheet" href="/css/products.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Lato:wght@100;300&family=Roboto:wght@300&display=swap">
-    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet"> 
+    <link href="/css/base-style.css" rel="stylesheet">
+    <link href="/css/productdetail-style.css" rel="stylesheet"> 
 
+    <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    <div class="content"></div>
+    <title>Detalle de Producto</title>
+</head>
 <body>
     <header>
+            <div class="top-header">
+                <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+                <h1 class="title">Detalle de Producto</h1>
+            </div>
+        <nav class="list">
+        <ul>   
+                <li> <a href ="#">Inicio </a></li>
+                <li> <a href="#" >Productos</a></li>
+        </ul>
 
     </header>
+<main>
+    <section>
+        <div class="products detail">
+            <article>
+                <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+                <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+                <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+                <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+            </article>
+            <article>
+                <h2>Nombre del Producto </h2>
+                <p class="precio">$1.00</p>
+                <p>Cantidad</p>
+                <select name="cantidad">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+            </select>
+               <div> <a href="./mediosdepago.html">VER MEDIOS DE PAGO</a> </div>
+                <p class="description">Descripción del Producto</p>
+                <p class="text"> Texto sobre el producto</p>
+                <form action="#" method="GET">
+                    <button type="submit">AGREGAR AL CARRITO</button> 
+                    </form>
+            </article>
+    </section>
+    <section>
+    <div class="Productos relacionados"> Productos relacionados</div>
+    <article>
+        <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+        <div class="Producto relacionado 1">Producto relacionado 1</div>
+        <p class="Precio"> $ 1.00 </p>
+        <form action="#" method="GET">
+        <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+        </form>
+    </article>
+
+    <article>
+        <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+        <div class="Producto relacionado 2">Producto relacionado 1</div>
+        <p class="Precio"> $ 1.00 </p>
+        <form action="#" method="GET">
+        <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+        </form>
+    </article>
+    <article>
+        <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+        <div class="Producto relacionado 3">Producto relacionado 1</div>
+        <p class="Precio"> $ 1.00 </p>
+        <form action="#" method="GET">
+        <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+        </form>
+    </article>
+
+    <article>
+        <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+        <div class="Producto relacionado 4">Producto relacionado 1</div>
+        <p class="Precio"> $ 1.00 </p>
+        <form action="#" method="GET">
+        <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+        </form>
+    </article>
+
+    
+
+    </section>
+
+    <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    
+</body>
+</html>
