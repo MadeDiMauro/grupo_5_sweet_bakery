@@ -2,11 +2,10 @@
 }
 
 .title {
-        position:relative;
-        text-align:center;
-        z-index:2;
-        top:-650px;
-
+position:relative;
+text-align:center;
+z-index:2;
+top:-650px;
 }
 
 .img-product1 {
@@ -20,5 +19,11 @@ padding: 0px 200px 0px 200px;
 
 .list {
         flex-wrap:wrap;
+}
 
+div.products-detail article {
+width:50%;
+}
+div.products-name article{
+width:50%;
 }
