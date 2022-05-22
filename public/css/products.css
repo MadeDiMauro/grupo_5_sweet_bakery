@@ -1,6 +1,7 @@
-*{
-    font-family: 'Catamaran', sans-serif;
-    font-size: 14px;
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -15,36 +16,137 @@ main {
     margin: 0 auto;
 }
 
-.filter {
-    width: 50%;
+.show-filter {
+    padding: 10px 0px;
+}
+
+.show-filter button {
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.show-filter button i {
+    padding-right: 10px;
+    margin-right: 5px;
+    text-align: left;
+    border-right: 1px solid lightgray;
+}
+
+/*.show-filter button:active .filter-section{
     display: flex;
+}*/
+
+.reference-location {
+    display: flex;
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.reference-location a {
+    text-decoration: none;
+}
+
+.reference-location button {
+  border: none;
+  background-color: transparent;
+}
+
+.reference-location i {
+    font-size: 14px;
+}
+
+.filter-section {
+    width: 70%;
+    display: none;
+    /*CAMBIAR A flex UNA VEZ HECHO EL BOTON DE MOSTRAR FILTROS*/
     flex-wrap: wrap;
     background-color: white;
     border: solid 1px lightgray;
 }
 
-.button-style button{
-    padding: 10px 0px 10px 14px;
-    background-color: transparent;
-}
-
-.categories label{
-    text-align: left;
-    padding: 20px 0px 20px 15px;
-}
-
-.categories button {
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
-    padding: 10px 0px 10px 14px;
+.close-container {
+    width: 90%;
+    text-align: right;
+    padding: 20px 0px;
+    margin: 0 auto;
     border-bottom: solid 1px lightgray;
 }
 
-.products{
+.close-button {
+    border: none;
+    background-color: transparent;
+}
+
+.close-button i {
+    font-size: 20px;
+}
+
+.search-section {
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.div-search {
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+}
+
+.search-button i {
+    color: darkgray;
+    font-size: 14px;
+}
+
+.search-button,
+.search-text {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.categories label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 90%;
+    padding: 20px 15px 10px;
+    border-top: solid 1px lightgray;
+}
+
+.categories button {
+    width: 80%;
+    text-align: left;
+    background-color: transparent;
+    padding: 10px 0px;
+    border: none;
+    border-bottom: solid 1px lightgray;
+}
+
+.categories button:last-child {
+    border: none;
+}
+
+.categories button a {
+    text-decoration: none;
+}
+
+.categories button:active a {
+    font-weight: bold;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    justify-content: space-between;
 }
 
 .products article {
@@ -66,7 +168,7 @@ main section article .img-product {
     text-align: center;
 }
 
-.products form{
+.products form {
     text-align: center;
 }
 

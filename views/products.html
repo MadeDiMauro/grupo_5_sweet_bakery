@@ -13,31 +13,42 @@
 
 <body>
     <header>
-
     </header>
 
     <main>
+        <section class="products-section">
+            <div class="show-filter">
+                <button type="submit"><i class="fa-solid fa-caret-down"></i> MOSTRAR FILTROS</button>
+            </div>
+            <div class="reference-location">
+                <a href="#">Productos</a>
+                <span> / <b>Mini postres</b></span>
+                <button type="submit"><i class="fas fa-filter"></i></button>
+            </div>
 
-        <section class="filter">
-            <form class="button-style" action="#" method="GET">
-                <button type="submit"><i class="fas fa-search"></i>
-                <input type="text" placeholder="Buscar producto"></button>
-            </form>
-            
-            <form class="categories" name="#" method="GET">
-                <label>CATEGORÍAS</label>
-                    <button type="submit">Alfajores</button>
-                    <button type="submit">Budines</button>
-                    <button type="submit">Cookies</button>
-                    <button type="submit">Desayunos y boxes</button>
-                    <button type="submit">Macarons</button>
-                    <button type="submit">Mini postres</button>
-                    <button type="submit">Postres</button>
-                    <button type="submit">Productos secos</button>
-            </form>
-        </section>
+            <section class="filter-section">
+                <div class="close-container">
+                    <button class="close-button" type="submit"><i class="fas fa-times"></i></button>
+                </div>
+                <section class="search-section">
+                    <div class="div-search">
+                        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+                        <input class="search-text" type="text" placeholder="Buscar producto">
+                    </div>
+                </section>
+                <form class="categories" name="#" method="GET">
+                    <label>CATEGORÍAS</label>
+                    <button><a href="#">Alfajores</a></button>
+                    <button><a href="#">Budines</a></button>
+                    <button><a href="#">Cookies</a></button>
+                    <button><a href="#">Desayunos y boxes</a></button>
+                    <button><a href="#">Mini postres</a></button>
+                    <button><a href="#">Macarons</a></button>
+                    <button><a href="#">Productos secos</a></button>
+                    <button><a href="#">Postres</a></button>
+                </form>
+            </section>
 
-        <section class="flex-products">
             <div class="products">
                 <article>
                     <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
