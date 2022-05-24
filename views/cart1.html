@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/cart1.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </header>
+    <section class="heading">
+        <p>CARRITO DE COMPRAS</p>
+    </section>
+
+    <main>
+        <div class="steps">
+            <div class="step-one">
+                <p>PASO 1</p>
+                <p>Carrito de compra</p>
+            </div>
+            <i class="fas fa-angle-double-right"></i>
+            <div class="step-two">
+                <p>PASO 2</p>
+                <p>Completar datos</p>
+            </div>
+            <i class="fas fa-angle-double-right"></i>
+            <div class="step-three">
+                <p>PASO 3</p>
+                <p>Finalizar compra</p>
+            </div>
+        </div>
+        <article class="cart-product">
+            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+            <div class="cart-info">
+                <p class="name">Cookie de chocolate</p>
+                <p class="price">$0.00</p>
+                <div class="quantity">
+                    <button class="less"><i class="fas fa-minus"></i></button>
+                    <span>1</span>
+                    <button class="plus"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="div-total">
+                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                <p class="total">Total</p>
+                <p class="price">$0.00</p>
+            </div>
+        </article>
+
+        <article class="cart-product">
+            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+            <div class="cart-info">
+                <p class="name">Cookie de chocolate</p>
+                <p class="price">$0.00</p>
+                <div class="quantity">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="div-total">
+                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                <p class="total">Total</p>
+                <p class="price">$0.00</p>
+            </div>
+        </article>
+
+        <article class="cart-product">
+            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+            <div class="cart-info">
+                <p class="name">Cookie de chocolate</p>
+                <p class="price">$0.00</p>
+                <div class="quantity">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="div-total">
+                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                <p class="total">Total</p>
+                <p class="price">$0.00</p>
+            </div>
+        </article>
+
+        <div class="code">
+            <input type="text" placeholder="Ingresá tu código de descuento">
+            <button type="submit">VALIDAR</button>
+        </div>
+
+        <div class="total-amount">
+            <div class="subtotal">
+                <p class="p1">Subtotal</p>
+                <p>$0.00</p>
+            </div>
+            <div class="bonus">
+                <p class="p1">Bonificación</p>
+                <p>$0.00</p>
+            </div>
+            <div class="total">
+                <p class="p1">TOTAL</p>
+                <p>$0.00</p>
+            </div>
+        </div>
+
+        <div class="buy">
+            <button type="submit">INICIAR COMPRA</button>
+            <a href="/products">Ver más productos</a>
+        </div>
+    </main>
+
+    <footer>
+        <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </footer>
+</body>
+
+</html>

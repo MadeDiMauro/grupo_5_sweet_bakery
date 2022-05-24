@@ -1,0 +1,210 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.heading p {
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.step-one {
+    font-weight: bold;
+}
+
+.step-one,
+.step-two,
+.step-three {
+    width: 30%;
+}
+
+.steps i {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.cart-product {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+}
+
+.cart-product img {
+    width: 35%;
+}
+
+.cart-info {
+    width: 40%;
+}
+
+.cart-info .name {
+   font-weight: 600;
+   
+}
+
+.cart-info .name,
+.cart-info .price {
+    font-size: 14px;
+}
+
+.quantity {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 50%;
+    border: 1px solid lightgray;
+    background-color: transparent;
+}
+
+.quantity button {
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+}
+
+.quantity button.less {
+    border-right: 1px solid lightgrey;
+}
+
+.quantity button.plus {
+    border-left: 1px solid lightgrey;
+}
+
+.quantity button i {
+    font-size: 12px;
+}
+
+.quantity span {
+    padding: 0px 10px;
+}
+
+.div-total {
+    width: 20%;
+    text-align: right;
+}
+
+.div-total button {
+    border: none;
+    background-color: transparent;
+}
+
+.div-total button i {
+    font-size: 14px;
+}
+
+.div-total .total {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.div-total .price {
+    font-size: 14px;
+}
+
+.code {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+}
+
+main .code input {
+    font-size: 14px;
+    font-style: italic;
+    width: 65%;
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin-left: 20px
+}
+
+main .code button {
+    font-weight: bold;
+    width: 20%;
+    height: 35px;
+    border: 3px solid black;
+    background-color: transparent;
+    margin-right: 20px
+}
+
+.total-amount {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.subtotal,
+.bonus,
+.total-amount .total {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.total-amount .total {
+    font-weight: bold;
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.buy {
+    text-align: center;
+}
+
+.buy button {
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    margin: 15px 0px;
+    padding: 5px 0px;
+}
+
+.buy a {
+    font-size: 14px;
+}
+
+
+
+/*.subtotal .p1,
+.bonus .p1,
+.total-amount .total .p1 {
+    width: 40%;
+} >>>>> MEDIA QUERY?? <<<<<< */
