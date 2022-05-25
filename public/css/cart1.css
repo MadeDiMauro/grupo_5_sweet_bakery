@@ -163,6 +163,11 @@ main .code button {
     margin-right: 20px
 }
 
+main .code button:active {
+    background-color: black;
+    color: white;
+}
+
 .total-amount {
     width: 100%;
     margin-top: 30px;
@@ -178,7 +183,7 @@ main .code button {
 }
 
 .total-amount .total {
-    font-weight: bold;
+    font-weight: 700;
     border-top: 1px solid lightgray;
     margin-top: 10px;
     padding-top: 10px;
@@ -189,6 +194,7 @@ main .code button {
 }
 
 .buy button {
+    font-weight: 500;
     width: 100%;
     background-color: black;
     border: none;

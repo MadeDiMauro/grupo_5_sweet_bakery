@@ -1,0 +1,96 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.heading p {
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.step-three {
+    font-weight: bold;
+}
+
+.step-one,
+.step-two,
+.step-three {
+    width: 30%;
+}
+
+.steps i {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkout {
+    text-align: center;
+}
+
+.checkout button {
+    font-weight: 500;
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    margin: 15px 0px;
+    padding: 5px 0px;
+}
