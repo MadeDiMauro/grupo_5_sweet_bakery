@@ -40,109 +40,150 @@
             </div>
         </div>
 
-        <div class="contact-title">
-            <p>DATOS DE CONTACTO</p>
-        </div>
-
-        <div class="contact-info">
-            <form action="#" method="GET">
-                <label for="name">Nombre(s) *</label>
-                <input type="text" name="name" id="name" required>
-
-                <label for="lastname">Apellido(s) *</label>
-                <input type="text" name="lastname" id="lastname" required>
-
-                <label for="email">Correo electrónico *</label>
-                <input type="email" name="email" id="email" required>
-
-                <div class="phones">
-                    <div>
-                        <label for="tel">Teléfono</label>
-                        <input type="number" name="tel" id="tel">
-                    </div>
-                    <div>
-                        <label for="cel">Celular</label>
-                        <input type="number" name="cel" id="cel">
-                    </div>
+        <section class="container">
+            <div class="contact-info">
+                <div class="contact-title">
+                    <p>DATOS DE CONTACTO</p>
                 </div>
+                <form action="#" method="GET">
+                    <label for="name">Nombre(s) *</label>
+                    <input type="text" name="name" id="name" required>
 
-                <div class="countries">
-                    <label>País/Región *</label>
-                    <select name="country">
-                        <option value="Argentina" selected>Argentina</option>
-                    </select>
-                </div>
+                    <label for="lastname">Apellido(s) *</label>
+                    <input type="text" name="lastname" id="lastname" required>
 
-                <div class="region">
-                    <div>
-                        <label for="province">Provincia *</label>
-                        <input type="text" name="province" id="province" required>
-                    </div>
-                    <div>
-                        <label for="location">Localidad *</label>
-                        <input type="text" name="location" id="location" required>
-                    </div>
-                </div>
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" name="email" id="email" required>
 
-                <div class="adress">
-                    <div>
-                        <label for="number">Número *</label>
-                        <input type="number" name="number" id="number" required>
+                    <div class="phones">
+                        <div>
+                            <label for="tel">Teléfono</label>
+                            <input type="number" name="tel" id="tel">
+                        </div>
+                        <div>
+                            <label for="cel">Celular</label>
+                            <input type="number" name="cel" id="cel">
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="floor">Piso</label>
-                        <input type="number" name="floor" id="floor">
+                    <div class="countries">
+                        <label>País/Región *</label>
+                        <select name="country">
+                            <option value="Argentina" selected>Argentina</option>
+                        </select>
                     </div>
 
-                    <div>
-                        <label for="apt">Dpto</label>
-                        <input type="text" name="apt" id="apt">
+                    <div class="region">
+                        <div>
+                            <label for="province">Provincia *</label>
+                            <input type="text" name="province" id="province" required>
+                        </div>
+                        <div>
+                            <label for="location">Localidad *</label>
+                            <input type="text" name="location" id="location" required>
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="cp">CP *</label>
-                        <input type="number" name="cp" id="cp" required>
-                    </div>
-                </div>
+                    <div class="adress">
+                        <div>
+                            <label for="number">Número *</label>
+                            <input type="number" name="number" id="number" required>
+                        </div>
 
-                <div class="radiobutton">
-                    <div>
-                        <input type="radio" name="shipping" value="delivery" id="delivery">
-                        <label for="delivery">Envío a domicilio</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="shipping" value="branch" id="branch">
-                        <label for="branch">Retiro por sucursal</label>
-                    </div>
-                </div>
-            </form>
-        </div>
+                        <div>
+                            <label for="floor">Piso</label>
+                            <input type="number" name="floor" id="floor">
+                        </div>
 
-        <div class="total-amount">
-            <div class="subtotal">
-                <p class="p1">Subtotal</p>
-                <p>$0.00</p>
+                        <div>
+                            <label for="apt">Dpto</label>
+                            <input type="text" name="apt" id="apt">
+                        </div>
+
+                        <div>
+                            <label for="cp">CP *</label>
+                            <input type="number" name="cp" id="cp" required>
+                        </div>
+                    </div>
+
+                    <div class="radiobutton">
+                        <div>
+                            <input type="radio" name="shipping" value="delivery" id="delivery">
+                            <label for="delivery">Envío a domicilio</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="shipping" value="branch" id="branch">
+                            <label for="branch">Retiro por sucursal</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="bonus">
-                <p class="p1">Bonificación</p>
-                <p>$0.00</p>
-            </div>
-            <div class="shipping">
-                <p class="p1">Envío</p>
-                <p>$0.00</p>
-            </div>
-            <div class="total">
-                <p class="p1">TOTAL</p>
-                <p>$0.00</p>
-            </div>
-        </div>
 
-        <div class="buy">
-            <a href="/cart3"><button type="submit">CONTINUAR COMPRA</button></a>
-            <a href="/products">Ver más productos</a>
-        </div>
+            <div class="order-section">
+                <div class="order-title">
+                    <p>TU ORDEN</p>
+                </div>
 
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Cookie de chocolate</p>
+                        <p class="quantity">x 2</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Cookie de avena</p>
+                        <p class="quantity">x 1</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Alfajor de maicena</p>
+                        <p class="quantity">x 1</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <div class="continue-buying">
+                    <div class="total-amount">
+                        <div class="subtotal">
+                            <p class="p1">Subtotal</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="bonus">
+                            <p class="p1">Bonificación</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="shipping">
+                            <p class="p1">Envío</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="total">
+                            <p class="p1">TOTAL</p>
+                            <p>$0.00</p>
+                        </div>
+                    </div>
+    
+                    <div class="buy">
+                        <a href="/cart3"><button type="submit">CONTINUAR COMPRA</button></a>
+                        <a href="/products">Ver más productos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

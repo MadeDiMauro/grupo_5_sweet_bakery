@@ -77,6 +77,8 @@ main {
 .adress {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -96,6 +98,10 @@ main {
     margin: 0 auto;
     margin-bottom: 10px;
     border: 1px solid lightgray;
+}
+
+.countries select {
+    padding: 4px;
 }
 
 .radiobutton {
@@ -151,7 +157,7 @@ main {
 }
 
 .buy button:active {
-    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 1px rgba(255, 255, 255, 1);
 }
 
 .buy button a {
@@ -160,4 +166,75 @@ main {
 
 .buy a {
     font-size: 14px;
+}
+
+.order-section {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    /*PROVISORIO
+    .continue-buying {
+        display: none;
+    }*/
+
+    main .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .order-section {
+        display: block;
+        border: 1px solid lightgray;
+        padding: 15px;
+    }
+
+    .order-title {
+        font-weight: 700;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .product img {
+        width: 30%;
+    }
+
+    /*.product .name-quantity {
+        width: 30%;
+        text-align: left;
+    }*/
+
+    .product .name {
+        font-weight: 600;
+    }
+
+    .product .cart-price {
+        width: 20%;
+    }
+
+    .product .cart-price p {
+        font-weight: 600;
+        text-align: right;
+    }
+
+    .contact-info,
+    .order-section {
+        width: 48%;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
 }
