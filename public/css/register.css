@@ -1,0 +1,61 @@
+* {
+    font-family: 'Catamaran', sans-serif;
+    box-sizing: border-box;
+    
+}
+.main-div-box{
+    border: 2px solid #000000;
+    margin: 5%;
+    background-color: #e5e5e5;
+}
+
+
+.titleh1{
+    text-align: center;
+}
+.h2, .input-box{
+    margin-left: 10%;
+    max-width: 90%;
+    
+}
+
+.input {
+    width: 80%;
+    max-width: 80%;
+    height: 15%;
+    max-height: 15%;
+}
+
+.checkbox-box{
+    border:2px solid #000000;
+    margin: auto;
+    margin-top: 5%;
+    width: 50%;
+    min-height: 10vh;
+    
+}
+
+.checkbox-label{
+
+   padding-left: 15%;
+   
+}
+
+.submit-box{
+    margin: auto;
+    padding: 10%;
+    padding-left: 20%;    
+}
+
+.submit-input{
+    margin: auto;
+    background-color: #000000;
+    color: #cca000;
+    width: 80%      
+}
+
+.final-a{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10%;
+}
