@@ -81,10 +81,16 @@ main {
     border: 1px solid lightgray;
 }
 
+.billing-info select {
+    padding: 4px;
+}
+
 .credit-info,
 .dni {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -93,7 +99,7 @@ main {
 }
 
 .dni div {
-    width: 45%;
+    width: 48%;
 }
 
 .buy {
