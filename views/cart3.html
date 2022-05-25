@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/cart3.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </header>
+    <section class="heading">
+        <p>CARRITO DE COMPRAS</p>
+    </section>
+
+    <main>
+        <div class="steps">
+            <div class="step-one">
+                <p>PASO 1</p>
+                <p>Carrito de compra</p>
+            </div>
+            <i class="fas fa-angle-double-right"></i>
+            <div class="step-two">
+                <p>PASO 2</p>
+                <p>Completar datos</p>
+            </div>
+            <i class="fas fa-angle-double-right"></i>
+            <div class="step-three">
+                <p>PASO 3</p>
+                <p>Finalizar compra</p>
+            </div>
+        </div>
+
+        <div class="billing-title">
+            <p>DATOS DE FACTURACIÓN</p>
+        </div>
+
+        <div class="billing-info">
+            <form action="#" method="GET">
+                <div class="credit-payment">
+                    <label for="payment">Medio de pago *</label>
+                    <select name="payment" id="payment" required>
+                        <option value="credit">Tarjeta de crédito/débito</option>
+                        <option value="cash">Efectivo</option>
+                    </select>
+                </div>
+
+                <label for="cedit-number">Número de tarjeta *</label>
+                <input type="number" name="cedit-number" id="cedit-number" required>
+
+                <div class="credit-info">
+                    <div>
+                        <label for="expiration">Vencimiento *</label>
+                        <input type="number" name="expiration" id="expiration" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV *</label>
+                        <input type="number" name="cvv" id="cvv" required>
+                    </div>
+                    <div>
+                        <label for="mensual-fee">Cuotas *</label>
+                        <select name="mensual-fee" id="mensual-fee">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="cardholder">Titular de la tarjeta *</label>
+                <input type="text" name="cardholder" id="cardholder" required>
+
+                <div class="dni">
+                    <div>
+                        <label for="document">Documento *</label>
+                        <select name="document" id="document" required>
+                            <option value="dni">DNI</option>
+                            <option value="le">Libreta de Enrolamiento</option>
+                            <option value="lc">Libreta Cívica</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="doc-number">Número de documento *</label>
+                        <input type="number" name="doc-number" id="doc-number" required>
+                    </div>
+                </div>
+            </form>
+
+            <div class="buy">
+                <a href="#"><button type="submit">FINALIZAR COMPRA</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </footer>
+</body>
+</html>

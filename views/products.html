@@ -7,27 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros productos</title>
     <link rel="stylesheet" href="/css/products.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Lato:wght@100;300&family=Roboto:wght@300&display=swap">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-
+        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </header>
-
+<section class="heading">
+    <p>PRODUCTOS</p>
+</section>
     <main>
+        <section class="products-section">
+            <div class="show-filter">
+                <button type="submit"><i class="fa-solid fa-caret-down"></i> MOSTRAR FILTROS</button>
+            </div>
+            <div class="reference-location">
+                <a href="#">Productos</a>
+                <span> / <b>Mini postres</b></span>
+                <button type="submit"><i class="fas fa-filter"></i></button>
+            </div>
 
-        <section>
+            <section class="filter-section">
+                <div class="close-container">
+                    <button class="close-button" type="submit"><i class="fas fa-times"></i></button>
+                </div>
+                <section class="search-section">
+                    <div class="div-search">
+                        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+                        <input class="search-text" type="text" placeholder="Buscar producto">
+                    </div>
+                </section>
+                <form class="categories" name="#" method="GET">
+                    <label>CATEGORÍAS</label>
+                    <button><a href="#">Alfajores</a></button>
+                    <button><a href="#">Budines</a></button>
+                    <button><a href="#">Cookies</a></button>
+                    <button><a href="#">Desayunos y boxes</a></button>
+                    <button><a href="#">Mini postres</a></button>
+                    <button><a href="#">Macarons</a></button>
+                    <button><a href="#">Productos secos</a></button>
+                    <button><a href="#">Postres</a></button>
+                </form>
+            </section>
+    
             <div class="products">
                 <article>
                     <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
                     <div class="product-info">
                         <p class="name">Alfajores XL</p>
                         <p class="price">$0.00</p>
-                        <!--Cual seria la ruta de action?? GET o POST??-->
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -38,7 +71,7 @@
                         <p class="name">Alfajor chocolate blanco</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -49,7 +82,7 @@
                         <p class="name">Alfajor chocolate negro</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -60,7 +93,7 @@
                         <p class="name">Alfajor de coco</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -71,7 +104,7 @@
                         <p class="name">Alfajor de maicena</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -82,7 +115,7 @@
                         <p class="name">Alfajor de nuez</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -93,7 +126,7 @@
                         <p class="name">Chocolate y oreo</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -104,7 +137,7 @@
                         <p class="name">Frutos rojos</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -115,7 +148,7 @@
                         <p class="name">Limón y amapola</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -126,7 +159,7 @@
                         <p class="name">Limón glaseado</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -137,7 +170,7 @@
                         <p class="name">Manzana</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -148,7 +181,7 @@
                         <p class="name">Marmolado</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -159,7 +192,7 @@
                         <p class="name">Con nueces</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -170,7 +203,7 @@
                         <p class="name">Cookie de Avena</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -181,7 +214,7 @@
                         <p class="name">Cookie de chocolate</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -192,7 +225,7 @@
                         <p class="name">Cookie con nutella</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -203,7 +236,7 @@
                         <p class="name">Cookies surtidas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -214,7 +247,7 @@
                         <p class="name">Cookie de vainilla</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -225,7 +258,7 @@
                         <p class="name">Croissant</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -236,18 +269,19 @@
                         <p class="name">Medialunas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
 
                 <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Pain de chocolate y frambuesa">
+                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg"
+                        alt="Pain de chocolate y frambuesa">
                     <div class="product-info">
                         <p class="name">Pain de chocolate y frambuesa</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -258,7 +292,7 @@
                         <p class="name">Box degustación</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -269,7 +303,7 @@
                         <p class="name">Box dulce</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -280,7 +314,7 @@
                         <p class="name">Desayuno para 2 personas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -291,7 +325,7 @@
                         <p class="name">Desayuno para 4 personas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -302,7 +336,7 @@
                         <p class="name">Macarons</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -313,7 +347,7 @@
                         <p class="name">Mini años locos</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -324,7 +358,7 @@
                         <p class="name">Franuisima</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -335,7 +369,7 @@
                         <p class="name">Marquise de chocolate</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -346,7 +380,7 @@
                         <p class="name">Mini Brownie</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -357,7 +391,7 @@
                         <p class="name">Mini Cheescake</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -368,7 +402,7 @@
                         <p class="name">Mini Chocotorta</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -379,7 +413,7 @@
                         <p class="name">Mini tarta de coco</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -390,7 +424,7 @@
                         <p class="name">Mini Crumble</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -401,7 +435,7 @@
                         <p class="name">Mini Frutos del Bosque</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -412,7 +446,7 @@
                         <p class="name">Mini Lemon Pie</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -423,18 +457,18 @@
                         <p class="name">Bombita Oreo</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
-                
+
                 <article>
                     <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini tarta de Frutillas">
                     <div class="product-info">
                         <p class="name">Mini tarta de Frutillas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -445,7 +479,7 @@
                         <p class="name">Mini Tiramisu</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -456,7 +490,7 @@
                         <p class="name">Black Coffee</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -467,7 +501,7 @@
                         <p class="name">Brownie</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -478,7 +512,7 @@
                         <p class="name">Crumble de manzana</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -489,7 +523,7 @@
                         <p class="name">Lemon Pie</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -500,7 +534,7 @@
                         <p class="name">Pastafrola</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -511,7 +545,7 @@
                         <p class="name">Rogel</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -522,7 +556,7 @@
                         <p class="name">Tarta de Frutillas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -533,7 +567,7 @@
                         <p class="name">Frutos del Bosque</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -544,7 +578,7 @@
                         <p class="name">Tarta de Ricota</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -555,7 +589,7 @@
                         <p class="name">Tiramisu</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -566,7 +600,7 @@
                         <p class="name">Bizcochitos de grasa</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -577,7 +611,7 @@
                         <p class="name">Cantucci con almendras</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -588,7 +622,7 @@
                         <p class="name">Copitos</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -599,7 +633,7 @@
                         <p class="name">Criollitos</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -610,7 +644,7 @@
                         <p class="name">Cuadraditos</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -621,7 +655,7 @@
                         <p class="name">Marineras</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -632,7 +666,7 @@
                         <p class="name">Masas húngaras</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -643,7 +677,7 @@
                         <p class="name">Pepas</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
@@ -654,20 +688,18 @@
                         <p class="name">Scones</p>
                         <p class="price">$0.00</p>
                         <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button> 
+                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
                         </form>
                     </div>
                 </article>
             </div>
         </section>
+    
     </main>
 
     <footer>
-
+<iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </footer>
-
-
-
 </body>
 
 </html>

@@ -1,0 +1,163 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.heading p {
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.step-two {
+    font-weight: bold;
+}
+
+.step-one,
+.step-two,
+.step-three {
+    width: 30%;
+}
+
+.steps i {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.contact-title {
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.contact-info form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-info form label:not(.phones):not(.region):not(.adress) {
+    width: 100%;
+}
+
+.countries {
+    width: 100%;
+}
+
+.phones,
+.region,
+.adress {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.phones div,
+.region div {
+    width: 45%;
+}
+
+.adress div {
+    width: 22%;
+}
+
+.contact-info form input:not(.radiobutton div input),
+.countries select {
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
+
+.radiobutton {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.radiobutton div {
+    width: 100%;
+}
+
+.radiobutton div:last-child {
+    margin-bottom: 30px;
+}
+
+.total-amount {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.subtotal,
+.bonus,
+.shipping,
+.total-amount .total {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.total-amount .total {
+    font-weight: 700;
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.buy {
+    text-align: center;
+}
+
+.buy button {
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    background-color: black;
+    border: none;
+    margin: 15px 0px;
+    padding: 5px 0px;
+}
+
+.buy button:active {
+    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+}
+
+.buy button a {
+    text-decoration: none;
+}
+
+.buy a {
+    font-size: 14px;
+}

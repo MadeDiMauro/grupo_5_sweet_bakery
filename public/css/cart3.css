@@ -1,0 +1,123 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.heading p {
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.step-three {
+    font-weight: bold;
+}
+
+.step-one,
+.step-two,
+.step-three {
+    width: 30%;
+}
+
+.steps i {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.billing-title {
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.billing-info form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.billing-info form label:not(.credit-info):not(.dni) {
+    width: 100%;
+}
+
+.credit-payment {
+    width: 100%;
+}
+
+.billing-info form input,
+.billing-info select {
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
+
+.credit-info,
+.dni {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.credit-info div {
+    width: 30%;
+}
+
+.dni div {
+    width: 45%;
+}
+
+.buy {
+    text-align: center;
+}
+
+.buy button {
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    background-color: black;
+    border: none;
+    margin: 15px 0px;
+    padding: 5px 0px;
+}
+
+.buy button:active {
+    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+}
+
+.buy button a {
+    text-decoration: none;
+}
+
+.buy a {
+    font-size: 14px;
+}
