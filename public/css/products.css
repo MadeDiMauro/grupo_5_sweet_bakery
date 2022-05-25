@@ -29,7 +29,7 @@ main {
 
 .show-filter {
     padding: 10px 0px;
-    position: absolute;
+    position: relative;
 }
 
 .show-filter button {
@@ -71,7 +71,7 @@ main .show-filter button:active .filter-section{
 }
 
 .filter-section {
-    width: 70%;
+    width: 60%;
     display: flex;
     /*CAMBIAR A flex UNA VEZ HECHO EL BOTON DE MOSTRAR FILTROS*/
     flex-wrap: wrap;
@@ -217,15 +217,42 @@ main section article .img-product {
     font-size: 14px;
 }
 
-/*@media (min-width: 769px){
-    .filter-section {
-        display: block;
-        width: 35%;
+@media (min-width: 769px){
+    .close-container {
+        display:none;
+    }
+    .show-filter button{
+        display:none;
     }
 
-    .products article {
-        width: 20%;
-        margin: 12px 0px;
-        padding: 20px 10px;
+    .reference-location {
+        position: relative;
+        top:20px;
+        left:35%;
+        width:100%;
     }
-}*/
+    .filter-section{
+        display:flex;
+        flex-direction: column;
+        width:30%;
+    
+        
+       
+    }
+    .products {
+        position:relative;
+        left:40%;
+        width: 60%;
+        margin: 20px 0px;
+        padding: 15px 10px;
+        bottom:40%;
+    }
+    .products-section {
+        position:relative;
+
+    }
+
+    .reference-location button i{
+        display:none;
+    }
+}
