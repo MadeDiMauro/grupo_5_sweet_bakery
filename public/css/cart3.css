@@ -51,46 +51,73 @@ main {
     margin-top: 5px;
 }
 
+.billing-title {
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
 
+.billing-info form {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.billing-info form label:not(.credit-info):not(.dni) {
+    width: 100%;
+}
 
+.credit-payment {
+    width: 100%;
+}
 
+.billing-info form input,
+.billing-info select {
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
 
+.credit-info,
+.dni {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
 
+.credit-info div {
+    width: 30%;
+}
 
+.dni div {
+    width: 45%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.checkout {
+.buy {
     text-align: center;
 }
 
-.checkout button {
+.buy button {
     font-weight: 500;
+    color: white;
     width: 100%;
     background-color: black;
     border: none;
-    color: white;
     margin: 15px 0px;
     padding: 5px 0px;
+}
+
+.buy button:active {
+    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+}
+
+.buy button a {
+    text-decoration: none;
+}
+
+.buy a {
+    font-size: 14px;
 }

@@ -142,12 +142,20 @@ main {
 
 .buy button {
     font-weight: 500;
+    color: white;
     width: 100%;
     background-color: black;
     border: none;
-    color: white;
     margin: 15px 0px;
     padding: 5px 0px;
+}
+
+.buy button:active {
+    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+}
+
+.buy button a {
+    text-decoration: none;
 }
 
 .buy a {
