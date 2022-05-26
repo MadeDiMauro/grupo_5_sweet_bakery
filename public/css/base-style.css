@@ -310,10 +310,10 @@ body {
 
     /*----------------------HEADER---------------------------------*/
     .ifHeader {
-            width: 100% !important;
-            height: 350px;
+        width: 100% !important;
+        height: 350px;
     }
-    
+
     .header-version-desktop {
         display: none;
         /*background: rgb(0, 0, 0);
@@ -363,84 +363,52 @@ body {
 
     }
 
+    .menu-burger-tablet {
+        width: 5%;
+    }
+
+    .menu-burger-tablet i {
+        color: white;
+        font-size: 2em;
+    }
+
+    .menu-burger-tablet i:hover {
+        color: rgb(218, 165, 32, 0.5);
+    }
+
     .menu-logo-tablet {
-        width: 80%;
-        padding: 10px;
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 50px;
     }
 
     .menu-logo-tablet img {
         width: 50%;
     }
 
-    .menu-search-tablet {
-        text-align: right;
-        width: 20%;
-    }
-
-    .menu-search-tablet i {
-        color: white;
-        font-size: 2em;
-    }
-
-    .menu-search-tablet i:hover {
-        color: rgb(218, 165, 32, 0.5);
-    }
-
-    .menu-accesos-tablet {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu-accesos-tablet div {
-        font-size: larger;
-        width: 25%;
-    }
-
-    .menu-accesos-tablet a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .menu-accesos-tablet a:hover {
-        color: rgb(218, 165, 32, 0.5);
-    }
-
     .menu-cart-tablet {
-        width: 40%;
+        width: 25%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
     .menu-cart-tablet div {
-        text-align: right;
-    } 
-
-    .menu-cart-tablet button {
-        background-color: rgba(218, 165, 32, 0.8);
-        border: none;
-        color: white;
-        padding: 10px 10px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+        padding-left: 20px
     }
 
-    .menu-cart-tablet button:hover {
-        background-color: rgb(218, 165, 32, 0.5);
+    .menu-cart-tablet i {
+        color: white;
+        font-size: 2em;
     }
 
     .menu-cart-tablet i:hover {
         color: rgb(218, 165, 32, 0.5);
     }
 
-    .menu-cart-tablet .fa-shopping-bag {
-        color: rgba(218, 165, 32, 0.8);
-        font-size: 2em;
-    }
 
     /*----------------------FOOTER---------------------------------*/
     .ifFooter {
