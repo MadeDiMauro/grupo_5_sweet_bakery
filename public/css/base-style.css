@@ -369,6 +369,7 @@ body {
 
     .menuh-nav {
         display: flex;
+        position: relative;
     }
 
 
