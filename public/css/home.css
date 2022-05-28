@@ -4,6 +4,12 @@
     
 }
 
+
+.body-home {
+    padding: 0px;
+    margin: 0px;
+}
+
 .header {
     width: 3000px;
     max-width: 100%;
