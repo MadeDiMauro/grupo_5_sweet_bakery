@@ -127,4 +127,15 @@
 
 @media (min-width: 769px){
 
+    .menu{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .main{
+        max-width: 1200px;
+        margin: auto;
+    }
+
 }
