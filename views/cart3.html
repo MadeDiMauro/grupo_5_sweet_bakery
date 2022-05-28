@@ -23,86 +23,169 @@
     </section>
 
     <main>
-        <div class="steps">
-            <div class="step-one">
+        <div class="step">
+            <div class="step__one">
                 <p>PASO 1</p>
                 <p>Carrito de compra</p>
             </div>
-            <i class="fas fa-angle-double-right"></i>
-            <div class="step-two">
+
+            <div class="step__decoration">
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+                <div class="step__div-icon">
+                    <i class="step__icon far fa-circle"></i>
+                </div>
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+            </div>
+
+            <div class="step__two">
                 <p>PASO 2</p>
                 <p>Completar datos</p>
             </div>
-            <i class="fas fa-angle-double-right"></i>
-            <div class="step-three">
+            
+            <div class="step__decoration">
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+                <div class="step__div-icon">
+                    <i class="step__icon far fa-circle"></i>
+                </div>
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+            </div>
+            
+            <div class="step__three">
                 <p>PASO 3</p>
                 <p>Finalizar compra</p>
             </div>
         </div>
 
-        <div class="billing-title">
-            <p>DATOS DE FACTURACIÓN</p>
-        </div>
-
-        <div class="billing-info">
-            <form action="#" method="GET">
-                <div class="credit-payment">
-                    <label for="payment">Medio de pago *</label>
-                    <select name="payment" id="payment" required>
-                        <option value="credit">Tarjeta de crédito/débito</option>
-                        <option value="cash">Efectivo</option>
-                    </select>
+        <section class="container-cart3">
+            <div class="billing-info">
+                <div class="billing-title">
+                    <p>DATOS DE FACTURACIÓN</p>
                 </div>
-
-                <label for="cedit-number">Número de tarjeta *</label>
-                <input type="number" name="cedit-number" id="cedit-number" required>
-
-                <div class="credit-info">
-                    <div>
-                        <label for="expiration">Vencimiento *</label>
-                        <input type="number" name="expiration" id="expiration" required>
-                    </div>
-                    <div>
-                        <label for="cvv">CVV *</label>
-                        <input type="number" name="cvv" id="cvv" required>
-                    </div>
-                    <div>
-                        <label for="mensual-fee">Cuotas *</label>
-                        <select name="mensual-fee" id="mensual-fee">
-                            <option value="1">1</option>
-                            <option value="3">3</option>
-                            <option value="6">6</option>
+                <form action="#" method="GET">
+                    <div class="credit-payment">
+                        <label for="payment">Medio de pago *</label>
+                        <select name="payment" id="payment" required>
+                            <option value="credit">Tarjeta de crédito/débito</option>
+                            <option value="cash">Efectivo</option>
                         </select>
                     </div>
-                </div>
 
-                <label for="cardholder">Titular de la tarjeta *</label>
-                <input type="text" name="cardholder" id="cardholder" required>
+                    <label for="cedit-number">Número de tarjeta *</label>
+                    <input type="number" name="cedit-number" id="cedit-number" required>
 
-                <div class="dni">
-                    <div>
-                        <label for="document">Documento *</label>
-                        <select name="document" id="document" required>
-                            <option value="dni">DNI</option>
-                            <option value="le">Libreta de Enrolamiento</option>
-                            <option value="lc">Libreta Cívica</option>
-                        </select>
+                    <div class="credit-info">
+                        <div>
+                            <label for="expiration">Vencimiento *</label>
+                            <input type="number" name="expiration" id="expiration" required>
+                        </div>
+                        <div>
+                            <label for="cvv">CVV *</label>
+                            <input type="number" name="cvv" id="cvv" required>
+                        </div>
+                        <div>
+                            <label for="mensual-fee">Cuotas *</label>
+                            <select name="mensual-fee" id="mensual-fee">
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="doc-number">Número de documento *</label>
-                        <input type="number" name="doc-number" id="doc-number" required>
-                    </div>
-                </div>
-            </form>
 
-            <div class="buy">
-                <a href="#"><button type="submit">FINALIZAR COMPRA</button></a>
+                    <label for="cardholder">Titular de la tarjeta *</label>
+                    <input type="text" name="cardholder" id="cardholder" required>
+
+                    <div class="dni">
+                        <div>
+                            <label for="document">Documento *</label>
+                            <select name="document" id="document" required>
+                                <option value="dni">DNI</option>
+                                <option value="le">Libreta de Enrolamiento</option>
+                                <option value="lc">Libreta Cívica</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="doc-number">Número de documento *</label>
+                            <input type="number" name="doc-number" id="doc-number" required>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
+            <div class="order-section">
+                <div class="order-title">
+                    <p>TU ORDEN</p>
+                </div>
+
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Cookie de chocolate</p>
+                        <p class="quantity">x 2</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Cookie de avena</p>
+                        <p class="quantity">x 1</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="name-quantity">
+                        <p class="name">Alfajor de maicena</p>
+                        <p class="quantity">x 1</p>
+                    </div>
+                    <div class="cart-price">
+                        <p class="price">$0.00</p>
+                    </div>
+                </article>
+
+                <div class="continue-buying">
+                    <div class="total-amount">
+                        <div class="subtotal">
+                            <p class="p1">Subtotal</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="bonus">
+                            <p class="p1">Bonificación</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="shipping">
+                            <p class="p1">Envío</p>
+                            <p>$0.00</p>
+                        </div>
+                        <div class="total">
+                            <p class="p1">TOTAL</p>
+                            <p>$0.00</p>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <a href="#"><button type="submit">FINALIZAR COMPRA</button></a>
+                    </div>
+                </div>
+            </div>
     </main>
     <footer>
         <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
             marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </footer>
 </body>
+
 </html>
