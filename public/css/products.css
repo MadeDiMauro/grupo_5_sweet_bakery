@@ -11,7 +11,7 @@ body {
     background-color: white;
 }
 
-.heading p {
+.heading__p {
     background-color: lightgray;
     width: 100%;
     text-align: center;
@@ -24,64 +24,89 @@ body {
 main {
     width: 90%;
     margin: 0 auto;
-    position: relative;
 }
 
-.show-filter {
+.filter {
     padding: 10px 0px;
-    position: relative;
+    margin-top: 30px;
 }
 
-.show-filter button {
+.filter__button {
     font-weight: bold;
     padding: 5px 10px;
     border: 1px solid lightgray;
     background-color: white;
 }
 
-.show-filter button i {
+.filter__button:active {
+    border: 2px solid black;
+}
+
+.filter__icon-caret-down {
     padding-right: 10px;
     margin-right: 5px;
     text-align: left;
     border-right: 1px solid lightgray;
 }
 
-main .show-filter button:active .filter-section{
-    display: flex;
-}
-
-.reference-location {
-    display: flex;
-    padding: 20px 0px 10px;
-    border-bottom: 1px solid lightgray;
-    position: absolute;
-}
-
-.reference-location a {
-    text-decoration: none;
-}
-
-.reference-location button {
-  border: none;
-  background-color: transparent;
-}
-
-.reference-location i {
-    font-size: 14px;
-}
-
 .filter-section {
+    display: none;
+}
+
+.filter__button:active .filter-section{
     width: 60%;
-    display: flex;
-    /*CAMBIAR A flex UNA VEZ HECHO EL BOTON DE MOSTRAR FILTROS*/
+    display: block;
     flex-wrap: wrap;
     background-color: white;
     border: solid 1px lightgray;
-    position: absolute;
-    top: 60px;
 }
 
-.close-container {
+.reference-container {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.reference {
+    display: none;
+}
+
+/*.reference__location {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid lightgray;
+}*/
+
+.reference__div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.reference__a {
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.reference__button {
+    border: none;
+    background-color: transparent;
+}
+
+.reference__icon-filter {
+    font-size: 14px;
+}
+
+.products-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.close {
     width: 90%;
     text-align: right;
     padding: 20px 0px;
@@ -89,23 +114,24 @@ main .show-filter button:active .filter-section{
     border-bottom: solid 1px lightgray;
 }
 
-.close-button {
+.close__button {
     border: none;
     background-color: transparent;
 }
 
-.close-button i {
+.close__x-icon {
     font-size: 20px;
 }
 
-.search-section {
+.search {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.div-search {
+.search__div {
     display: flex;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -113,26 +139,23 @@ main .show-filter button:active .filter-section{
     border-radius: 30px;
 }
 
-.div-search .search-text {
-    width: 70%;
-    border: none;
-    border-radius: 40px;
-    padding: 5px;
+.search__button {
+    width: 25%;
+}
+
+.search__text {
+    width: 75%;
+    padding: 5px 0px;
     margin: 0 auto;
 }
 
-.search-button {
-    width: 30%;
-    padding-left: 20px;
-}
-
-.search-button i {
+.search__icon {
     color: darkgray;
     font-size: 14px;
 }
 
-.search-button,
-.search-text {
+.search__button,
+.search__text {
     border:none;
     background-color: transparent;
 }
@@ -144,14 +167,14 @@ main .show-filter button:active .filter-section{
     padding-bottom: 20px;
 }
 
-.categories label {
+.categories__label {
     font-weight: bold;
     width: 90%;
     padding: 20px 15px 10px;
     border-top: solid 1px lightgray;
 }
 
-.categories button {
+.categories__button {
     width: 80%;
     text-align: left;
     background-color: transparent;
@@ -160,101 +183,98 @@ main .show-filter button:active .filter-section{
     border-bottom: solid 1px lightgray;
 }
 
-.categories button:last-child {
+.categories__button:last-child {
     border: none;
 }
 
-.categories button a {
+.categories__a {
     text-decoration: none;
 }
 
-.categories button:active a {
+.categories__button:active .categories__a {
     font-weight: 600;
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 0px;
     justify-content: space-between;
 }
 
-.products article {
+.products__article {
     width: 45%;
-    margin: 12px 0px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
-main section article .img-product {
+.products__img {
     width: 100%;
 }
 
-.name {
+.products__name {
     font-weight: 600;
     text-align: center;
 }
 
-.price {
+.products__price {
     font-weight: 300;
     text-align: center;
 }
 
-.products article button {
+.products__button-add {
     width: 100%;
     background-color: black;
     color: white;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
-.products article .product-info form:active button {
+.products__a:active .products__button-add {
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
 }
 
-.fa-cart-plus {
+.pruducts__icon-cart {
     color: white;
     padding: 0px 5px;
     font-size: 14px;
 }
 
 @media (min-width: 769px){
-    .close-container {
-        display:none;
-    }
-    .show-filter button{
-        display:none;
+    .filter {
+        display: none;
     }
 
-    .reference-location {
-        position: relative;
-        top:20px;
-        left:35%;
-        width:100%;
+    .reference {
+        display: block;
     }
+
+    .reference__p {
+        font-weight: 600;
+    }
+
     .filter-section{
-        display:flex;
+        display: flex;
         flex-direction: column;
-        width:30%;
-    
-        
-       
+        border: 1px solid lightgray;
+        width: 30%;
+        height: 560px;       
     }
+
+    .close {
+        display: none;
+    }
+
     .products {
-        position:relative;
-        left:40%;
-        width: 60%;
-        margin: 20px 0px;
-        padding: 15px 10px;
-        bottom:40%;
-    }
-    .products-section {
-        position:relative;
-
+        width: 67%;
+        padding: 0px;
     }
 
-    .reference-location button i{
-        display:none;
+    .products__article {
+        width: 31%;
+        margin-top: 0px;
+        margin-bottom: 30px;
     }
 }
