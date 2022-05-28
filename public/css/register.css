@@ -49,9 +49,10 @@
 
 .submit-input{
     margin: auto;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
     background-color: #000000;
-    color: #cca000;
-    width: 80%      
+    color: #cca000;    
 }
 
 .final-a{
