@@ -73,7 +73,7 @@ main {
 }
 
 .billing-title {
-    font-weight: 700;
+    font-weight: 600;
     width: 100%;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -150,7 +150,7 @@ main {
 }
 
 .buy button {
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     width: 100%;
     background-color: black;
@@ -160,7 +160,8 @@ main {
 }
 
 .buy button:active {
-    box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+    /*box-shadow: inset 0px 0px 10px 1px rgba(255,255,255,1);*/
 }
 
 .buy a {
@@ -191,7 +192,7 @@ main {
 
     .order-section .order-title {
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         width: 100%;
         padding-bottom: 10px;
         margin-bottom: 20px;

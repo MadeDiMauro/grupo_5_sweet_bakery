@@ -8,585 +8,834 @@
     <title>Nuestros productos</title>
     <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" href="/css/base-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </header>
-<section class="heading">
-    <p>PRODUCTOS</p>
-</section>
+    <section class="heading">
+        <p class="heading__p">PRODUCTOS</p>
+    </section>
     <main>
-        <section class="products-section">
-            <div class="show-filter">
-                <button type="submit"><i class="fa-solid fa-caret-down"></i> MOSTRAR FILTROS</button>
-            </div>
-            <div class="reference-location">
-                <a href="#">Productos</a>
-                <span> / <b>Mini postres</b></span>
-                <button type="submit"><i class="fas fa-filter"></i></button>
+        <div class="filter">
+            <button class="filter__button" type="submit">
+                <i class="filter__icon-caret-down fa-solid fa-caret-down"></i> MOSTRAR FILTROS
+            </button>
+        </div>
+
+        <div class="reference-container">
+            <div class="reference">
+                <p class="reference__p"><b>BUSCAR PRODUCTOS</b></p>
             </div>
 
+            <!-- <div class="reference__location"> -->
+            <div class="reference__div">
+                <a class="reference__a" href="/products">
+                    <p>Productos >></p>
+                </a>
+                <p><b>Mini postres</b></p>
+            </div>
+            <button class="reference__button" type="submit">
+                <i class="reference__icon-filter fas fa-filter"></i>
+            </button>
+            <!-- </div> -->
+        </div>
+
+        <section class="products-section">
             <section class="filter-section">
-                <div class="close-container">
-                    <button class="close-button" type="submit"><i class="fas fa-times"></i></button>
+                <div class="close">
+                    <button class="close__button" type="submit"><i class="close__x-icon fas fa-times"></i></button>
                 </div>
-                <section class="search-section">
-                    <div class="div-search">
-                        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
-                        <input class="search-text" type="text" placeholder="Buscar producto">
+
+                <section class="search">
+                    <div class="search__div">
+                        <button class="search__button" type="submit"><i class="search__icon fas fa-search"></i></button>
+                        <input class="search__text" type="text" placeholder="Buscar producto">
                     </div>
                 </section>
+
                 <form class="categories" name="#" method="GET">
-                    <label>CATEGORÍAS</label>
-                    <button><a href="#">Alfajores</a></button>
-                    <button><a href="#">Budines</a></button>
-                    <button><a href="#">Cookies</a></button>
-                    <button><a href="#">Desayunos y boxes</a></button>
-                    <button><a href="#">Mini postres</a></button>
-                    <button><a href="#">Macarons</a></button>
-                    <button><a href="#">Productos secos</a></button>
-                    <button><a href="#">Postres</a></button>
+                    <label class="categories__label">CATEGORÍAS</label>
+                    <button class="categories__button"><a class="categories__a" href="#">Alfajores</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Budines</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Cookies</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Desayunos y boxes</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Mini postres</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Macarons</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Productos secos</a></button>
+                    <button class="categories__button"><a class="categories__a" href="#">Postres</a></button>
                 </form>
             </section>
-    
+
+
             <div class="products">
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
-                    <div class="product-info">
-                        <p class="name">Alfajores XL</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajores XL</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor chocolate blanco">
-                    <div class="product-info">
-                        <p class="name">Alfajor chocolate blanco</p>
-                        <p class="price">$0.00</p>
-                        <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
-                        </form>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor chocolate blanco">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajor blanco</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor chocolate negro">
-                    <div class="product-info">
-                        <p class="name">Alfajor chocolate negro</p>
-                        <p class="price">$0.00</p>
-                        <form action="#" method="GET">
-                            <button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button>
-                        </form>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor chocolate negro">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajor negro</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de coco">
-                    <div class="product-info">
-                        <p class="name">Alfajor de coco</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de coco">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajor de coco</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de maicena">
-                    <div class="product-info">
-                        <p class="name">Alfajor de maicena</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de maicena">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajor de maicena</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de nuez">
-                    <div class="product-info">
-                        <p class="name">Alfajor de nuez</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajor de nuez">
+                    <div class="products__div-info">
+                        <p class="products__name">Alfajor de nuez</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de chocolate y oreo">
-                    <div class="product-info">
-                        <p class="name">Chocolate y oreo</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de chocolate y oreo">
+                    <div class="products__div-info">
+                        <p class="products__name">Chocolate y oreo</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de frutos rojos">
-                    <div class="product-info">
-                        <p class="name">Frutos rojos</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de frutos rojos">
+                    <div class="products__div-info">
+                        <p class="products__name">Frutos rojos</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de limón y amapola">
-                    <div class="product-info">
-                        <p class="name">Limón y amapola</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de limón y amapola">
+                    <div class="products__div-info">
+                        <p class="products__name">Limón y amapola</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de limón glaseado">
-                    <div class="product-info">
-                        <p class="name">Limón glaseado</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de limón glaseado">
+                    <div class="products__div-info">
+                        <p class="products__name">Limón glaseado</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de manzana">
-                    <div class="product-info">
-                        <p class="name">Manzana</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín de manzana">
+                    <div class="products__div-info">
+                        <p class="products__name">Manzana</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín marmolado">
-                    <div class="product-info">
-                        <p class="name">Marmolado</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín marmolado">
+                    <div class="products__div-info">
+                        <p class="products__name">Marmolado</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Budín con nueces">
-                    <div class="product-info">
-                        <p class="name">Con nueces</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Budín con nueces">
+                    <div class="products__div-info">
+                        <p class="products__name">Con nueces</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de avena">
-                    <div class="product-info">
-                        <p class="name">Cookie de Avena</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de avena">
+                    <div class="products__div-info">
+                        <p class="products__name">Cookie de Avena</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="product-info">
-                        <p class="name">Cookie de chocolate</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="products__div-info">
+                        <p class="products__name">Cookie de chocolate</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie con nutella">
-                    <div class="product-info">
-                        <p class="name">Cookie con nutella</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie con nutella">
+                    <div class="products__div-info">
+                        <p class="products__name">Cookie con nutella</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookies surtidas">
-                    <div class="product-info">
-                        <p class="name">Cookies surtidas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookies surtidas">
+                    <div class="products__div-info">
+                        <p class="products__name">Cookies surtidas</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de vainilla">
-                    <div class="product-info">
-                        <p class="name">Cookie de vainilla</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de vainilla">
+                    <div class="products__div-info">
+                        <p class="products__name">Cookie de vainilla</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Croissant">
-                    <div class="product-info">
-                        <p class="name">Croissant</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Croissant">
+                    <div class="products__div-info">
+                        <p class="products__name">Croissant</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Medialunas">
-                    <div class="product-info">
-                        <p class="name">Medialunas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Medialunas">
+                    <div class="products__div-info">
+                        <p class="products__name">Medialunas</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg"
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg"
                         alt="Pain de chocolate y frambuesa">
-                    <div class="product-info">
-                        <p class="name">Pain de chocolate y frambuesa</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                    <div class="products__div-info">
+                        <p class="products__name">Pain choco y frambuesa</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Box degustación">
-                    <div class="product-info">
-                        <p class="name">Box degustación</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Box degustación">
+                    <div class="products__div-info">
+                        <p class="products__name">Box degustación</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Box dulce">
-                    <div class="product-info">
-                        <p class="name">Box dulce</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Box dulce">
+                    <div class="products__div-info">
+                        <p class="products__name">Box dulce</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Desayuno para 2 personas">
-                    <div class="product-info">
-                        <p class="name">Desayuno para 2 personas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Desayuno para 2 personas">
+                    <div class="products__div-info">
+                        <p class="products__name">Desayuno para 2</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Desayuno para 4 personas">
-                    <div class="product-info">
-                        <p class="name">Desayuno para 4 personas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Desayuno para 4 personas">
+                    <div class="products__div-info">
+                        <p class="products__name">Desayuno para 4</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Macarons">
-                    <div class="product-info">
-                        <p class="name">Macarons</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Macarons">
+                    <div class="products__div-info">
+                        <p class="products__name">Macarons</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini años locos">
-                    <div class="product-info">
-                        <p class="name">Mini años locos</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini años locos">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini años locos</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Franuisima">
-                    <div class="product-info">
-                        <p class="name">Franuisima</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Franuisima">
+                    <div class="products__div-info">
+                        <p class="products__name">Franuisima</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Marquise de chocolate">
-                    <div class="product-info">
-                        <p class="name">Marquise de chocolate</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Marquise de chocolate">
+                    <div class="products__div-info">
+                        <p class="products__name">Marquise de chocolate</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Brownie">
-                    <div class="product-info">
-                        <p class="name">Mini Brownie</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Brownie">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Brownie</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Cheescake">
-                    <div class="product-info">
-                        <p class="name">Mini Cheescake</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Cheescake">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Cheescake</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Chocotorta">
-                    <div class="product-info">
-                        <p class="name">Mini Chocotorta</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Chocotorta">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Chocotorta</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini tarta de coco">
-                    <div class="product-info">
-                        <p class="name">Mini tarta de coco</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini tarta de coco">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini tarta de coco</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Crumble">
-                    <div class="product-info">
-                        <p class="name">Mini Crumble</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Crumble">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Crumble</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Frutos del Bosque">
-                    <div class="product-info">
-                        <p class="name">Mini Frutos del Bosque</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Frutos del Bosque">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Frutos del Bosque</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Lemon Pie">
-                    <div class="product-info">
-                        <p class="name">Mini Lemon Pie</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Lemon Pie">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Lemon Pie</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Bombita Oreo">
-                    <div class="product-info">
-                        <p class="name">Bombita Oreo</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Bombita Oreo">
+                    <div class="products__div-info">
+                        <p class="products__name">Bombita Oreo</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini tarta de Frutillas">
-                    <div class="product-info">
-                        <p class="name">Mini tarta de Frutillas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini tarta de Frutillas">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini tarta de Frutillas</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Tiramisu">
-                    <div class="product-info">
-                        <p class="name">Mini Tiramisu</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Mini Tiramisu">
+                    <div class="products__div-info">
+                        <p class="products__name">Mini Tiramisu</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Black Coffee">
-                    <div class="product-info">
-                        <p class="name">Black Coffee</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Black Coffee">
+                    <div class="products__div-info">
+                        <p class="products__name">Black Coffee</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Brownie">
-                    <div class="product-info">
-                        <p class="name">Brownie</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Brownie">
+                    <div class="products__div-info">
+                        <p class="products__name">Brownie</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Crumble de manzana">
-                    <div class="product-info">
-                        <p class="name">Crumble de manzana</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Crumble de manzana">
+                    <div class="products__div-info">
+                        <p class="products__name">Crumble de manzana</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Lemon Pie">
-                    <div class="product-info">
-                        <p class="name">Lemon Pie</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Lemon Pie">
+                    <div class="products__div-info">
+                        <p class="products__name">Lemon Pie</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Pastafrola">
-                    <div class="product-info">
-                        <p class="name">Pastafrola</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Pastafrola">
+                    <div class="products__div-info">
+                        <p class="products__name">Pastafrola</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Rogel">
-                    <div class="product-info">
-                        <p class="name">Rogel</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Rogel">
+                    <div class="products__div-info">
+                        <p class="products__name">Rogel</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Tarta de Frutillas">
-                    <div class="product-info">
-                        <p class="name">Tarta de Frutillas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Tarta de Frutillas">
+                    <div class="products__div-info">
+                        <p class="products__name">Tarta de Frutillas</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Frutos del Bosque">
-                    <div class="product-info">
-                        <p class="name">Frutos del Bosque</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Frutos del Bosque">
+                    <div class="products__div-info">
+                        <p class="products__name">Frutos del Bosque</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Tarta de Ricota">
-                    <div class="product-info">
-                        <p class="name">Tarta de Ricota</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Tarta de Ricota">
+                    <div class="products__div-info">
+                        <p class="products__name">Tarta de Ricota</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Tiramisu">
-                    <div class="product-info">
-                        <p class="name">Tiramisu</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Tiramisu">
+                    <div class="products__div-info">
+                        <p class="products__name">Tiramisu</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Bizcochitos de grasa">
-                    <div class="product-info">
-                        <p class="name">Bizcochitos de grasa</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Bizcochitos de grasa">
+                    <div class="products__div-info">
+                        <p class="products__name">Bizcochitos de grasa</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cantucci con almendras">
-                    <div class="product-info">
-                        <p class="name">Cantucci con almendras</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cantucci con almendras">
+                    <div class="products__div-info">
+                        <p class="products__name">Cantucci con almendras</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Copitos">
-                    <div class="product-info">
-                        <p class="name">Copitos</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Copitos">
+                    <div class="products__div-info">
+                        <p class="products__name">Copitos</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Criollitos">
-                    <div class="product-info">
-                        <p class="name">Criollitos</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Criollitos">
+                    <div class="products__div-info">
+                        <p class="products__name">Criollitos</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cuadraditos">
-                    <div class="product-info">
-                        <p class="name">Cuadraditos</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cuadraditos">
+                    <div class="products__div-info">
+                        <p class="products__name">Cuadraditos</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Marineras">
-                    <div class="product-info">
-                        <p class="name">Marineras</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Marineras">
+                    <div class="products__div-info">
+                        <p class="products__name">Marineras</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Masas húngaras">
-                    <div class="product-info">
-                        <p class="name">Masas húngaras</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Masas húngaras">
+                    <div class="products__div-info">
+                        <p class="products__name">Masas húngaras</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Pepas">
-                    <div class="product-info">
-                        <p class="name">Pepas</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Pepas">
+                    <div class="products__div-info">
+                        <p class="products__name">Pepas</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
 
-                <article>
-                    <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Scones">
-                    <div class="product-info">
-                        <p class="name">Scones</p>
-                        <p class="price">$0.00</p>
-                        <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                <article class="products__article">
+                    <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Scones">
+                    <div class="products__div-info">
+                        <p class="products__name">Scones</p>
+                        <p class="products__price">$0.00</p>
+                        <a class="products__a" href="/cart1">
+                            <button class="products__button-add" type="submit">
+                                AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </article>
             </div>
         </section>
-    
+
     </main>
 
     <footer>
-<iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </footer>
 </body>
 

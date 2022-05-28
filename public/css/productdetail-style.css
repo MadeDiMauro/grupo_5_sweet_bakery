@@ -15,6 +15,7 @@ body {
 main {
         width: 90%;
         margin: 0 auto;
+        height:fit-content;
  }
 
 .title{
@@ -31,7 +32,7 @@ main {
         width:100%;
         margin-bottom: 20px;
         font-size: 16px;
-        font-weight:300;
+        font-weight:600;
 }
 
 .list {
@@ -127,7 +128,8 @@ main {
         text-align: center;
 }
 
-.productos-relacionados p{
+.productos-relacionados{
+        margin-top: 20px;
         width:100%;
         text-align: center;
         font-weight: 300;
@@ -140,6 +142,8 @@ hr {
 
 .productos-relacionados-title {
         width:100%;
+        margin-bottom: 15px;
+        font-weight:600;
 }
 
 .productos-relacionados {
@@ -152,8 +156,8 @@ hr {
 
 .productos-relacionados article {
         box-sizing: border-box;
-        width: 45%;
-        margin: 12px 0px;
+        width: 25%;
+        margin: 20px 0px;
         
     }
 
@@ -249,7 +253,7 @@ main {
 .product-name1 {
         float:right;
         width:50%;
-        font-weight: 300;
+       
 
 }
 
@@ -267,7 +271,9 @@ hr {
 .productos-relacionados-title p{
         width:100%;
         text-align: center;
-        font-weight: 300;
+}  
+.productos-relacionados-title.titulo2 {
+        font-weight: 600;
 }
 .product-description {
         margin-bottom: 20%;

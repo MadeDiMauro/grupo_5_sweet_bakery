@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Bakery</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/base-style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
@@ -13,45 +13,58 @@
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="body-home">
+<body>
     <header>
-        <iframe class="ifHeaderh" src="/headerh" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"
-            scrolling="no"></iframe>
+        <iframe class="ifHeaderh" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0"
+            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+
     </header>
 
     <main class="main">
-        <div>
-            <h2 class="textoH2"> ¡Sweet Bakery es un lugar donde lo delicioso y lo riquisimo se combinan!</h2>
-            <p class="conocenos2"><a class="conocenos" href="./nosotros">Conocenos!</a></p>
+        <div class="main__conteiner">
+            <img class="main__conteiner__logo" src="/images/logo-sweet-bakery-dorado.png" alt="">
+        </div>
+        <div class="main__secondconteiner">
+            <p class="main__secondconteiner__p"> ¡Sweet Bakery es un lugar donde lo delicioso y lo riquisimo
+                se combinan!</p>
+            <p class="main__secondconteiner__knowus"><a class="knowus" href="./nosotros">Conocenos!</a></p>
         </div>
 
         <section class="menu">
-            <div class="imagenMenu">
-                <a href="./products" class="textoMenu">PRODUCTOS</a>
-                <p class="textoBajoMenu">Nuestra tienda online</p>
+            <div class="menu__image">
+                <div>
+                    <a href="./products" class="menu__image__a">PRODUCTOS</a>
+                    <p class="menu__image__p">Nuestra tienda online</p>
+                </div>
             </div>
 
-            <div class="imagenMenu">
-                <a href="./cursos" class="textoMenu">CURSOS</a>
-                <p class="textoBajoMenu">Inscribite a nuestras clases</p>
+            <div class="menu__image">
+                <div>
+                    <a href="./cursos" class="menu__image__a">CURSOS</a>
+                    <p class="menu__image__p">Inscribite a nuestras clases</p>
+                </div>
             </div>
 
-            <div class="imagenMenu">
-                <a href="./giftcard" class="textoMenu">GIFT CARD</a>
-                <p class="textoBajoMenu">Regalá dulzura</p>
+            <div class="menu__image">
+                <div>
+                    <a href="./giftcard" class="menu__image__a">GIFT CARD</a>
+                    <p class="menu__image__p">Regalá dulzura</p>
+                </div>
             </div>
         </section>
 
-        <div class="imagenFondo">
-            <h3 class="textoFondo">Siempre es mejor con algo rico</h3>
+        <div class="lastconteiner">
+            <p class="lastconteiner__p">Siempre es mejor con algo rico</p>
         </div>
 
 
     </main>
-
+    <footer>
         <iframe class="ifFooterh" src="/footerh" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"
             scrolling="no"></iframe>
-   
+    </footer>
+
+
 
 </body>
 
