@@ -72,6 +72,10 @@ main {
     font-size: small;
 }
 
+.title {
+    display: none;
+}
+
 .product__article {
     display: flex;
     flex-wrap: nowrap;
@@ -141,7 +145,7 @@ main {
     width: 20%;
     text-align: right;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-around;
 }
 
@@ -152,7 +156,6 @@ main {
 }
 
 .product__icon-trash {
-    font-size: 14px;
     text-align: right;
 }
 
@@ -190,7 +193,7 @@ main {
 .code__input {
     font-size: 14px;
     font-style: italic;
-    width: 75%;
+    width: 78%;
     border: 1px solid lightgray;
     padding: 5px;
     padding-left: 10px;
@@ -253,6 +256,27 @@ main {
 }
 
 @media (min-width: 769px) {
+    .title-container {
+        display: flex;
+        width: 100%;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+    
+    .title__product,
+    .title__price,
+    .title__quantity,
+    .title__total,
+    .title__remove {
+        font-weight: 600;
+    }
+
     .product {
         width: 100%;
     }
@@ -269,11 +293,8 @@ main {
         border-top: 1px solid lightgray;
     }
 
-
-
-
     .product__img {
-        width: 20%;
+        width: 18%;
     }
 
     .product__info,
@@ -284,35 +305,26 @@ main {
     }
 
     .product__div-name-price {
-        width: 50%;
+        width: 65%;
     }
 
-    .product__name {
+    .product__div-total {
+        width: 40%;
+    }
+
+    .product__total {
         width: 25%;
     }
 
-    .product__price,
-    .product__quantity {
-        width: 10%;
-    }
-
     .product__button-remove {
-        width: 5%;
         display: flex;
         align-items: flex-start;
         padding-top: 5px;
     }
 
-
-
-
     .product__info {
         width: 50%;
-    }
-
-    
-
-    
+    } 
 
     .product__total-title {
         display: none;
@@ -328,6 +340,21 @@ main {
         width: 45%;
         align-items: flex-start;
         border: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .code__input {
+        width: 78%;
+    }
+
+    .code__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 8px;
+        margin-left: 10px;
     }
 
     .container-checkout-buy {
