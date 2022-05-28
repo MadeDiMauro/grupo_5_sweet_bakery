@@ -256,6 +256,10 @@ main {
 }
 
 @media (min-width: 769px) {
+    main {
+        max-width: 1200px;
+    }
+    
     .title-container {
         display: flex;
         width: 100%;
