@@ -19,103 +19,175 @@
             marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </header>
     <section class="heading">
-        <p>CARRITO DE COMPRAS</p>
+        <p class="heading__p">CARRITO DE COMPRAS</p>
     </section>
 
     <main>
-        <div class="steps">
-            <div class="step-one">
+        <div class="step">
+            <div class="step__one">
                 <p>PASO 1</p>
                 <p>Carrito de compra</p>
             </div>
-            <i class="fas fa-angle-double-right"></i>
-            <div class="step-two">
+
+            <div class="step__decoration">
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+                <div class="step__div-icon">
+                    <i class="step__icon far fa-circle"></i>
+                </div>
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+            </div>
+
+            <div class="step__two">
                 <p>PASO 2</p>
                 <p>Completar datos</p>
             </div>
-            <i class="fas fa-angle-double-right"></i>
-            <div class="step-three">
+
+            <div class="step__decoration">
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+                <div class="step__div-icon">
+                    <i class="step__icon far fa-circle"></i>
+                </div>
+                <div class="step__div-hr">
+                    <hr class="step__hr">
+                </div>
+            </div>
+
+            <div class="step__three">
                 <p>PASO 3</p>
                 <p>Finalizar compra</p>
             </div>
         </div>
-        <article class="cart-product">
-            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-            <div class="cart-info">
-                <p class="name">Cookie de chocolate</p>
-                <p class="price">$0.00</p>
-                <div class="quantity">
-                    <button class="less"><i class="fas fa-minus"></i></button>
-                    <span>1</span>
-                    <button class="plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="div-total">
-                <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                <p class="total">Total</p>
-                <p class="price">$0.00</p>
-            </div>
-        </article>
 
-        <article class="cart-product">
-            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-            <div class="cart-info">
-                <p class="name">Cookie de chocolate</p>
-                <p class="price">$0.00</p>
-                <div class="quantity">
-                    <button><i class="fas fa-minus"></i></button>
-                    <span>1</span>
-                    <button><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="div-total">
-                <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                <p class="total">Total</p>
-                <p class="price">$0.00</p>
-            </div>
-        </article>
-
-        <article class="cart-product">
-            <img class="img-product" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-            <div class="cart-info">
-                <p class="name">Cookie de chocolate</p>
-                <p class="price">$0.00</p>
-                <div class="quantity">
-                    <button><i class="fas fa-minus"></i></button>
-                    <span>1</span>
-                    <button><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="div-total">
-                <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                <p class="total">Total</p>
-                <p class="price">$0.00</p>
-            </div>
-        </article>
-
-        <div class="code">
-            <input type="text" placeholder="Ingresá tu código de descuento">
-            <button type="submit">VALIDAR</button>
-        </div>
-
-        <div class="total-amount">
-            <div class="subtotal">
-                <p class="p1">Subtotal</p>
-                <p>$0.00</p>
-            </div>
-            <div class="bonus">
-                <p class="p1">Bonificación</p>
-                <p>$0.00</p>
-            </div>
-            <div class="total">
-                <p class="p1">TOTAL</p>
-                <p>$0.00</p>
+        <div class="title-container">
+            <div class="title">
+                <p class="title__product">PRODUCTO</p>
+                <p class="title__price">PRECIO</p>
+                <p class="title__quantity">CANTIDAD</p>
+                <p class="title__total">TOTAL</p>
+                <p class="title__remove">ELIMINAR</p>
             </div>
         </div>
 
-        <div class="buy">
-            <a href="/cart2"><button type="submit">INICIAR COMPRA</button></a>
-            <a href="/products">Ver más productos</a>
+        <div class="product">
+            <article class="product__article">
+                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                <div class="product__info">
+                    <div class="product__div-name-price">
+                        <p class="product__name">Cookie de chocolate</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <div class="product__quantity">
+                        <button class="product__button-less">
+                            <i class="product__icon fas fa-minus"></i>
+                        </button>
+                        <span class="product__span">1</span>
+                        <button class="product__button-add">
+                            <i class="product__icon fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__total">
+                    <div class="product__div-total">
+                        <p class="product__total-title">Total</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <button class="product__button-remove" type="reset">
+                        <i class="product__icon-trash fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product__article">
+                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                <div class="product__info">
+                    <div class="product__div-name-price">
+                        <p class="product__name">Cookie de avena</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <div class="product__quantity">
+                        <button class="product__button-less">
+                            <i class="product__icon fas fa-minus"></i>
+                        </button>
+                        <span class="product__span">1</span>
+                        <button class="product__button-add">
+                            <i class="product__icon fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__total">
+                    <div class="product__div-total">
+                        <p class="product__total-title">Total</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <button class="product__button-remove" type="reset">
+                        <i class="product__icon-trash fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product__article">
+                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                <div class="product__info">
+                    <div class="product__div-name-price">
+                        <p class="product__name">Alfajor de maicena</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <div class="product__quantity">
+                        <button class="product__button-less">
+                            <i class="product__icon fas fa-minus"></i>
+                        </button>
+                        <span class="product__span">1</span>
+                        <button class="product__button-add">
+                            <i class="product__icon fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product__total">
+                    <div class="product__div-total">
+                        <p class="product__total-title">Total</p>
+                        <p class="product__price">$0.00</p>
+                    </div>
+                    <button class="product__button-remove" type="reset">
+                        <i class="product__icon-trash fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <div class="container-code-checkout">
+            <div class="code">
+                <input class="code__input" type="text" placeholder="Ingresá tu código de descuento">
+                <button class="code__button" type="submit">VALIDAR</button>
+            </div>
+
+            <div class="container-checkout-buy">
+                <div class="checkout">
+                    <div class="checkout__subtotal">
+                        <p>Subtotal</p>
+                        <p>$0.00</p>
+                    </div>
+                    <div class="checkout__bonus">
+                        <p>Bonificación</p>
+                        <p>$0.00</p>
+                    </div>
+                    <div class="checkout__total">
+                        <p>TOTAL</p>
+                        <p>$0.00</p>
+                    </div>
+                </div>
+
+                <div class="buy">
+                    <a class="buy__a" href="/cart2"><button class="buy__button" type="submit">INICIAR
+                            COMPRA</button></a>
+                    <a class="buy__a" href="/products">Ver más productos</a>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -124,4 +196,5 @@
             marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </footer>
 </body>
+
 </html>
