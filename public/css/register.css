@@ -1,6 +1,7 @@
 * {
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
+    font-size: 16px;
     
 }
 .main-div-box{
@@ -10,12 +11,17 @@
 }
 
 
-.titleh1{
+.main-div-box__p{
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
-.h2, .input-box{
+
+.input-box{
     margin-left: 10%;
-    max-width: 90%;
+    margin-right: 10%;
+    width: 100%;
+    margin-bottom: 10%;
     
 }
 
@@ -28,35 +34,57 @@
 
 .checkbox-box{
     border:2px solid #000000;
+    
     margin: auto;
     margin-top: 5%;
-    width: 50%;
-    min-height: 10vh;
+    width: 60%;
+    min-height: 7vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
-}
-
-.checkbox-label{
-
-   padding-left: 15%;
-   
 }
 
 .submit-box{
     margin: auto;
     padding: 10%;
-    padding-left: 20%;    
+    padding-left: 10%;    
 }
 
 .submit-input{
     margin: auto;
-    width: 80%;
-    padding: 10px 10px 10px 10px;
+    padding: 7%;
+    padding-right: 10%;
     background-color: #000000;
-    color: #cca000;    
+    border-radius: 10px;
+    color: #cca000;
+    width: 100%      
 }
 
 .final-a{
     margin: auto;
     text-align: center;
     padding-bottom: 10%;
+}
+
+@media (min-width: 769px){
+
+    .input-box{
+        margin-bottom: 5%;
+    }
+  
+   .main-div-box{
+       max-width: 1200px;
+       margin: auto;
+   }
+
+   .checkbox-box{
+       max-width: 450px;
+   }
+
+   .submit-input{
+       padding-top: 0%;
+       padding-bottom: 0%;
+
+   }
 }

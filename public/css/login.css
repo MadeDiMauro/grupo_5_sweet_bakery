@@ -1,6 +1,7 @@
 * {
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
+    font-size: 16px;
     
 }
 .main-div-box{
@@ -9,19 +10,21 @@
     background-color: #e5e5e5;
 }
 
-.titleh1{
+.titlep{
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.h2, .input-box{
+.input-box{
     margin-left: 10%;
     max-width: 90%;
     
 }
 
 .input {
-    width: 80%;
-    max-width: 80%;
+    width: 90%;
+    max-width: 90%;
     height: 15%;
     max-height: 15%;
 }
@@ -42,10 +45,12 @@
 
  .forgotpass-box{
      padding-top: 5%;
+
  }
  .submit-box{
      margin-left: 10%;
      margin-top: 10%;
+    
      
  }
 
@@ -53,6 +58,7 @@
 
      width: 90%;
      font-size: x-large;
+     border-radius: 10px;
  } 
  
  .final-a-box{
@@ -62,6 +68,7 @@
      margin-left: 10%;
      margin-bottom: 15%;
      width: 81%;
+     border-radius: 10px;
      
      
  }
@@ -79,5 +86,39 @@
      margin: auto;
      text-align: center;
  }
+
+ @media (min-width: 481px){
+    .forgotpass-box{
+        text-align: center;
+    }
+
+    .checkbox-box{
+        text-align: center;
+        padding-top: 2.5%;
+    }
     
+    .forgotpass{
+        margin-left: 0;
+    }
+
+    .checkbox-label{
+        margin-left: 0%;
+    }
+
+    .submit-box{
+        margin-top: 5%;
+    }
+
+    .forgotpass-box{
+        padding-top: 2.5%;
+    }
+
+    .main-div-box{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+
+ }
+
     
