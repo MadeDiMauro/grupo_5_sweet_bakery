@@ -31,15 +31,13 @@ main {
         width:100%;
         margin-bottom: 20px;
         font-size: 16px;
-}
-
-.product-name1 p{
-        font-weight: 900;
+        font-weight:300;
 }
 
 .list {
         margin-bottom:20px;
 }
+
 .main-product-detail {
         width:100%;
 }
@@ -89,7 +87,7 @@ main {
         width:100%;
 }
 
-article .product-description {
+.product-description {
         text-align: left;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -99,9 +97,9 @@ article .product-description {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        width: 20%;
         border: 1px solid lightgray;
         background-color: transparent;
+        width: 20%;
 }
     
 .quantity button {
@@ -132,7 +130,7 @@ article .product-description {
 .productos-relacionados p{
         width:100%;
         text-align: center;
-        font-weight: 900;
+        font-weight: 300;
 }
 hr {
         width:100%;
@@ -166,17 +164,10 @@ hr {
     
 main section article .img-product {
         width: 100%;
-
 }
-.name {
-        font-weight: 600;
+.name, .price {
         text-align: center;
  }
-    
-.price {
-        font-weight: 300;
-        text-align: center;
-}
     
 .productos-relacionados article .product-info button {
         text-align: center;
@@ -244,6 +235,7 @@ main {
         width:50%;
         position:relative;
         bottom:200px;
+        margin-bottom: 12px;
 }
 .productos-relacionados article{
         display: flex;
@@ -257,6 +249,7 @@ main {
 .product-name1 {
         float:right;
         width:50%;
+        font-weight: 300;
 
 }
 
@@ -274,6 +267,7 @@ hr {
 .productos-relacionados-title p{
         width:100%;
         text-align: center;
+        font-weight: 300;
 }
 .product-description {
         margin-bottom: 20%;
