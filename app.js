@@ -16,6 +16,8 @@ const cart3Path = path.join(__dirname, "./views/cart3.html");
 const basePath = path.join(__dirname, "./views/plantillas/base.html");
 const headerPath = path.join(__dirname, "./views/plantillas/header.html");
 const footerPath = path.join(__dirname, "./views/plantillas/footer.html");
+const headerhPath = path.join(__dirname, "./views/plantillas/header-home.html");
+const footerhPath = path.join(__dirname, "./views/plantillas/footer-home.html");
 
 const PORT = process.env.PORT || 3000;
 
@@ -67,4 +69,12 @@ app.get("/header", (req, res) => {
 
 app.get("/footer", (req, res) => {
 	res.sendFile(footerPath);
+});
+
+app.get("/headerh", (req, res) => {
+	res.sendFile(headerhPath);
+});
+
+app.get("/footerh", (req, res) => {
+	res.sendFile(footerhPath);
 });

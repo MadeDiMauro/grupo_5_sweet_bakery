@@ -19,7 +19,7 @@
             marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </header>
     <section class="heading">
-        <p>CARRITO DE COMPRAS</p>
+        <p class="heading__p">CARRITO DE COMPRAS</p>
     </section>
 
     <main>
@@ -45,7 +45,7 @@
                 <p>PASO 2</p>
                 <p>Completar datos</p>
             </div>
-            
+
             <div class="step__decoration">
                 <div class="step__div-hr">
                     <hr class="step__hr">
@@ -57,32 +57,32 @@
                     <hr class="step__hr">
                 </div>
             </div>
-            
+
             <div class="step__three">
                 <p>PASO 3</p>
                 <p>Finalizar compra</p>
             </div>
         </div>
 
-        <section class="container-cart3">
-            <div class="billing-info">
-                <div class="billing-title">
+        <section class="container3">
+            <div class="billing">
+                <div class="billing__title">
                     <p>DATOS DE FACTURACIÓN</p>
                 </div>
-                <form action="#" method="GET">
-                    <div class="credit-payment">
-                        <label for="payment">Medio de pago *</label>
-                        <select name="payment" id="payment" required>
+                <form class="billing__form" action="#" method="GET">
+                    <div class="billing__div">
+                        <label class="billing__label" for="payment">Medio de pago *</label>
+                        <select class="billing__select" name="payment" id="payment" required>
                             <option value="credit">Tarjeta de crédito/débito</option>
                             <option value="cash">Efectivo</option>
                         </select>
                     </div>
 
-                    <label for="cedit-number">Número de tarjeta *</label>
-                    <input type="number" name="cedit-number" id="cedit-number" required>
+                    <label class="billing__label" for="cedit-number">Número de tarjeta *</label>
+                    <input class="billing__input" type="number" name="cedit-number" id="cedit-number" required>
 
-                    <div class="credit-info">
-                        <div>
+                    <div class="billing__credit-info">
+                        <div class="billing__credit-info-div">
                             <label for="expiration">Vencimiento *</label>
                             <input type="number" name="expiration" id="expiration" required>
                         </div>
@@ -100,11 +100,11 @@
                         </div>
                     </div>
 
-                    <label for="cardholder">Titular de la tarjeta *</label>
-                    <input type="text" name="cardholder" id="cardholder" required>
+                    <label class="billing__label" for="cardholder">Titular de la tarjeta *</label>
+                    <input class="billing__input" type="text" name="cardholder" id="cardholder" required>
 
-                    <div class="dni">
-                        <div>
+                    <div class="billing__dni">
+                        <div class="billing__dni-div">
                             <label for="document">Documento *</label>
                             <select name="document" id="document" required>
                                 <option value="dni">DNI</option>
@@ -119,65 +119,68 @@
                     </div>
                 </form>
             </div>
-            <div class="order-section">
-                <div class="order-title">
+
+            <div class="order">
+                <div class="order__title">
                     <p>TU ORDEN</p>
                 </div>
 
-                <article class="product">
-                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="name-quantity">
-                        <p class="name">Cookie de chocolate</p>
-                        <p class="quantity">x 2</p>
+                <article class="order__product">
+                    <img class="order__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="order__name-quantity">
+                        <p class="order__name">Cookie de chocolate</p>
+                        <p class="order__quantity">x 2</p>
                     </div>
-                    <div class="cart-price">
-                        <p class="price">$0.00</p>
-                    </div>
-                </article>
-
-                <article class="product">
-                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="name-quantity">
-                        <p class="name">Cookie de avena</p>
-                        <p class="quantity">x 1</p>
-                    </div>
-                    <div class="cart-price">
-                        <p class="price">$0.00</p>
+                    <div class="order__div-price">
+                        <p class="order__price">$0.00</p>
                     </div>
                 </article>
 
-                <article class="product">
-                    <img src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="name-quantity">
-                        <p class="name">Alfajor de maicena</p>
-                        <p class="quantity">x 1</p>
+                <article class="order__product">
+                    <img class="order__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="order__name-quantity">
+                        <p class="order__name">Cookie de avena</p>
+                        <p class="order__quantity">x 1</p>
                     </div>
-                    <div class="cart-price">
-                        <p class="price">$0.00</p>
+                    <div class="order__div-price">
+                        <p class="order__price">$0.00</p>
+                    </div>
+                </article>
+
+                <article class="order__product">
+                    <img class="order__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                    <div class="order__name-quantity">
+                        <p class="order__name">Alfajor de maicena</p>
+                        <p class="order__quantity">x 1</p>
+                    </div>
+                    <div class="order__div-price">
+                        <p class="order__price">$0.00</p>
                     </div>
                 </article>
 
                 <div class="continue-buying">
-                    <div class="total-amount">
-                        <div class="subtotal">
-                            <p class="p1">Subtotal</p>
+                    <div class="checkout">
+                        <div class="checkout__subtotal">
+                            <p>Subtotal</p>
                             <p>$0.00</p>
                         </div>
-                        <div class="bonus">
-                            <p class="p1">Bonificación</p>
+                        <div class="checkout__bonus">
+                            <p>Bonificación</p>
                             <p>$0.00</p>
                         </div>
-                        <div class="shipping">
-                            <p class="p1">Envío</p>
+                        <div class="checkout__shipping">
+                            <p>Envío</p>
                             <p>$0.00</p>
                         </div>
-                        <div class="total">
-                            <p class="p1">TOTAL</p>
+                        <div class="checkout__total">
+                            <p>TOTAL</p>
                             <p>$0.00</p>
                         </div>
                     </div>
                     <div class="buy">
-                        <a href="#"><button type="submit">FINALIZAR COMPRA</button></a>
+                        <a class="buy__a" href="#">
+                            <button class="buy__button" type="submit">FINALIZAR COMPRA</button>
+                        </a>
                     </div>
                 </div>
             </div>
