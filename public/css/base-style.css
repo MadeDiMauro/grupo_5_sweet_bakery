@@ -46,6 +46,8 @@ body {
 .ifHeaderh {
     width: 100% !important;
     height: 500px;
+    /* border-bottom: solid 5px goldenrod; */
+    border-bottom: solid 5px rgb(70, 7, 1);
 }
 
 .ifFooterh {
@@ -98,7 +100,7 @@ body {
         margin: auto;
         color: white;
         max-width: 1200px;
-        padding: 20px 0px 20px 0px;
+        padding: 20px 20px 20px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -380,7 +382,7 @@ body {
         font-weight: bold;
         margin: auto;
         color: white;
-        max-width: 1500px;
+        max-width: 1200px;
         padding: 10px 10px 20px 10px;
         display: flex;
         justify-content: space-between;
@@ -423,7 +425,7 @@ body {
     }
 
     .menuh-cart {
-        width: 15%;
+        width: 7%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -448,12 +450,13 @@ body {
         color: rgb(218, 165, 32, 0.5);
     }
 
-    .menuh-cart .fa-shopping-bag {
+    .menuh-cart .fa-shopping-bag, .fa-user {
         color: rgba(218, 165, 32, 0.8);
         font-size: 2em;
     }
 
     .menuh-logo {
+        margin-top: 55px;
         width: 100%;
         text-align: center;
     }
@@ -556,7 +559,7 @@ body {
         font-weight: bold;
         margin: auto;
         color: white;
-        max-width: 1920px;
+        max-width: 1200px;
         padding: 20px 30px 20px 30px;
         display: flex;
         justify-content: center;

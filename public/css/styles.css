@@ -2,11 +2,11 @@
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
     font-size: 16px;
-    
+
 }
 
 
-.body-home {
+.body__home {
     padding: 0px;
     margin: 0px;
     width: 100%;
@@ -19,6 +19,13 @@
     max-height: 100vh;
 } */
 
+.header__home {
+    width: 100%;
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+}
+
 .main__conteiner {
     width: 100%;
     height: 100vh;
@@ -29,125 +36,162 @@
     align-items: center;
 }
 
-.main__conteiner__logo{
+.main__conteiner__logo {
     max-width: 45%;
     max-height: 45vh;
 }
 
 
-.main {
-    background-image:url(../images/fondo5.jpg);
+.main__home {
+    /* background-image:url(../images/img-fondo-home.webp); */
+    background-image: url(../images/pastelero-masa.webp);
     background-size: cover;
-   /*background-color: #e5e5e5 ;*/
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+
+}
+
+.main__home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
 }
 
 .imagenHeader {
-   width: 100%;
-   height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.menuDesktop{
+.menuDesktop {
     display: none;
 }
 
-.barraDeBusqueda{
+.barraDeBusqueda {
     display: none;
 }
 
-.main__secondconteiner__p{
+.main__secondconteiner__p {
     margin: auto;
     text-align: center;
     max-width: 80%;
     padding: 2.5%;
-       
-    
-}
-.main__secondconteiner__knowus{
-    text-align: center;
-    color:#fbfaf8;
+    font-size: 35px;
+    /* font-family: 'Catamaran', sans-serif; */
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
-.knowus{
+.main__secondconteiner__knowus {
+    text-align: center;
+    color: #fbfaf8;
+}
+
+.knowus {
     color: #000000;
-    padding: 2.5% 5%;
-    border: 1px solid #000000;
-    border-radius: .5em;
-    background-color: #fbfaf8;
+    border: 1px solid goldenrod;
+    border-radius: none;
+    background-color: rgb(218, 165, 32);
     text-align: center;
     text-decoration: none;
 }
 
-.menu__image{
-    background-image: url(../images/mini-frutos-del-bosque.jpg);
-    background-size: cover;
+
+.menu__image {
+    /* background-image: url(../images/pastel-de-chocolate.jpg);
+    background-size: cover; */
+    background-color: rgba(0, 0, 0, 0.8);
     width: 90%;
     height: 30vh;
     margin: 5vh 5%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
-.menu__image__p{
+.menu__image:hover {
+    background-color:rgb(218, 165, 32, 0.5);
+}
+
+
+.menu__image__p {
     text-align: center;
     font-size: medium;
-    
+
     color: #fbfaf8;
-    
+
 
 }
 
-.menu__image__a{
+.menu__image__a {
     display: block;
     color: #fbfaf8;
     text-align: center;
     padding-top: 10%;
     text-decoration: none;
     font-weight: bold;
-    
+
 }
 
 .lastconteiner {
-    background-image: url(../images/mini-frutos-del-bosque.jpg);
+    background-image: url(../images/postre-frutillas.jpg);
     background-size: cover;
-    width: 100% ;
-    height:30vh;  
-    display: flex;
-    align-items: center;  
-    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    border-top: solid 5px rgb(70, 7, 1);
 }
 
-.lastconteiner__p{
+.lastconteiner div {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.lastconteiner__p {
+    font-family: 'Dancing Script', cursive;
     color: #fbfaf8;
-   
+    font-size: 40px;
+    text-shadow: 2px 2px 2px black;
 }
 
 .footer-nav {
     background-color: #000000;
-    color:#fbfaf8
+    color: #fbfaf8
 }
 
 
-@media (min-width: 481px){
-    .knowus{
+@media (min-width: 481px) {
+    .knowus {
         padding: 1% 3%;
     }
 
-    .main__secondconteiner__p{
+    .main__secondconteiner__p {
         font-weight: 700;
     }
-    
+
 }
 
-@media (min-width: 769px){
+@media (min-width: 769px) {
 
-    .menu{
+    .menu {
         display: flex;
         justify-content: space-between;
 
     }
 
-    .main{
+    .main {
         margin: auto;
     }
 
