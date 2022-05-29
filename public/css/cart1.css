@@ -262,8 +262,8 @@ main {
         margin-top: 35px;
         margin-bottom: 15px;
         /*border: 1px solid red;*/
+     
     }
-    
     .title {
         display: flex;
         justify-content: space-between;
@@ -280,6 +280,7 @@ main {
 
     .product {
         width: 100%;
+        
     }
 
     .product__article {
