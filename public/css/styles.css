@@ -42,19 +42,18 @@
 }
 
 
-.main__home {
+/*.main__home { */
     /* background-image:url(../images/img-fondo-home.webp); */
-    background-image: url(../images/pastelero-masa.webp);
+    /* background-image: url(../images/pastelero-masa.webp);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-color: white;
     position: relative;
     z-index: 1;
+}*/
 
-}
-
-.main__home::after {
+/* .main__home::after {
     content: "";
     position: absolute;
     top: 0;
@@ -63,7 +62,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
     z-index: -1;
-}
+} */
 
 .imagenHeader {
     width: 100%;
@@ -78,16 +77,34 @@
     display: none;
 }
 
+.main__secondconteiner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
 .main__secondconteiner__p {
-    margin: auto;
+    /*margin: auto;
     text-align: center;
     max-width: 80%;
-    padding: 2.5%;
-    font-size: 35px;
+    padding: 2.5%;*/
+    font-size: 18px;
     /* font-family: 'Catamaran', sans-serif; */
     font-family: 'Dancing Script', cursive;
-    color: white;
-    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    color: black;
+    margin: 0;
+    /*text-shadow: 3px 3px 3px rgb(0, 0, 0);*/
+}
+
+.main__description {
+    color: black;
+    font-size: 16px;
+    text-align: center;
 }
 
 .main__secondconteiner__knowus {
@@ -96,28 +113,40 @@
 }
 
 .knowus {
-    color: #000000;
-    border: 1px solid goldenrod;
-    border-radius: none;
-    background-color: rgb(218, 165, 32);
-    text-align: center;
     text-decoration: none;
+    font-size: 14px;
+}
+
+.knowus__button {
+    color: white;
+    width: 100%;
+    background-color: black;
+    border: none;
+    margin: 15px 0px;
+    padding: 5px 10px;
+}
+
+.knowus__button:active {
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
 }
 
 
+.menu {
+    margin-bottom: 30px;
+}
+
 .menu__image {
-    /* background-image: url(../images/pastel-de-chocolate.jpg);
-    background-size: cover; */
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 90%;
+    background-image: url(../images/pastel-de-chocolate.jpg);
+    background-size: cover;
+    width: 100%;
     height: 30vh;
-    margin: 5vh 5%;
+    margin: 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu__image:hover {
+.menu__image:active {
     background-color:rgb(218, 165, 32, 0.5);
 }
 
@@ -162,7 +191,7 @@
 .lastconteiner__p {
     font-family: 'Dancing Script', cursive;
     color: #fbfaf8;
-    font-size: 40px;
+    font-size: 18px;
     text-shadow: 2px 2px 2px black;
 }
 
@@ -173,10 +202,6 @@
 
 
 @media (min-width: 481px) {
-    .knowus {
-        padding: 1% 3%;
-    }
-
     .main__secondconteiner__p {
         font-weight: 700;
     }
@@ -188,11 +213,19 @@
     .menu {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        padding: 0px 10px;
+    }
 
+    .menu__image {
+        height: 380px;
     }
 
     .main {
         margin: auto;
     }
 
+    .menu__image:hover {
+        background-color:rgb(218, 165, 32, 0.5);
+    }
 }
