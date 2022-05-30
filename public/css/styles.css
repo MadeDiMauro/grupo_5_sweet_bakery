@@ -42,27 +42,36 @@
 }
 
 
-/*.main__home { */
+.main__home {
     /* background-image:url(../images/img-fondo-home.webp); */
-    /* background-image: url(../images/pastelero-masa.webp);
+    background-image: url(../images/pastelero-masa.webp);
+    /* background-image: url(../images/chocolate-rustic.jpg); */
     background-size: cover;
-    background-position: center center;
+    background-position: bottom center;
     background-attachment: fixed;
-    background-color: white;
     position: relative;
+    top: 200px;
     z-index: 1;
-}*/
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
 
-/* .main__home::after {
+.main__home::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
-} */
+}
+
+.main__content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
 .imagenHeader {
     width: 100%;
@@ -82,8 +91,7 @@
     flex-wrap: wrap;
     width: 70%;
     margin: 0 auto;
-    margin-top: 30px;
-    padding: 20px;
+    padding: 40px 20px;
     justify-content: center;
     text-align: center;
 }
@@ -96,13 +104,13 @@
     font-size: 18px;
     /* font-family: 'Catamaran', sans-serif; */
     font-family: 'Dancing Script', cursive;
-    color: black;
+    color: white;
     margin: 0;
-    /*text-shadow: 3px 3px 3px rgb(0, 0, 0);*/
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
 .main__description {
-    color: black;
+    color: white;
     font-size: 16px;
     text-align: center;
 }
@@ -174,8 +182,8 @@
     background-image: url(../images/postre-frutillas.jpg);
     background-size: cover;
     width: 100%;
-    height: 30vh;
-    border-top: solid 5px rgb(70, 7, 1);
+    height: 45vh;
+    /* border-top: solid 5px rgb(125, 12, 2); */
 }
 
 .lastconteiner div {

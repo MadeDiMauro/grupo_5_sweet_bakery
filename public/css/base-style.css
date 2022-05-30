@@ -45,15 +45,16 @@ body {
 
 .ifHeaderh {
     width: 100% !important;
-    height: 500px;
+    height: 100vh !important;
     /* border-bottom: solid 5px goldenrod; */
-    border-bottom: solid 5px rgb(70, 7, 1);
+    /* border-bottom: solid 5px rgb(125, 12, 2); */
 }
 
 .ifFooterh {
     width: 100% !important;
     height: 380px;
-    position: static;
+    margin-top: 200px;
+    position: relative;
     bottom: 0;
 }
 
@@ -61,6 +62,150 @@ body {
 
 /*Desktop*/
 @media (min-width: 770px) {
+
+    /*----------------------------HEADER HOME-----------------------------*/
+    .headerh-version-desktop {
+        display: block;
+        /* display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap; */
+        background-image: url(/images/postre-frutillas.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 100vh;
+    }
+
+    /* .headerh-version-desktop::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+            } */
+
+    .headerh-version-tablet {
+        display: none;
+    }
+
+    .headerh-version-mobile {
+        display: none;
+    }
+
+
+    .menuh-nav {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        top: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .menuh-listado {
+        width: 95vw;
+        margin: 0px auto;
+        font-size: medium;
+        font-weight: bold;
+        color: white;
+        max-width: 1200px;
+        padding: 10px 10px 20px 10px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .menuh-accesos {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70%;
+    }
+
+    .menuh-accesos .menuh-products,
+    .menuh-contact,
+    .menuh-courses,
+    .menuh-search {
+        margin-left: 40px;
+    }
+
+    .menuh-accesos a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .menuh-accesos a:hover {
+        color: rgb(218, 165, 32, 0.5);
+    }
+
+    .menuh-cart {
+        width: 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menuh-cart button {
+        background-color: rgba(218, 165, 32, 0.8);
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .menuh-cart button:hover {
+        background-color: rgb(218, 165, 32, 0.5);
+    }
+
+    .menuh-cart i:hover {
+        color: rgb(218, 165, 32, 0.5);
+    }
+
+    .menuh-cart .fa-shopping-bag,
+    .fa-user {
+        color: rgba(218, 165, 32, 0.8);
+        font-size: 2em;
+    }
+
+    .menuh-logo {
+        width: 100%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .menuh-logo-img {
+        width: 45vh;
+    }
+
+    /*----------------------------FOOTER HOME-----------------------------*/
+
+    .footerh-version-desktop {
+        height: 380px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .footerh-version-tablet {
+        display: none;
+    }
+
+    .footerh-version-mobile {
+        display: none;
+    }
 
     /*----------------HEADER------------------------------*/
 
@@ -93,7 +238,7 @@ body {
     }
 
     .menu-listado {
-        width: 100% !important;
+        width: 95vw;
         height: auto;
         font-size: medium;
         font-weight: bold;
@@ -210,8 +355,8 @@ body {
 
 
     .footer-nav {
-        width: 100% !important;
         max-width: 1200px;
+        width: 95vw;
         height: auto;
         margin: auto;
         color: white;
@@ -344,137 +489,6 @@ body {
     }
 
 
-
-    /*----------------------------HEADER HOME-----------------------------*/
-    .headerh-version-desktop {
-        display: block;
-        /* display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap; */
-        background-image: url(/images/postre-frutillas.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        position: relative;
-        height: 500px;
-    }
-
-    /* .headerh-version-desktop::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-    } */
-
-    .menuh-nav {
-        display: flex;
-        position: relative;
-    }
-
-    .menuh-listado {
-        width: 100% !important;
-        height: auto;
-        font-size: medium;
-        font-weight: bold;
-        margin: auto;
-        color: white;
-        max-width: 1200px;
-        padding: 10px 10px 20px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-
-    }
-
-
-    .menuh-nav {
-        width: 100%;
-        margin: none;
-        padding: none;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
-    }
-
-    .menuh-accesos {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 70%;
-    }
-
-    .menuh-accesos .menuh-products,
-    .menuh-contact,
-    .menuh-courses,
-    .menuh-search {
-        margin-left: 40px;
-    }
-
-    .menuh-accesos a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    .menuh-accesos a:hover {
-        color: rgb(218, 165, 32, 0.5);
-    }
-
-    .menuh-cart {
-        width: 7%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menuh-cart button {
-        background-color: rgba(218, 165, 32, 0.8);
-        border: none;
-        color: white;
-        padding: 10px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-
-    .menuh-cart button:hover {
-        background-color: rgb(218, 165, 32, 0.5);
-    }
-
-    .menuh-cart i:hover {
-        color: rgb(218, 165, 32, 0.5);
-    }
-
-    .menuh-cart .fa-shopping-bag, .fa-user {
-        color: rgba(218, 165, 32, 0.8);
-        font-size: 2em;
-    }
-
-    .menuh-logo {
-        margin-top: 55px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menuh-logo-img {
-        width: 25%;
-    }
-
-    /*----------------------------FOOTER HOME-----------------------------*/
-
-    .footerh-version-desktop {
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        display: block;
-        background-color: rgb(0, 0, 0);
-    }
-
 }
 
 /*Tablet*/
@@ -518,6 +532,26 @@ body {
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
     }
 
+
+    /*--------------------FOOTER HOME------------------------------*/
+    .footerh-version-desktop {
+        display: none;
+    }
+
+    .footerh-version-tablet {
+        display: block;
+        height: 1250px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .footerh-version-mobile {
+        display: none;
+    }
+
+    .ifFooterh {
+        height: 1250px;
+    }
+
     /*----------------------HEADER---------------------------------*/
     .ifHeader {
         width: 100% !important;
@@ -553,7 +587,7 @@ body {
     }
 
     .menu-listado-tablet {
-        width: 100% !important;
+        width: 95vw;
         height: auto;
         font-size: medium;
         font-weight: bold;
@@ -638,6 +672,7 @@ body {
         margin: 0px;
         padding: 0px;
         display: block;
+        height: 1250px;
     }
 
     .footer-version-mobile {
@@ -646,7 +681,7 @@ body {
 
 
     .footer-nav-tablet {
-        width: 100% !important;
+        width: 100%;
         height: auto;
         margin: auto;
         color: white;
@@ -758,6 +793,8 @@ body {
         width: 100%;
         margin-top: 50px;
     }
+
+
 }
 
 /*Mobile*/
@@ -787,6 +824,26 @@ body {
     .ifHeaderh {
         width: 100% !important;
         height: 400px;
+    }
+
+
+    /*-----------------------FOOTER HOME --------------------------*/
+    .footerh-version-desktop {
+        display: none;
+    }
+
+    .footerh-version-tablet {
+        display: none;
+    }
+
+    .footerh-version-mobile {
+        display: block;
+        height: 800px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .ifFooterh {
+        height: 800px;
     }
 
     /*-----------------------HEADER--------------------------------*/
