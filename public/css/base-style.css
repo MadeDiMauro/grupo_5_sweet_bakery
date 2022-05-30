@@ -45,7 +45,7 @@ body {
 
 .ifHeaderh {
     width: 100% !important;
-    height: 100vh !important;
+    height: 100vh;
     /* border-bottom: solid 5px goldenrod; */
     /* border-bottom: solid 5px rgb(125, 12, 2); */
 }
@@ -53,7 +53,7 @@ body {
 .ifFooterh {
     width: 100% !important;
     height: 380px;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     position: relative;
     bottom: 0;
 }
@@ -185,7 +185,7 @@ body {
     }
 
     .menuh-logo-img {
-        width: 45vh;
+        width: 30vh;
     }
 
     /*----------------------------FOOTER HOME-----------------------------*/
@@ -823,7 +823,7 @@ body {
 
     .ifHeaderh {
         width: 100% !important;
-        height: 400px;
+        height: 400px !important;
     }
 
 
