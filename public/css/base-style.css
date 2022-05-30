@@ -225,7 +225,7 @@ body {
         z-index: 100;
         background-color: black;
         display: block;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
         padding-top: 20px;
     }
 
@@ -340,7 +340,7 @@ body {
         padding: 0px;
         display: block;
         background: rgb(0, 0, 0);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%); */
     }
 
     .footer-version-tablet {
@@ -573,7 +573,7 @@ body {
         z-index: 100;
         background-color: black;
         background: rgb(0, 0, 0);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
     }
 
     .header-version-mobile {
@@ -686,7 +686,7 @@ body {
         margin: auto;
         color: white;
         background: rgb(0, 0, 0);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%); */
         padding: 200px 30px 30px 30px;
 
         /*box-shadow: 1px -6px 5px -3px rgba(0, 0, 0, 0.61);
@@ -873,7 +873,7 @@ body {
     .menu-nav-mobile {
         background-color: black;
         background: rgb(0, 0, 0);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
         padding: 30px;
     }
 
@@ -957,7 +957,7 @@ body {
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(2, 0, 33, 0.7203256302521008) 100%);
         */
         background: rgb(0, 0, 0);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%);
+        /* background: linear-gradient(0deg, rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 1) 47%, rgba(0, 0, 0, 0.7234244039412641) 73%, rgba(0, 0, 0, 0.50773812943146) 85%, rgba(0, 0, 0, 0) 100%); Este va! */
         /*background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 3, 0.6449930313922444) 66%, rgba(2, 0, 33, 0) 100%);*/
     }
 
