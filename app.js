@@ -21,11 +21,11 @@ const footerhPath = path.join(__dirname, "./views/plantillas/footer-home.html");
 
 const PORT = process.env.PORT || 3000;
 
+app.set ("view engine", "ejs");
+app.set ("views", path.join (__dirname, "views"));
+
 app.use(express.static(publicPath));
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
 
 app.get("/", (req, res) => {
 res.sendFile(homePath);
@@ -77,4 +77,8 @@ app.get("/headerh", (req, res) => {
 
 app.get("/footerh", (req, res) => {
 	res.sendFile(footerhPath);
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
