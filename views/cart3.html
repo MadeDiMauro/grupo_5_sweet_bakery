@@ -83,16 +83,16 @@
 
                     <div class="billing__credit-info">
                         <div class="billing__credit-info-div">
-                            <label for="expiration">Vencimiento *</label>
-                            <input type="number" name="expiration" id="expiration" required>
+                            <label  for="expiration">Vencimiento *</label>
+                            <input class="billing__input" type="number" name="expiration" id="expiration" required>
                         </div>
-                        <div>
-                            <label for="cvv">CVV *</label>
-                            <input type="number" name="cvv" id="cvv" required>
+                        <div class="billing__credit-info-div">
+                            <label  for="cvv">CVV *</label>
+                            <input class="billing__input" type="number" name="cvv" id="cvv" required>
                         </div>
-                        <div>
-                            <label for="mensual-fee">Cuotas *</label>
-                            <select name="mensual-fee" id="mensual-fee">
+                        <div class="billing__credit-info-div">
+                            <label  for="mensual-fee">Cuotas *</label>
+                            <select class="billing__select" name="mensual-fee" id="mensual-fee">
                                 <option value="1">1</option>
                                 <option value="3">3</option>
                                 <option value="6">6</option>
@@ -105,16 +105,16 @@
 
                     <div class="billing__dni">
                         <div class="billing__dni-div">
-                            <label for="document">Documento *</label>
-                            <select name="document" id="document" required>
+                            <label class="billing__label" for="document">Documento *</label>
+                            <select class="billing__select" name="document" id="document" required>
                                 <option value="dni">DNI</option>
                                 <option value="le">Libreta de Enrolamiento</option>
                                 <option value="lc">Libreta Cívica</option>
                             </select>
                         </div>
-                        <div>
-                            <label for="doc-number">Número de documento *</label>
-                            <input type="number" name="doc-number" id="doc-number" required>
+                        <div class="billing__dni-div">
+                            <label class="billing__label" for="doc-number">Número de documento *</label>
+                            <input class="billing__input" type="number" name="doc-number" id="doc-number" required>
                         </div>
                     </div>
                 </form>

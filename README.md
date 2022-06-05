@@ -50,3 +50,11 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 - Mobile: 0px a 480px
 - Tablet: 481px a 768px
 - Desktop: 769px a 1279px
+
+### Índice y rutas del proyecto
+- Home: http://localhost:3000/
+- Listado de productos: http://localhost:3000/products
+- Detalle de producto: http://localhost:3000/productDetail
+- Carrito de compras: | Paso 1: http://localhost:3000/cart1 | Paso 2: http://localhost:3000/cart2 | Paso 3: http://localhost:3000/cart3 |
+- Login: http://localhost:3000/login
+- Resgitro: http://localhost:3000/register

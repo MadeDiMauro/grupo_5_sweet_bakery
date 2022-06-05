@@ -23,6 +23,7 @@ body {
 
 main {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -33,7 +34,10 @@ main {
     flex-wrap: nowrap;
     justify-content: space-around;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
     margin-bottom: 25px;
+    padding: 15px;
 }
 
 .step__two {
@@ -43,7 +47,7 @@ main {
 .step__one,
 .step__two,
 .step__three {
-    width: 30%;
+    width: 50%;
 }
 
 .step__decoration {
@@ -55,7 +59,7 @@ main {
 }
 
 .step__div-hr {
-    width: 30%;
+    width: 25%;
 }
 
 .step__hr{
@@ -63,7 +67,7 @@ main {
 } 
 
 .step__div-icon {
-    width: 20%;
+    width: 15%;
     display: flex;
     justify-content: center;
 }
@@ -195,10 +199,6 @@ main {
 }
 
 @media (min-width: 769px) {
-    main {
-        max-width: 1200px;
-    }
-
     .container {
         display: flex;
         flex-wrap: nowrap;
