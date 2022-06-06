@@ -1,7 +1,14 @@
-const express = require("express");
 const path = require("path");
-
+const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {`Servidor corriendo en el puerto ${PORT}`});
+
+app.set ("view engine", "ejs");
+app.set ("views", path.join (__dirname, "views"));
+
+app.use(express.static(publicPath));
 
 const publicPath = path.join(__dirname, "./public");
 const homePath = path.join(__dirname, "./views/home.html");
@@ -19,13 +26,6 @@ const footerPath = path.join(__dirname, "./views/plantillas/footer.html");
 const headerhPath = path.join(__dirname, "./views/plantillas/header-home.html");
 const footerhPath = path.join(__dirname, "./views/plantillas/footer-home.html");
 
-const PORT = process.env.PORT || 3000;
-
-app.use(express.static(publicPath));
-
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
 
 app.get("/", (req, res) => {
 res.sendFile(homePath);
