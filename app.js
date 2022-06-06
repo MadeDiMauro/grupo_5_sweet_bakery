@@ -78,3 +78,39 @@ app.get("/headerh", (req, res) => {
 app.get("/footerh", (req, res) => {
 	res.sendFile(footerhPath);
 });
+
+// const routesProducts = require('./routes/products');
+// const routesCart = require('./routes/cart');
+// const routesUsers = require('./routes/users');
+// const routesMain = require('./routes/main');
+
+// app.use('/products', routesProducts);
+// app.use('/cart', routesCart);
+// app.use('/users', routesUsers);
+// app.use('/', routesMain);
+
+const adminProfile = path.join(__dirname, "./views/adminProfile.html");
+const adminProducts = path.join(__dirname, "./views/adminProducts.html");
+const adminCreate = path.join(__dirname, "./views/adminCreate.html");
+const adminProductsList = path.join(__dirname, "./views/adminProductsList.html");
+const adminProductEdit = path.join(__dirname, "./views/adminProductEdit.html");
+
+app.get("/adminProfile", (req, res) => {
+    res.sendFile(adminProfile);
+});
+
+app.get("/adminProducts", (req, res) => {
+    res.sendFile(adminProducts);
+});
+
+app.get("/adminCreate", (req, res) => {
+    res.sendFile(adminCreate);
+});
+
+app.get("/adminProductsList", (req, res) => {
+    res.sendFile(adminProductsList);
+});
+
+app.get("/adminProductEdit", (req, res) => {
+    res.sendFile(adminProductEdit);
+});

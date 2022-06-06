@@ -1,0 +1,140 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    width: 100%;
+}
+
+.admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+    height: 100vh;
+    background-color: black;
+}
+
+.admin__div-avatar{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.admin__span-avatar {
+    display: none;
+    /* background-color: darkgray;
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid white; */
+}
+
+.admin__img-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.admin__button {
+    background-color: transparent;
+    border: none;
+}
+
+.admin__a {
+    padding: 10px;
+}
+
+.admin__a:not(.admin__img-avatar:last-child){
+    border-bottom: 1px solid white;
+}
+
+.admin__a:active {
+    background-color: rgb(218, 165, 32, 0.6);
+}
+
+.admin__span {
+    display: none;
+}
+
+.admin__icon {
+    color: white;
+}
+
+.admin__container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.adminTitle {
+    margin: 15px 0px;
+}
+
+.adminTitle__p {
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.productsList {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.productsList__img {
+    width: 32%;
+}
+
+.productsList__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 53%;
+}
+
+.productsList__name {
+    font-weight: 600;
+}
+
+.productsList__category,
+.productsList__price {
+    font-size: 14px;
+}
+
+.productsList__buttons {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: flex-end;
+    width: 8%;
+}
+
+.productsList__button-edit,
+.productsList__button-remove {
+    width: 45%;
+    background-color: transparent;
+    border: none;
+}
+
+.productsList__span {
+    display: none;
+}
