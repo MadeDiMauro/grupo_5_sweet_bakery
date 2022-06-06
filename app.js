@@ -3,14 +3,15 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {`Servidor corriendo en el puerto ${PORT}`});
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
 
 app.set ("view engine", "ejs");
 app.set ("views", path.join (__dirname, "views"));
 
-app.use(express.static(publicPath));
+app.use(express.static(path.join(__dirname, "public")));
 
-const publicPath = path.join(__dirname, "./public");
 const homePath = path.join(__dirname, "./views/home.html");
 const productPath = path.join(__dirname, "./views/products.html");
 const productDetailPath = path.join(__dirname, "./views/productDetail.html");
