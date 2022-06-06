@@ -35,7 +35,51 @@
 </div>
     <div class="main-product-detail">
 
-    <div class="product-name1"><p>NOMBRE DEL PRODUCTO </p>
+        <% for (let i=0; i< productsList.length; i ++) { %>
+        <div class="product-name1"><p><%= productsList [i].name %></p>
+            <div class="price1"><p><%=productsList [i].price %></p></div>
+        </div>
+        <div= class="product-detail">     
+        <img src='<%= productsList[i].image %>' alt=productsList[i].name %>>
+        </div>
+    
+        <div class="product-description">
+                <p class="description">Descripción del Producto</p>
+                <p class="text"> <%= productsList [i].description %></p>
+                <% } %>
+                <p class="q">Cantidad</p>
+                <div class="quantity">
+                    <button><i class="fas fa-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="payment">VER MEDIOS DE PAGO</div>
+        <div class="product-buy"><a href="/cart1"><button type="submit">AGREGAR AL CARRITO</button></a> 
+        </div>
+        </div>
+        </div>
+        </section>
+        <div class="productos-relacionados">
+            <div class="productos-relacionados-title"><p class="titulo2">PRODUCTOS RELACIONADOS</p>
+                <hr>
+            </div>
+
+            <% for (let i=0; i< productsList.length; i ++) { %>
+            <article>
+            <a href='/detailProduct/<%= product.id %>'><img class="img-product" src='<%= productsList[i].image %>' alt=productsList[i].name %>></a>
+             <div class="product-info">
+            <p class="products__name"><%= productsList [i].name %></p>
+            <p class="products__price"><%=productsList [i].price %></p>
+            <% } %>
+            <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+             </div>
+             </article>
+
+            </div>
+        </main>
+
+
+    <!--<div class="product-name1"><p>NOMBRE DEL PRODUCTO </p>
         <div class="price1"><p>$1.00</p></div>
     </div>
     
@@ -88,8 +132,11 @@
         </article>
 
         </div>
-    </main>
+        </main>
+
+          -->
 </body>
+
 <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0" marginheight="0"
     marginwidth="0" scrolling="no"></iframe>
 

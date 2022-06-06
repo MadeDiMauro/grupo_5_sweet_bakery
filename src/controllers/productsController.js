@@ -17,7 +17,8 @@ const productsController = {
         return res.render ("products", {productsList:productsList})
     },
     productDetail: (req,res)=> {
-        return res.render ('productDetail', {productsList:productsList}) // validacion y sin objeto completo
+        let productItem=productsList.find (item=>item.id==req.params.id);
+        return res.render ('productDetail', {item:productItem}) // validacion y sin objeto completo
     },
     create: (req, res) => {
         return res.render ('create')

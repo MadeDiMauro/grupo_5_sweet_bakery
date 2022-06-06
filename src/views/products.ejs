@@ -72,7 +72,26 @@
                 </form>
             </section>
 
-
+            <div class="products">
+            <article class="products__article">
+                        <% for (let i=0; i< productsList.length; i ++) { %>
+                        <img class="products__img" src='<%= productsList[i].image %>' alt=productsList[i].name %>>
+                        <div class="products__div-info">
+                        <p class="products__name"><%= productsList [i].name %></p>
+                        <p class="products__price"><%=productsList [i].price %></p>
+                        <% } %>
+                        <a class="products__a" href="/cart1">
+                        <button class="products__button-add" type="submit">
+                        AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+                        </button>
+                    </a>
+                </div>
+            </article>
+            </div>
+            </section>
+            </main> 
+                
+<!--
             <div class="products">
                 <article class="products__article">
                     <img class="products__img" src="/images/mini-frutos-del-bosque.jpg" alt="Alfajores XL">
@@ -83,7 +102,7 @@
                             <button class="products__button-add" type="submit">
                                 AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
                             </button>
-                        </a>
+                        </a> 
                     </div>
                 </article>
 
@@ -830,8 +849,7 @@
                 </article>
             </div>
         </section>
-
-    </main>
+    </main> -->
 
     <footer>
         <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
