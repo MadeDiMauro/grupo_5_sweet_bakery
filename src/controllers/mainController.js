@@ -1,4 +1,7 @@
 const mainController = {
+    home: (req, res) => {
+        return res.render ('home')
+    },
     about: (req, res) => {
         return res.render ('about')
     },
@@ -7,6 +10,9 @@ const mainController = {
     },
     giftcard: (req,res) => {
         return res.render ('giftcard')
+    },
+    base: (req, res) => {
+        return res.render ('base')
     }
 
 }

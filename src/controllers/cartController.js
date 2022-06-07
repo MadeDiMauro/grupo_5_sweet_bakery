@@ -1,7 +1,7 @@
 const fs= require ("fs");
 const path=require ("path");
 
-const productosLpPath=path.join (__dirname, "../Lp/productos.json");
+const productosdbPath=path.join (__dirname, "../database/productos.json");
 
 const readJsonFile= (path)=> {
     const data=fs.readFileSync (path, "utf-8");
@@ -9,9 +9,11 @@ const readJsonFile= (path)=> {
     return dataParsed;
 }
 
+let productsList = readJsonFile(productosdbPath); 
+
 const cartController = {
     cart1: (req,res) => {
-      return res.render('cart1', {listaProductos:listaProductos})  
+      return res.render("cart1", { listaProductos: productsList });  
     },
     cart2: (req, res) => {
         return res.render('cart2')
