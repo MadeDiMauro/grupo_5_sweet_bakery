@@ -28,13 +28,13 @@ body {
 }
 
 /*Estilos del Iframe Header*/
-.ifHeader {
+.body-header {
     width: 100% !important;
     height: 220px;
 }
 
 /*Estilos del Iframe footer*/
-.ifFooter {
+.body-footer {
     width: 100% !important;
     height: 380px;
     position: static;
@@ -43,15 +43,16 @@ body {
 
 /*Estilos del home header y footer*/
 
-.ifHeaderh {
+.body-headerh {
     width: 100% !important;
     height: 100vh;
     /* border-bottom: solid 5px goldenrod; */
     /* border-bottom: solid 5px rgb(125, 12, 2); */
 }
 
-.ifFooterh {
+.body-footerh {
     width: 100% !important;
+    background-color: black;
     height: 380px;
     /* margin-top: 200px; */
     position: relative;
@@ -74,7 +75,7 @@ body {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        position: relative;
+
         height: 100vh;
     }
 
@@ -99,7 +100,7 @@ body {
 
     .menuh-nav {
         width: 100%;
-        height: 500px;
+        height: 100vh;
         position: relative;
         top: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
@@ -180,18 +181,18 @@ body {
 
     .menuh-logo {
         width: 100%;
-        margin-top: 10%;
+        height: 100%;
         text-align: center;
     }
 
     .menuh-logo-img {
-        width: 30vh;
+        width: 320px;
     }
 
     /*----------------------------FOOTER HOME-----------------------------*/
 
     .footerh-version-desktop {
-        height: 380px;
+        height: auto;
         width: 100%;
         margin: 0px;
         padding: 0px;
@@ -503,7 +504,7 @@ body {
     }
 
     /*----------------------HEADER HOME-----------------------------*/
-    .ifHeaderh {
+    .body-headerh {
         width: 100% !important;
         height: 500px;
     }
@@ -548,12 +549,14 @@ body {
         display: none;
     }
 
-    .ifFooterh {
+    .body-footerh {
+        background-color: black;
+        width: 100%;
         height: 1250px;
     }
 
     /*----------------------HEADER---------------------------------*/
-    .ifHeader {
+    .body-header {
         width: 100% !important;
         height: 350px;
     }
@@ -658,7 +661,7 @@ body {
     }
 
     /*----------------------FOOTER---------------------------------*/
-    .ifFooter {
+    .body-footer {
         height: 1250px;
     }
 
@@ -821,7 +824,7 @@ body {
         background-color: black;
     }
 
-    .ifHeaderh {
+    .body-headerh {
         width: 100% !important;
         height: 400px !important;
     }
@@ -842,14 +845,15 @@ body {
         background-color: rgb(0, 0, 0);
     }
 
-    .ifFooterh {
+    .body-footerh {
+        width: 100%;
         height: 800px;
     }
 
     /*-----------------------HEADER--------------------------------*/
 
     /*Estilos del Iframe Header*/
-    .ifHeader {
+    .body-header {
         width: 100% !important;
         height: 400px;
     }
@@ -941,7 +945,7 @@ body {
     }
 
 
-    .ifFooter {
+    .body-footer {
         height: 800px;
     }
 

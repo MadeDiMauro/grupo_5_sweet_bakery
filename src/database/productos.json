@@ -4,7 +4,8 @@
         "name": "Cheesecake",
         "price": "$ 0.00",
         "description":"Cremoso y compacto, su base es de cookies y su cobertura de confitura de frutos rojos.20 cm: rinde 10/12 porciones",
-        "image":"/images/black_cake.jpg"
+        "image":"cake-chocolate.jpg",
+        "category": "postres"
     },
 
     {
@@ -12,7 +13,7 @@
         "name": "Tiramisú",
         "price": "$ 0.00",
         "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
-        "image":"/images/cake-chocolate.jpg"
+        "image":"cake-chocolate.jpg"
    },
    
    {
@@ -20,7 +21,7 @@
        "name": "Lemon pie",
        "price": "$ 0.00",
        "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano. 20cm: rinde 8/10 porciones",
-       "image": "/images/"
+       "image": "cake-chocolate.jpg"
    },
 
    {
@@ -28,7 +29,7 @@
        "name": "Tarta de Frutillas",
        "price": "$ 0.00",
        "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas. 20cm: rinde 8/10 porciones",
-       "image": "/images/"
+       "image": "cake-chocolate.jpg"
    },
 
    {
@@ -36,7 +37,7 @@
        "name": "Brownie",
        "price": "$ 0.00",
        "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano.18 cm: rinde 10/12 porciones",
-       "image": "/images/"
+       "image": "cake-chocolate.jpg"
     },
 
     {
@@ -44,7 +45,7 @@
         "name": "Tarta de frutos del bosque",
         "price": "$ 0.00",
         "description": "Masa sable breton de chocolate rellena con crema pastelera y frutos del bosque. 20cm: rinde 8/10 porciones",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg"
     },
 
     {
