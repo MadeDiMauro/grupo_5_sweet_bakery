@@ -35,17 +35,17 @@
 </div>
     <div class="main-product-detail">
 
-        <% for (let i=0; i< productsList.length; i ++) { %>
-        <div class="product-name1"><p><%= productsList [i].name %></p>
-            <div class="price1"><p><%=productsList [i].price %></p></div>
+        <% for (let i=0; i<productsList.length; i ++) { %>
+        <div class="product-name1"><p><%=productItem.name %></p>
+            <div class="price1"><p><%=productItem.price %></p></div>
         </div>
         <div= class="product-detail">     
-        <img src='<%= productsList[i].image %>' alt=productsList[i].name %>>
+        <img src='/images/<%=productItem.image %>' alt='<%=productItem.name %>'>
         </div>
     
         <div class="product-description">
                 <p class="description">Descripción del Producto</p>
-                <p class="text"> <%= productsList [i].description %></p>
+                <p class="text"> <%=productItem.description%></p>
                 <% } %>
                 <p class="q">Cantidad</p>
                 <div class="quantity">
@@ -64,17 +64,16 @@
                 <hr>
             </div>
 
-            <% for (let i=0; i< productsList.length; i ++) { %>
+            <% for (let i=0; i<productsList.length; i ++) { %>
             <article>
-            <a href='/detailProduct/<%= product.id %>'><img class="img-product" src='<%= productsList[i].image %>' alt=productsList[i].name %>></a>
+            <a href='/detailProduct/<%=product.id %>'><img class="img-product" src='/images/<%=productsList[i].image %>' alt=productsList[i].name %>></a>
              <div class="product-info">
-            <p class="products__name"><%= productsList [i].name %></p>
+            <p class="products__name"><%=productsList [i].name %></p>
             <p class="products__price"><%=productsList [i].price %></p>
-            <% } %>
             <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
              </div>
              </article>
-
+             <% } %>
             </div>
         </main>
 
