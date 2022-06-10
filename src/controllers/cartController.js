@@ -13,13 +13,13 @@ let productsList = readJsonFile(productosdbPath);
 
 const cartController = {
     cart1: (req,res) => {
-      return res.render("cart1", { listaProductos: productsList });  
+      return res.render("cart/cart1", { listaProductos: productsList });  
     },
     cart2: (req, res) => {
-        return res.render('cart2')
+        return res.render('cart/cart2')
     },
     cart3: (req, res) => {
-        return res.render('cart3')
+        return res.render('cart/cart3')
     },
 
 }

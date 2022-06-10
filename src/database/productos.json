@@ -13,7 +13,8 @@
         "name": "Tiramisú",
         "price": "$ 0.00",
         "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
-        "image":"cake-chocolate.jpg"
+        "image":"cake-chocolate.jpg",
+        "category": "postres"
    },
    
    {
@@ -21,7 +22,8 @@
        "name": "Lemon pie",
        "price": "$ 0.00",
        "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano. 20cm: rinde 8/10 porciones",
-       "image": "cake-chocolate.jpg"
+       "image": "cake-chocolate.jpg",
+        "category": "postres"
    },
 
    {
@@ -29,7 +31,9 @@
        "name": "Tarta de Frutillas",
        "price": "$ 0.00",
        "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas. 20cm: rinde 8/10 porciones",
-       "image": "cake-chocolate.jpg"
+       "image": "cake-chocolate.jpg",
+       "category": "postres"
+
    },
 
    {

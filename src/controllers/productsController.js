@@ -20,23 +20,24 @@ const productsController = {
 						);
             //return res.json(productsList);
             console.log(productsListCategory);
-            return res.render("products", { productsList: productsListCategory });
+            return res.render("products/products", { productsList: productsListCategory });
         } else {
-            return res.render("products", { productsList: productsList });
+            return res.render("products/products", { productsList: productsList });
         }
         
     },
     detail: (req,res)=> {
-        let productItem=productsList.find (item => item.id==req.params.id);
-        return res.render ('productDetail', {item:productItem}) // validacion y sin objeto completo
+        let productItem = productsList.find (item => item.id==req.params.id);
+        let productsRelated = productsList.filter (item => item.category == productItem.category);
+        return res.render ('products/productDetail', {productItem : productItem, productsRelated : productsRelated}) // validacion y sin objeto completo
     },
     create: (req, res) => {
-        return res.render ('create')
+        return res.render ('products/create')
     },
     edit: (req, res) => {
         let productItem = productsList.find((item) => item.id == req.params.id);
-        return res.render ('edit', {productsList:productsList}) //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
-    },
+        return res.render ('products/edit', {productsList:productsList}) //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
+    }
 
 }
 

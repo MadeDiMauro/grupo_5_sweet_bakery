@@ -1,19 +1,16 @@
 const mainController = {
     home: (req, res) => {
-        return res.render ('home')
+        return res.render ('main/home')
     },
     about: (req, res) => {
-        return res.render ('about')
+        return res.render ('main/about')
     },
     contact: (req, res) => {
-        return res.render ('contact')
+        return res.render ('main/contact')
     },
     giftcard: (req,res) => {
-        return res.render ('giftcard')
-    },
-    base: (req, res) => {
-        return res.render ('base')
-    }
+        return res.render ('main/giftcard')
+    }    
 
 }
 

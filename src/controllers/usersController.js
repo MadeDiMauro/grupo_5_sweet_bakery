@@ -1,14 +1,15 @@
 const usersController = {
 
   login: (req,res) => {
-      return  res.render ('home')    
+      return  res.render ('users/login')    
     },
   register: (req,res) => {
-      return  res.render ('register')
+      return  res.render ('users/register')
     },
-    profile: (req,res) => {
+   /* profile: (req,res) => {
       return  res.render ('profile')
-    },
+    }
+    */
 }
 
 module.exports= usersController;

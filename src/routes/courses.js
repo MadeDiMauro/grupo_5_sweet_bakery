@@ -6,3 +6,4 @@ router.get('/list', coursesController.list);
 router.get('/detail/:id', coursesController.detail);
 
 module.exports = router;
+

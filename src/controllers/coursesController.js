@@ -2,11 +2,12 @@ const path=require ("path");
 
 const coursesController = {
     list: (req, res) => {
-        return res.send('Soy cursos');
+        return res.render('courses/courses');
     },
     detail: (req, res) => {
-        res.send('Soy el detalle de cursos');
+        return res.render('courses/detail');
     }
 }
 
 module.exports = coursesController;
+
