@@ -13,7 +13,7 @@ const productsList = readJsonFile(productsdbPath);
 
 const adminController = {
     adminPage: (req, res) => {
-        res, render('users/admin/adminProducts');
+        res.render('users/admin/adminProducts');
     },
     editList: (req, res) => {
         res.render('users/admin/adminProductsList', { productsList });

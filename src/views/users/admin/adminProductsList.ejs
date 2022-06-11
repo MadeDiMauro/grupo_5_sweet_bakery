@@ -24,8 +24,9 @@
                     </div>
 
                     <article class="productsList">
-                        <div class="productsList__div">
                         <% for(let i=0; i < productsList.length; i++) { %>
+                        <div class="productsList__div">
+                        
                             <img class="productsList__img" src="/images/<%= productsList[i].image %>"
                                 alt="<%= productsList[i].name %>">
                             <div class="productsList__info">
@@ -48,9 +49,9 @@
                                     </button>
                                 </a>
                             </div>
-                            <% } %>
+                            
                         </div>
-                        
+                        <% } %>
                     </article>
 
                 </div>

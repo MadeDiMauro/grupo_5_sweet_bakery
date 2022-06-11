@@ -39,12 +39,13 @@
                     <!-- </div> -->
                 </article>
 
+                <% for(let i = 0; i < 3; i++) { %>
             <article class="product__article">
-                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
+                <img class="product__img" src="/images/<%= productsList[i].image %>" alt="<%= productsList[i].name %>">
                 <div class="product__info">
                     <!-- <div class="product__div-name"> -->
-                        <p class="product__name">Cookie de chocolate</p>
-                        <p class="product__price">$0.00</p>
+                        <p class="product__name"><%= productsList[i].name %></p>
+                        <p class="product__price"><%= productsList[i].price %></p>
                     <!-- </div> -->
                     <div class="product__div-quantity">
                         <div class="product__quantity">
@@ -68,64 +69,7 @@
                     </button>
                 </div>
             </article>
-
-            <article class="product__article">
-                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                <div class="product__info">
-                    <p class="product__name">Cookie de chocolate</p>
-                    <p class="product__price">$0.00</p>
-                    <div class="product__div-quantity">
-                        <div class="product__quantity">
-                            <button class="product__button-less">
-                                <i class="product__icon fas fa-minus"></i>
-                            </button>
-                            <span class="product__span">1</span>
-                            <button class="product__button-add">
-                                <i class="product__icon fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product__total">
-                    <div class="product__div-total">
-                        <p class="product__total-title">Total</p>
-                        <p class="product__price">$0.00</p>
-                    </div>
-                    <button class="product__button-remove" type="reset">
-                        <i class="product__icon-trash fas fa-trash-alt"></i>
-                    </button>
-                </div>
-            </article>
-
-            <article class="product__article">
-                <img class="product__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                <div class="product__info">
-                    <p class="product__name">Cookie de chocolate</p>
-                    <p class="product__price">$0.00</p>
-                    <div class="product__div-quantity">
-                        <div class="product__quantity">
-                            <button class="product__button-less">
-                                <i class="product__icon fas fa-minus"></i>
-                            </button>
-                            <span class="product__span">1</span>
-                            <button class="product__button-add">
-                                <i class="product__icon fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product__total">
-                    <div class="product__div-total">
-                        <p class="product__total-title">Total</p>
-                        <p class="product__price">$0.00</p>
-                    </div>
-                    <button class="product__button-remove" type="reset">
-                        <i class="product__icon-trash fas fa-trash-alt"></i>
-                    </button>
-                </div>
-            </article>
-
-
+            <% } %>
 
             <div class="container-code-checkout">
                 <div class="code">
