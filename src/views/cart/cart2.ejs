@@ -23,46 +23,7 @@
     </section>
 
     <main>
-        <div class="step">
-            <div class="step__one">
-                <p>PASO 1</p>
-                <p>Carrito de compra</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__two">
-                <p>PASO 2</p>
-                <p>Completar datos</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__three">
-                <p>PASO 3</p>
-                <p>Finalizar compra</p>
-            </div>
-        </div>
+        <%- include('../partials/cartSteps') %>
 
         <section class="container">
             <div class="contact">
@@ -202,11 +163,11 @@
                     </div>
 
                     <div class="buy">
-                        <a class="buy__a" href="/cart3">
+                        <a class="buy__a" href="/cart/3">
                             <button class="buy__button" type="submit">CONTINUAR
                                 COMPRA</button>
                         </a>
-                        <a class="buy__a" href="/products">Ver más productos</a>
+                        <a class="buy__a" href="/products/list">Ver más productos</a>
                     </div>
                 </div>
             </div>

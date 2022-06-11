@@ -94,6 +94,13 @@ main {
 
 .productsList {
     display: flex;
+    flex-direction: column;
+    
+}
+
+.productsList__div {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid lightgray;

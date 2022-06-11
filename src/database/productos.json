@@ -57,7 +57,7 @@
          "name": "Crumble de manzana",
          "price": "$ 0.00",
          "description": "Base de tarta dulce con relleno esponjoso de pure de manzana, con miel, un toque de canela y cubierta con un crocante stroisel. 20cm: rinde 8/10 porciones",
-         "image": "/images/"
+         "image": "cake-chocolate.jpg"
     
     },
 
@@ -66,7 +66,7 @@
         "name": "Rogel",
         "price": "$ 0.00",
         "description": "Finos discos de masa crocante rogel, dulce de leche y el clásico merengue Italiano. 20cm: rinde 8/10 porciones",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg"
     
     },
 

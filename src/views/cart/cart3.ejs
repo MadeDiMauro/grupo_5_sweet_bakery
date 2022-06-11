@@ -23,46 +23,7 @@
     </section>
 
     <main>
-        <div class="step">
-            <div class="step__one">
-                <p>PASO 1</p>
-                <p>Carrito de compra</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__two">
-                <p>PASO 2</p>
-                <p>Completar datos</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__three">
-                <p>PASO 3</p>
-                <p>Finalizar compra</p>
-            </div>
-        </div>
+        <%- include('../partials/cartSteps') %>
 
         <section class="container3">
             <div class="billing">
@@ -79,16 +40,16 @@
                     </div>
 
                     <label class="billing__label" for="cedit-number">Número de tarjeta *</label>
-                    <input class="billing__input" type="number" name="cedit-number" id="cedit-number" required>
+                    <input class="billing__input" type="text" name="cedit-number" id="cedit-number" required>
 
                     <div class="billing__credit-info">
                         <div class="billing__credit-info-div">
                             <label  for="expiration">Vencimiento *</label>
-                            <input class="billing__input" type="number" name="expiration" id="expiration" required>
+                            <input class="billing__input" type="text" name="expiration" id="expiration" required>
                         </div>
                         <div class="billing__credit-info-div">
                             <label  for="cvv">CVV *</label>
-                            <input class="billing__input" type="number" name="cvv" id="cvv" required>
+                            <input class="billing__input" type="text" name="cvv" id="cvv" required>
                         </div>
                         <div class="billing__credit-info-div">
                             <label  for="mensual-fee">Cuotas *</label>
@@ -113,8 +74,8 @@
                             </select>
                         </div>
                         <div class="billing__dni-div">
-                            <label class="billing__label" for="doc-number">Número de documento *</label>
-                            <input class="billing__input" type="number" name="doc-number" id="doc-number" required>
+                            <label class="billing__label" for="doc-number">Nº de documento *</label>
+                            <input class="billing__input" type="text" name="doc-number" id="doc-number" required>
                         </div>
                     </div>
                 </form>

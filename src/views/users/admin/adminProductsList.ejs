@@ -14,92 +14,48 @@
 </head>
 
 <body>
-    <header>
-        <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0"
-            marginheight="0" marginwidth="0" scrolling="no"></iframe>
-    </header>
     <main>
         <section class="admin">
-            <div class="admin__menu">
-                <div class="admin__div-avatar">
-                    <span class="admin__span-avatar">ADMIN</span>
-                    <img class="admin__img-avatar" src="/images/avatar1.jpg" alt="Profile avatar">
+            <!--PARTIAL NAVBAR-->
+            <%- include('../../partials/navbarAdmin') %>
+                <div class="admin__container">
+                    <div class="adminTitle">
+                        <p class="adminTitle__p">EDITAR PRODUCTOS</p>
+                    </div>
+
+                    <article class="productsList">
+                        <div class="productsList__div">
+                        <% for(let i=0; i < productsList.length; i++) { %>
+                            <img class="productsList__img" src="/images/<%= productsList[i].image %>"
+                                alt="<%= productsList[i].name %>">
+                            <div class="productsList__info">
+                                <p class="productsList__name"><%= productsList[i].name %></p>
+                                <p class="productsList__category"><%= productsList[i].category %></p>
+                                <p class="productsList__price"><%= productsList[i].price %></p>
+                            </div>
+                            <div class="productsList__buttons">
+                                <a class="productsList__a" href="#">
+                                    <button class="productsList__button-edit" type="submit">
+                                        <i class="productsList__icon far fa-edit"></i> <span
+                                            class="productsList__span">Editar</span>
+                                    </button>
+                                </a>
+
+                                <a class="productsList__a" href="#">
+                                    <button class="productsList__button-remove" type="submit">
+                                        <i class="productsList__icon far fa-trash-alt"></i> <span
+                                            class="productsList__span">Eliminar</span>
+                                    </button>
+                                </a>
+                            </div>
+                            <% } %>
+                        </div>
+                        
+                    </article>
+
                 </div>
-
-                <a class="admin__a" href="/adminProfile">
-                    <button class="admin__button">
-                        <span class="admin__span">Perfil</span> <i class="admin__icon fas fa-user"></i>
-                    </button>
-                </a>
-
-                <a class="admin__a" href="/adminProducts">
-                    <button class="admin__button">
-                        <span class="admin__span">Productos</span> <i class="admin__icon fas fa-store"></i>
-                    </button>
-                </a>
-
-                <a class="admin__a" href="#">
-                    <button class="admin__button">
-                        <span class="admin__span">Configuración</span> <i class="admin__icon fas fa-cogs"></i>
-                    </button>
-                </a>
-            </div>
-
-            <div class="admin__container">
-                <div class="adminTitle">
-                    <p class="adminTitle__p">EDITAR PRODUCTOS</p>
-                </div>
-
-                <article class="productsList">
-                    <img class="productsList__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="productsList__info">
-                        <p class="productsList__name">Cookie de chocolate</p>
-                        <p class="productsList__category">Cookies</p>
-                        <p class="productsList__price">$0.00</p>
-                    </div>
-                    <div class="productsList__buttons">
-                        <a class="productsList__a" href="#">
-                            <button class="productsList__button-edit" type="submit">
-                                <i class="productsList__icon far fa-edit"></i> <span class="productsList__span">Editar</span>
-                            </button>
-                        </a>
-
-                        <a class="productsList__a" href="#">
-                            <button class="productsList__button-remove" type="submit">
-                                <i class="productsList__icon far fa-trash-alt"></i> <span class="productsList__span">Eliminar</span>
-                            </button>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="productsList">
-                    <img class="productsList__img" src="/images/mini-frutos-del-bosque.jpg" alt="Cookie de chocolate">
-                    <div class="productsList__info">
-                        <p class="productsList__name">Lemon Pie</p>
-                        <p class="productsList__category">Postres</p>
-                        <p class="productsList__price">$0.00</p>
-                    </div>
-                    <div class="productsList__buttons">
-                        <a class="productsList__a" href="#">
-                            <button class="productsList__button-edit" type="submit">
-                                <i class="productsList__icon far fa-edit"></i> <span class="productsList__span">Editar</span>
-                            </button>
-                        </a>
-
-                        <a class="productsList__a" href="#">
-                            <button class="productsList__button-remove" type="submit">
-                                <i class="productsList__icon far fa-trash-alt"></i> <span class="productsList__span">Eliminar</span>
-                            </button>
-                        </a>
-                    </div>
-                </article>
-            </div>
         </section>
     </main>
-    <footer>
-        <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
-            marginheight="0" marginwidth="0" scrolling="no"></iframe>
-    </footer>
 </body>
 
 </html>
