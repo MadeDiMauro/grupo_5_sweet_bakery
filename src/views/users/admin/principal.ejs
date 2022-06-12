@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="/css/adminPrincipal.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="admin">
+            <%- include('../../partials/navbarAdmin') %>
+
+            <div class="admin__container_principal">
+                
+                <div class="adminTitle_principal">
+                    <p class="adminTitle__principal_p">BIENVENIDO A TU PÁGINA</p>
+                </div>
+
+                <div class="admin_start">
+                    <div class="admin_start_profile">
+                        <p class="admin_start_title">Comienza</p>
+                        <button class="admin_button-profile" type="submit">Edita tu Perfil</button>
+                    </div>
+                
+                    <div class="admin_actions">
+                    <nav>
+                    <p class="admin_actions_title">Acciones</p>
+                    <ul>   
+                            <li class="admin_actions_see"> <i class="fa-solid fa-eye"></i>Ver tu Sitio</li>
+                            <li class="admin_actions_edit"><i class="fa-solid fa-pen-to-square"></i>Editar tu pagina de Inicio</li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+                <!-- <div class="adminProd__divs-buttons">
+                    <a class="adminProd__a" href="/adminCreate">
+                        <button class="adminProd__button">
+                            <i class="adminProd__icon fa-solid fa-file-circle-plus"></i> Crear producto
+                        </button>
+                    </a>
+
+                    <a class="adminProd__a" href="/adminProductsList">
+                        <button class="adminProd__button">
+                            <i class="adminProd__icon fa-solid fa-file-pen"></i> Editar producto
+                        </button>
+                    </a>
+                </div>!-->
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

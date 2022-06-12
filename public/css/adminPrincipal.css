@@ -1,0 +1,185 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    width: 100%;
+}
+
+.admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+    height: 100vh;
+    background-color: black;
+}
+
+.admin__div-avatar{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.admin__span-avatar {
+    display: none;
+    /* background-color: darkgray;
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid white; */
+}
+
+.admin__img-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.admin__button {
+    background-color: transparent;
+    border: none;
+}
+
+.admin__a {
+    padding: 10px;
+}
+
+.admin__a:not(.admin__img-avatar:last-child){
+    border-bottom: 1px solid white;
+}
+
+.admin__a:active {
+    background-color: rgb(218, 165, 32, 0.6);
+}
+
+.admin__span {
+    display: none;
+}
+
+.admin__icon {
+    color: white;
+}
+
+.adminProd__divs-buttons {
+    display: flex;
+    align-self: center;
+    width: 95%;
+}
+
+.adminProd__a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 15px;
+    height: 150px;
+    border: 1px dashed black;
+    border-radius: 8px;
+}
+
+.adminProd__button {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+}
+
+.adminProd__icon {
+    width: 100%;
+    font-size: 18px
+}
+
+.admin__container_principal {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+
+}
+
+.adminTitle_principal {
+    margin: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+.adminTitle_principal p {
+    font-weight: 600;
+    padding-bottom: 5px;
+   
+}
+
+p {
+    font-size:18px;
+}
+
+.admin_button-profile {
+    border: none;
+    padding: 5px 0px;
+    background-color: black;
+    color:white;
+    width:50%;
+    
+}
+
+.admin_start {
+  margin:0;
+  margin-top:25px;
+  background-color:rgb(244, 248, 248);
+  border: 1px solid black;
+}
+
+.admin_start_profile, 
+.admin_actions {
+    flex-direction:column;
+    padding:20px;
+
+}
+ul {
+    list-style: none;
+}
+
+ul i {
+    font-size: small;
+    margin-right: 10px;
+}
+
+.admin_start_title,
+.admin_actions_title {
+
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+@media (min-width: 481px) {
+    
+    .admin_start {
+        display:flex;
+        flex-wrap:nowrap;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .admin_start_profile,
+    .admin_actions {
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px) {
+    
+}
