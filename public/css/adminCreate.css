@@ -16,66 +16,6 @@ main {
     max-width: 1200px;
 }
 
-.admin {
-    display: flex;
-    justify-content: space-between;
-}
-
-.admin__menu {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 15%;
-    /* height: 100vh; */
-    background-color: black;
-}
-
-.admin__div-avatar{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-bottom: 1px solid white;
-}
-
-.admin__span-avatar {
-    display: none;
-    /* background-color: darkgray;
-    color: black;
-    padding: 10px;
-    border-bottom: 1px solid white; */
-}
-
-.admin__img-avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-}
-
-.admin__button {
-    background-color: transparent;
-    border: none;
-}
-
-.admin__a {
-    padding: 10px;
-}
-
-.admin__a:not(.admin__button:last-child){
-    border-bottom: 1px solid white;
-}
-
-.admin__a:active {
-    background-color: rgb(218, 165, 32, 0.6);
-}
-
-.admin__span {
-    display: none;
-}
-
-.admin__icon {
-    color: white;
-}
-
 .admin__container {
     display: flex;
     flex-direction: column;

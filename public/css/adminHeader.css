@@ -1,0 +1,56 @@
+.adminHeader__div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 35px;
+    background-color: rgb(44, 51, 57);;
+    border-bottom: 1px solid white;
+}
+
+.adminHeader__logo {
+    display: flex;
+    align-items: center;
+}
+
+.adminHeader__div2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adminHeader__button {
+    display: flex;
+    align-items: baseline;
+    border: none;
+    background-color: transparent;
+    padding: 0px 5px;
+}
+
+.adminHeader__span {
+    display: none;
+}
+
+.adminHeader__icon {
+    color: white;
+}
+
+.adminHeader__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0px 10px;
+}
+
+@media (min-width: 769px) {
+    .adminHeader__span {
+        display: flex;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .adminHeader__span:active {
+        text-decoration: underline;
+        color: white;
+    }
+}
