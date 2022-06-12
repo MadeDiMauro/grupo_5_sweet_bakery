@@ -1,0 +1,188 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+    /* height: 100vh; */
+    background-color: black;
+}
+
+.admin__div-avatar{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.admin__span-avatar {
+    display: none;
+    /* background-color: darkgray;
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid white; */
+}
+
+.admin__img-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.admin__button {
+    background-color: transparent;
+    border: none;
+}
+
+.admin__a {
+    padding: 10px;
+}
+
+.admin__a:not(.admin__button:last-child){
+    border-bottom: 1px solid white;
+}
+
+.admin__a:active {
+    background-color: rgb(218, 165, 32, 0.6);
+}
+
+.admin__span {
+    display: none;
+}
+
+.admin__icon {
+    color: white;
+}
+
+.admin_container_edit {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.adminTitleEdit {
+    margin: 15px 0px;
+}
+
+.adminTitleEdit_p {
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.newProduct_form_edit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newProduct_input_edit,
+.newProduct_select_edit {
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+}
+
+#lastInput_edit {
+    height: 100px;
+}
+
+.newProduct_input-file_edit {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.newProduct_label_edit {
+    width: 100%;
+}
+
+.newProduct_label-img_edit {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    /* margin: 15px 0px 30px; */
+}
+
+.edit_button,
+.edit_button-clean {
+    border: none;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.edit_button {
+    font-weight: 600;
+    background-color: black;
+    color: white;
+}
+
+.edit_button:active,
+.edit_button-clean:active {
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+}
+
+.edit_button-clean{
+    background-color: lightgray;
+}
+
+.edit_a {
+    width: 100%;
+}
+
+.edit_a:first-child {
+    padding: 10px 0px;
+}
+
+@media (min-width: 481px) {
+    
+}
+
+@media (min-width: 769px) {
+    .newProduct_form_edit {
+        width: 50%;
+    }
+
+    .edit {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .edit_a {
+        width: 45%;
+        padding: 10px 0px;
+        /* margin: 0px 5px; */
+    }
+}

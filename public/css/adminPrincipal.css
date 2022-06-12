@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-weight: 300;
 }
 
 body {
@@ -75,23 +76,6 @@ main {
     color: white;
 }
 
-.admin__container {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: 0 auto;
-}
-
-.adminTitle {
-    margin: 15px 0px;
-}
-
-.adminTitle__p {
-    font-weight: 600;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
-}
-
 .adminProd__divs-buttons {
     display: flex;
     align-self: center;
@@ -120,8 +104,80 @@ main {
     font-size: 18px
 }
 
+.admin__container_principal {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+
+}
+
+.adminTitle_principal {
+    margin: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+.adminTitle_principal p {
+    font-weight: 600;
+    padding-bottom: 5px;
+   
+}
+
+p {
+    font-size:18px;
+}
+
+.admin_button-profile {
+    border: none;
+    padding: 5px 0px;
+    background-color: black;
+    color:white;
+    width:50%;
+    
+}
+
+.admin_start {
+  margin:0;
+  margin-top:25px;
+  background-color:rgb(244, 248, 248);
+  border: 1px solid black;
+}
+
+.admin_start_profile, 
+.admin_actions {
+    flex-direction:column;
+    padding:20px;
+
+}
+ul {
+    list-style: none;
+}
+
+ul i {
+    font-size: small;
+    margin-right: 10px;
+}
+
+.admin_start_title,
+.admin_actions_title {
+
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
 @media (min-width: 481px) {
     
+    .admin_start {
+        display:flex;
+        flex-wrap:nowrap;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .admin_start_profile,
+    .admin_actions {
+        width: 50%;
+    }
 }
 
 @media (min-width: 769px) {
