@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('../partials/head', { title: "Detalle de productos" , style: "productdetail-style" }) %>
 
-<head>
-
-    <title>Detalle de Producto</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
-        rel="stylesheet">
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/base-style.css" rel="stylesheet">
-    <link href="/css/productdetail-style.css" rel="stylesheet">
-
-</head>
-
-<body>
-    <header>
-        <%- include('../partials/header') %>
-    </header>
-    <div class="title"><p>DETALLE DE PRODUCTO</p></div>
-<main>
-    <div class="list">
-    <nav>
-    <ul>   
-            <li class="list"><a href ="/">Inicio/</a></li>
-            <li class="list"><a href="/products">Producto/</a></li>
-            <li class="list"> Detalle de Producto</li>
-    </ul>
-    </nav>
-</div>
-    <div class="main-product-detail">
-
-
-        <div class="product-name1"><p><%=productItem.name %></p>
-            <div class="price1"><p><%=productItem.price %></p></div>
+    <body>
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+        <div class="title">
+            <p>DETALLE DE PRODUCTO</p>
         </div>
-        <div= class="product-detail">     
-        <img src='/images/<%=productItem.image %>' alt='<%=productItem.name %>'>
-        </div>
-    
-        <div class="product-description">
+        <main class="main__product__detail">
+            <div class="list">
+                <nav>
+                    <ul>
+                        <li class="list"><a href="/">Inicio  /</a></li>
+                        <li class="list"><a href="/products">Producto  /</a></li>
+                        <li class="list">Detalle de Producto</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-product-detail">
+
+
+                <div class="product-name1">
+                    <p>
+                        <%=productItem.name %>
+                    </p>
+                    <div class="price1">
+                        <p>
+                            <%=productItem.price %>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <img src='/images/<%=productItem.image %>' alt='<%=productItem.name %>'> 
+                </div>
+            </div>
+
+            <div class="product-description">
                 <p class="description">Descripción del Producto</p>
-                <p class="text"> <%=productItem.description%></p>
-                
+                <p class="text">
+                    <%=productItem.description%>
+                </p>
+
                 <p class="q">Cantidad</p>
                 <div class="quantity">
                     <button><i class="fas fa-minus"></i></button>
                     <span>1</span>
                     <button><i class="fas fa-plus"></i></button>
-        </div>
-        <div class="payment">VER MEDIOS DE PAGO</div>
-        <div class="product-buy"><a href="/cart1"><button type="submit">AGREGAR AL CARRITO</button></a> 
-        </div>
-        </div>
-        </div>
-        </section>
-        <div class="productos-relacionados">
-            <div class="productos-relacionados-title"><p class="titulo2">PRODUCTOS RELACIONADOS</p>
-                <hr>
+                </div>
+                <div class="payment">VER MEDIOS DE PAGO</div>
+                <div class="product-buy"><a href="/cart1"><button type="submit">AGREGAR AL CARRITO</button></a>
+                </div>
             </div>
+            </div>
+    
+            <div class="productos-relacionados">
+                <div class="productos-relacionados-title">
+                    <p class="titulo2">PRODUCTOS RELACIONADOS</p>
+                    <hr>
+                </div>
 
-            <% for (let i=0; i < productsRelated.length; i ++) { %>
-            <article>
-            <a href='/products/detail/<%=productsRelated[i].id %>'><img class="img-product" src='/images/<%=productsRelated[i].image %>' alt=productsRelated[i].name %>></a>
-             <div class="product-info">
-            <p class="products__name"><%=productsRelated [i].name %></p>
-            <p class="products__price"><%=productsRelated [i].price %></p>
-            <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
-             </div>
-             </article>
-             <% } %>
+                <% for (let i=0; i < 3; i ++) { %>
+                    <article>
+                        <a href='/products/detail/<%=productsRelated[i].id %>'><img class="img-product"
+                                src='/images/<%= productsRelated[i].image %>' alt='<%= productsRelated[i].name %>'></a>
+                        <div class="product-info">
+                            <p class="products__name">
+                                <%=productsRelated [i].name %>
+                            </p>
+                            <p class="products__price">
+                                <%=productsRelated [i].price %>
+                            </p>
+                            <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                        </div>
+                    </article>
+                <% } %>
             </div>
         </main>
 
 
-    <!--<div class="product-name1"><p>NOMBRE DEL PRODUCTO </p>
+        <!--<div class="product-name1"><p>NOMBRE DEL PRODUCTO </p>
         <div class="price1"><p>$1.00</p></div>
     </div>
     
@@ -134,9 +136,10 @@
         </main>
 
           -->
-</body>
+    </body>
 
-<footer>
-    <%- include('../partials/footer') %>
-</footer>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+
 </html>

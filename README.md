@@ -6,7 +6,6 @@ Proyecto integrador realizado grupalmente para el curso de Programador Web Full 
 En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery", desde la misma los usuarios van a poder ver los productos, filtrar por categorias, realizar pedidos, registrarse como clientes y tambien pagar por los productos adheridos a su carrito.
 
 ### Listado de productos
-
 - Postres
 - Mini postres
 - Budines
@@ -19,7 +18,6 @@ En este proyecto vamos a realizar un e-commerce para la pasteleria "Sweet Bakery
 - Giftcards
 
 ### Servicios ofrecidos
-
 - Cursos virtuales
 
 ### Páginas de referencia
@@ -31,18 +29,13 @@ https://stevenbaker.de/
 http://www.tantesara.com/
 
 ### Público objetivo
-
 - Público en general
 
 ### Participantes
-
-Iñiguez Mariano
-
-Di Mauro Madeleine
-
-Lorenzo Aldana
-
-María Eugenia Brest
+- Iñiguez Mariano
+- Di Mauro Madeleine
+- Lorenzo Aldana
+- María Eugenia Brest
 
 ### Tablero de trabajo
 Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
@@ -50,7 +43,7 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 ### Resoluciones de pantalla
 - Mobile: 0px a 480px
 - Tablet: 481px a 768px
-- Desktop: 769px a 1279px
+- Desktop: 769px a 1200px
 
 ### Índice y rutas del proyecto
 - Home: http://localhost:3000/
@@ -59,4 +52,5 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 - Carrito de compras: 
 Paso 1: http://localhost:3000/cart/1 | Paso 2: http://localhost:3000/cart/2 | Paso 3: http://localhost:3000/cart/3 |
 - Login: http://localhost:3000/users/login
-- Resgitro: http://localhost:3000/users/register
+- Registro: http://localhost:3000/users/register
+- Administración: http://localhost:3000/admin/principal |  http://localhost:3000/admin/create | http://localhost:3000/admin/edit
