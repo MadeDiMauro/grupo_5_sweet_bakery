@@ -84,13 +84,26 @@ main {
 }
 
 .adminTitle {
-    margin: 15px 0px;
+    margin: 15px 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .adminTitle__p {
-    font-weight: 600;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    font-weight: 500;
+    /* padding-bottom: 5px;
+    border-bottom: 1px solid black; */
+}
+
+.adminTitle__icon {
+    margin-right: 5px;
+    font-size: 14px;
+    /* color: rgb(100, 100, 100); */
+}
+
+.adminTitle__hr {
+    margin-top: 5px;
 }
 
 .newProduct__form {
@@ -171,6 +184,7 @@ main {
 @media (min-width: 769px) {
     .newProduct__form {
         width: 50%;
+        margin-top: 25px;
     }
 
     .create {
