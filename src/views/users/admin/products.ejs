@@ -23,10 +23,12 @@
                         <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-folder-open"></i> Productos</p>
                         <a class="adminTitle__a" href="/admin/create">
                             <button class="adminTitle__button">
-                                <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i>CREAR PRODUCTO
+                                <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i><span
+                                    class="adminTitle__span"> CREAR PRODUCTO</span>
                             </button>
                         </a>
                     </div>
+                    <hr class="adminTitle__hr">
 
                     <form class="filter" name="#" method="GET">
                         <div class="filter__div">
@@ -53,32 +55,36 @@
                         </button>
                     </form>
 
-
-                    <article class="productsList__title">
-                        <div class="productsList__div">
-                            <p>ID</p>
-                            <p>PRODUCTO</p>
-                            <div class="productsList__info">
-                                <p>NOMBRE</p>
-                                <!-- <div class="productsList__ div-info"> -->
-                                <p>CATEGORÍA</p>
-                                <p>PRECIO</p>
-                                <!-- </div> -->
-                            </div>
+                    <article class="titles">
+                        <div class="titles__div1">
+                            <input class="titles__checkbox" type="checkbox" name="idProduct" value="idProduct">
+                            <p class="titles__id">ID</p>
+                            <p class="titles__product">PRODUCTO</p>
+                        </div>
+                        <div class="titles__div2">
+                            <p class="titles__name">NOMBRE</p>
+                            <p class="titles__category">CATEGORÍA</p>
+                            <p class="titles__price">PRECIO</p>
+                        </div>
+                        <div class="titles__div3">
+                            <p class="titles__edit">EDITAR</p>
+                            <P class="titles__delete">ELIMINAR</P>
                         </div>
                     </article>
 
                     <article class="productsList">
-                        <% for(let i=0; i < productsList.length; i++) { %>
-                            <div class="productsList__div">
-                                <input class="productsList__checkbox" type="checkbox" name="idProduct"
-                                    value="idProduct">
-                                <p class="productsList__id">
-                                    <%= productsList[i].id %>
-                                </p>
-                                <img class="productsList__img" src="/images/<%= productsList[i].image %>"
-                                    alt="<%= productsList[i].name %>">
 
+                        <% for(let i=0; i < productsList.length; i++) { %>
+                            <div class="productsList__container">
+                                <div class="productsList__div">
+                                    <input class="productsList__checkbox" type="checkbox" name="idProduct"
+                                        value="idProduct">
+                                    <p class="productsList__id">
+                                        <%= productsList[i].id %>
+                                    </p>
+                                    <img class="productsList__img" src="/images/<%= productsList[i].image %>"
+                                        alt="<%= productsList[i].name %>">
+                                </div>
                                 <div class="productsList__info">
                                     <p class="productsList__name">
                                         <%= productsList[i].name %>
