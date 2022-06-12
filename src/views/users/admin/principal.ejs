@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="/css/adminPrincipal.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="admin">
+            <%- include('../../partials/navbarAdmin') %>
+
+            <div class="admin__container">
+                <div class="adminTitle">
+                    <p class="adminTitle__p">PRODUCTOS</p>
+                </div>
+
+                <div class="adminProd__divs-buttons">
+                    <a class="adminProd__a" href="/adminCreate">
+                        <button class="adminProd__button">
+                            <i class="adminProd__icon fa-solid fa-file-circle-plus"></i> Crear producto
+                        </button>
+                    </a>
+
+                    <a class="adminProd__a" href="/adminProductsList">
+                        <button class="adminProd__button">
+                            <i class="adminProd__icon fa-solid fa-file-pen"></i> Editar producto
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

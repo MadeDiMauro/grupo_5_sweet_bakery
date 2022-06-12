@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porductos</title>
+    <link rel="stylesheet" href="/css/adminProducts.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="admin">
+            <%- include('../../partials/navbarAdmin') %>
+
+                <div class="admin__container">
+                    <div class="adminTitle">
+                        <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-folder-open"></i> Productos</p>
+                        <a class="adminTitle__a" href="/admin/create">
+                            <button class="adminTitle__button">
+                                <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i>CREAR PRODUCTO
+                            </button>
+                        </a>
+                    </div>
+
+                    <form class="filter" name="#" method="GET">
+                        <div class="filter__div">
+                            <select class="filter__select" name="category">
+                                <option hidden selected>Categoría</option>
+                                <option value="c1">Alfajores</option>
+                                <option value="c2">Budines</option>
+                                <option value="c3">Cookies</option>
+                                <option value="c4">Desayunos y boxes</option>
+                                <option value="c5">Macarons</option>
+                                <option value="c6">Mini postres</option>
+                                <option value="c7">Postres</option>
+                                <option value="c8">Productos secos</option>
+                            </select>
+                        </div>
+
+                        <div class="filter__div">
+                            <input class="filter__input" type="text" name="name" id="name"
+                                placeholder="Nombre del producto">
+                        </div>
+
+                        <button class="filter__button">
+                            <i class="filter__icon fa-solid fa-magnifying-glass"></i>Filtrar
+                        </button>
+                    </form>
+
+
+                    <article class="productsList__title">
+                        <div class="productsList__div">
+                            <p>ID</p>
+                            <p>PRODUCTO</p>
+                            <div class="productsList__info">
+                                <p>NOMBRE</p>
+                                <!-- <div class="productsList__ div-info"> -->
+                                <p>CATEGORÍA</p>
+                                <p>PRECIO</p>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="productsList">
+                        <% for(let i=0; i < productsList.length; i++) { %>
+                            <div class="productsList__div">
+                                <input class="productsList__checkbox" type="checkbox" name="idProduct"
+                                    value="idProduct">
+                                <p class="productsList__id">
+                                    <%= productsList[i].id %>
+                                </p>
+                                <img class="productsList__img" src="/images/<%= productsList[i].image %>"
+                                    alt="<%= productsList[i].name %>">
+
+                                <div class="productsList__info">
+                                    <p class="productsList__name">
+                                        <%= productsList[i].name %>
+                                    </p>
+                                    <!-- <div class="productsList__ div-info"> -->
+                                    <span class="productsList__category">
+                                        <%= productsList[i].category %>
+                                    </span>
+                                    <span class="productsList__price">
+                                        <%= productsList[i].price %>
+                                    </span>
+                                    <!-- </div> -->
+                                </div>
+                                <div class="productsList__buttons">
+                                    <!-- <div class="productsList__divs"> -->
+                                    <a class="productsList__a-edit" href="/admin/edit">
+                                        <button class="productsList__button-edit" type="submit">
+                                            <i class="productsList__icon far fa-edit"></i> <span
+                                                class="productsList__span">Editar</span>
+                                        </button>
+                                    </a>
+                                    <!-- </div>
+                                    <div class="productsList__divs"> -->
+                                    <a class="productsList__a-delete" href="#">
+                                        <button class="productsList__button-delete" type="submit">
+                                            <i class="productsList__icon far fa-trash-alt"></i> <span
+                                                class="productsList__span">Eliminar</span>
+                                        </button>
+                                    </a>
+                                    <!-- </div> -->
+                                </div>
+
+                            </div>
+                            <% } %>
+                    </article>
+
+                </div>
+        </section>
+    </main>
+</body>
+
+</html>

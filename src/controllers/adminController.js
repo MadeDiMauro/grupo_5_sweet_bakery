@@ -12,14 +12,20 @@ const readJsonFile = (path) => {
 const productsList = readJsonFile(productsdbPath);
 
 const adminController = {
-    adminPage: (req, res) => {
-        res.render('users/admin/adminProducts');
+    principal: (req, res) => {
+        res.render('users/admin/principal');
     },
-    editList: (req, res) => {
-        res.render('users/admin/adminProductsList', { productsList });
+    // profile: (req, res) => {
+    //     res.render('users/admin/profile');
+    // },
+    list: (req, res) => {
+        res.render('users/admin/products', { productsList });
     },
+    // edit: (req, res) => {
+    //     res.render('users/admin/editProduct');
+    // },
     create: (req, res) => {
-        res.render('users/admin/adminCreate');
+        res.render('users/admin/createProduct');
     }
 }
 

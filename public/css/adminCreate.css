@@ -13,6 +13,7 @@ body {
 
 main {
     width: 100%;
+    max-width: 1200px;
 }
 
 .admin {
@@ -115,11 +116,22 @@ main {
     font-size: 14px;
 }
 
+.newProduct__label {
+    width: 100%;
+}
+
+.newProduct__label-img {
+    width: 100%;
+    padding: 15px 0px;
+}
+
 .create {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    margin: 15px 0px 30px;
+    margin-bottom: 30px;
+    /* margin: 15px 0px 30px; */
 }
 
 .create__button,
@@ -145,7 +157,11 @@ main {
 }
 
 .create__a {
-    width: 45%;
+    width: 100%;
+}
+
+.create__a:first-child {
+    padding: 10px 0px;
 }
 
 @media (min-width: 481px) {
@@ -153,5 +169,20 @@ main {
 }
 
 @media (min-width: 769px) {
-    
+    .newProduct__form {
+        width: 50%;
+    }
+
+    .create {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .create__a {
+        width: 45%;
+        padding: 10px 0px;
+        /* margin: 0px 5px; */
+    }
 }
