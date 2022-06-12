@@ -18,12 +18,29 @@
         <section class="admin">
             <%- include('../../partials/navbarAdmin') %>
 
-            <div class="admin__container">
-                <div class="adminTitle">
-                    <p class="adminTitle__p">PRODUCTOS</p>
+            <div class="admin__container_principal">
+                
+                <div class="adminTitle_principal">
+                    <p class="adminTitle__principal_p">BIENVENIDO A TU PÁGINA</p>
                 </div>
 
-                <div class="adminProd__divs-buttons">
+                <div class="admin_start">
+                    <div class="admin_start_profile">
+                        <p class="admin_start_title">Comienza</p>
+                        <button class="admin_button-profile" type="submit">Edita tu Perfil</button>
+                    </div>
+                
+                    <div class="admin_actions">
+                    <nav>
+                    <p class="admin_actions_title">Acciones</p>
+                    <ul>   
+                            <li class="admin_actions_see"> <i class="fa-solid fa-eye"></i>Ver tu Sitio</li>
+                            <li class="admin_actions_edit"><i class="fa-solid fa-pen-to-square"></i>Editar tu pagina de Inicio</li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+                <!-- <div class="adminProd__divs-buttons">
                     <a class="adminProd__a" href="/adminCreate">
                         <button class="adminProd__button">
                             <i class="adminProd__icon fa-solid fa-file-circle-plus"></i> Crear producto
@@ -35,7 +52,7 @@
                             <i class="adminProd__icon fa-solid fa-file-pen"></i> Editar producto
                         </button>
                     </a>
-                </div>
+                </div>!-->
             </div>
         </section>
     </main>
