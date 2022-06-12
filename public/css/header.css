@@ -15,6 +15,7 @@
     width: 100% !important;
     /* border-bottom: solid 5px goldenrod; */
     /* border-bottom: solid 5px rgb(125, 12, 2); */
+    
 }
 
 
@@ -26,6 +27,7 @@
     .body-headerh {
             width: 100% !important;
             height: 100vh;
+         
     }
     
     .headerh-version-desktop {
@@ -287,7 +289,7 @@
     /*----------------------HEADER HOME-----------------------------*/
     .body-headerh {
         width: 100% !important;
-        height: 100vh;
+        height: 50vh;
     }
 
     .headerh-version-desktop {
@@ -300,7 +302,7 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        height: 100vh;
+        height: 50vh;
     }
 
     .headerh-version-mobile {
