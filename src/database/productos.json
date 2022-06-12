@@ -41,7 +41,8 @@
        "name": "Brownie",
        "price": "$ 0.00",
        "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano.18 cm: rinde 10/12 porciones",
-       "image": "cake-chocolate.jpg"
+       "image": "cake-chocolate.jpg",
+       "category": "postres"
     },
 
     {
@@ -49,7 +50,8 @@
         "name": "Tarta de frutos del bosque",
         "price": "$ 0.00",
         "description": "Masa sable breton de chocolate rellena con crema pastelera y frutos del bosque. 20cm: rinde 8/10 porciones",
-        "image": "cake-chocolate.jpg"
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     },
 
     {
@@ -57,7 +59,8 @@
          "name": "Crumble de manzana",
          "price": "$ 0.00",
          "description": "Base de tarta dulce con relleno esponjoso de pure de manzana, con miel, un toque de canela y cubierta con un crocante stroisel. 20cm: rinde 8/10 porciones",
-         "image": "cake-chocolate.jpg"
+         "image": "cake-chocolate.jpg",
+         "category": "postres"
     
     },
 
@@ -66,7 +69,8 @@
         "name": "Rogel",
         "price": "$ 0.00",
         "description": "Finos discos de masa crocante rogel, dulce de leche y el clásico merengue Italiano. 20cm: rinde 8/10 porciones",
-        "image": "cake-chocolate.jpg"
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     
     },
 
@@ -75,7 +79,8 @@
         "name": "Carrot cake",
         "price": "$ 0.00",
         "description": "Torta de zanahoria, especiada con nueces y un suave frosting.20cm: rinde 8/10 porciones",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     },
 
     {
@@ -83,8 +88,8 @@
         "name": "Black coffee",
         "price": "$ 0.00",
         "description": "Bizcochuelo de chocolate y café con dos cortes: uno con una suave mouse de café y chocolate, y el otro corte con dulce de frambuesa. Humedecida con almibar de café. Cubierta con suave mouse de café y chocolate. 18 cm: rinde 10/12 porciones",
-        "image": "/images/"
-    
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     },
 
     {
@@ -92,7 +97,8 @@
         "name": "Tarta de ricota",
         "price": "$ 0.00",
         "description": "Nuestra clásica masa con húmedo relleno de ricota y una pizca de ralladura de limón. 20cm: rinde 8/10 porciones",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     
     },
 
@@ -101,7 +107,8 @@
         "name": "Rola membrillo o batata",
         "price": "$ 0.00",
         "description": "Nuestra clásica masa de frola con el mejor dulce de batata o membrillo. 20cm: rinde 8/10 porciones",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "postres"
     
     },
 
@@ -110,8 +117,8 @@
        "name": "Mini Cheese cake con frutos rojos",
        "price": "$ 0.00",
        "description": "Base de galletitas dulces y crocantes mousse de creme cheese con mermelada de frutos rojos",
-       "image": "/images/"
-   
+       "image": "cake-chocolate.jpg",
+       "category": "mini postres"
     },
 
    {
@@ -119,8 +126,8 @@
        "name": "Mini Tiramisú",
        "price": "$ 0.00",
        "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho",
-       "image": "/images/"
-  
+       "image": "cake-chocolate.jpg",
+       "category": "mini postres"
     },
    
    {
@@ -128,8 +135,8 @@
        "name": "Mini Lemon Pie",
        "price": "$ 0.00",
        "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano",
-       "image": "/images/"
-    
+       "image": "cake-chocolate.jpg",
+       "category": "mini postres"
     },
 
     {
@@ -137,8 +144,8 @@
         "name": "Mini Tarta de Frutillas",
         "price": "$ 0.00",
         "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas",
-        "image": "/images/"
-    
+        "image": "cake-chocolate.jpg",
+       "category": "mini postres"
     },
 
     {
@@ -146,8 +153,8 @@
         "name": "Mini Brownie",
         "price": "$ 0.00",
         "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano",
-        "image": "/images/"
-   
+        "image": "cake-chocolate.jpg",
+       "category": "mini postres"
     },
 
     {
@@ -155,7 +162,8 @@
         "name": "Chocotorta",
         "price": "$ 0.00",
         "description": "Galletitas chocolinas, crema de queso y dulce de leche",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "mini postres"
     },
 
     {
@@ -163,8 +171,8 @@
         "name": "Bombita oreo",
         "price": "$ 0.00",
         "description": "Base de brownie, con dulce de leche repostero con galletas oreo y mousse de chocolate",
-        "image": "/images/"
-    
+        "image": "cake-chocolate.jpg",
+        "category": "mini postres"
     },
 
     {
@@ -172,72 +180,283 @@
         "name": "Franuisima",
         "price": "$ 0.00",
         "description": "Base de marquise, crema de dulce de leche, relleno de galletitas Oreo y cobertura de frambuesas FraNui",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "mini postres"
     
     },
 
     {
         "id": "21",
-        "name": "Alfajor de nuez",
+        "name": "Mini años locos",
         "price": "$ 0.00",
-        "description": "Masa crocante de nuez y mucho dulce de leche",
-        "image": "/images/"
+        "description": "Crema de chocolate con picos de merengue base con café",
+        "image": "cake-chocolate.jpg",
+        "category": "mini postres"
     },
-    
+
     {
         "id": "22",
-        "name": "Alfajor coco",
+        "name": "Mini marquise de chocolate",
         "price": "$ 0.00",
-        "description": "Tapa de coco y mucho dulce de leche",
-        "image": "/images/"
+        "description": "Base humeda de chocolate, dulce de leche, crema y merengue",
+        "image": "cake-chocolate.jpg",
+        "category": "mini postres"
     },
 
     {
         "id": "23",
-        "name": "AAlfajor de chocolate",
+        "name": "Limón",
         "price": "$ 0.00",
-        "description": "Bañado en chocolate blanco o negro y relleno de dulce de leche",
-        "image": "/images/"
+        "description": "Budín sabor limón recubierto con glaseado -tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    
+    {
+        "id": "24",
+        "name": "Limón y amapola",
+        "price": "$ 0.00",
+        "description": "Budín sabor limón con amapolas -Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    
+    {
+        "id": "25",
+        "name": "Nuez y dulce de leche",
+        "price": "$ 0.00",
+        "description": "Budín sabor vainilla con nueces y corazón de dulce de leche - Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    {
+        "id": "26",
+        "name": "Marmolado",
+        "price": "$ 0.00",
+        "description": "Budín sabor marmolado de chocolate y vainilla -Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    {
+        "id": "27",
+        "name": "Frutos rojos",
+        "price": "$ 0.00",
+        "description": "Budín sabor frutos rojos- Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    {
+        "id": "28",
+        "name": "Chocolate y oreos",
+        "price": "$ 0.00",
+        "description": "Budín sabor chocolate y oreos-Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
+    },
+    {
+        "id": "29",
+        "name": "Manzana",
+        "price": "$ 0.00",
+        "description": "Budín sabor manzana con crumble- Tamaño 650 grs. y 1200 grs.",
+        "image": "cake-chocolate.jpg",
+        "category": "budines"
     },
 
     {
-        "id": "24",
+        "id": "30",
+        "name": "Alfajor de nuez",
+        "price": "$ 0.00",
+        "description": "Masa crocante de nuez y mucho dulce de leche",
+        "image": "cake-chocolate.jpg",
+        "category": "alfajores"
+    },
+    
+    {
+        "id": "31",
+        "name": "Alfajor coco",
+        "price": "$ 0.00",
+        "description": "Tapa de coco y mucho dulce de leche",
+        "image": "cake-chocolate.jpg",
+        "category": "alfajores"
+    },
+
+    {
+        "id": "32",
+        "name": "Alfajor de chocolate",
+        "price": "$ 0.00",
+        "description": "Bañado en chocolate blanco o negro y relleno de dulce de leche",
+        "image": "cake-chocolate.jpg",
+        "category": "alfajores"
+    },
+
+    {
+        "id": "33",
         "name": "Alfajor de maicena",
         "price": "$ 0.00",
         "description": "Clásico de maicena con dulce de leche",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "alfajores"
     },
 
     {
-        "id": "25",
+        "id": "34",
         "name": "Alfajores XL",
         "price": "$ 0.00",
         "description": "Chocolate blanco o negro relleno con dulce de leche. Relleno con pasta de avellana. Relleno con pasta de nougat. Maicena con dulce de leche. Chocolate con relleno de frambuesa",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "alfajores"
     },
 
     {
-        "id": "26",
+        "id": "35",
+        "name": "Cookies de avena",
+        "price": "$ 0.00",
+        "description": "Cookies de avena por 1/4",
+        "image": "cake-chocolate.jpg",
+        "category": "cookies"
+    },
+    {
+        "id": "36",
+        "name": "Cookie rellena de Nutella",
+        "price": "$ 0.00",
+        "description": "Cookie rellena de Nutella",
+        "image": "cake-chocolate.jpg",
+        "category": "cookies"
+    },
+    {
+        "id": "37",
+        "name": "Cookie de chocolate",
+        "price": "$ 0.00",
+        "description": "Cookie de chocolate",
+        "image": "cake-chocolate.jpg",
+        "category": "cookies"
+    },
+    {
+        "id": "38",
+        "name": "Cookie de vainilla y dulce de leche con chips de chocolate",
+        "price": "$ 0.00",
+        "description": "Cookie de vainilla y dulce de leche con chips de chocolate",
+        "image": "cake-chocolate.jpg",
+        "category": "cookies"
+    },
+
+    {
+        "id": "39",
+        "name": "Cookies surtidas",
+        "price": "$ 0.00",
+        "description": "Cookies surtidas por 1/4",
+        "image": "cake-chocolate.jpg",
+        "category": "cookies"
+    },
+    {
+        "id": "40",
         "name": "Pain de Chocolate",
         "price": "$ 0.00",
         "description": "Masa crocante de nuez y mucho dulce de leche",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "Croissant"
     },
 
     {
-        "id": "27",
+        "id": "41",
         "name": "Croissant",
         "price": "$ 0.00",
         "description": "Ideal para el desayuno y la merienda - Elaborado con manteca de primera calidad",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "Croissant"
     },
 
     {
-        "id": "28",
+        "id": "42",
         "name": "Medialunas",
         "price": "$ 0.00",
         "description": "Las mejores medialunas de grasa y manteca, recién horneadas",
-        "image": "/images/"
+        "image": "cake-chocolate.jpg",
+        "category": "Croissant"
+    },
+
+    {
+        "id": "43",
+        "name": "Macarons surtidos",
+        "price": "$ 0.00",
+        "description": "Macarons surtidos por 12, 18 o 24 unidades",
+        "image": "cake-chocolate.jpg",
+        "category": "macarons"
+    },
+
+    {
+        "id": "44",
+        "name": "Scons",
+        "price": "$ 0.00",
+        "description": "Con nueces, chips de chocolate o ralladura de limón",
+        "image": "cake-chocolate.jpg",
+        "category":"productos secos"
+    },
+   
+    {
+        "id": "45",
+        "name": "Marineras por 1/4",
+        "price": "$ 0.00",
+        "description": "Con y sin semillas:livianas, crocantes y sabrosas",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "46",
+        "name": "Bizcochitos de grasa por 1/4",
+        "price": "$ 0.00",
+        "description": "Pruebe nuestros irresistibles bizcochitos de grasa",
+        "image": "cake-chocolate.jpg",
+        "category":"productos secos"
+    },
+   
+    {
+        "id": "47",
+        "name": "Cuadraditos por 1/4",
+        "price": "$ 0.00",
+        "description": "Elegí el que más te guste: ricota, coco con dulce de leche, brownie con nueces, frola de membrillo o batata, limón y manzana",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "48",
+        "name": "Criollos por 1/4",
+        "price": "$ 0.00",
+        "description": "Crocantes, livianos, suaves, con aroma a manteca",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "49",
+        "name": "Copitos",
+        "price": "$ 0.00",
+        "description": "Deliciosos copitos de dulce de leche bañados con chocolate",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "50",
+        "name": "Pepas por 1/4",
+        "price": "$ 0.00",
+        "description": "Clásicas pepas de vainilla y membrillo",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "51",
+        "name": "Masitas húngaras por 1/4",
+        "price": "$ 0.00",
+        "description": "Masitas con cubierta crocante de chocolate con almendras y rellenas con dulce de frambuesas",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
+    },
+    {
+        "id": "52",
+        "name": "Cantucci con almendras por 1/4",
+        "price": "$ 0.00",
+        "description": "También llamados biscottis, son una masita típica italiana aquí reversionada por nuestro maestro pastelero",
+        "image": "cake-chocolate.jpg",
+        "category": "productos secos"
     }
    
 
