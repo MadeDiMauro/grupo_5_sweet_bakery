@@ -1,0 +1,35 @@
+
+
+.admin__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+    height: 100vh;
+    background-color: rgb(44, 51, 57);
+}
+
+.admin__button {
+    background-color: transparent;
+    border: none;
+}
+
+.admin__a {
+    padding: 10px;
+}
+
+.admin__a:not(.admin__img-avatar:last-child) {
+    border-bottom: 1px solid white;
+}
+
+.admin__a:active {
+    background-color: rgb(218, 165, 32, 0.6);
+}
+
+.admin__span {
+    display: none;
+}
+
+.admin__icon {
+    color: white;
+}
