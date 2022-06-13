@@ -4,11 +4,16 @@
     padding: 10px 35px;
     background-color: rgb(44, 51, 57);;
     border-bottom: 1px solid white;
+    margin: 0 auto;
 }
 
 .adminHeader__logo {
     display: flex;
     align-items: center;
+}
+
+.adminHeader__logo img {
+    width: 200px;
 }
 
 .adminHeader__div2 {

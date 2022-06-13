@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <%- include('../partials/head', { title: "Iniciar sesión" , style: "login" }) %>
 
-<body>
+  <body>
     <header>
 
       <%- include('../partials/header') %>
 
     </header>
-    <main>
+    <main class="main-login">
       <div class="main-div-box">
-          <p class="titlep">INICIAR SESION</p>
-          <form action="">
-              <div class="input-box">
-                <label for="user">Usuario</label><br>
-                <input class="input" type="text" name="user" id="user" required>
-              </div>
-              
-              <div class="input-box">
-                <label for="password_login">Contraseña</label><br>
-                <input class="input" type="password" name="password_login" id="password_login" placeholder="">
-              </div>
-              
-              <div class="checkbox-box">
-                <label class="checkbox-label" for="check_login">
-                <input class="checkbox-input" type="checkbox" name="check_login" id="check_login" placeholder="">
-                Recordarme</label>
-              </div>
-              <div class="forgotpass-box">
-              <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
-              </div>
-              <div class="submit-box">
-                <label class="submit-label" for=""></label>
-                <input class="submit-input" type="submit" name="" id="" placeholder="" value="INICIAR SESION">
-              </div>
-              <div class="final-a-box">
-                  <div class="div-center">
-              <a class="final-a" href="./register">REGISTRATE</a>
-                  </div>
-              </div>
-          </form>
+        <p class="titlep">INICIAR SESION</p>
+        <form action="">
+          <div class="input-box">
+            <label for="user">Usuario</label><br>
+            <input class="input" type="text" name="user" id="user" required>
+          </div>
+
+          <div class="input-box">
+            <label for="password_login">Contraseña</label><br>
+            <input class="input" type="password" name="password_login" id="password_login" placeholder="">
+          </div>
+
+          <div class="checkbox-box">
+            <label class="checkbox-label" for="check_login">
+              <input class="checkbox-input" type="checkbox" name="check_login" id="check_login" placeholder="">
+              Recordarme</label>
+          </div>
+          <div class="forgotpass-box">
+            <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
+          </div>
+          <div class="submit-box">
+            <label class="submit-label" for=""></label>
+            <input class="submit-input" type="submit" name="" id="" placeholder="" value="INICIAR SESION">
+          </div>
+          <div class="final-a-box">
+            <div class="div-center">
+              <a class="final-a" href="/register"><button>REGISTRATE</button></a>
+            </div>
+          </div>
+        </form>
       </div>
 
     </main>
     <footer>
-        <%- include('../partials/footer') %>
-        
+      <%- include('../partials/footer') %>
+
     </footer>
-</body>
+  </body>

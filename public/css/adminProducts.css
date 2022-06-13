@@ -13,18 +13,19 @@ body {
 
 main {
     width: 100%;
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
 }
 
 .admin {
-    display: flex;
-    justify-content: space-between;
+    width: 90%;
+    background-color: white;
 }
 
 .admin_container {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
 }
 

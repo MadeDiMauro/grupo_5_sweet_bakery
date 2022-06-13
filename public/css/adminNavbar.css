@@ -4,9 +4,13 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 15%;
-    height: 100vh;
+    width: 10%;
     background-color: rgb(44, 51, 57);
+}
+
+.admin__container__div {
+    margin: 0 auto;
+    width: 90%;
 }
 
 .admin__button {

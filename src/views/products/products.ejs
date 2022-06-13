@@ -64,7 +64,7 @@
                  <% for (let i=0; i<productsList.length; i ++) { %> 
                     <article class="products__article">
 
-                        <img class="products__img" src='/images/<%= productsList[i].image %>' alt='<%= productsList[i].name %>'>
+                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/<%= productsList[i].image %>' alt='<%= productsList[i].name %>'></a>
                         <div class="products__div-info">
                             <p class="products__name">
                                 <%=productsList [i].name %>

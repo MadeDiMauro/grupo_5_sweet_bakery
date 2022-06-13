@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Catamaran';
     font-size: 16px;
@@ -6,21 +7,25 @@
     margin: 0px;
     padding: 0px;
 }
-
 body {
     background-color: white;
 }
 
 main {
     width: 100%;
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
 }
 
-.admin__container {
+.admin {
+    width: 90%;
+    background-color: white;
+}
+
+.admin_container {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .adminTitle {
@@ -44,6 +49,7 @@ main {
 
 .adminTitle__hr {
     margin-top: 5px;
+    width: 100%;
 }
 
 .newProduct__form {
@@ -123,8 +129,7 @@ main {
 
 @media (min-width: 769px) {
     .newProduct__form {
-        width: 50%;
-        margin-top: 25px;
+        width: 100%;
     }
 
     .create {

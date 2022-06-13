@@ -55,10 +55,13 @@
 }
 
 .main__secondconteiner {
-    background-image: url(../images/cake-chocolate.jpg);
+    background-image: url(../images/delicious-cupcakes3.jpg);
     background-size: cover;
     background-position: top center;
     width: 100%;
+    -webkit-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+        box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
     
 }
 
@@ -71,9 +74,7 @@
     padding: 40px 0px;
     justify-content: center;
     text-align: center;
-    -webkit-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
-        -moz-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
-        box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+  
 }
 
 .main__secondconteiner__p {
@@ -126,7 +127,7 @@
 }
 
 .menu__image {
-    background-image: url(../images/delicious-cupcakes.jpg);
+    background-image: url(../images/delicious-cake-copia.jpg);
     background-size: cover;
     width: 90%;
     margin: 0 auto;

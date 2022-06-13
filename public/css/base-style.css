@@ -1,12 +1,9 @@
-* {
-    box-sizing: border-box;
-    color: white;
-}
 
 /*Tipografias y configuraciones comunes*/
 body {
     font-family: "Catamaran", sans-serif;
-
+box-sizing: border-box;
+    color: white;
 }
 
 

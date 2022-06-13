@@ -16,55 +16,61 @@
 </head>
 
 <body>
-    <main>
-        <section class="admin">
+    <%- include('../../partials/headerAdmin') %>
+        <main>
             <%- include('../../partials/navbarAdmin') %>
+                <section class="admin">
+                    <div class="admin__container">
+                        <div class="admin__container__div">
+                            <div class="newProduct">
+                                <div class="adminTitle">
+                                    <p class="adminTitle__p"><i
+                                            class="adminTitle__icon fa-solid fa-file-circle-plus"></i> Crear producto
+                                    </p>
+                                </div>
+                                <hr class="adminTitle__hr">
 
-            <div class="admin__container">
-                <div class="adminTitle">
-                    <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-file-circle-plus"></i> Crear producto</p>
-                </div>
-                <hr class="adminTitle__hr">
+                                <form class="newProduct__form" action="" method="GET">
 
-                <div class="newProduct">
-                    <form class="newProduct__form" action="" method="GET">
-                        <label class="newProduct__label" for="name">Nombre</label>
-                        <input class="newProduct__input" type="text" name="name" id="name" required>
+                                    <label class="newProduct__label" for="name">Nombre</label>
+                                    <input class="newProduct__input" type="text" name="name" id="name" required>
 
-                        <label class="newProduct__label" for="category">Categoría</label>
-                        <select class="newProduct__select" name="categories" required>
-                            <option value="c1">Alfajores</option>
-                            <option value="c2">Budines</option>
-                            <option value="c3">Cookies</option>
-                            <option value="c4">Desayunos y boxes</option>
-                            <option value="c5">Mini postres</option>
-                            <option value="c6">Macarons</option>
-                            <option value="c7">Productos secos</option>
-                            <option value="c8">Postres</option>
-                        </select>
+                                    <label class="newProduct__label" for="category">Categoría</label>
+                                    <select class="newProduct__select" name="categories" required>
+                                        <option value="c1">Alfajores</option>
+                                        <option value="c2">Budines</option>
+                                        <option value="c3">Cookies</option>
+                                        <option value="c4">Desayunos y boxes</option>
+                                        <option value="c5">Mini postres</option>
+                                        <option value="c6">Macarons</option>
+                                        <option value="c7">Productos secos</option>
+                                        <option value="c8">Postres</option>
+                                    </select>
 
-                        <label class="newProduct__label" for="price">Precio</label>
-                        <input class="newProduct__input" type="text" name="price" id="price" required>
+                                    <label class="newProduct__label" for="price">Precio</label>
+                                    <input class="newProduct__input" type="text" name="price" id="price" required>
 
-                        <label class="newProduct__label" for="description">Descripción</label>
-                        <input id="lastInput" class="newProduct__input" type="text" name="description" id="description">
+                                    <label class="newProduct__label" for="description">Descripción</label>
+                                    <input id="lastInput" class="newProduct__input" type="text" name="description"
+                                        id="description">
 
-                        <label class="newProduct__label-img">Agregar imagen de producto</label>
-                        <input class="newProduct__input-file" type="file" name="imgProduct" accept=".jpg">
+                                    <label class="newProduct__label-img">Agregar imagen de producto</label>
+                                    <input class="newProduct__input-file" type="file" name="imgProduct" accept=".jpg">
 
-                        <div class="create">
-                            <a class="create__a" href="#">
-                                <button class="create__button-clean" type="reset">Limpiar</button>
-                            </a>
-                            <a class="create__a" href="#">
-                                <button class="create__button" type="submit">CREAR</button>
-                            </a>
+                                    <div class="create">
+                                        <a class="create__a" href="#">
+                                            <button class="create__button-clean" type="reset">Limpiar</button>
+                                        </a>
+                                        <a class="create__a" href="#">
+                                            <button class="create__button" type="submit">CREAR</button>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+                    </div>
+                </section>
+        </main>
 </body>
 
 </html>

@@ -13,13 +13,19 @@ body {
 
 main {
     width: 100%;
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin {
+    width: 90%;
+    background-color: white;
 }
 
 .admin_container {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -123,7 +129,7 @@ main {
 
 @media (min-width: 769px) {
     .newProduct_form {
-        width: 50%;
+        width: 100%;
         margin-top: 25px;
     }
 
