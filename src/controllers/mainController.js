@@ -8,9 +8,10 @@ const mainController = {
     contact: (req, res) => {
         return res.render ('main/contact')
     },
-    giftcard: (req,res) => {
-        return res.render ('main/giftcard')
-    }    
+    questions: (req,res) => {
+        return res.render ('main/questions')
+    }
+        
 
 }
 
