@@ -2,27 +2,37 @@
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
     font-size: 16px;
-    
-}
-.main-div-box{
-    border: 2px solid #000000;
-    margin: 5%;
-    background-color: #e5e5e5;
+
 }
 
+.main-login {
+    background-image: url(../images/delicious-cupcakes3.jpg);
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    -webkit-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+    box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+}
 
-.main-div-box__p{
+.main-div-box {
+    width: 100%;
+    background-color: #e5e5e5e6;
+    padding: 100px;
+}
+
+.titlep {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
 }
 
-.input-box{
+.input-box {
     margin-left: 10%;
     margin-right: 10%;
     width: 100%;
     margin-bottom: 10px;
-    
+
 }
 
 .input {
@@ -32,57 +42,64 @@
     max-height: 15%;
 }
 
-.checkbox-box{
-    border:2px solid #000000;
-    
+.checkbox-box {
+    border: 2px solid #000000;
+
     margin: auto;
     margin-top: 5%;
     width: 60%;
     min-height: 7vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.submit-box{
+.submit-box {
     margin: auto;
     padding: 10%;
-    padding-left: 10%;    
+    padding-left: 10%;
 }
 
-.submit-input{
-    margin: auto;
-    padding: 7%;
-    padding-right: 10%;
-    background-color: #000000;
-    border-radius: 10px;
-    color: #cca000;
-    width: 100%      
-}
-
-.final-a{
-    margin: auto;
+.final-a {
     text-align: center;
-    padding-bottom: 10%;
 }
 
-@media (min-width: 769px){
+.final-a-box {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
 
-    
-  
-   .main-div-box{
-       max-width: 1200px;
-       margin: auto;
-   }
 
-   .checkbox-box{
-       max-width: 450px;
-   }
+.submit-input {
+    background-color: black;
+    width: 90%;
+    color: white;
+    font-size: 18px;
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px 50px;
+}
 
-   .submit-input{
-       padding-top: 0%;
-       padding-bottom: 0%;
+@media (min-width: 769px) {
 
-   }
+
+
+    .main-div-box {
+        max-width: 1200px;
+        width: 50%;
+        margin: 0 auto;
+        padding: 50px auto;
+
+        -webkit-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+        -moz-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+        box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+    }
+
+    .checkbox-box {
+        max-width: 450px;
+    }
+
+
 }

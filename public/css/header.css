@@ -1,16 +1,21 @@
+/*Estilos del header */
 
-.body-header {
+ .body-header {
     width: 100% !important;
-    height: 220px;
-}
+     display: block;
+     background-image: url(/images/postre-frutillas.jpg);
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+ }
 
 /*Estilos del home header */
 
 .body-headerh {
     width: 100% !important;
-    height: 100vh;
     /* border-bottom: solid 5px goldenrod; */
     /* border-bottom: solid 5px rgb(125, 12, 2); */
+    
 }
 
 
@@ -19,6 +24,12 @@
 @media (min-width: 770px) {
 
     /*----------------------------HEADER HOME-----------------------------*/
+    .body-headerh {
+            width: 100% !important;
+            height: 100vh;
+         
+    }
+    
     .headerh-version-desktop {
         display: block;
         /* display: flex;
@@ -29,7 +40,6 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-
         height: 100vh;
     }
 
@@ -55,6 +65,7 @@
     .menuh-nav {
         width: 100%;
         height: 100vh;
+        
         position: relative;
         top: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
@@ -94,7 +105,7 @@
         text-decoration: none;
         color: white;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .menuh-accesos a:hover {
@@ -140,7 +151,8 @@
     }
 
     .menuh-logo-img {
-        width: 320px;
+        padding-top: 5%;
+        width: 250px;
     }
 
   
@@ -154,16 +166,17 @@
         z-index: 100;
     }*/
 
+   
+
     .header-version-desktop {
         position: relative;
         top: 0;
         width: 100%;
-        height: 200px;
+        height: 120px;
         z-index: 100;
         background-color: black;
         display: block;
-        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
-        padding-top: 20px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); 
     }
 
     .header-version-tablet {
@@ -222,7 +235,7 @@
         text-decoration: none;
         color: white;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .menu-accesos a:hover {
@@ -276,7 +289,7 @@
     /*----------------------HEADER HOME-----------------------------*/
     .body-headerh {
         width: 100% !important;
-        height: 500px;
+        height: 50vh;
     }
 
     .headerh-version-desktop {
@@ -285,11 +298,11 @@
 
     .headerh-version-tablet {
         display: block;
-        background-image: url(/images/tortitas-chocolate-2.jpg);
+        background-image: url(/images/postre-frutillas.jpg);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        height: 500px;
+        height: 50vh;
     }
 
     .headerh-version-mobile {
@@ -308,7 +321,6 @@
     /*----------------------HEADER---------------------------------*/
     .body-header {
         width: 100% !important;
-        height: 350px;
     }
 
     .header-version-desktop {
@@ -322,11 +334,10 @@
         position: relative;
         top: 0;
         width: 100%;
-        height: 300px;
         z-index: 100;
         background-color: black;
         background: rgb(0, 0, 0);
-        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
     }
 
     .header-version-mobile {
@@ -407,7 +418,8 @@
     }
 
     .menu-logo-tablet img {
-        width: 50%;
+        padding-top: 10%;
+        width: 200px;
     }
 
 }
@@ -426,13 +438,16 @@
 
     .headerh-version-mobile {
         display: block;
-        height: 400px;
-        background-color: black;
+        background-image: url(/images/postre-frutillas.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
     }
 
     .body-headerh {
         width: 100% !important;
-        height: 400px !important;
+        height: 100vh;
     }
 
 
@@ -441,7 +456,6 @@
     /*Estilos del Iframe Header*/
     .body-header {
         width: 100% !important;
-        height: 400px;
     }
 
     .header-version-desktop {
@@ -461,9 +475,9 @@
     }
 
     .menu-nav-mobile {
-        background-color: black;
+        /* background-color: black; */
         background: rgb(0, 0, 0);
-        /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); */
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%); 
         padding: 30px;
     }
 

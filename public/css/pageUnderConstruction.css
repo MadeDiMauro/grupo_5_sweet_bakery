@@ -1,0 +1,56 @@
+.page__construction__main {
+    background-image: url(/images/pastelero-masa.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.page__construction__div {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.page__section__title {
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.page__section__section {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.page__section__logo {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.page__section__logo img {
+    width: 250px;
+}
+
+.page__section__back {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.page__section__back button {
+    color: black;
+    background-color: goldenrod;
+    border: 0px;
+    padding: 10px 20px;
+}
+
+.page__section__back button:hover {
+    color: white;
+    background-color: rgb(156, 118, 22);
+}

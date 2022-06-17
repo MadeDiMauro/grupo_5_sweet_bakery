@@ -1,68 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras</title>
-    <link rel="stylesheet" href="/css/cart2.css">
-    <link rel="stylesheet" href="/css/base-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
-</head>
+<%- include('../partials/head', { title: "Carrito de compras" , style: "cart2" }) %>
 
 <body>
     <header>
-        <iframe class="ifHeader" src="/header" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"
-            scrolling="no"></iframe>
+        <%- include('../partials/header') %>
     </header>
     <section class="heading">
         <p class="heading__p">CARRITO DE COMPRAS</p>
     </section>
 
     <main>
-        <div class="step">
-            <div class="step__one">
-                <p>PASO 1</p>
-                <p>Carrito de compra</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__two">
-                <p>PASO 2</p>
-                <p>Completar datos</p>
-            </div>
-
-            <div class="step__decoration">
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-                <div class="step__div-icon">
-                    <i class="step__icon far fa-circle"></i>
-                </div>
-                <div class="step__div-hr">
-                    <hr class="step__hr">
-                </div>
-            </div>
-
-            <div class="step__three">
-                <p>PASO 3</p>
-                <p>Finalizar compra</p>
-            </div>
-        </div>
+        <%- include('../partials/cart') %>
 
         <section class="container">
             <div class="contact">
@@ -202,11 +152,11 @@
                     </div>
 
                     <div class="buy">
-                        <a class="buy__a" href="/cart3">
+                        <a class="buy__a" href="/cart/3">
                             <button class="buy__button" type="submit">CONTINUAR
                                 COMPRA</button>
                         </a>
-                        <a class="buy__a" href="/products">Ver más productos</a>
+                        <a class="buy__a" href="/products/list">Ver más productos</a>
                     </div>
                 </div>
             </div>
@@ -214,8 +164,7 @@
     </main>
 
     <footer>
-        <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0"
-            marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <%- include('../partials/footer') %>
     </footer>
 </body>
 

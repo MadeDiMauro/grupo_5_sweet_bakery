@@ -1,0 +1,281 @@
+* {
+    font-family: 'Catamaran', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.body__home {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+
+
+.main__home {
+    /* background-image:url(../images/img-fondo-home.webp); */
+    /* background-image: url(../images/pastelero-masa.webp); */
+    /* background-image: url(../images/chocolate-rustic.jpg); */
+
+    /* background-attachment: fixed; */
+    position: relative;
+    /* top: 200px; */
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* .main__home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+} */
+
+.main__content {
+    margin: 0 auto;
+}
+
+.imagenHeader {
+    width: 100%;
+    height: 100%;
+}
+
+.menuDesktop {
+    display: none;
+}
+
+.barraDeBusqueda {
+    display: none;
+}
+
+.main__secondconteiner {
+    background-image: url(../images/delicious-cupcakes3.jpg);
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    -webkit-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+        box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
+    
+}
+
+.main__secondconteiner .main__secondteiner__div {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0px;
+    justify-content: center;
+    text-align: center;
+  
+}
+
+.main__secondconteiner__p {
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-weight: lighter;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.main__description {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.main__secondconteiner__knowus {
+    width: 100%;
+}
+
+.knowus {
+    text-decoration: none;
+}
+
+.knowus__button {
+    font-weight: 700;
+    color: white;
+    width: 50%;
+    background-color: black;
+    border: none;
+    padding: 5px 0px;
+}
+
+.knowus__button:active {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    background-color: rgb(37, 37, 37);
+
+
+}
+
+.menu__div {
+    max-width: 1200px;
+}
+
+.menu__image {
+    background-image: url(../images/delicious-cake-copia.jpg);
+    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+    box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
+}
+
+.menu__image:hover {
+    background-color: rgb(218, 165, 32, 0.5);
+}
+
+.menu__image__p {
+    text-align: center;
+    font-size: medium;
+    color: #fbfaf8;
+}
+
+.menu__image__a {
+    display: block;
+    color: #fbfaf8;
+    text-align: center;
+    padding-top: 10%;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.lastconteiner {
+    background-image: url(../images/postre-frutillas.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    /* border-top: solid 5px rgb(125, 12, 2); */
+}
+
+.lastconteiner div {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lastconteiner h4 {
+    font-family: 'Dancing Script', cursive;
+    max-width: 1200px;
+    font-size: 25px;
+    color: #fbfaf8;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.lastconteiner__p {
+
+    font-family: 'Catamaran', sans-serif;
+    color: #fbfaf8;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer-nav {
+    background-color: #000000;
+    color: #fbfaf8
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .main__home .menu__div {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 0px;
+        }
+
+
+    .main__secondconteiner {
+        margin: 0 auto;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (min-width: 481px) {
+
+    /* .header__home {
+        width: 100%;
+        height: 500px;
+    } */
+
+        .main__home .menu__div {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 0px;
+        }
+
+    .main__secondconteiner__p {
+        font-weight: 700;
+    }
+
+    .main__secondconteiner {
+        margin: 0 auto;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (min-width: 769px) {
+    .main__home .menu__div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 0px;
+    }
+
+    .menu__image {
+        height: 350px;
+    }
+
+    .menu__image {
+        margin: 10px;
+    }
+
+    .menu__image:hover {
+        background-color: rgb(218, 165, 32, 0.5);
+    }
+
+    .main {
+        margin: auto;
+    }
+
+    .main__secondconteiner {
+        margin: 0 auto;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}

@@ -1,7 +1,5 @@
 * {
     font-family: 'Catamaran';
-    font-size: 16px;
-    color: black;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -34,20 +32,27 @@ main {
     flex-wrap: nowrap;
     justify-content: space-around;
     text-align: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     padding: 15px;
 }
 
 .step__two {
-    font-weight: bold;
+    color: black;
+    font-weight: 700;
+}
+
+.step__one,
+.step__three {
+    color: rgb(93, 92, 92);
 }
 
 .step__one,
 .step__two,
 .step__three {
     width: 50%;
+    font-size: 14px;
 }
 
 .step__decoration {
@@ -73,7 +78,7 @@ main {
 }
 
 .step__icon {
-   font-size: small;
+    font-size: 10px;
 }
 
 .contact__title {
@@ -234,7 +239,7 @@ main {
     }
 
     .order__name-quantity {
-        width: 40%;
+        width: 45%;
         text-align: left;
     }
 
@@ -243,11 +248,11 @@ main {
     }
 
     .order__div-price {
-        width: 20%;
+        width: 15%;
     }
 
-    .oeder__price {
-        font-weight: 600;
+    .order__price {
+        /* font-weight: 600; */
         text-align: right;
     }
 

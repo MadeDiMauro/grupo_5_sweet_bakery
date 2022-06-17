@@ -1,67 +1,54 @@
 <!DOCTYPE html>
+<%- include('../partials/head', { title: "Registrarse" , style: "register" }) %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Bakery</title>
-  <link rel="stylesheet" href="/css/register.css">
-  <link rel="stylesheet" href="/css/base-style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <header>
 
-<body>
-  <header>
-
-    <iframe class="ifHeader" src="http://localhost:3000/header" frameborder="0" hspace="0" vspace="0" marginheight="0"
-      marginwidth="0" scrolling="no"></iframe>
+      <%- include('../partials/header') %>
 
     </header>
-    <main>
+    <main class="main-login">
       <div class="main-div-box">
-          <p class="main-div-box__p">REGISTRATE</p>
-          <form action="">
-              <div class="input-box">
-                <label class="input-box__label" for="name">Nombre*</label><br>
-                <input class="input" type="text" name="name" id="name" required>
-              </div>
-              <div class="input-box">
-                <label class="input-box__label" for="email">Correo Electronico*</label><br>
-                <input class="input" type="email" name="email" id="email" placeholder="">
-              </div  class="input-box">
-              <div class="input-box" >
-                <label class="input-box__label" for="phone">Telefono</label><br>
-                <input class="input" type="tel" name="phone" id="phone" placeholder="">
-              </div>
-              <div class="input-box">
-                <label class="input-box__label" for="password">Contraseña*</label><br>
-                <input class="input" type="password" name="password" id="password" required>
-              </div>
-              <div class="input-box">
-                <label class="input-box__label" for="re_password">Repetir Contraseña*</label><br>
-                <input class="input" type="password" name="re_password" id="re_password" required>
-              </div>
-              <div class="checkbox-box">
-                <label class="checkbox-label" for="check">
-                <input class="checkbox-input" type="checkbox" name="check" id="check" placeholder="">
-                No soy un robot</label>
-              </div>
-              <div class="submit-box">
-                <label class="submit-label" for=""></label>
-                <input class="submit-input" type="submit" name="" id="" placeholder="" value="CREA TU CUENTA">
-              </div>
-              <div class="final-a">
-              <a href="./home">¿Ya tenes cuenta? Inicia Sesion</a>
-              </div>
-          </form>
+        <p class="titlep">REGISTRARSE</p>
+        <form action="">
+          <div class="input-box">
+            <label class="input-box__label" for="name">Nombre*</label><br>
+            <input class="input" type="text" name="name" id="name" required>
+          </div>
+          <div class="input-box">
+            <label class="input-box__label" for="email">Correo Electronico*</label><br>
+            <input class="input" type="email" name="email" id="email" placeholder="">
+          </div class="input-box">
+          <div class="input-box">
+            <label class="input-box__label" for="phone">Telefono</label><br>
+            <input class="input" type="tel" name="phone" id="phone" placeholder="">
+          </div>
+          <div class="input-box">
+            <label class="input-box__label" for="password">Contraseña*</label><br>
+            <input class="input" type="password" name="password" id="password" required>
+          </div>
+          <div class="input-box">
+            <label class="input-box__label" for="re_password">Repetir Contraseña*</label><br>
+            <input class="input" type="password" name="re_password" id="re_password" required>
+          </div>
+          <div class="checkbox-box">
+            <label class="checkbox-label" for="check">
+              <input class="checkbox-input" type="checkbox" name="check" id="check" placeholder="">
+              No soy un robot</label>
+          </div>
+          <div class="submit-box">
+            <label class="submit-label" for=""></label>
+            <input class="submit-input" type="submit" name="" id="" placeholder="" value="CREA TU CUENTA">
+          </div>
+          <div class="final-a-box">
+            <a class="final-a" href="/login">¿Ya tenes cuenta? Inicia Sesion</a>
+          </div>
+        </form>
       </div>
 
-  </main>
-  <footer>
-    <iframe class="ifFooter" src="http://localhost:3000/footer" frameborder="0" hspace="0" vspace="0" marginheight="0"
-      marginwidth="0" scrolling="no"></iframe>
+    </main>
+    <footer>
+      <%- include('../partials/footer') %>
 
-  </footer>
-</body>
+    </footer>
+  </body>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/adminEdit.css">
+    <link rel="stylesheet" href="/css/adminHeader.css">
+    <link rel="stylesheet" href="/css/adminNavbar.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../../partials/headerAdmin') %>
+        <main>
+            <%- include('../../partials/navbarAdmin') %>
+
+                <section class="admin">
+                    <div class="admin_container">
+                        <div class="admin__container__div">
+                            <div class="adminTitle">
+                                <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-file-pen"></i> Editar
+                                    producto</p>
+                            </div>
+                            <hr class="adminTitle__hr">
+
+                            <div class="newProduct">
+                                <form class="newProduct_form" action="" method="GET">
+                                    <label class="newProduct_label" for="name">Nombre</label>
+                                    <input class="newProduct_input" type="text" name="name" id="name" required>
+
+                                    <label class="newProduct_label" for="category">Categoría</label>
+                                    <select class="newProduct_select" name="categories" required>
+                                        <option value="c1">Alfajores</option>
+                                        <option value="c2">Budines</option>
+                                        <option value="c3">Cookies</option>
+                                        <option value="c4">Desayunos y boxes</option>
+                                        <option value="c5">Mini postres</option>
+                                        <option value="c6">Macarons</option>
+                                        <option value="c7">Productos secos</option>
+                                        <option value="c8">Postres</option>
+                                    </select>
+
+                                    <label class="newProduct_label" for="price">Precio</label>
+                                    <input class="newProduct_input" type="text" name="price" id="price" required>
+
+                                    <label class="newProduct_label" for="description">Descripción</label>
+                                    <input id="lastInput" class="newProduct_input" type="text" name="description"
+                                        id="description">
+
+                                    <label class="newProduct_label-img">Agregar imagen de producto</label>
+                                    <input class="newProduct_input-file" type="file" name="imgProduct" accept=".jpg">
+
+                                    <div class="edit">
+                                        <a class="edit_a" href="#">
+                                            <button class="edit_button-clean" type="reset">EDITAR</button>
+                                        </a>
+                                        <a class="edit_a" href="#">
+                                            <button class="edit_button" type="delete">DELETE</button>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </main>
+</body>
+
+</html>

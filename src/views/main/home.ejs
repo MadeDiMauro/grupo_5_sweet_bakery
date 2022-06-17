@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Bakery</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/base-style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;500;700&family=Dancing+Script:wght@500&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
-</head>
+<%- include('../partials/head', { title: "Sweet Bakery" , style: "home" }) %>
 
-<body class="body__home">
-    <header class="header__home">
-        <%- include('../partials/header-home') %>
-    </header>
+    <body class="body__home">
+        <header class="header__home">
+            <%- include('../partials/header-home') %>
+        </header>
 
-    <main class="main__home">
-        <div class="main__content">
-        <!-- <div class="main__conteiner">
+        <main class="main__home">
+            <div class="main__content">
+                <!-- <div class="main__conteiner">
             <img class="main__conteiner__logo" src="/images/logo-sweet-bakery-dorado.png" alt="">
         </div> -->
-        <div class="main__secondconteiner">
-            <p class="main__secondconteiner__p">¡Sweet Bakery, donde calidad y buen gusto combinan!</p>
-            <p class="main__description">Como equipo buscamos crear y cumplir con los sueños y objetivos de cada cliente, pero lo que más nos gusta es generar vínculos de amistad, ese es el mayor desafío. Todo esto y nuestra pasión por el detalle, hizo que nuestras recetas se conviertan en clásicos y sean reconocidas por quienes nos visitan. </p>
-            <p class="main__description">¡Te invitamos a saber más sobre nosotros! </p>
-            <div class="main__secondconteiner__knowus">
-                <a class="knowus" href="/nosotros"><button class="knowus__button"> CONOCENOS </button></a>
-            </div>
-        </div>
+                <div class="main__secondconteiner">
+                    <div class="main__secondteiner__div">
+                        <p class="main__secondconteiner__p">¡Sweet Bakery, donde calidad y buen gusto combinan!</p>
+                        <p class="main__description">Como equipo buscamos crear y cumplir con los sueños y objetivos de
+                            cada
+                            cliente, pero lo que más nos gusta es generar vínculos de amistad, ese es el mayor desafío.
+                            <br>Todo
+                            esto y nuestra pasión por el detalle, hizo que nuestras recetas se conviertan en clásicos y
+                            sean
+                            reconocidas por quienes nos visitan. </p>
+                        <p class="main__description">¡Te invitamos a saber más sobre nosotros! </p>
+                        <div class="main__secondconteiner__knowus">
+                            <a class="knowus" href="/about"><button class="knowus__button"> CONOCENOS </button></a>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="menu">
-            <div class="menu__image">
+                <section class="menu">
+                    <div class="menu__div">
+                        <div class="menu__image">
+                            <div>
+                                <a href="/products/list" class="menu__image__a"> Productos</a>
+                                <p class="menu__image__p">Nuestra tienda online</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__image">
+                            <div>
+                                <a href="/courses/list" class="menu__image__a">Cursos</a>
+                                <p class="menu__image__p">Inscribite a nuestras clases</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__image">
+                            <div>
+                                <a href="/giftcard" class="menu__image__a">Gift Cards</a>
+                                <p class="menu__image__p">Regalá dulzura</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="lastconteiner">
                 <div>
-                    <a href="/products/list" class="menu__image__a"> PRODUCTOS</a>
-                    <p class="menu__image__p">Nuestra tienda online</p>
+                    <h4>Variedad de sabores y texturas</h4>
+                    <p class="lastconteiner__p">Cada receta está pensada para que disfrutes de un momento
+                    placentero en un ambiente cálido y hogareño. <br> Nuestra premisa es hacer cosas ricas que reconfortan el cuerpo y el alma.</p>
                 </div>
             </div>
 
-            <div class="menu__image">
-                <div>
-                    <a href="/courses/list" class="menu__image__a">CURSOS</a>
-                    <p class="menu__image__p">Inscribite a nuestras clases</p>
-                </div>
-            </div>
 
-            <div class="menu__image">
-                <div>
-                    <a href="/giftcard" class="menu__image__a">GIFT CARD</a>
-                    <p class="menu__image__p">Regalá dulzura</p>
-                </div>
-            </div>
-        </section>
-</div>
-        <div class="lastconteiner">
-            <div>
-                <p class="lastconteiner__p">...Siempre es mejor con algo rico...</p>
-            </div>
-        </div>
-
-
-    </main>
-    <footer>
-        <%- include('../partials/footer-home') %>
-    </footer>
-
-
-
-</body>
+        </main>
+        <footer>
+            <%- include('../partials/footer-home') %>
+        </footer>
+    </body>
 
 </html>
