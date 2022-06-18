@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const productsdbPath = path.join(__dirname, "../database/productos.json");
+const productsdbPath = path.join(__dirname, "../database/products.json");
 
 const readJsonFile = (path) => {
     const data = fs.readFileSync(path, "utf-8");
@@ -13,6 +13,7 @@ const productsList = readJsonFile(productsdbPath);
 
 const productsController = {
     list: (req, res) => {
+        const productsList = readJsonFile(productsdbPath);
         if (req.params.category) {
             let productsListCategory = productsList.filter(
                 (item) => item.category == req.params.category
@@ -28,13 +29,6 @@ const productsController = {
         let productItem = productsList.find(item => item.id == req.params.id);
         let productsRelated = productsList.filter(item => item.category == productItem.category);
         return res.render('products/productDetail', { productItem: productItem, productsRelated: productsRelated }) // validacion y sin objeto completo
-    },
-    create: (req, res) => {
-        return res.render('products/create')
-    },
-    edit: (req, res) => {
-        let productItem = productsList.find((item) => item.id == req.params.id);
-        return res.render('products/edit', { productsList: productsList }) //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
     }
 }
 

@@ -107,21 +107,18 @@
                                         </div>
                                         <div class="productsList__buttons">
                                             <!-- <div class="productsList__divs"> -->
-                                            <a class="productsList__a-edit" href="/admin/edit">
+                                            <a class="productsList__a-edit" href="/admin/editProduct/<%= productsList[i].id %>">
                                                 <button class="productsList__button-edit" type="submit">
                                                     <i class="productsList__icon far fa-edit"></i> <span
                                                         class="productsList__span">Editar</span>
                                                 </button>
                                             </a>
-                                            <!-- </div>
-                                    <div class="productsList__divs"> -->
-                                            <a class="productsList__a-delete" href="#">
+                                        <form class="productsList__a-delete" action="/admin/deleteProduct/<%= productsList[i].id %>?_method=DELETE" method="POST">
                                                 <button class="productsList__button-delete" type="submit">
                                                     <i class="productsList__icon far fa-trash-alt"></i> <span
                                                         class="productsList__span">Eliminar</span>
                                                 </button>
-                                            </a>
-                                            <!-- </div> -->
+                                        </form>
                                         </div>
 
                                     </div>
