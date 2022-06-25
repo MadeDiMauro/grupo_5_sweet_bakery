@@ -5,7 +5,7 @@
     "price": "1500",
     "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
     "image": "delicious-cupcakes.jpg",
-    "category": "c5"
+    "category": "postres"
   },
   {
     "id": "2",
@@ -13,10 +13,10 @@
     "price": "1500",
     "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
     "image": "delicious-cupcakes.jpg",
-    "category": "c5"
+    "category": "postres"
   },
   {
-    "id": "3",
+    "id":"3",
     "name": "Lemon pie",
     "price": "$ 0.00",
     "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano. 20cm: rinde 8/10 porciones",
@@ -184,7 +184,7 @@
     "category": "budines"
   },
   {
-    "id": "24",
+    "id":"24",
     "name": "Limón y amapola",
     "price": "$ 0.00",
     "description": "Budín sabor limón con amapolas -Tamaño 650 grs. y 1200 grs.",
@@ -312,7 +312,7 @@
     "category": "cookies"
   },
   {
-    "id": 40,
+    "id": "40",
     "name": "Pain de Chocolate",
     "price": "$ 0.00",
     "description": "Masa crocante de nuez y mucho dulce de leche",
@@ -320,7 +320,7 @@
     "category": "Croissant"
   },
   {
-    "id": 41,
+    "id": "41",
     "name": "Croissant",
     "price": "$ 0.00",
     "description": "Ideal para el desayuno y la merienda - Elaborado con manteca de primera calidad",
@@ -328,7 +328,7 @@
     "category": "Croissant"
   },
   {
-    "id": 42,
+    "id": "42",
     "name": "Medialunas",
     "price": "$ 0.00",
     "description": "Las mejores medialunas de grasa y manteca, recién horneadas",
@@ -336,7 +336,7 @@
     "category": "Croissant"
   },
   {
-    "id": 43,
+    "id": "43",
     "name": "Macarons surtidos",
     "price": "$ 0.00",
     "description": "Macarons surtidos por 12, 18 o 24 unidades",
@@ -344,7 +344,7 @@
     "category": "macarons"
   },
   {
-    "id": 44,
+    "id": "44",
     "name": "Scons",
     "price": "$ 0.00",
     "description": "Con nueces, chips de chocolate o ralladura de limón",
@@ -352,7 +352,7 @@
     "category": "productos secos"
   },
   {
-    "id": 45,
+    "id": "45",
     "name": "Marineras por 1/4",
     "price": "$ 0.00",
     "description": "Con y sin semillas:livianas, crocantes y sabrosas",
@@ -360,7 +360,7 @@
     "category": "productos secos"
   },
   {
-    "id": 46,
+    "id": "46",
     "name": "Bizcochitos de grasa por 1/4",
     "price": "$ 0.00",
     "description": "Pruebe nuestros irresistibles bizcochitos de grasa",
@@ -368,7 +368,7 @@
     "category": "productos secos"
   },
   {
-    "id": 47,
+    "id": "47",
     "name": "Cuadraditos por 1/4",
     "price": "$ 0.00",
     "description": "Elegí el que más te guste: ricota, coco con dulce de leche, brownie con nueces, frola de membrillo o batata, limón y manzana",
@@ -376,7 +376,7 @@
     "category": "productos secos"
   },
   {
-    "id": 48,
+    "id": "48",
     "name": "Criollos por 1/4",
     "price": "$ 0.00",
     "description": "Crocantes, livianos, suaves, con aroma a manteca",
@@ -384,7 +384,7 @@
     "category": "productos secos"
   },
   {
-    "id": 49,
+    "id": "49",
     "name": "Copitos",
     "price": "$ 0.00",
     "description": "Deliciosos copitos de dulce de leche bañados con chocolate",
@@ -392,7 +392,7 @@
     "category": "productos secos"
   },
   {
-    "id": 50,
+    "id": "50",
     "name": "Pepas por 1/4",
     "price": "$ 0.00",
     "description": "Clásicas pepas de vainilla y membrillo",
@@ -400,7 +400,7 @@
     "category": "productos secos"
   },
   {
-    "id": 51,
+    "id": "51",
     "name": "Masitas húngaras por 1/4",
     "price": "$ 0.00",
     "description": "Masitas con cubierta crocante de chocolate con almendras y rellenas con dulce de frambuesas",
@@ -408,7 +408,7 @@
     "category": "productos secos"
   },
   {
-    "id": 52,
+    "id": "52",
     "name": "Cantucci con almendras por 1/4",
     "price": "$ 0.00",
     "description": "También llamados biscottis, son una masita típica italiana aquí reversionada por nuestro maestro pastelero",
@@ -416,19 +416,37 @@
     "category": "productos secos"
   },
   {
-    "id": 53,
-    "name": "Budin de Chocolate",
+    "id": "53",
+    "name": "Degustación de mini tortas.Tamaños: x4/x6/x9.",
     "price": "900",
-    "category": "c2",
-    "description": "Delicioso budín de chocolate con dulce de leche",
-    "image": "imgProduct-1655503353504-815008270.jpg"
+    "description": "Elegí la variedad que prefieras: Cheesecake, Brownie, Lemon Pie, Crumble de manzana, Chocotorta, Tarta de Frutos del Bosque, Años locos, Franuisima, Tarta de frutillas, Tiramisú, Bombita oreo, Tarta de ricota, Mini coco, Marquise de chocolate. ",
+    "image": "imgProduct-1655503353504-815008270.jpg",
+    "category": "desayunos"
   },
   {
-    "id": 54,
-    "name": "Budin de Chocolate",
+    "id": "54",
+    "name": "Desayuno para 2 personas",
     "price": "900",
-    "category": "c2",
-    "description": "Delicioso budín de chocolate con dulce de leche",
-    "image": "imgProduct-1655503660816-794713402.jpg"
-  }
+    "description": "Incluye: tarjeta alusiva, Scones con chips de chocolate 1/4, Macarons x 1 unidad, Cantuccis con almendras 1/4, Húngaras por 9 unidades, Alfajor XL de avellana o nougat por 1 unidad, medialunas x 2 unidades, Rodajas de pan de campo por 4 unidades, Criollitos x 4 unidades, Copito de dulce de leche x 1 unidad, Figazzitas o similar rellenos con jamón y queso x 2 unidades, Espiral vienes x 1 unidad (relleno con pasta de almendras, chocolate, almendras y cerezas) o similar, Manteca por 3 unidades, Dulce de leche x 2 unidades, Infusiones varisa, taza",
+    "image": "imgProduct-1655503660816-794713402.jpg",
+    "category": "desayunos"
+
+  },
+  {
+    "id": "55",
+    "name": "Desayuno para 4 personas",
+    "price": "900",
+    "description": "Incluye: tarjeta alusiva, Scones con chips de chocolate 1/4, Macarons x 2 unidad, Cantuccis con almendras 1/4, Húngaras por 9 unidades, Alfajor XL de avellana o nougat por 1 unidad, medialunas x 4 unidades, Rodajas de pan de campo por 6 unidades, Criollitos x 8 unidades, Copito de dulce de leche x 2 unidad, Figazzitas o similar rellenos con jamón y queso x 2 unidades, Espiral vienes x 1 unidad (relleno con pasta de almendras, chocolate, almendras y cerezas) o similar, Manteca por 4 unidades, Dulce de leche x 2 unidades, Infusiones varias, taza",
+    "image": "imgProduct-1655503660816-794713402.jpg",
+     "category": "desayunos"
+},
+{
+    "id": "56",
+    "name": "Box dulce",
+    "price": "900",
+    "description": "Incluye: 2 Mini postres a elección, 2 Macarons surtidos, 1 Cuadrado de coco y dulce de leche, 1 Cuadrado de ricota, 1 Alfajor XL nougat, 1/4 Kg. Bizcochitos de grasa, 1/4 Kg. Pepas de membrillo, 1/4 kg. Scones, 1/4 Kg. marineras semilladas, 1/4 Kg. Alfajores de maicena, 2 Copitos de dulce de leche bañados en chocolate, 1 Pan de campo chico.",
+    "image": "imgProduct-1655503660816-794713402.jpg",
+    "category": "boxes"
+}
+
 ]

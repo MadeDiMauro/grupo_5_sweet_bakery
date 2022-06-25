@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "firstname": "Juan Adrian",
+        "lastname": "Carnevale",
+        "email": "javale@hotmail.com",
+        "password": "65487ab",
+        "category": "Admin",
+        "image": "avatar1.jpg"
+    },
+    {
+        "id": 2,
+        "firstname": "Francisco Pablo",
+        "lastname": "Arlicuoan",
+        "email": "arlifp@gmail.com",
+        "password": "eustaquio1981",
+        "category": "Admin",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 3,
+        "firstname": "Valentín",
+        "lastname": "Enriquez",
+        "email": "vnenriquez@hotmail.com",
+        "password": "cami_45_x",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 4,
+        "firstname": "Federica Ornella",
+        "lastname": "Hunry",
+        "email": "ornehun@hotmail.com",
+        "password": "1542.madre",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 5,
+        "firstname": "Maria Fernanda",
+        "lastname": "Recondo",
+        "email": "marfer98@hotmail.com",
+        "password": "amarillo_verde",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 6,
+        "firstname": "Sofia Ana",
+        "lastname": "Gutierrez",
+        "email": "sofian@hotmail.com",
+        "password": "tukiantoc",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 6,
+        "firstname": "Esteban Ignacio",
+        "lastname": "Madrigal",
+        "email": "madrimia@gmail.com",
+        "password": "marita_funes22",
+        "category": "Admin",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 7,
+        "firstname": "Carolina Karina",
+        "lastname": "Figioni",
+        "email": "figikar@gmail.com",
+        "password": "1254.ab.-",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 8,
+        "firstname": "Adriano Carlos",
+        "lastname": "Zamiro",
+        "email": "zamira@hotmail.com",
+        "password": "tacos1264",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 9,
+        "firstname": "Beatriz Fernanda",
+        "lastname": "Nayun",
+        "email": "nayi@hotmail.com",
+        "password": "nayinur1478",
+        "category": "user",
+        "image": "avatar1.jpg"
+      },
+      {
+        "id": 10,
+        "firstname": "Nune Analia",
+        "lastname": "Demirtokian",
+        "email": "Nunatoki@gmail.com",
+        "password": "demir_9725",
+        "category": "admin",
+        "image": "avatar1.jpg"
+      }
+ ]
