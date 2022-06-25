@@ -30,13 +30,13 @@
                                 </div>
                                 <hr class="adminTitle__hr">
 
-                                <form class="newProduct__form" action="" method="GET">
+                                <form class="newProduct__form" action="/admin/products" method="POST" enctype="multipart/form-data">
 
                                     <label class="newProduct__label" for="name">Nombre</label>
                                     <input class="newProduct__input" type="text" name="name" id="name" required>
 
                                     <label class="newProduct__label" for="category">Categoría</label>
-                                    <select class="newProduct__select" name="categories" required>
+                                    <select class="newProduct__select" name="category" required>
                                         <option value="c1">Alfajores</option>
                                         <option value="c2">Budines</option>
                                         <option value="c3">Cookies</option>
