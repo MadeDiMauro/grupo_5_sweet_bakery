@@ -61,9 +61,9 @@
                     <hr>
                 </div>
 
-                <% for (let i=0; i < 3; i ++) { %>
+                <% for (let i=0; i < (productsRelated.length <= 2 ? productsRelated.length : 3 ); i ++) { %>
                     <article>
-                        <a href='/products/detail/<%=productsRelated[i].id %>'><img class="img-product"
+                        <a href='/products/detail/<%= productsRelated[i].id %>'><img class="img-product"
                                 src='/images/<%= productsRelated[i].image %>' alt='<%= productsRelated[i].name %>'></a>
                         <div class="product-info">
                             <p class="products__name">
