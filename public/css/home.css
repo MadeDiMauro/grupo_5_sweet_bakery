@@ -128,7 +128,10 @@
 
 .menu__image {
     background-image: url(../images/delicious-cake-copia.jpg);
+    /* background-image: url(../images/postre-frutillas2.jpg); */
+    /* background-image: url(../images/delicious-cupcakes3.jpg);  */
     background-size: cover;
+    background-position:bottom left;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 10px;
