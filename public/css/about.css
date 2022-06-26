@@ -111,15 +111,14 @@ font-weight: 600;
 }
 .main__secondconteiner__ourhistory__p {
     margin:0 auto;
-    padding-left:20px;
-    width:55%;
+    width:50%;
 
 }
 
 .about__images__about {
     display:flex;
     flex-wrap: wrap;
-    width:50%;
+    width:45%;
 }
 .about__img__about1,
 .about__img__about2,
@@ -132,18 +131,22 @@ font-weight: 600;
 .about__img__about3 {
     display:block;
 
-
 }
 
-.main__secondconteiner__more__p {
+.main__secondconteiner__more{
     display:flex;
     flex-wrap: nowrap;
     width:100%;
-    margin:0 auto;
-
+    
 }
-.about__img__us {
-    width:50%;
+.main__secondconteiner__more__p {
+    margin: 0 auto;
+}
+.about__img__us__lastpic {
+    margin-top:20px;
+    margin-bottom:20px;
+    max-width: 1200px;
+
 }
 }
 
