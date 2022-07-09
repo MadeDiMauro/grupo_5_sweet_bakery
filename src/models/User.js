@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const User={ 
-    fileName:'../database/users.json',
+    fileName:'/database/users.json',
 
     getData: function () {
 
@@ -43,14 +43,14 @@ const User={
   
     /*GUARDAR UN USUARIO*/
     create: function (userData) {
-        let allUsers=this.findAll (); /*traer todos los usuarios y hago push a array userData y lo vuelvo a escribir en json*/
+                let allUsers=this.findAll (); /*traer todos los usuarios y hago push a array userData y lo vuelvo a escribir en json*/
         let newUser= {
             id:this.generateId (),
             ...userData  /*express generator*/
         }
         allUsers.push (newUser);
         fs.writeFileSync (this.fileName, JSON.stringify (allUsers, null, ' '));
-        return newUser;
+        //return newUser;
     },
 
     /*BORRAR USUARIO /USO FILTER*/
