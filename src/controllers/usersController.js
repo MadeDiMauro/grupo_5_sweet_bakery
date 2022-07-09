@@ -62,7 +62,7 @@ const usersController = {
   
   profile: (req,res) => {       /* por si queremos incluirlo*/
   return  res.render ('userProfile', {
-  user:req.session.userLogged
+  user:req.session.userLogged  /*usé user en la vista de profile*/
      })
    },
 
