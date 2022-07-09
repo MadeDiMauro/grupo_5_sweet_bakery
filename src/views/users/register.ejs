@@ -10,7 +10,7 @@
     <main class="main-login">
       <div class="main-div-box">
         <p class="titlep">REGISTRARSE</p>
-        <form action="">
+        <form action="/users/register" method="POST">
           <div class="input-box">
             <label class="input-box__label" for="name">Nombre*</label><br>
             <input class="input" type="text" name="name" id="name" required>
@@ -37,8 +37,13 @@
               No soy un robot</label>
           </div>
           <div class="submit-box">
-            <label class="submit-label" for=""></label>
-            <input class="submit-input" type="submit" name="" id="" placeholder="" value="CREA TU CUENTA">
+            <a href="/" class="submit-label">
+            <button class="submit-input" type="submit" >CREA TU CUENTA</button></a>
+            <!--   <a class="products__a" href="/cart1">
+              <button class="products__button-add" type="submit">
+                  AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
+              </button>
+          </a> -->
           </div>
           <div class="final-a-box">
             <a class="final-a" href="/login">¿Ya tenes cuenta? Inicia Sesion</a>
