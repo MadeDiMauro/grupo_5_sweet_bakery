@@ -12,7 +12,7 @@
     </section>
 
     <main>
-        <%- include('../partials/cart') %>
+        <%- include('../partials/steps') %>
 
         <section class="container3">
             <div class="billing">
@@ -21,27 +21,27 @@
                 </div>
                 <form class="billing__form" action="#" method="GET">
                     <div class="billing__div">
-                        <label class="billing__label" for="payment">Medio de pago *</label>
+                        <label class="billing__label" for="payment">Medio de pago</label>
                         <select class="billing__select" name="payment" id="payment" required>
                             <option value="credit">Tarjeta de crédito/débito</option>
                             <option value="cash">Efectivo</option>
                         </select>
                     </div>
 
-                    <label class="billing__label" for="cedit-number">Número de tarjeta *</label>
+                    <label class="billing__label" for="cedit-number">Número de tarjeta</label>
                     <input class="billing__input" type="text" name="cedit-number" id="cedit-number" required>
 
                     <div class="billing__credit-info">
                         <div class="billing__credit-info-div">
-                            <label  for="expiration">Vencimiento *</label>
+                            <label  for="expiration">Vencimiento</label>
                             <input class="billing__input" type="text" name="expiration" id="expiration" required>
                         </div>
                         <div class="billing__credit-info-div">
-                            <label  for="cvv">CVV *</label>
+                            <label  for="cvv">CVV</label>
                             <input class="billing__input" type="text" name="cvv" id="cvv" required>
                         </div>
                         <div class="billing__credit-info-div">
-                            <label  for="mensual-fee">Cuotas *</label>
+                            <label  for="mensual-fee">Cuotas</label>
                             <select class="billing__select" name="mensual-fee" id="mensual-fee">
                                 <option value="1">1</option>
                                 <option value="3">3</option>
@@ -50,12 +50,12 @@
                         </div>
                     </div>
 
-                    <label class="billing__label" for="cardholder">Titular de la tarjeta *</label>
+                    <label class="billing__label" for="cardholder">Titular de la tarjeta</label>
                     <input class="billing__input" type="text" name="cardholder" id="cardholder" required>
 
                     <div class="billing__dni">
                         <div class="billing__dni-div">
-                            <label class="billing__label" for="document">Documento *</label>
+                            <label class="billing__label" for="document">Documento</label>
                             <select class="billing__select" name="document" id="document" required>
                                 <option value="dni">DNI</option>
                                 <option value="le">Libreta de Enrolamiento</option>
@@ -63,7 +63,7 @@
                             </select>
                         </div>
                         <div class="billing__dni-div">
-                            <label class="billing__label" for="doc-number">Nº de documento *</label>
+                            <label class="billing__label" for="doc-number">Nº de documento</label>
                             <input class="billing__input" type="text" name="doc-number" id="doc-number" required>
                         </div>
                     </div>

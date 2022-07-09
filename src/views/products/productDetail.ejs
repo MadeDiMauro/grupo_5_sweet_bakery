@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="product-detail">
-                    <img src='/images/<%=productItem.image %>' alt='<%=productItem.name %>'> 
+                    <img src='/images/products/<%=productItem.image %>' alt='<%=productItem.name %>'> 
                 </div>
             </div>
 
@@ -61,16 +61,16 @@
                     <hr>
                 </div>
 
-                <% for (let i=0; i < 3; i ++) { %>
+                <% for (let i=0; i < (productsRelated.length <= 2 ? productsRelated.length : 3 ); i ++) { %>
                     <article>
-                        <a href='/products/detail/<%=productsRelated[i].id %>'><img class="img-product"
-                                src='/images/<%= productsRelated[i].image %>' alt='<%= productsRelated[i].name %>'></a>
+                        <a href='/products/detail/<%= productsRelated[i].id %>'><img class="img-product"
+                                src='/images/products/<%= productsRelated[i].image %>' alt='<%= productsRelated[i].name %>'></a>
                         <div class="product-info">
                             <p class="products__name">
-                                <%=productsRelated [i].name %>
+                                <%= productsRelated[i].name %>
                             </p>
                             <p class="products__price">
-                                <%=productsRelated [i].price %>
+                                <%= productsRelated[i].price %>
                             </p>
                             <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
                         </div>

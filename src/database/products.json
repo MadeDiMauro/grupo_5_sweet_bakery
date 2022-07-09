@@ -1,434 +1,474 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Cheescake",
-    "price": "1500",
-    "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
-    "category": "c5"
+    "price": 1500,
+    "description": "Cremoso y compacto, su base es de cookies  y su cobertura de confitura de frutos rojos. 20cm: rinde 10/12 porciones",
+    "image": "cheescake.jpg",
+    "category": "Desayunos boxes"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Tiramisú",
-    "price": "1500",
+    "price": 1500,
     "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
-    "category": "c5"
+    "image": "tiramisu.jpg",
+    "category": "postres"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Lemon pie",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "lemon-pie.jpg",
     "category": "postres"
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Tarta de Frutillas",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "tarta-frutillas.jpg",
     "category": "postres"
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Brownie",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano.18 cm: rinde 10/12 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "brownie.jpg",
     "category": "postres"
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Tarta de frutos del bosque",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Masa sable breton de chocolate rellena con crema pastelera y frutos del bosque. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "tarta-frutos-rojos.jpg",
     "category": "postres"
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "Crumble de manzana",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Base de tarta dulce con relleno esponjoso de pure de manzana, con miel, un toque de canela y cubierta con un crocante stroisel. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "crumble-manzana.jpg",
     "category": "postres"
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "Rogel",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Finos discos de masa crocante rogel, dulce de leche y el clásico merengue Italiano. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "rogel.jpg",
     "category": "postres"
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "Carrot cake",
-    "price": "$ 0.00",
-    "description": "Torta de zanahoria, especiada con nueces y un suave frosting.20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Torta de zanahoria, especiada con nueces y un suave frosting. 20cm: rinde 8/10 porciones",
+    "image": "carrot-cake.jpg",
     "category": "postres"
   },
   {
-    "id": "10",
+    "id": 10,
     "name": "Black coffee",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Bizcochuelo de chocolate y café con dos cortes: uno con una suave mouse de café y chocolate, y el otro corte con dulce de frambuesa. Humedecida con almibar de café. Cubierta con suave mouse de café y chocolate. 18 cm: rinde 10/12 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "black-coffee.jpg",
     "category": "postres"
   },
   {
-    "id": "11",
+    "id": 11,
     "name": "Tarta de ricota",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Nuestra clásica masa con húmedo relleno de ricota y una pizca de ralladura de limón. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "tarta-ricota.jpg",
     "category": "postres"
   },
   {
-    "id": "12",
-    "name": "Rola membrillo o batata",
-    "price": "$ 0.00",
+    "id": 12,
+    "name": "Frola membrillo o batata",
+    "price": 0.01,
     "description": "Nuestra clásica masa de frola con el mejor dulce de batata o membrillo. 20cm: rinde 8/10 porciones",
-    "image": "delicious-cupcakes.jpg",
+    "image": "pasta-frola.jpg",
     "category": "postres"
   },
   {
-    "id": "13",
-    "name": "Mini Cheese cake con frutos rojos",
-    "price": "$ 0.00",
-    "description": "Base de galletitas dulces y crocantes mousse de creme cheese con mermelada de frutos rojos",
-    "image": "delicious-cupcakes.jpg",
+    "id": 13,
+    "name": "Mini Cheesecake con frutos rojos",
+    "price": 0.01,
+    "description": "Base de galletitas dulces y crocantes mousse de creme cheese con mermelada de frutos rojos.",
+    "image": "mini-cheescake.jpg",
     "category": "mini postres"
   },
   {
-    "id": "14",
+    "id": 14,
     "name": "Mini Tiramisú",
-    "price": "$ 0.00",
-    "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Interior de bizcocho soletilla, humedecido con almibar y licor de café, mousse de queso mascarpone. Cubierta con cacao y pedacitos de bizcocho.",
+    "image": "mini-tiramisu.jpg",
     "category": "mini postres"
   },
   {
-    "id": "15",
+    "id": 15,
     "name": "Mini Lemon Pie",
-    "price": "$ 0.00",
-    "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue italiano",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Masa sable breton rellena con nuestra untuosa crema de limón y terminado con el clásico merengue Italiano.",
+    "image": "mini-lemon-pie.jpg",
     "category": "mini postres"
   },
   {
-    "id": "16",
+    "id": 16,
     "name": "Mini Tarta de Frutillas",
-    "price": "$ 0.00",
-    "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Base de masa sable breton rellena con crema pastelera y frutillas frescas.",
+    "image": "mini-tarta-frutillas.jpg",
     "category": "mini postres"
   },
   {
-    "id": "17",
+    "id": 17,
     "name": "Mini Brownie",
-    "price": "$ 0.00",
-    "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Base de brownie húmedo con chocolate al 70% de cacao, nueces, dulce de leche repostero y el clásico merengue Italiano.",
+    "image": "mini-brownie.jpg",
     "category": "mini postres"
   },
   {
-    "id": "18",
+    "id": 18,
+    "name": "Mini Tarta de frutos del bosque",
+    "price": 0.01,
+    "description": "Masa sable breton de chocolate rellena con crema pastelera y frutos del bosque.",
+    "image": "mini-frutos-del-bosque.jpg",
+    "category": "mini postres"
+  },
+  {
+    "id": 19,
+    "name": "Mini Crumble de manzana",
+    "price": 0.01,
+    "description": "Base de tarta dulce con relleno esponjoso de pure de manzana, con miel, un toque de canela y cubierta con un crocante stroisel.",
+    "image": "mini-crumble.jpg",
+    "category": "mini postres"
+  },
+  {
+    "id": 20,
     "name": "Chocotorta",
-    "price": "$ 0.00",
-    "description": "Galletitas chocolinas, crema de queso y dulce de leche",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Galletitas chocolinas, crema de queso y dulce de leche.",
+    "image": "mini-chocotorta.jpg",
     "category": "mini postres"
   },
   {
-    "id": "19",
+    "id": 21,
     "name": "Bombita oreo",
-    "price": "$ 0.00",
-    "description": "Base de brownie, con dulce de leche repostero con galletas oreo y mousse de chocolate",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Base de brownie, con dulce de leche repostero con galletas oreo y mousse de chocolate.",
+    "image": "mini-oreo.jpg",
     "category": "mini postres"
   },
   {
-    "id": "20",
+    "id": 22,
+    "name": "Mini coco",
+    "price": 0.01,
+    "description": "Base de masa dulce mucho dulce de leche y cruble de coco.",
+    "image": "mini-coco.jpg",
+    "category": "mini postres"
+  },
+  {
+    "id": 23,
     "name": "Franuisima",
-    "price": "$ 0.00",
-    "description": "Base de marquise, crema de dulce de leche, relleno de galletitas Oreo y cobertura de frambuesas FraNui",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Base de marquise, crema de dulce de leche, relleno de galletitas oreo y cobertura de frambuesas FraNui.",
+    "image": "mini-franuisima.jpg",
     "category": "mini postres"
   },
   {
-    "id": "21",
+    "id": 24,
     "name": "Mini años locos",
-    "price": "$ 0.00",
-    "description": "Crema de chocolate con picos de merengue base con café",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Crema de chocolate con picos de merengue base con café.",
+    "image": "anios-locos.jpg",
     "category": "mini postres"
   },
   {
-    "id": "22",
+    "id": 25,
     "name": "Mini marquise de chocolate",
-    "price": "$ 0.00",
-    "description": "Base humeda de chocolate, dulce de leche, crema y merengue",
-    "image": "delicious-cupcakes.jpg",
+    "price": 0.01,
+    "description": "Base humeda de chocolate, dulce de leche, crema y merengue.",
+    "image": "marquise-chocolate.jpg",
     "category": "mini postres"
   },
   {
-    "id": "23",
+    "id": 26,
     "name": "Limón",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor limón recubierto con glaseado -tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "limon-glaseado.jpg",
     "category": "budines"
   },
   {
-    "id": "24",
+    "id": 27,
     "name": "Limón y amapola",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor limón con amapolas -Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "limon-amapola.jpg",
     "category": "budines"
   },
   {
-    "id": "25",
+    "id": 28,
     "name": "Nuez y dulce de leche",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor vainilla con nueces y corazón de dulce de leche - Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "nuez-ddl.jpg",
     "category": "budines"
   },
   {
-    "id": "26",
+    "id": 29,
     "name": "Marmolado",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor marmolado de chocolate y vainilla -Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "marmolado.jpg",
     "category": "budines"
   },
   {
-    "id": "27",
+    "id": 30,
     "name": "Frutos rojos",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor frutos rojos- Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "frutos-rojos.jpg",
     "category": "budines"
   },
   {
-    "id": "28",
+    "id": 31,
     "name": "Chocolate y oreos",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor chocolate y oreos-Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "chocolate-oreos.jpg",
     "category": "budines"
   },
   {
-    "id": "29",
+    "id": 32,
     "name": "Manzana",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Budín sabor manzana con crumble- Tamaño 650 grs. y 1200 grs.",
-    "image": "delicious-cupcakes.jpg",
+    "image": "manzana.jpg",
     "category": "budines"
   },
   {
-    "id": "30",
+    "id": 33,
     "name": "Alfajor de nuez",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Masa crocante de nuez y mucho dulce de leche",
-    "image": "delicious-cupcakes.jpg",
+    "image": "alfajor-nuez.jpg",
     "category": "alfajores"
   },
   {
-    "id": "31",
+    "id": 34,
     "name": "Alfajor coco",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Tapa de coco y mucho dulce de leche",
-    "image": "delicious-cupcakes.jpg",
+    "image": "alfajor-coco.jpg",
     "category": "alfajores"
   },
   {
-    "id": "32",
+    "id": 35,
     "name": "Alfajor de chocolate",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Bañado en chocolate blanco o negro y relleno de dulce de leche",
-    "image": "delicious-cupcakes.jpg",
+    "image": "alfajor-chocolate-negro.jpg",
     "category": "alfajores"
   },
   {
-    "id": "33",
+    "id": 36,
     "name": "Alfajor de maicena",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Clásico de maicena con dulce de leche",
-    "image": "delicious-cupcakes.jpg",
+    "image": "alfajor-maicena.jpg",
     "category": "alfajores"
   },
   {
-    "id": "34",
+    "id": 37,
     "name": "Alfajores XL",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Chocolate blanco o negro relleno con dulce de leche. Relleno con pasta de avellana. Relleno con pasta de nougat. Maicena con dulce de leche. Chocolate con relleno de frambuesa",
-    "image": "delicious-cupcakes.jpg",
+    "image": "alfajores-xl.jpg",
     "category": "alfajores"
   },
   {
-    "id": "35",
+    "id": 38,
     "name": "Cookies de avena",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Cookies de avena por 1/4",
-    "image": "delicious-cupcakes.jpg",
+    "image": "cookies-avena.jpg",
     "category": "cookies"
   },
   {
-    "id": "36",
+    "id": 39,
     "name": "Cookie rellena de Nutella",
-    "price": "$ 0.00",
+    "price": 0.01,
     "description": "Cookie rellena de Nutella",
-    "image": "delicious-cupcakes.jpg",
-    "category": "cookies"
-  },
-  {
-    "id": "37",
-    "name": "Cookie de chocolate",
-    "price": "$ 0.00",
-    "description": "Cookie de chocolate",
-    "image": "delicious-cupcakes.jpg",
-    "category": "cookies"
-  },
-  {
-    "id": "38",
-    "name": "Cookie de vainilla y dulce de leche con chips de chocolate",
-    "price": "$ 0.00",
-    "description": "Cookie de vainilla y dulce de leche con chips de chocolate",
-    "image": "delicious-cupcakes.jpg",
-    "category": "cookies"
-  },
-  {
-    "id": "39",
-    "name": "Cookies surtidas",
-    "price": "$ 0.00",
-    "description": "Cookies surtidas por 1/4",
-    "image": "delicious-cupcakes.jpg",
+    "image": "cookies-nutella.jpg",
     "category": "cookies"
   },
   {
     "id": 40,
-    "name": "Pain de Chocolate",
-    "price": "$ 0.00",
-    "description": "Masa crocante de nuez y mucho dulce de leche",
-    "image": "delicious-cupcakes.jpg",
-    "category": "Croissant"
+    "name": "Cookie de chocolate",
+    "price": 0.01,
+    "description": "Cookie de chocolate",
+    "image": "cookies-chocolate.jpg",
+    "category": "cookies"
   },
   {
     "id": 41,
-    "name": "Croissant",
-    "price": "$ 0.00",
-    "description": "Ideal para el desayuno y la merienda - Elaborado con manteca de primera calidad",
-    "image": "delicious-cupcakes.jpg",
-    "category": "Croissant"
+    "name": "Cookie de vainilla y dulce de leche con chips de chocolate",
+    "price": 0.01,
+    "description": "Cookie de vainilla y dulce de leche con chips de chocolate",
+    "image": "cookies-vainilla.jpg",
+    "category": "cookies"
   },
   {
     "id": 42,
-    "name": "Medialunas",
-    "price": "$ 0.00",
-    "description": "Las mejores medialunas de grasa y manteca, recién horneadas",
-    "image": "delicious-cupcakes.jpg",
-    "category": "Croissant"
+    "name": "Cookies surtidas",
+    "price": 0.01,
+    "description": "Cookies surtidas por 1/4",
+    "image": "cookies-surtidas.jpg",
+    "category": "cookies"
   },
   {
     "id": 43,
-    "name": "Macarons surtidos",
-    "price": "$ 0.00",
-    "description": "Macarons surtidos por 12, 18 o 24 unidades",
-    "image": "delicious-cupcakes.jpg",
-    "category": "macarons"
+    "name": "Pain de Chocolate",
+    "price": 0.01,
+    "description": "Masa crocante de nuez y mucho dulce de leche",
+    "image": "pain-choco-frambuesa.jpg",
+    "category": "Croissant"
   },
   {
     "id": 44,
-    "name": "Scons",
-    "price": "$ 0.00",
-    "description": "Con nueces, chips de chocolate o ralladura de limón",
-    "image": "delicious-cupcakes.jpg",
-    "category": "productos secos"
+    "name": "Croissant",
+    "price": 0.01,
+    "description": "Ideal para el desayuno y la merienda - Elaborado con manteca de primera calidad",
+    "image": "croissants.jpg",
+    "category": "Croissant"
   },
   {
     "id": 45,
-    "name": "Marineras por 1/4",
-    "price": "$ 0.00",
-    "description": "Con y sin semillas:livianas, crocantes y sabrosas",
-    "image": "delicious-cupcakes.jpg",
-    "category": "productos secos"
+    "name": "Medialunas",
+    "price": 0.01,
+    "description": "Las mejores medialunas de grasa y manteca, recién horneadas",
+    "image": "medialunas.jpg",
+    "category": "Croissant"
   },
   {
     "id": 46,
-    "name": "Bizcochitos de grasa por 1/4",
-    "price": "$ 0.00",
-    "description": "Pruebe nuestros irresistibles bizcochitos de grasa",
-    "image": "delicious-cupcakes.jpg",
-    "category": "productos secos"
+    "name": "Macarons surtidos",
+    "price": 0.01,
+    "description": "Macarons surtidos por 12, 18 o 24 unidades",
+    "image": "macarons4.jpg",
+    "category": "macarons"
   },
   {
     "id": 47,
-    "name": "Cuadraditos por 1/4",
-    "price": "$ 0.00",
-    "description": "Elegí el que más te guste: ricota, coco con dulce de leche, brownie con nueces, frola de membrillo o batata, limón y manzana",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Scons",
+    "price": 0.01,
+    "description": "Con nueces, chips de chocolate o ralladura de limón",
+    "image": "scones.jpg",
     "category": "productos secos"
   },
   {
     "id": 48,
-    "name": "Criollos por 1/4",
-    "price": "$ 0.00",
-    "description": "Crocantes, livianos, suaves, con aroma a manteca",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Marineras por 1/4",
+    "price": 0.01,
+    "description": "Con y sin semillas:livianas, crocantes y sabrosas",
+    "image": "marineras.jpg",
     "category": "productos secos"
   },
   {
     "id": 49,
-    "name": "Copitos",
-    "price": "$ 0.00",
-    "description": "Deliciosos copitos de dulce de leche bañados con chocolate",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Bizcochitos de grasa por 1/4",
+    "price": 0.01,
+    "description": "Pruebe nuestros irresistibles bizcochitos de grasa",
+    "image": "bizcochitos-de-grasa.jpg",
     "category": "productos secos"
   },
   {
     "id": 50,
-    "name": "Pepas por 1/4",
-    "price": "$ 0.00",
-    "description": "Clásicas pepas de vainilla y membrillo",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Cuadraditos por 1/4",
+    "price": 0.01,
+    "description": "Elegí el que más te guste: ricota, coco con dulce de leche, brownie con nueces, frola de membrillo o batata, limón y manzana",
+    "image": "cuadraditos.jpg",
     "category": "productos secos"
   },
   {
     "id": 51,
-    "name": "Masitas húngaras por 1/4",
-    "price": "$ 0.00",
-    "description": "Masitas con cubierta crocante de chocolate con almendras y rellenas con dulce de frambuesas",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Criollos por 1/4",
+    "price": 0.01,
+    "description": "Crocantes, livianos, suaves, con aroma a manteca",
+    "image": "criollitos.jpg",
     "category": "productos secos"
   },
   {
     "id": 52,
-    "name": "Cantucci con almendras por 1/4",
-    "price": "$ 0.00",
-    "description": "También llamados biscottis, son una masita típica italiana aquí reversionada por nuestro maestro pastelero",
-    "image": "delicious-cupcakes.jpg",
+    "name": "Copitos",
+    "price": 0.01,
+    "description": "Deliciosos copitos de dulce de leche bañados con chocolate",
+    "image": "copitos.jpg",
     "category": "productos secos"
   },
   {
     "id": 53,
-    "name": "Budin de Chocolate",
-    "price": "900",
-    "category": "c2",
-    "description": "Delicioso budín de chocolate con dulce de leche",
-    "image": "imgProduct-1655503353504-815008270.jpg"
+    "name": "Pepas por 1/4",
+    "price": 0.01,
+    "description": "Clásicas pepas de vainilla y membrillo",
+    "image": "pepas.jpg",
+    "category": "productos secos"
   },
   {
     "id": 54,
-    "name": "Budin de Chocolate",
+    "name": "Masitas húngaras por 1/4",
+    "price": 0.01,
+    "description": "Masitas con cubierta crocante de chocolate con almendras y rellenas con dulce de frambuesas",
+    "image": "masas-hungaras.jpg",
+    "category": "productos secos"
+  },
+  {
+    "id": 55,
+    "name": "Cantucci con almendras por 1/4",
+    "price": 0.01,
+    "description": "También llamados biscottis, son una masita típica italiana aquí reversionada por nuestro maestro pastelero",
+    "image": "cantucci-con-almendras.jpg",
+    "category": "productos secos"
+  },
+  {
+    "id": 56,
+    "name": "Degustación de mini tortas.Tamaños: x4/x6/x9.",
     "price": "900",
-    "category": "c2",
-    "description": "Delicioso budín de chocolate con dulce de leche",
-    "image": "imgProduct-1655503660816-794713402.jpg"
+    "description": "Elegí la variedad que prefieras: Cheesecake, Brownie, Lemon Pie, Crumble de manzana, Chocotorta, Tarta de Frutos del Bosque, Años locos, Franuisima, Tarta de frutillas, Tiramisú, Bombita oreo, Tarta de ricota, Mini coco, Marquise de chocolate. ",
+    "image": "box-degustacion1.jpg",
+    "category": "desayunos"
+  },
+  {
+    "id": 57,
+    "name": "Desayuno para 2 personas",
+    "price": "900",
+    "description": "Incluye: tarjeta alusiva, Scones con chips de chocolate 1/4, Macarons x 1 unidad, Cantuccis con almendras 1/4, Húngaras por 9 unidades, Alfajor XL de avellana o nougat por 1 unidad, medialunas x 2 unidades, Rodajas de pan de campo por 4 unidades, Criollitos x 4 unidades, Copito de dulce de leche x 1 unidad, Figazzitas o similar rellenos con jamón y queso x 2 unidades, Espiral vienes x 1 unidad (relleno con pasta de almendras, chocolate, almendras y cerezas) o similar, Manteca por 3 unidades, Dulce de leche x 2 unidades, Infusiones varisa, taza",
+    "image": "desayuno-2-personas.jpg",
+    "category": "desayunos"
+  },
+  {
+    "id": 58,
+    "name": "Desayuno para 4 personas",
+    "price": "900",
+    "description": "Incluye: tarjeta alusiva, Scones con chips de chocolate 1/4, Macarons x 2 unidad, Cantuccis con almendras 1/4, Húngaras por 9 unidades, Alfajor XL de avellana o nougat por 1 unidad, medialunas x 4 unidades, Rodajas de pan de campo por 6 unidades, Criollitos x 8 unidades, Copito de dulce de leche x 2 unidad, Figazzitas o similar rellenos con jamón y queso x 2 unidades, Espiral vienes x 1 unidad (relleno con pasta de almendras, chocolate, almendras y cerezas) o similar, Manteca por 4 unidades, Dulce de leche x 2 unidades, Infusiones varias, taza",
+    "image": "desayuno-4-personas.jpg",
+    "category": "desayunos"
+  },
+  {
+    "id": 59,
+    "name": "Box dulce",
+    "price": "900",
+    "description": "Incluye: 2 Mini postres a elección, 2 Macarons surtidos, 1 Cuadrado de coco y dulce de leche, 1 Cuadrado de ricota, 1 Alfajor XL nougat, 1/4 Kg. Bizcochitos de grasa, 1/4 Kg. Pepas de membrillo, 1/4 kg. Scones, 1/4 Kg. marineras semilladas, 1/4 Kg. Alfajores de maicena, 2 Copitos de dulce de leche bañados en chocolate, 1 Pan de campo chico.",
+    "image": "box-dulce.jpg",
+    "category": "boxes"
   }
 ]

@@ -26,10 +26,14 @@ const productsController = {
         }
     },
     detail: (req, res) => {
-        let productItem = productsList.find(item => item.id == req.params.id);
-        let productsRelated = productsList.filter(item => item.category == productItem.category);
-        return res.render('products/productDetail', { productItem: productItem, productsRelated: productsRelated }) // validacion y sin objeto completo
-    }
+			const productsList = readJsonFile(productsdbPath);
+			let productItem = productsList.find((item) => item.id == req.params.id);
+			let productsRelated = productsList.filter(
+				(item) => item.category == productItem.category
+			);
+			return res.render('products/productDetail', { productItem: productItem, productsRelated: productsRelated }) // validacion y sin objeto completo
+			/*return res.json({ productsRelated: productsRelated });*/
+		}
 }
 
 

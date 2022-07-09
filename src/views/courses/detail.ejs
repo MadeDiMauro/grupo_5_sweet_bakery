@@ -2,7 +2,80 @@
 <html lang="en">
 <%- include('../partials/head', { title: "Detalle de curso" , style: "coursesDetail" }) %>
 <body>
+<<<<<<< HEAD
     <h1>Soy cursos Detail</h1>
     <%- include('../partials/page-under-construction', { title: "detalle de cursos" }) %>
+=======
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <section class="heading">
+        <p class="heading__p">DETALLE DE CURSO</p>
+    </section>
+
+    <main>
+        <div>
+            <div class="reference__courses">
+                <a class="reference__a" href="/courses/list">
+                    <p>Cursos >></p>
+                </a>
+                <p><b>Detalle</b></p>
+            </div>
+
+            <div class="courses">
+                <div>
+                    <%= courseDetail.name %>
+                </div>
+                <div>
+                    <%= courseDetail.price %>
+                </div>
+                <div>
+                    <img class="courses__img" src='/images/<%= courseDetail.image %>' alt='<%= courseDetail.name %>'> 
+                </div>
+                <div>
+                    <%= courseDetail.description %>
+                </div>
+                <div class="product__quantity">
+                    <button class="product__button-less">
+                        <i class="product__icon fas fa-minus"></i>
+                    </button>
+                    <span class="product__span">1</span>
+                    <button class="product__button-add">
+                        <i class="product__icon fas fa-plus"></i>
+                    </button>
+                </div>
+                <div>
+                    <a href="#">VER MEDIOS DE PAGO</a>
+                </div>
+                <div class="buy">
+                    <a class="buy__a" href="#">
+                        <button class="buy__button" type="submit">AGREGAR AL CARRITO</button>
+                    </a>
+                </div>
+
+                <div class="contact">
+                    <div class="contact__title">
+                        <p>FICHA TÉCNICA</p>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <div class="contact__title">
+                        <p>BENEFICIOS POR REALIZAR ESTE CURSO</p>
+                    </div>
+                    <i class="fa-solid fa-square-check"></i><p> Beneficio</p>
+                    <i class="fa-solid fa-square-check"></i><p> Beneficio</p>
+                    <i class="fa-solid fa-square-check"></i><p>Beneficio</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        
+    </main>
+
+>>>>>>> 7a25a6a420ddda146aa37ad72cd06156d60d5891
 </body>
 </html>

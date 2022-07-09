@@ -30,7 +30,7 @@ const adminController = {
         res.render('users/admin/adminProducts', { productsList });
     },
     createProduct: (req, res) => {
-        return res.render('products/create')
+        return res.render('users/admin/adminCreate');
     },
     store: (req, res) => {
         const products = readJsonFile(productsdbPath)
@@ -48,7 +48,8 @@ const adminController = {
         return res.redirect("/admin/products")
     },
     editProduct: (req, res) => {
-        let product = productsList.find((item) => item.id == req.params.id);
+        const products = readJsonFile(productsdbPath);
+        let product = products.find((item) => item.id == req.params.id);
         return res.render('users/admin/adminEdit', { product }) //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
     },
     update: (req, res) => {
