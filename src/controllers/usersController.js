@@ -39,7 +39,7 @@ const usersController = {
     if (passwordOk) {
       delete userToLogin.password; /*por seguridad se borra la password*/
       req.session.userLogged=userToLogin; /*en userToLogin está toda la info de session.userLogged*/
-      return res.direct ('/');  /*Acá debería redirigir a la página de profile del usuario pero no tenemos aún. Si la hacemos falta routes y controller*/
+      return res.direct ('/');  /*Acá debería redirigir a la página de profile/ hice una simple página en ejs y css*/
     } else {
       return res.render ('userToLogin', {
         errors: {
@@ -60,9 +60,9 @@ const usersController = {
     //return res.send ('ok, se guardó el usuario')
   },
   
-    profile: (req,res) => {       /* por si queresmos incluirlo*/
-    return  res.render ('userProfile', {
-    user:req.session.userLogged
+  profile: (req,res) => {       /* por si queremos incluirlo*/
+  return  res.render ('userProfile', {
+  user:req.session.userLogged
      })
    },
 
