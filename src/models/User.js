@@ -5,9 +5,8 @@ const User={
     fileName:'../database/users.json',
 
     getData: function () {
-
         return JSON.parse (fs.readFileSync (this.fileName, 'utf-8'));
-        },
+    },
     
     /*GENERAR ID*/
     generateId: function () {
@@ -16,9 +15,7 @@ const User={
         if (lastUser) {
             return lastUser.id +1;
             }
-
         return 1;
-    
     },
 
     findAll: function () {
@@ -29,16 +26,14 @@ const User={
     findByPk: function (id) {
         let allUsers=this.findAll();
         let userFound=allUsers.find (oneUser=>oneUser.id===id); 
-        return userFound;
-      
+        return userFound; 
     },
 
-    /*BUSCAR POR MAIL Y/U OTRO CAMPO*/
+    /*BUSCAR POR MAIL U OTRO CAMPO*/
     findByField: function (field,text) {
         let allUsers=this.findAll();
         let userFound=allUsers.find (oneUser =>oneUser[field]===text); 
-        return userFound;
-      
+        return userFound;     
     },
   
     /*GUARDAR UN USUARIO*/
