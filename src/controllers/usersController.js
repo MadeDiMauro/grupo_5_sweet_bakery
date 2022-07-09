@@ -32,7 +32,7 @@ const usersController = {
       }
   },
 
-  loginprocess:(req,res) => {                 /*instalé bcrypt y lo llamé acá en userController*/
+  loginProcess:(req,res) => {                 /*instalé bcrypt y lo llamé acá en userController*/
     let userToLogin=User.findByField ('email', req.body.email)},
     if (userToLogin) {
     let passwordOk= bcrypt.compareSync (req.body.password, userToLogin.password)
