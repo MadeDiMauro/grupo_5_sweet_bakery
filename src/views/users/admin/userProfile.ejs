@@ -22,10 +22,22 @@
     </header>
 
 <main>
-    <div class="row">
-        <h2>Hola <%=user.firstname%></h2>
-        <img src="/images/avatars/<%=user.image%>">
-        <div class="alert-success"><%=user.email%></div>
+    <section class="user">
+        <%- include('../../partials/navbarUser') %>
+
+        <div class="user__container">
+            <div class="userTitle">
+                <p class="userTitle__p">PERFIL DEL USUARIO</p>
+            </div>
+
+            <div class="user_info">
+                <h2>Hola <%=user.firstname%></h2>
+                <img src="/images/avatars/<%=user.image%>">
+                <div class="alert-success"><%=user.email%></div>
+        </div>
+
+
+    </section>
 
 </main>
 <footer>

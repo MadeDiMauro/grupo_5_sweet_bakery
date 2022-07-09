@@ -17,7 +17,7 @@ app.use (session ({secret:'shh, It´s a secret',  /*agregué session con app.use
 resave: false,
 saveUninitialized: false,
 }));
-app.use (userLoggedMiddleware);  /*middleware de aplicación*/
+app.use (userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
 
 const routesProducts = require('./routes/products');
 const routesCart = require('./routes/cart');

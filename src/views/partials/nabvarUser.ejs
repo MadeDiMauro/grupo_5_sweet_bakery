@@ -2,10 +2,30 @@
     <div class="usernHeader__logo">
         <img class="menu-logo" src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery">
     </div>
-    <div class="userHeader__div2">
-        <img class="userHeader__avatar" src="/images/avatar1.jpg" alt="Profile avatar">
+
+    <ul class="navbar">
+   
+    <% if (locals.isLogged) { %>
+
+    <li class="nav-item dropdown">
+        <img class="userHeader__avatar" src="/images/<%=locals.userLogged.avatar%>" alt="Profile avatar">
         <button class="userHeader__button">
-            <span class="userHeader__span"> ¡Hola Usuario! </span> <i class="userHeader__icon fa-solid fa-caret-down"></i>
+            <span class="userHeader__span"> ¡Hola <%=locals.userLogged.firstname%> ! </span> <i class="userHeader__icon fa-solid fa-caret-down"></i>
         </button>
+
+        <ul class="userNabvar_profile">
+            <a class="dropdown-item" href="/user/profile">Mi Perfil</a>
+            <li> <hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="/user/logout">Salir</a>
+        </ul>
+    </li>
+        <% } else { %>
+
+        <li class="nav-item"> <a class="nav-link" href="/user/register">Registrate</a></li>
+        <li class="nav-item"><a class="nav-link" href="/user/login">Inicia Sesión</a></li>
+
+        <% }  %>
+
+    </ul>
     </div>
 </div>
