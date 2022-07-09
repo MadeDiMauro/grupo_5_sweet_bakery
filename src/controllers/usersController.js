@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const User= require ('../models/User'); 
 const { validationResult } = require ('express-validator');
+const bcrypt= require ('bcrypt');
 
 
 
@@ -31,8 +32,24 @@ const usersController = {
       }
   },
 
-  /*login process:(req,re) => {
-    let userToLogin=user},*/
+  loginprocess:(req,res) => {                 /*instalé bcrypt y lo llamé acá en userController*/
+    let userToLogin=User.findByField ('email', req.body.email)},
+    if (userToLogin) {
+    let passwordOk= bcrypt.compareSync (req.body.password, userToLogin.password)
+    if (passwordOk) {
+      delete userToLogin.password; /*por seguridad se borra la password*/
+      req.session.userLogged=userToLogin; /*en userToLogin está toda la info de session.userLogged*/
+      return res.direct ('/');  /*Acá debería redirigir a la página de profile del usuario pero no tenemos aún. Si la hacemos falta routes y controller*/
+    } else {
+      return res.render ('userToLogin', {
+        errors: {
+          email: {
+            msg:'No se encuentra este e-mail en nuestra base de datos'
+          }
+        }
+      })
+    }
+    },
 
   register: (req, res) => {
     return res.render('users/register')
@@ -41,11 +58,19 @@ const usersController = {
   processRegister: (req,res)=> {
     User.create (req.body);
     //return res.send ('ok, se guardó el usuario')
-  }
-  /* profile: (req,res) => {
-     return  res.render ('profile')
-   }
-   */
+  },
+  
+    profile: (req,res) => {       /* por si queresmos incluirlo*/
+    return  res.render ('userProfile', {
+    user:req.session.userLogged
+     })
+   },
+
+   logout: (req,res) => {                  /*para que no se quede logueado continuamente*/
+    req.session.destroy ();
+    return res.redirect ('/');
+   },
+
 }
 
 module.exports = usersController;
