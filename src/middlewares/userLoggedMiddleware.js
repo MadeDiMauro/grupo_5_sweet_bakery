@@ -1,10 +1,11 @@
-function userLoggedMiddleware (req,res,next) {
-    
+function userLoggedMiddleware(req, res, next) {
+    res.locals.isLogged = false;
+
     if (req.session && req.session.userLogged) {
-        res.locals.isLogged=false;
-        res.locals.isLogged=req.session.userLogged;  /*paso lo que tengo en session a locals para después usarlo en la vista de nabvaruser*/
+        res.locals.isLogged = true;
+        res.locals.isLogged = req.session.userLogged;  /*paso lo que tengo en session a locals para después usarlo en la vista de nabvaruser*/
     }
-    next ();
+    next();
 }
 
-module.exports= userLoggedMiddleware;
+module.exports = userLoggedMiddleware;
