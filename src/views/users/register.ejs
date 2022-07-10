@@ -14,10 +14,16 @@
           <div class="input-box">
             <label class="input-box__label" for="name">Nombre</label><br>
             <input class="input" type="text" name="name" id="name" required>
+            <% if(locals.errors && errors.name) { %>
+              <%= errors.name.msg %>
+            <% } %>
           </div>
           <div class="input-box">
             <label class="input-box__label" for="email">Correo Electrónico</label><br>
             <input class="input" type="email" name="email" id="email" required>
+            <% if(locals.errors && errors.email) { %>
+              <%= errors.email.msg %>
+            <% } %>
           </div class="input-box">
           <div class="input-box">
             <label class="input-box__label" for="phone">Teléfono</label><br>
@@ -34,6 +40,9 @@
           <div class="input-box">
             <label class="input-box__label" for="avatar">Foto de perfil</label><br>
             <input class="input" type="file" name="avatar" id="avatar">
+            <% if(locals.errors && errors.avatar) { %>
+              <%= errors.avatar.msg %>
+            <% } %>
           </div>
           <div class="checkbox-box">
             <label class="checkbox-label" for="check">

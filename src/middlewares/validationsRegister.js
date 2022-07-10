@@ -13,12 +13,15 @@ const validationsRegister = [
         if (file) {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error('Las extensiones de archivos permitidos son .jpg, .png, .gif')
+                throw new Error(
+									"Las extensiones de archivos permitidos son " +
+										acceptedExtensions.join(", ")
+								);
                 //${acceptedExtensions.join(', ')}
             }
             return true;
         }
-    })
+    }).withMessage('Debes ingresar una imagen')
 ]
 
 module.exports = validationsRegister;
