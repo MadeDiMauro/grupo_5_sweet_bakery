@@ -20,18 +20,19 @@
     </header>
 
 <main>
-    <section class="user">
-        <%- include('../../partials/navbarUser') %>
 
+    <section class="user">
+        <%- include('../partials/navbarUser') %>
+     
         <div class="user__container">
             <div class="userTitle">
                 <p class="userTitle__p">PERFIL DEL USUARIO</p>
             </div>
 
             <div class="user_info">
-                <h2>Hola <%=user.firstname%></h2>
-                <img src="/images/avatars/<%=user.avatar%>">
-                <div class="alert-success"><%=user.email%></div>
+                <h2>Hola <%=locals.isLogged.name%></h2>
+                <img src="/images/avatars/<%=locals.isLogged.avatar%>">
+                <div class="alert-success"><%=locals.email%></div>
         </div>
 
 

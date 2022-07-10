@@ -106,5 +106,14 @@
   "password": "$2a$10$6e9kJiBzj.Tee9ikKxTxW.OTCMdVS.YGAQddyoNsDY6mH/3s8GknO",
   "re_password": "1234",
   "avatar": "avatar-1657471136013-26520404.jpg"
+ },
+ {
+  "id": 12,
+  "name": "eugenia",
+  "email": "ja@hotmail.com",
+  "phone": "12356478",
+  "password": "$2a$10$NdvAyUBkVpHVgFl4Xgv7x.gII7ihs7LKosNX6rdRTPETKy7FOghUu",
+  "re_password": "1234",
+  "avatar": "avatar-1657477526051-842318374.jpg"
  }
 ]

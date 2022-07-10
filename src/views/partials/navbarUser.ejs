@@ -8,9 +8,9 @@
     <% if (locals.isLogged) { %>
 
     <li class="nav-item dropdown">
-        <img class="userHeader__avatar" src="/images/avatars/<%=locals.userLogged.avatar%>" alt="Profile avatar">
+       <img class="userHeader__avatar" src="/images/avatars/<%=locals.isLogged.avatar%>" alt="Profile avatar">
         <button class="userHeader__button">
-            <span class="userHeader__span"> ¡Hola <%=locals.userLogged.firstname%> ! </span> <i class="userHeader__icon fa-solid fa-caret-down"></i>
+            <span class="userHeader__span"> ¡Hola <%=locals.isLogged.name%> ! </span> <i class="userHeader__icon fa-solid fa-caret-down"></i>
         </button>
 
         <ul class="userNabvar_profile">

@@ -54,37 +54,39 @@ const usersController = {
   login: (req, res) => {
     return res.render('users/login')
   },
+
   processLogin: (req, res) => {
-    const resultValidation = validationResult(req);
+   const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render('users/login', {
         errors: resultValidation.mapped(),
-      });
+        old:req.body
+    });
     }
-  },
-  loginProcess: (req, res) => { /*instalé bcrypt y lo llamé acá en userController*/
+    
     let userToLogin = User.findByField('email', req.body.email)
     
     if(userToLogin) {
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
-      
+
       if (passwordOk) {
-        delete userToLogin.password; /*por seguridad se borra la password*/
-        req.session.userLogged = userToLogin; /*en userToLogin está toda la info de session.userLogged*/
-      return res.direct('/');  /*Acá debería redirigir a la página de profile/ hice una simple página en ejs y css*/
-    } else {
-      return res.render('userToLogin', {
+        delete userToLogin.password; //por seguridad se borra la password
+        req.session.userLogged = userToLogin; //en userToLogin está toda la info de session.userLogged
+      return res.redirect ('/users/profile');  //Acá debería redirigir a la página de profile/ hice una simple página en ejs y css
+      } else {
+        return res.render('users/login', {
         errors: {
           email: {
             msg: 'No se encuentra este e-mail en nuestra base de datos'
           }
         }
-      })
+        })
+      }
     }
-  }
   },
+    
   profile: (req, res) => {       /* por si queremos incluirlo*/
-    return res.render('userProfile', {
+    return res.render('users/userProfile', {
       user: req.session.userLogged  /*usé user en la vista de profile*/
     })
   },
