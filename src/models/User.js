@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const User={ 
-    fileName:'/database/users.json',
+    fileName:'../database/users.json',
 
     getData: function () {
 
@@ -50,7 +50,7 @@ const User={
         }
         allUsers.push (newUser);
         fs.writeFileSync (this.fileName, JSON.stringify (allUsers, null, ' '));
-        //return newUser;
+        return newUser;
     },
 
     /*BORRAR USUARIO /USO FILTER*/
@@ -59,12 +59,11 @@ const User={
         let finalUsers=allUsers.filter (oneUser=> oneUser.id !==id); /*Me trae todos menos el que borre*/
         fs.writeFileSync (this.fileName, JSON.stringify (finalUsers, null, ' '));
         return true;
-    }
+    } 
 }
 
 /*console.log (User.create ({name:'elsa', email: 'elsa@hotmail.com'}))
-console.log (User.delete (2));
+console.log (User.delete (2));*/
 
-*/
- 
+
 module.exports=User;

@@ -13,7 +13,7 @@
         <form method="POST" action="/users/login">
           <div class="input-box">
             <label for="user">Usuario</label><br>
-            <input class="input" type="text" name="user" id="user" >
+            <input class="input" type="text" name="user" id="user" value="<%= locals.oldData ? oldData.user : null %>">
             <% if (locals.errors && errors.user) { %>
            <div>
             <%= errors.user.msg %>
