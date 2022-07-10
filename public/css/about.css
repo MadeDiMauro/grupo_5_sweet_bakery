@@ -1,3 +1,19 @@
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    box-sizing: border-box;
+  
+}
+
+body {
+    
+    color: black;
+    background-color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
+}
+
+
 .heading__about__p {
     background-color: lightgray;
     width: 100%;
@@ -7,9 +23,145 @@
     font-weight: 900;
     margin: 0 auto;
 }
+.main__firstconteiner__about__title,
+.main__secondconteiner__title{
+font-weight: 600;
+}
+
+.main__firstconteiner__about__p,
+.main__secondconteiner__about__p {
+    text-align: justify;
+}
 
 .main__about {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 0px 10px;
+   
 }
+
+.about__img__team,
+.about__img__history,
+.about__img__us
+ {
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+   
+}
+
+.about__images__about {
+    display:flex;
+    width:100%;
+
+ }
+ .about__img__about1,
+ .about__img__about2,
+ .about__img__about3 {
+    display:flex;
+     flex-wrap: wrap;
+     width: 40%;
+     justify-content: space-between;
+     padding:20px;
+     margin-left: 20px;
+     margin-right:20px;
+           
+ }
+
+ .about__img__about3 {
+    display:none;
+}
+
+
+@media  (min-width: 769px){
+
+.main__firstconteiner {
+    display: flex;
+    flex-wrap:nowrap;
+    width:100%;
+
+    
+}
+.about__img__team__pic {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    padding-left:20px;
+    padding-right:20px;
+
+}
+
+.main__firstconteiner__p {
+    margin-bottom:20px;
+    padding-left:20px;
+
+    
+}
+
+.about__img__history {
+    display:none;
+}
+
+.main__secondconteiner {
+    width:100%;
+
+}
+
+.main__secondconteiner__ourhistory {
+    display:flex;
+    flex-wrap: nowrap;
+    width:100%;
+ 
+}
+.main__secondconteiner__ourhistory__p {
+    margin:0 auto;
+    width:50%;
+
+}
+
+.about__images__about {
+    display:flex;
+    flex-wrap: wrap;
+    width:45%;
+}
+.about__img__about1,
+.about__img__about2,
+.about__img__about3 {
+    margin-left: 20px;
+    margin-right:20px;
+    padding-left: 0px;
+    width:100%;
+          
+}
+/*.about__img__about3 {
+    display:block;*/
+
+.main__secondconteiner__more
+
+
+
+
+
+{
+    display:flex;
+    flex-wrap: nowrap;
+    width:100%;
+    
+}
+.main__secondconteiner__more__p {
+    margin: 0 auto;
+    width:50%;
+}
+.about__img__us__lastpic {
+    margin-top:20px;
+    margin-bottom:20px;
+    max-width: 1200px;
+    padding-left:20px;
+    width:45%;
+
+}
+}
+

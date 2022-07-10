@@ -1,5 +1,6 @@
 * {
     font-family: 'Catamaran';
+    font-weight: 400;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -27,6 +28,8 @@ main {
     margin-bottom: 30px;
 }
 
+/* PASAR A STEPS.CSS Y VINCULARLO CON LAS 3 VISTAS DEL CARRITO */
+
 .step {
     display: flex;
     flex-wrap: nowrap;
@@ -38,48 +41,56 @@ main {
     padding: 15px;
 }
 
-.step__one {
-    color: black;
-    font-weight: 700;
+.step__div {
+    position: relative;
 }
 
-.step__two,
-.step__three {
-    color: rgb(93, 92, 92);
-}
-
-.step__one,
-.step__two,
-.step__three {
-    width: 50%;
-    font-size: 14px;
-}
-
-.step__decoration {
+.step__div2 {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.step__div-hr {
-    width: 25%;
+/* .step__div2::after {
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    right: -130px;
+    background-color: black;
+    height: 1px;
+    width: 238px;
 }
+
+.step__div:last-child .step__div2::after {
+    display: none;
+} */
 
 .step__hr {
-    margin: 0 auto;
+    position: relative;
+    bottom: -12px;
+    /* right: -140px; */
+    width: 150px;
 }
 
-.step__div-icon {
-    width: 15%;
+.step__div2 .step__span {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 50%;
 }
 
-.step__icon {
-    font-size: 10px;
+.step__div .step__icon {
+    font-size: 25px;
+    display: none;
 }
+
+/* ------------------------------------*/
 
 .title {
     display: none;
@@ -204,6 +215,7 @@ main {
     font-style: italic;
     width: 78%;
     border: 1px solid lightgray;
+    border-radius: 3px;
     padding: 5px;
     padding-left: 10px;
 }
@@ -211,8 +223,10 @@ main {
 .code__button {
     font-weight: bold;
     width: 20%;
-    height: 35px;
-    border: 3px solid black;
+    height: 27.5px;
+    padding-top: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
     background-color: transparent;
 }
 
@@ -252,8 +266,9 @@ main {
     width: 100%;
     background-color: black;
     border: none;
+    border-radius: 3px;
     margin: 15px 0px;
-    padding: 5px 0px;
+    padding: 7px 0px 5px;
 }
 
 .buy__button:active {
@@ -271,7 +286,7 @@ main {
         margin-top: 35px;
         margin-bottom: 15px;
         /*border: 1px solid red;*/
-     
+
     }
 
     .title {
@@ -294,7 +309,7 @@ main {
         padding-bottom: 15px;
         /* border-top: 1px solid lightgray; */
     }
-    
+
     .title__product,
     .title__name,
     .title__price,
@@ -369,7 +384,7 @@ main {
 
     .product__info {
         width: 55%;
-    } 
+    }
 
     .product__total-title {
         display: none;
@@ -398,7 +413,7 @@ main {
         justify-content: center;
         align-items: center;
         width: 30%;
-        padding: 8px;
+        padding: 10px 6px 6px;
         margin-left: 10px;
     }
 

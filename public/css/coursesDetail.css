@@ -1,0 +1,84 @@
+* {
+    font-family: 'Catamaran';
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.reference__courses {
+    display: flex;
+    width:100%;
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.reference__a {
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+
+
+
+.courses {
+    width: 100%;
+}
+
+
+.courses__img {
+    width: 90%;
+}
+
+
+
+
+
+
+.product__quantity {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+    height: 25px;
+    border: 1px solid lightgray;
+    background-color: transparent;
+}
+
+.product__button-less,
+.product__button-add {
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 25px;
+}
+
+.product__button-less {
+    border-right: 1px solid lightgrey;
+}
+
+.product__button-add {
+    border-left: 1px solid lightgrey;
+}
+
+.product__icon {
+    font-size: 12px;
+    border: none;
+}
+
+.product__span {
+    padding: 0px 10px;
+}

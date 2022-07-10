@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "DECORACIÓN DE TORTAS",
+        "price": 6000,
+        "description": "Este curso enseña diversas técnicas de ornamentación de tortas y pasteles como el modelado de figuras en pastas comestibles, la elaboración de flores de pasta de goma, el forrado clásico de tortas, el pastillaje y otras coberturas. El curso revisa todos los secretos que te permitirán decorar profesionalmente y con una alta calidad tortas y pasteles para toda ocasión.",
+        "image": "delicious-cake.jpg",
+        "duration": "8 clases",
+        "hours": "Clases de 2hs | 16 horas totales. | 1 vez por semana.",
+        "modality": "Online",
+        "include": "Cuadernillo con todo el contenido teórico práctico de la cursada. No incluye materiales.",
+        "student": "Para toda persona que desee incursionar en técnicas para la decoración de tortas y tartas, para aficionados que deseen encontrar un momento de distención y divertimento aprendiendo a cocinar, así como también alumnos de cocina que busquen adquirir nuevos conocimientos.",
+        "benefits": "Descuentos especiales es todos nuestros cursos."
+    },
+    {
+        "id": 2,
+        "name": "ABC DE LA PASTELERÍA",
+        "price": 9500,
+        "description": "El curso se centra en el aprendizaje de las técnicas básicas y elementales de la pastelería, para la elaboración de preparaciones clásicas y simples. Para ello se realizará una variedad amplia de tartas, tortas y masitas.",
+        "image": "delicious-cake.jpg",
+        "duration": "12 clases",
+        "hours": "Clases de 2hs 30' | 30 horas totales. | 1 vez por semana.",
+        "modality": "Presencial",
+        "include": "Cuadernillo con todo el contenido teórico práctico de la cursada. Herramientas y materias primas incluidas.",
+        "student": "Este curso está orientado a todas aquellas personas que estén interesadas en incursionar en las técnicas de la pastelería específicas para la confección de postres y aprender un repertorio de recetas clásicas.",
+        "benefits": "Tarjeta de descuento Sweet Bakery para realizar compras en nuestros locales, disfrutando de precios especiales para nuestros alumnos."
+    },
+    {
+        "id": 3,
+        "name": "LOS MEJORES MACARONS",
+        "price": 7000,
+        "description": "Empezaremos con el merengue Italiano para los Macarons de cacao, continuando con el merengue Francés para los Macarons frutales. En este curso el alumno aprenderá sobre el reposo y secado de los Macarons, la temperatura de cocción y como conservarlos. Veremos tips y técnicas para las distintas pigmentaciones, las principales placas siliconadas y hojas antiadherente especiales para la cocción de las tapas de Macarons. Aprenderá a realizar exquisitos Macarons crujientes por afuera y cremosos en el interior.",
+        "image": "delicious-cake.jpg",
+        "duration": "2 clases",
+        "hours": "Clases de 3hs | 6 horas totales. | 1 vez por semana.",
+        "modality": "Presencial",
+        "include": "Cuadernillo con todo el contenido teórico práctico de la cursada. Herramientas y materias primas incluidas.",
+        "student": "Orientado tanto hacia aficionados de la pastelería, como a aquellos que ya tengan un emprendimiento personal o esten pensando en iniciarlo.",
+        "benefits": "Con tu inscripción al curso presencial de Macarons incluimos sin cargo el curso Online para que puedas practicar y consultar todas las técnicas y preparaciones vistas en las clases, a través de 12 videos en full HD a 4 cámaras y todas las recetas en formato descargable."
+    }
+]

@@ -7,3 +7,4 @@ router.get('/detail/:id', coursesController.detail);
 
 module.exports = router;
 
+

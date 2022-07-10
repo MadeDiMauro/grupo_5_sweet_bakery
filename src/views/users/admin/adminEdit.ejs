@@ -38,21 +38,21 @@
 
                                     <label class="newProduct_label" for="category">Categoría</label>
                                     <select class="newProduct_select" name="category" required>
-                                        <option value="c1" <%=product.category=="c1" ? "selected" : null %> >Alfajores
+                                        <option value="Alfajores" <%=product.category=="Alfajores" ? "selected" : null %> >Alfajores
                                         </option>
-                                        <option value="c2" <%=product.category=="c2" ? "selected" : null %> >Budines
+                                        <option value="Budines" <%=product.category=="Budines" ? "selected" : null %> >Budines
                                         </option>
-                                        <option value="c3" <%=product.category=="c3" ? "selected" : null %> >Cookies
+                                        <option value="Cookies" <%=product.category=="Cookies" ? "selected" : null %> >Cookies
                                         </option>
-                                        <option value="c4" <%=product.category=="c4" ? "selected" : null %> >Desayunos y
+                                        <option value="Desayunos y boxes" <%=product.category=="Desayunos y boxes" ? "selected" : null %> >Desayunos y
                                             boxes</option>
-                                        <option value="c5" <%=product.category=="c5" ? "selected" : null %> >Mini
+                                        <option value="Mini postres" <%=product.category=="Mini postres" ? "selected" : null %> >Mini
                                             postres</option>
-                                        <option value="c6" <%=product.category=="c6" ? "selected" : null %> >Macarons
+                                        <option value="Macarons" <%=product.category=="Macarons" ? "selected" : null %> >Macarons
                                         </option>
-                                        <option value="c7" <%=product.category=="c7" ? "selected" : null %> >Productos
+                                        <option value="Productos secos" <%=product.category=="Productos secos" ? "selected" : null %> >Productos
                                             secos</option>
-                                        <option value="c8" <%=product.category=="c8" ? "selected" : null %> >Postres
+                                        <option value="Postres" <%=product.category=="Postres" ? "selected" : null %> >Postres
                                         </option>
                                     </select>
 
@@ -61,8 +61,7 @@
                                         value="<%= product.price %>">
 
                                     <label class="newProduct_label" for="description">Descripción</label>
-                                    <input id="lastInput" class="newProduct_input" type="text" name="description"
-                                        id="description" value="<%= product.description %>">
+                                    <textarea class="newProduct_input" id="description"  name="description" rows="4"><%= product.description %></textarea>
 
                                     <label class="newProduct_label-img">Agregar imagen de producto</label>
                                     <input class="newProduct_input-file" type="file" name="imgProduct" accept=".jpg">
@@ -72,11 +71,8 @@
                                     </div>
                                 </form>
                                 <!-- <form class="newProduct_form" action="/admin/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                                        <button class="edit_a edit_button" type="delete">DELETE</button>
-                                </form> -->
-                                <form class="newProduct_form" action="/admin/deleteProduct/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button class="edit_a edit_button" type="submit">ELIMINAR</button>
-                                </form>
+                                        <button class="edit_a edit_button" type="delete">EDITAR</button>
+                                </form>  -->
                             </div>
                         </div>
                     </div>

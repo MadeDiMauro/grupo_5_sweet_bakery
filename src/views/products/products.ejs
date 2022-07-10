@@ -64,13 +64,13 @@
                  <% for (let i=0; i<productsList.length; i ++) { %> 
                     <article class="products__article">
 
-                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/<%= productsList[i].image %>' alt='<%= productsList[i].name %>'></a>
+                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/products/<%= productsList[i].image %>' alt='<%= productsList[i].name %>'></a>
                         <div class="products__div-info">
                             <p class="products__name">
-                                <%=productsList [i].name %>
+                                <%=productsList[i].name %>
                             </p>
                             <p class="products__price">
-                                <%=productsList [i].price %>
+                                $ <%=productsList[i].price %>
                             </p>
                             <a class="products__a" href="/cart1">
                                 <button class="products__button-add" type="submit">

@@ -1,0 +1,38 @@
+
+.user__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 10%;
+    background-color: rgb(44, 51, 57);
+}
+
+.admin__container__div {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.user__button {
+    background-color: transparent;
+    border: none;
+}
+
+.user__a {
+    padding: 10px;
+}
+
+.user__a:not(.user__img-avatar:last-child) {
+    border-bottom: 1px solid white;
+}
+
+.user__a:active {
+    background-color: rgb(218, 165, 32, 0.6);
+}
+
+.user__span {
+    display: none;
+}
+
+.user__icon {
+    color: white;
+}

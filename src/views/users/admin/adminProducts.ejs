@@ -25,7 +25,7 @@
                             <div class="adminTitle">
                                 <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-folder-open"></i>
                                     Productos</p>
-                                <a class="adminTitle__a" href="/admin/create">
+                                <a class="adminTitle__a" href="/admin/createProduct">
                                     <button class="adminTitle__button">
                                         <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i><span
                                             class="adminTitle__span"> CREAR PRODUCTO</span>
@@ -81,7 +81,7 @@
 
                             <article class="productsList">
 
-                                <% for(let i=0; i < 6; i++) { %>
+                                <% for(let i=0; i < productsList.length; i++) { %>
                                     <div class="productsList__container">
                                         <div class="productsList__div">
                                             <input class="productsList__checkbox" type="checkbox" name="idProduct"
@@ -89,7 +89,7 @@
                                             <p class="productsList__id">
                                                 <%= productsList[i].id %>
                                             </p>
-                                            <img class="productsList__img" src="/images/<%= productsList[i].image %>"
+                                            <img class="productsList__img" src="/images/products/<%= productsList[i].image %>"
                                                 alt="<%= productsList[i].name %>">
                                         </div>
                                         <div class="productsList__info">
@@ -101,7 +101,7 @@
                                                 <%= productsList[i].category %>
                                             </span>
                                             <span class="productsList__price">
-                                                <%= productsList[i].price %>
+                                                $ <%= productsList[i].price %>
                                             </span>
                                             <!-- </div> -->
                                         </div>

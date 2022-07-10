@@ -1,5 +1,6 @@
 * {
     font-family: 'Catamaran';
+    font-weight: 400;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -27,6 +28,8 @@ main {
     margin-bottom: 30px;
 }
 
+/* PASAR A STEPS.CSS Y VINCULARLO CON LAS 3 VISTAS DEL CARRITO */
+
 .step {
     display: flex;
     flex-wrap: nowrap;
@@ -38,48 +41,56 @@ main {
     padding: 15px;
 }
 
-.step__three {
-    color: black;
-    font-weight: 700;
+.step__div {
+    position: relative;
 }
 
-.step__one,
-.step__two {
-    color: rgb(93, 92, 92);
-}
-
-.step__one,
-.step__two,
-.step__three {
-    width: 50%;
-    font-size: 14px;
-}
-
-.step__decoration {
+.step__div2 {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.step__div-hr {
-    width: 25%;
+/* .step__div2::after {
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    right: -130px;
+    background-color: black;
+    height: 1px;
+    width: 238px;
 }
 
-.step__hr{
-    margin: 0 auto;
+.step__div:last-child .step__div2::after {
+    display: none;
+} */
+
+.step__hr {
+    position: relative;
+    bottom: -12px;
+    /* right: -140px; */
+    width: 150px;
 }
 
-.step__div-icon {
-    width: 15%;
+.step__div2 .step__span {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 50%;
 }
 
-.step__icon {
-    font-size: 10px;
+.step__div .step__icon {
+    font-size: 25px;
+    display: none;
 }
+
+/* ------------------------------------*/
 
 .billing__title {
     font-weight: 600;
@@ -94,12 +105,10 @@ main {
     flex-wrap: wrap;
 }
 
-.billing__label {
-    width: 100%;
-}
-
+.billing__label,
 .billing__div {
     width: 100%;
+    margin-top: 7px;
 }
 
 .billing__input,
@@ -107,12 +116,15 @@ main {
     width: 100%;
     padding: 5px;
     margin: 0 auto;
+    margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid lightgray;
+    border-radius: 3px;
 }
 
 .billing__select {
-    padding: 4px;
+    padding: 0.5px;
+    margin-top: 7px;
 }
 
 .billing__credit-info,
@@ -120,8 +132,9 @@ main {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
+    margin-top: 7px;
 }
 
 .billing__credit-info-div {
@@ -164,8 +177,9 @@ main {
     width: 100%;
     background-color: black;
     border: none;
+    border-radius: 3px;
     margin: 15px 0px;
-    padding: 5px 0px;
+    padding: 7px 0px 5px;
 }
 
 .buy__button:active {
