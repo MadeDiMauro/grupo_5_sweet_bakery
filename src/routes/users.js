@@ -5,8 +5,7 @@ const uploadAvatar = require('../middlewares/multerAvatarUser');
 const validationsRegister = require('../middlewares/validationsRegister');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require("../middlewares/authMiddleware");
-const validationsLogin = require('../middlewares/validationsLogin')
-
+const validationsLogin = require('../middlewares/validationsLogin');
 
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', validationsLogin, usersController.processLogin);
