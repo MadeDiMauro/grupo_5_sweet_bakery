@@ -1,101 +1,110 @@
 [
-    {
-        "id": 1,
-        "firstname": "Juan Adrian",
-        "lastname": "Carnevale",
-        "email": "javale@hotmail.com",
-        "password": "65487ab",
-        "category": "Admin",
-        "avatar": "avatar1.jpg"
-    },
-    {
-        "id": 2,
-        "firstname": "Francisco Pablo",
-        "lastname": "Arlicuoan",
-        "email": "arlifp@gmail.com",
-        "password": "eustaquio1981",
-        "category": "Admin",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 3,
-        "firstname": "Valentín",
-        "lastname": "Enriquez",
-        "email": "vnenriquez@hotmail.com",
-        "password": "cami_45_x",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 4,
-        "firstname": "Federica Ornella",
-        "lastname": "Hunry",
-        "email": "ornehun@hotmail.com",
-        "password": "1542.madre",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 5,
-        "firstname": "Maria Fernanda",
-        "lastname": "Recondo",
-        "email": "marfer98@hotmail.com",
-        "password": "amarillo_verde",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 6,
-        "firstname": "Sofia Ana",
-        "lastname": "Gutierrez",
-        "email": "sofian@hotmail.com",
-        "password": "tukiantoc",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 6,
-        "firstname": "Esteban Ignacio",
-        "lastname": "Madrigal",
-        "email": "madrimia@gmail.com",
-        "password": "marita_funes22",
-        "category": "Admin",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 7,
-        "firstname": "Carolina Karina",
-        "lastname": "Figioni",
-        "email": "figikar@gmail.com",
-        "password": "1254.ab.-",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 8,
-        "firstname": "Adriano Carlos",
-        "lastname": "Zamiro",
-        "email": "zamira@hotmail.com",
-        "password": "tacos1264",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 9,
-        "firstname": "Beatriz Fernanda",
-        "lastname": "Nayun",
-        "email": "nayi@hotmail.com",
-        "password": "nayinur1478",
-        "category": "user",
-        "avatar": "avatar1.jpg"
-      },
-      {
-        "id": 10,
-        "firstname": "Nune Analia",
-        "lastname": "Demirtokian",
-        "email": "Nunatoki@gmail.com",
-        "password": "demir_9725",
-        "category": "admin",
-        "avatar": "avatar1.jpg"
-      }
- ]
+ {
+  "id": 1,
+  "firstname": "Juan Adrian",
+  "lastname": "Carnevale",
+  "email": "javale@hotmail.com",
+  "password": "65487ab",
+  "category": "Admin",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 2,
+  "firstname": "Francisco Pablo",
+  "lastname": "Arlicuoan",
+  "email": "arlifp@gmail.com",
+  "password": "eustaquio1981",
+  "category": "Admin",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 3,
+  "firstname": "Valentín",
+  "lastname": "Enriquez",
+  "email": "vnenriquez@hotmail.com",
+  "password": "cami_45_x",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 4,
+  "firstname": "Federica Ornella",
+  "lastname": "Hunry",
+  "email": "ornehun@hotmail.com",
+  "password": "1542.madre",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 5,
+  "firstname": "Maria Fernanda",
+  "lastname": "Recondo",
+  "email": "marfer98@hotmail.com",
+  "password": "amarillo_verde",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 6,
+  "firstname": "Sofia Ana",
+  "lastname": "Gutierrez",
+  "email": "sofian@hotmail.com",
+  "password": "tukiantoc",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 6,
+  "firstname": "Esteban Ignacio",
+  "lastname": "Madrigal",
+  "email": "madrimia@gmail.com",
+  "password": "marita_funes22",
+  "category": "Admin",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 7,
+  "firstname": "Carolina Karina",
+  "lastname": "Figioni",
+  "email": "figikar@gmail.com",
+  "password": "1254.ab.-",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 8,
+  "firstname": "Adriano Carlos",
+  "lastname": "Zamiro",
+  "email": "zamira@hotmail.com",
+  "password": "tacos1264",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 9,
+  "firstname": "Beatriz Fernanda",
+  "lastname": "Nayun",
+  "email": "nayi@hotmail.com",
+  "password": "nayinur1478",
+  "category": "user",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 10,
+  "firstname": "Nune Analia",
+  "lastname": "Demirtokian",
+  "email": "Nunatoki@gmail.com",
+  "password": "demir_9725",
+  "category": "admin",
+  "avatar": "avatar1.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Made",
+  "email": "correo@gmail.com",
+  "phone": "1234",
+  "password": "$2a$10$6e9kJiBzj.Tee9ikKxTxW.OTCMdVS.YGAQddyoNsDY6mH/3s8GknO",
+  "re_password": "1234",
+  "avatar": "avatar-1657471136013-26520404.jpg"
+ }
+]
