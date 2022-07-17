@@ -5,11 +5,7 @@ const path = require("path");
 
 
 const User = {
-<<<<<<< HEAD
-  fileName: "../database/users.json",
-=======
     fileName: 'src/database/users.json',
->>>>>>> cb2d88a8d006828cd686e243b8eaa1628dfc1276
 
   getData: function () {
     return JSON.parse(fs.readFileSync(this.fileName, "utf-8"));
