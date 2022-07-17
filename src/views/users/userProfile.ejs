@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="/css/userProfile.css">
+    <link rel="stylesheet" href="/css/userHeader.css">
+    <link rel="stylesheet" href="/css/base-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/headerUser') %>
+    </header>
+
+<main>
+
+    <section class="user">
+     
+        <div class="user__container">
+            <div class="userTitle">
+                <p class="userTitle__p">PERFIL DEL USUARIO</p>
+            </div>
+
+            <div class="user_info">
+                <h2>Hola <%=locals.isLogged.name%></h2>
+                <img src="/images/avatars/<%=locals.isLogged.avatar%>">
+                <div class="alert-success"><%=locals.isLogged.email%></div>
+        </div>
+
+
+    </section>
+
+</main>
+</body>
+
+</html>

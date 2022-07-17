@@ -1,0 +1,29 @@
+
+    <div class="userHeader__div">
+        <div class="userHeader__logo">
+            <img class="userMenu-logo" src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery">
+        </div>
+    <ul class="navbar">
+          
+    <% if (locals.isLogged) { %>
+
+    <li class="nav-item dropdown">
+       <img class="userHeader__avatar" src="/images/avatars/<%=locals.isLogged.avatar%>" alt="Profile avatar">
+        <button class="userHeader__button">
+            <span class="userHeader__span"> ¡Hola <%=locals.isLogged.name%> ! </span> <i class="userHeader__icon fa-solid fa-caret-down"></i>
+        </button>
+
+        <ul class="userNabvar_profile">
+            <a class="dropdown-item" href="/users/profile"><p>Mi Perfil</p></a>
+            <a class="dropdown-item" href="/users/logout"><p>Salir </p></a>
+        </ul>
+    </li>
+        <% } else { %>
+
+        <li class="nav-item"> <a class="nav-link" href="/users/register">Registrate</a></li>
+        <li class="nav-item"><a class="nav-link" href="/users/login">Inicia Sesión</a></li>
+
+        <% }  %>
+
+    </ul>
+</div>
