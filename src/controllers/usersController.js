@@ -16,16 +16,14 @@ const usersList=readJsonFile(usersdbPath); /* no me lo lee*/
 
 const usersController = {
   register: (req, res) => {
-    //FALTA res.cookie??
     return res.render('users/register')
   },
   processRegister: (req, res) => {
-    const resultValidation = validationResult(req);
+    const validations = validationResult(req);
 
-    if(resultValidation.errors.length > 0){
+    if(validations.errors.length > 0){
       return res.render('users/register', {
-        //NO ENTIENDO EL ERRORS Y MARIANO TAMPOCO :D
-        errors: resultValidation.mapped(),
+        errors: validations.mapped(),
         old: req.body
       })
     }
@@ -70,22 +68,31 @@ const usersController = {
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
 
       if (passwordOk) {
-        delete userToLogin.password; //por seguridad se borra la password
-        req.session.userLogged = userToLogin; //en userToLogin está toda la info de session.userLogged
-      return res.redirect ('/users/profile');  //Acá debería redirigir a la página de profile/ hice una simple página en ejs y css
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        
+      return res.redirect ('/users/profile');
       } else {
         return res.render('users/login', {
         errors: {
-          email: {
-            msg: 'No se encuentra este e-mail en nuestra base de datos'
+          generico: {
+            msg: 'Usuario o contraseña incorrecta'
           }
         }
         })
       }
+    } else {
+      return res.render('users/login', {
+        errors: {
+          email: {
+            msg: 'Este mail no se encuentra registrado'
+          }
+        }
+        })
     }
   },
     
-  profile: (req, res) => {       /* por si queremos incluirlo*/
+  profile: (req, res) => {
     return res.render('users/userProfile', {
       user: req.session.userLogged  /*usé user en la vista de profile*/
     })

@@ -115,5 +115,14 @@
   "password": "$2a$10$NdvAyUBkVpHVgFl4Xgv7x.gII7ihs7LKosNX6rdRTPETKy7FOghUu",
   "re_password": "1234",
   "avatar": "avatar-1657477526051-842318374.jpg"
+ },
+ {
+  "id": 13,
+  "name": "aldana",
+  "email": "aldana.lorenzo@gmail.com",
+  "phone": "",
+  "password": "$2a$10$nfus2wtpGk1orcX4YkbAEuwQA.hf3cD9IJMxzPCQ10PqeFSEHiDoq",
+  "re_password": "hola123",
+  "avatar": "avatar-1658010106666-275196657.png"
  }
 ]

@@ -9,16 +9,21 @@
     </header>
     <main class="main-login">
       <div class="main-div-box">
-          <p class="titlep">INICIAR SESION</p>
+        <p class="titlep">INICIAR SESION</p>
         <form method="POST" action="/users/login">
           <div class="input-box">
             <label for="email">Usuario</label><br>
             <input class="input" type="email" name="email" id="email" value="<%= locals.old ? old.email : null %>">
             <% if (locals.errors && errors.email) { %>
-           <div>
-            <%= errors.email.msg %>
-           </div>
-           <% } %>
+              <div>
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
+                <% if (locals.errors && errors.generico) { %>
+                  <div>
+                    <%= errors.generico.msg %>
+                  </div>
+                  <% } %>
           </div>
 
           <div class="input-box">
@@ -26,9 +31,14 @@
             <input class="input" type="password" name="password" id="password">
             <% if (locals.errors && errors.password) { %>
               <div>
-               <%= errors.password.msg %>
+                <%= errors.password.msg %>
               </div>
               <% } %>
+                <% if (locals.errors && errors.generico) { %>
+                  <div>
+                    <%= errors.generico.msg %>
+                  </div>
+                  <% } %>
           </div>
 
           <div class="checkbox-box">
@@ -45,7 +55,9 @@
           </div>
           <div class="final-a-box">
             <div class="div-center">
-              <a class="final-a" href="/register"><button>REGISTRATE</button></a>
+              <a class="final-a" href="/users/register">
+                <button type="button">REGISTRATE</button>
+              </a>
             </div>
           </div>
         </form>
