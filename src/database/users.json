@@ -95,7 +95,7 @@
   "lastname": "Demirtokian",
   "email": "Nunatoki@gmail.com",
   "password": "demir_9725",
-  "category": "admin",
+  "category": "user",
   "avatar": "avatar1.jpg"
  },
  {
@@ -104,7 +104,8 @@
   "email": "correo@gmail.com",
   "phone": "1234",
   "password": "$2a$10$6e9kJiBzj.Tee9ikKxTxW.OTCMdVS.YGAQddyoNsDY6mH/3s8GknO",
-  "re_password": "1234",
+  "re_password": "$2a$10$6e9kJiBzj.Tee9ikKxTxW.OTCMdVS.YGAQddyoNsDY6mH/3s8GknO",
+  "category": "admin",
   "avatar": "avatar-1657471136013-26520404.jpg"
  },
  {
@@ -114,6 +115,7 @@
   "phone": "12356478",
   "password": "$2a$10$NdvAyUBkVpHVgFl4Xgv7x.gII7ihs7LKosNX6rdRTPETKy7FOghUu",
   "re_password": "1234",
+  "category": "user",
   "avatar": "avatar-1657477526051-842318374.jpg"
  },
  {
@@ -124,5 +126,25 @@
   "password": "$2a$10$nfus2wtpGk1orcX4YkbAEuwQA.hf3cD9IJMxzPCQ10PqeFSEHiDoq",
   "re_password": "hola123",
   "avatar": "avatar-1658010106666-275196657.png"
+ },
+ {
+  "id": 14,
+  "name": "pepito",
+  "email": "pepito@hotmail.com",
+  "phone": "123456",
+  "password": "$2a$10$jodI0HZvXwBn.QAYp70sL.t25NbhL7yLgCN/ZoZaqiTrq7RlWfuQO",
+  "re_password": "$2a$10$Zf2okLbKO5YbrPdnOb/VLuZ/dg3agBus0mjxwj47eziXDQrs11uzS",
+  "category": "user",
+  "avatar": "avatar-1658072718488-461448985.jpg"
+ },
+ {
+  "id": 15,
+  "name": "gomez",
+  "email": "gomez@gmail.com",
+  "phone": "123456",
+  "password": "$2a$10$CfdVjabjfxGgzsPTOovQnuaimaUZOyOOl.HNVtCCi0F3iC46xf/Ma",
+  "re_password": "$2a$10$qvthglmNHlUks7RZYJC6juHj.6WPQr.dCuSdARVD2o6MNVHLCvhgm",
+  "category": "user",
+  "avatar": "avatar1.jpg"
  }
 ]

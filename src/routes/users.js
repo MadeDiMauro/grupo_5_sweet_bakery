@@ -7,11 +7,11 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require("../middlewares/authMiddleware");
 const validationsLogin = require('../middlewares/validationsLogin');
 
-router.get('/login', /*guestMiddleware,*/ usersController.login);
+router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', validationsLogin, usersController.processLogin);
 
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', uploadAvatar.single('avatar'), validationsRegister, usersController.processRegister);
+router.post('/register',  uploadAvatar.single('avatar'), validationsRegister,  usersController.processRegister);
 
 router.get('/profile', authMiddleware, usersController.profile); 
 router.get ('/logout', usersController.logout);

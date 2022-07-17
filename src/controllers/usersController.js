@@ -27,7 +27,7 @@ const usersController = {
         old: req.body
       })
     }
-
+    
     let userInDB = User.findByField('email', req.body.email);
     if(userInDB){
       return res.render('users/register', {
@@ -39,13 +39,26 @@ const usersController = {
         old: req.body
       })
     }
-
+    
+     
+    if (req.body.password !== req.body.re_password) {
+      return res.render('users/register', {
+        errors: {
+          re_password: { 
+            msg: 'Las contraseñas no coinciden' 
+          }
+        },
+        old: req.body
+      })
+    } 
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file ? req.file.filename : "logo-sweet-bakery-dorado.png"
+      re_password: bcryptjs.hashSync(req.body.password, 10),
+      category: "user",
+      avatar: req.file ? req.file.filename : "avatar1.jpg"
     }
-
+  
     let userCreated = User.create(userToCreate);
     return res.redirect('/users/login');
   },
@@ -63,6 +76,7 @@ const usersController = {
     }
     
     let userToLogin = User.findByField('email', req.body.email)
+    //let isAdmin = User.findByField('category',req.body.category)
     
     if(userToLogin) {
       let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
@@ -70,7 +84,9 @@ const usersController = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
-        
+        if (userToLogin.category == "admin"){
+          return res.redirect ('/admin/')
+        }
       return res.redirect ('/users/profile');
       } else {
         return res.render('users/login', {
