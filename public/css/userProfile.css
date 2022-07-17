@@ -1,0 +1,42 @@
+
+* {
+    font-family: 'Catamaran';
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+   
+}
+
+main {
+    width: 100%;
+}
+
+.userTitle {
+    margin: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+.userTitle__p {
+    font-weight: 600;
+    padding-bottom: 5px;
+   
+}
+
+p {
+    font-size:18px;
+}
+
+.user_info img {
+    width:50%;
+    
+}
+
+.user_info {
+    text-align: center;
+}

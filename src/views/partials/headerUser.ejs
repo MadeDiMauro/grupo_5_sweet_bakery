@@ -1,10 +1,10 @@
-<div class="userHeader__div">
-    <div class="usernHeader__logo">
-        <img class="menu-logo" src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery">
-    </div>
 
+    <div class="userHeader__div">
+        <div class="userHeader__logo">
+            <img class="userMenu-logo" src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery">
+        </div>
     <ul class="navbar">
-   
+          
     <% if (locals.isLogged) { %>
 
     <li class="nav-item dropdown">
@@ -14,9 +14,8 @@
         </button>
 
         <ul class="userNabvar_profile">
-            <a class="dropdown-item" href="/users/profile">Mi Perfil</a>
-            <li> <hr class="dropdown-divider"></li>
-            <a class="dropdown-item" href="/users/logout">Salir</a>
+            <a class="dropdown-item" href="/users/profile"><p>Mi Perfil</p></a>
+            <a class="dropdown-item" href="/users/logout"><p>Salir </p></a>
         </ul>
     </li>
         <% } else { %>
@@ -27,5 +26,4 @@
         <% }  %>
 
     </ul>
-    </div>
 </div>
