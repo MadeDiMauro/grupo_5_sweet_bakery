@@ -19,7 +19,10 @@ const validationsRegister = [
             }
             return true;
         }
-    }).withMessage('Debes ingresar una imagen')
+        
+        return true;
+    })
+        
 ]
 
 module.exports = validationsRegister;
