@@ -126,34 +126,38 @@ main {
 }
 
 .search {
-    display: flex;
-    width: 90%;
+    /* display: flex; */
+    width: 100%;
     margin: 0 auto;
+    border-bottom: solid 1px lightgray
 }
 
 .search__div {
     display: flex;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px; 
     border: 1px solid lightgray;
     border-radius: 30px;
 }
 
 .search__button {
-    width: 25%;
+    width: 20%;
+    padding: 0px;
+    padding-left: 5px;
 }
 
 .search__text {
+    font-size: 14px;
     width: 75%;
-    padding: 5px 0px;
+    padding: 7px 0px 5px 5px;
     margin: 0 auto;
 }
 
 .search__icon {
     color: darkgray;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .search__button,
@@ -172,25 +176,26 @@ main {
 .categories__label {
     font-weight: bold;
     width: 90%;
-    padding: 20px 15px 10px;
-    border-top: solid 1px lightgray;
+    padding: 25px 15px 15px;
+    /* border-top: solid 1px red; */
 }
 
 .categories__button {
-    width: 80%;
     text-align: left;
     background-color: transparent;
     padding: 10px 0px;
-    border: none;
-    border-bottom: solid 1px lightgray;
-}
-
-.categories__button:last-child {
     border: none;
 }
 
 .categories__a {
     text-decoration: none;
+    font-size: 14px;
+    width: 80%;
+    border-bottom: solid 1px lightgray;
+}
+
+.categories__a:last-child {
+    border: none;
 }
 
 .categories__button:active .categories__a {
@@ -231,6 +236,7 @@ main {
     font-weight: 600;
     border: none;
     padding: 5px;
+    padding-top: 8px;
     margin-top: 5px;
 }
 
@@ -240,8 +246,9 @@ main {
 
 .pruducts__icon-cart {
     color: white;
-    padding: 0px 5px;
-    font-size: 14px;
+    padding: 0px;
+    padding-left: 5px;
+    font-size: 12px;
 }
 
 @media (min-width: 481px) {
@@ -268,8 +275,9 @@ main {
         display: flex;
         flex-direction: column;
         border: 1px solid lightgray;
+        border-radius: 5px;
         width: 25%;
-        height: 560px;       
+        height: 100%;       
     }
 
     .close {
