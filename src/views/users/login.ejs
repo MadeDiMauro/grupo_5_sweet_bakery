@@ -3,17 +3,25 @@
 
   <body>
     <header>
-
       <%- include('../partials/header') %>
-
     </header>
+
     <main class="main-login">
-      <div class="main-div-box">
-        <p class="titlep">INICIAR SESION</p>
+      <!-- <div class="main-div-box"> -->
+      <div class="principal-container">
+        <div class="title-box">
+          <p class="titlep">INICIAR SESION</p>
+          <!-- <div class="div-center"> -->
+            <a class="final-a" href="/users/register">Registrate</a>
+          <!-- </div> -->
+        </div>
+        <!-- </div> -->
+
         <form method="POST" action="/users/login">
           <div class="input-box">
-            <label for="email">Usuario</label><br>
-            <input class="input" type="email" name="email" id="email" value="<%= locals.old ? old.email : null %>">
+            <!-- <label for="email">Usuario</label> -->
+            <input class="input" type="email" name="email" id="email" placeholder="Usuario" value="<%= locals.old ? old.email : null %>">
+            <!-- <i class="fa-solid fa-user"></i> -->
             <% if (locals.errors && errors.email) { %>
               <div>
                 <%= errors.email.msg %>
@@ -27,8 +35,9 @@
           </div>
 
           <div class="input-box">
-            <label for="password">Contraseña</label><br>
-            <input class="input" type="password" name="password" id="password">
+            <!-- <label for="password">Contraseña</label> -->
+            <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+            <!-- <i class="fa-solid fa-key"></i> -->
             <% if (locals.errors && errors.password) { %>
               <div>
                 <%= errors.password.msg %>
@@ -40,26 +49,33 @@
                   </div>
                   <% } %>
           </div>
-
-          <div class="checkbox-box">
-            <label class="checkbox-label" for="check_login">
-              <input class="checkbox-input" type="checkbox" name="check_login" id="check_login">
-              Recordarme</label>
-          </div>
+          
           <div class="forgotpass-box">
             <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
           </div>
+
           <div class="submit-box">
-            <label class="submit-label" for=""></label>
             <button class="submit-input" type="submit">INICIAR SESION</button>
           </div>
-          <div class="final-a-box">
+
+          <!-- <div class="final-a-box">
             <div class="div-center">
               <a class="final-a" href="/users/register">
                 <button type="button">REGISTRATE</button>
               </a>
             </div>
+          </div> -->
+
+          <div class="box1">
+            <div class="checkbox-box">
+              <input class="checkbox-input" type="checkbox" name="check_login" id="check_login">
+              <label class="checkbox-label" for="check_login">Recordarme</label>
+            </div>
+            <!-- <div class="forgotpass-box">
+              <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
+            </div> -->
           </div>
+
         </form>
       </div>
 
