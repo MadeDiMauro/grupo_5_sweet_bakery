@@ -22,17 +22,27 @@
 
     <section class="user">
      
-        <div class="user__container">
+<div class="user__container">
             <div class="userTitle">
                 <p class="userTitle__p">PERFIL DEL USUARIO</p>
             </div>
 
-            <div class="user_info">
-                <h2>Hola <%=locals.isLogged.name%></h2>
+        <div class="user_info">
+            <div class="user_name">
+                <p>Hola <%=locals.isLogged.name%></p>
                 <img src="/images/avatars/<%=locals.isLogged.avatar%>">
-                <div class="alert-success"><%=locals.isLogged.email%></div>
-        </div>
+            </div>
+           
 
+            <div class="user_others">
+                <div class="alert-success"> <i class="fa-solid fa-envelope"></i><%=locals.isLogged.email%></div>
+                <div class="last-orders"> <i class="fa-solid fa-rectangle-list"></i>Mis últimos pedidos</div>
+                <div class="favourites"><i class="fa-solid fa-heart"></i>Mis favoritos</div>
+            </div>
+
+        </div>
+    
+</div>
 
     </section>
 
