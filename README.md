@@ -50,7 +50,7 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 - Listado de productos: http://localhost:3000/products/list
 - Detalle de producto: http://localhost:3000/products/detail
 - Carrito de compras: 
-Paso 1: http://localhost:3000/cart/1 | Paso 2: http://localhost:3000/cart/2 | Paso 3: http://localhost:3000/cart/3 |
+Paso 1: http://localhost:3000/cart/paso-uno | Paso 2: http://localhost:3000/cart/paso-dos | Paso 3: http://localhost:3000/cart/paso-tres |
 - Login: http://localhost:3000/users/login
 - Registro: http://localhost:3000/users/register
 - Administración: http://localhost:3000/admin/principal |  http://localhost:3000/admin/create | http://localhost:3000/admin/edit
