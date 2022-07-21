@@ -5,6 +5,8 @@ const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
 const session = require('express-session'); /*agregué session*/
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); /* y también el userLoggedMiddleware que debería ser un middleware de aplicación*/
+const cookieParser = require('cookie-parser');
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
@@ -18,7 +20,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookieParser());
 app.use(userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
+
 
 const routesProducts = require('./routes/products');
 const routesCart = require('./routes/cart');

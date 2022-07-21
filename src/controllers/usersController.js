@@ -84,6 +84,11 @@ const usersController = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
+
+        if (req.body.check_login){
+          res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5});
+        }
+
         if (userToLogin.category == "admin"){
           return res.redirect ('/admin/')
         }
@@ -109,12 +114,13 @@ const usersController = {
   },
     
   profile: (req, res) => {
+    //console.log(req.cookies.userEmail);
     return res.render('users/userProfile', {
       user: req.session.userLogged  /*usé user en la vista de profile*/
     })
   },
   logout: (req, res) => { /*para que no se quede logueado continuamente*/
-    //res.clearCookie('')  
+    res.clearCookie('userEmail');
     req.session.destroy();
     return res.redirect('/');
   }
