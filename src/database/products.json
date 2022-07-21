@@ -3,9 +3,9 @@
     "id": 1,
     "name": "Cheescake",
     "price": 1500,
-    "description": "Cremoso y compacto, su base es de cookies  y su cobertura de confitura de frutos rojos. 20cm: rinde 10/12 porciones",
+    "description": "Cremoso y compacto, su base es de cookies y su cobertura de confitura de frutos rojos. 20cm: rinde 10/12 porciones",
     "image": "cheescake.jpg",
-    "category": "Desayunos boxes"
+    "category": "postres"
   },
   {
     "id": 2,

@@ -10,7 +10,7 @@
       <!-- <div class="main-div-box"> -->
       <div class="principal-container">
         <div class="title-box">
-          <p class="titlep">INICIAR SESION</p>
+          <p class="titlep">Iniciar sesión</p>
           <!-- <div class="div-center"> -->
             <a class="final-a" href="/users/register">Registrate</a>
           <!-- </div> -->
@@ -21,7 +21,7 @@
           <div class="input-box">
             <!-- <label for="email">Usuario</label> -->
             <input class="input" type="email" name="email" id="email" placeholder="Usuario" value="<%= locals.old ? old.email : null %>">
-            <!-- <i class="fa-solid fa-user"></i> -->
+            <i class="login-icon fa-solid fa-user"></i>
             <% if (locals.errors && errors.email) { %>
               <div>
                 <%= errors.email.msg %>
@@ -37,7 +37,7 @@
           <div class="input-box">
             <!-- <label for="password">Contraseña</label> -->
             <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
-            <!-- <i class="fa-solid fa-key"></i> -->
+            <i class="pass-icon fa-solid fa-key"></i>
             <% if (locals.errors && errors.password) { %>
               <div>
                 <%= errors.password.msg %>
@@ -49,22 +49,6 @@
                   </div>
                   <% } %>
           </div>
-          
-          <div class="forgotpass-box">
-            <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
-          </div>
-
-          <div class="submit-box">
-            <button class="submit-input" type="submit">INICIAR SESION</button>
-          </div>
-
-          <!-- <div class="final-a-box">
-            <div class="div-center">
-              <a class="final-a" href="/users/register">
-                <button type="button">REGISTRATE</button>
-              </a>
-            </div>
-          </div> -->
 
           <div class="box1">
             <div class="checkbox-box">
@@ -75,6 +59,22 @@
               <a class="forgotpass" href="">¿Olvidaste la contraseña?</a>
             </div> -->
           </div>
+          
+          <div class="submit-box">
+            <button class="submit-input" type="submit">Iniciar sesión</button>
+          </div>
+
+          <div class="forgotpass-box">
+            <a class="forgotpass" href="#">¿Olvidaste la contraseña?</a>
+          </div>
+
+          <!-- <div class="final-a-box">
+            <div class="div-center">
+              <a class="final-a" href="/users/register">
+                <button type="button">REGISTRATE</button>
+              </a>
+            </div>
+          </div> -->
 
         </form>
       </div>

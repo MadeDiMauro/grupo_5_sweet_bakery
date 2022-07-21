@@ -30,21 +30,23 @@ main {
 }
 
 .adminTitle {
-    margin: 15px 0px 5px;
+    margin: 35px 0px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: rgb(250, 250, 250);
+    padding: 10px 20px;
+    border: 1px solid lightgray;
 }
 
 .adminTitle__p {
-    /* color: rgb(100, 100, 100); */
     font-weight: 500;
 }
 
 .adminTitle__icon {
     margin-right: 5px;
     font-size: 14px;
-    /* color: rgb(100, 100, 100); */
 }
 
 .adminTitle__a {
@@ -81,7 +83,7 @@ main {
 .productsList {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .productsList__container {
@@ -124,7 +126,7 @@ main {
 }
 
 .productsList__name {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     width: 100%;
 }
@@ -189,8 +191,9 @@ main {
     .filter {
         display: flex;
         justify-content: flex-start;
-        background-color: rgb(242, 242, 242);
+        background-color: rgb(250, 250, 250);
         border: 1px solid lightgray;
+        border-radius: 2px;
         padding: 10px;
         margin-top: 35px;
         width: 100%;
@@ -214,14 +217,9 @@ main {
     .filter__select {
         width: 100%;
         border: 1px solid lightgray;
-        font-style: italic;
+        /* font-style: italic; */
         font-size: 14px;
     }
-
-    /* .filter__input:focus,
-    .filter__select:focus {
-        font-style: normal;
-    } */
 
     .filter__select {
         padding: 2px;
@@ -251,11 +249,13 @@ main {
     .titles {
         display: flex;
         justify-content: space-between;
-        /* background-color: rgb(242, 242, 242); */
-        padding: 5px 20px;
-        margin-top: 35px;
+        background-color: rgb(250, 250, 250);
+        padding: 10px 20px;
         align-items: center;
+        border-bottom: 1px solid lightgray;
+        /* margin-top: 35px;
         border: 1px solid lightgray;
+        border-radius: 2px; */
     }
 
     .titles__div1,
@@ -263,11 +263,12 @@ main {
     .titles__div3 {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .titles__div1,
     .productsList__div {
-        width: 25%;
+        width: 20%;
         justify-content: space-between;
     }
 
@@ -278,17 +279,33 @@ main {
     .titles__div2,
     .productsList__info {
         width: 50%;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
-    .titles__div3,
+    .titles__div3 {
+        width: 30%;
+    }
+
+    .titles__div4 {
+        width: 35%;
+    }
+
     .productsList__buttons {
-        width: 20%;
+        width: 21%;
+    }
+
+    .titles__div5 {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+        width: 22%;
     }
 
     .titles__edit,
     .titles__delete {
-        width: 45%;
+        /* width: 45%; */
+        width: 35%;
     }
 
     .titles__edit {
@@ -297,11 +314,16 @@ main {
 
     .productsList {
         border: 1px solid lightgray;
+        border-radius: 2px;
+    }
+
+    .productsList__container:first-child {
+        margin-top: 10px;
     }
 
     .productsList__container {
         margin: 0px 10px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .titles__id,
@@ -310,6 +332,11 @@ main {
         text-align: center;
     }
 
+    .titles__list {
+        margin-left: 8px;
+    }
+
+    .titles__list,
     .titles__id,
     .titles__product,
     .titles__name,
@@ -318,13 +345,13 @@ main {
     .titles__edit,
     .titles__delete {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         color: rgb(58, 121, 203);
     }
 
     .titles__product,
     .productsList__img {
-        width: 40%;
+        width: 25%;
     }
 
     .productsList__info {
@@ -352,34 +379,37 @@ main {
     .productsList__a-delete {
         text-decoration: none;
         padding: 0px 5px;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     .productsList__a-edit {
         background-color: rgb(58, 121, 203);
-        margin-right: 15px;
-        width: 45%;
+        padding-right: 15px;
+        /* margin-right: 15px; */
+        /* width: 45%; */
     }
 
     .productsList__a-delete {
         background-color: rgb(187, 64, 53);
-        width: 45%;
+        padding-right: 10px;
+        /* width: 45%; */
     }
 
     .productsList__buttons {
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .productsList__button-edit,
     .productsList__button-delete {
         display: flex;
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap; */
         align-items: baseline;
     }
 
     .productsList__icon {
         color: white;
-        padding-right: 8px;
+        padding-right: 5px;
         font-size: 12px;
     }
 

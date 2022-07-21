@@ -136,14 +136,18 @@ main {
 }
 
 .contact__input:not(.radio__input),
-.contact__country-select {
+.contact__country-select,
+.contact__province-select {
     width: 100%;
-    padding: 5px;
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid lightgray;
     border-radius: 3px;
+}
+
+.contact__input:not(.radio__input) {
+    padding: 5px;
 }
 
 .contact__country-select {

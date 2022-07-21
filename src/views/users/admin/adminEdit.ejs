@@ -27,7 +27,7 @@
                                 <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-file-pen"></i> Editar
                                     producto</p>
                             </div>
-                            <hr class="adminTitle__hr">
+                            <!-- <hr class="adminTitle__hr"> -->
 
                             <div class="newProduct">
                                 <form class="newProduct_form" action="/admin/<%= product.id %>?_method=PUT"
@@ -38,21 +38,29 @@
 
                                     <label class="newProduct_label" for="category">Categoría</label>
                                     <select class="newProduct_select" name="category" required>
-                                        <option value="Alfajores" <%=product.category=="Alfajores" ? "selected" : null %> >Alfajores
+                                        <option value="Alfajores" <%=product.category=="Alfajores" ? "selected" : null
+                                            %> >Alfajores
                                         </option>
-                                        <option value="Budines" <%=product.category=="Budines" ? "selected" : null %> >Budines
+                                        <option value="Budines" <%=product.category=="Budines" ? "selected" : null %>
+                                            >Budines
                                         </option>
-                                        <option value="Cookies" <%=product.category=="Cookies" ? "selected" : null %> >Cookies
+                                        <option value="Cookies" <%=product.category=="Cookies" ? "selected" : null %>
+                                            >Cookies
                                         </option>
-                                        <option value="Desayunos y boxes" <%=product.category=="Desayunos y boxes" ? "selected" : null %> >Desayunos y
+                                        <option value="Desayunos y boxes" <%=product.category=="Desayunos y boxes"
+                                            ? "selected" : null %> >Desayunos y
                                             boxes</option>
-                                        <option value="Mini postres" <%=product.category=="Mini postres" ? "selected" : null %> >Mini
+                                        <option value="Mini postres" <%=product.category=="Mini postres" ? "selected" :
+                                            null %> >Mini
                                             postres</option>
-                                        <option value="Macarons" <%=product.category=="Macarons" ? "selected" : null %> >Macarons
+                                        <option value="Macarons" <%=product.category=="Macarons" ? "selected" : null %>
+                                            >Macarons
                                         </option>
-                                        <option value="Productos secos" <%=product.category=="Productos secos" ? "selected" : null %> >Productos
+                                        <option value="Productos secos" <%=product.category=="Productos secos"
+                                            ? "selected" : null %> >Productos
                                             secos</option>
-                                        <option value="Postres" <%=product.category=="Postres" ? "selected" : null %> >Postres
+                                        <option value="Postres" <%=product.category=="Postres" ? "selected" : null %>
+                                            >Postres
                                         </option>
                                     </select>
 
@@ -61,10 +69,14 @@
                                         value="<%= product.price %>">
 
                                     <label class="newProduct_label" for="description">Descripción</label>
-                                    <textarea class="newProduct_input" id="description"  name="description" rows="4"><%= product.description %></textarea>
+                                    <textarea class="newProduct_input" id="description" name="description"
+                                        rows="4"><%= product.description %></textarea>
 
-                                    <label class="newProduct_label-img">Agregar imagen de producto</label>
-                                    <input class="newProduct_input-file" type="file" name="imgProduct" accept=".jpg">
+                                    <div class="newProduct_div-img">
+                                        <label class="newProduct_label-img">Agregar imagen de producto</label>
+                                        <input class="newProduct_input-file" type="file" name="imgProduct"
+                                            accept=".jpg">
+                                    </div>
 
                                     <div class="edit">
                                         <button class="edit_a edit_button-clean" type="submit">EDITAR</button>

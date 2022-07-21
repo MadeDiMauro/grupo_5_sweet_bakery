@@ -49,8 +49,16 @@
 
                     <div class="contact__region">
                         <div class="contact__region-divs">
-                            <label for="province">Provincia</label>
-                            <input class="contact__input" type="text" name="province" id="province" required>
+                            <label for="contact__province-label">Provincia</label>
+                            <select name="province" class="contact__province-select" required>
+                                <option hidden selected>Selecionar</option>
+                                <% const provinces = ['Buenos Aires', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'] %>
+                                <% for(let province of provinces) { %>
+                                    <option value="<%= province %>" <%= locals.old && (province == old.province) ? 'selected' : null %>>
+                                        <%= province %>
+                                    </option>
+                                <% } %>
+                            </select>
                         </div>
                         <div class="contact__region-divs">
                             <label class="contact__label" for="location">Localidad</label>

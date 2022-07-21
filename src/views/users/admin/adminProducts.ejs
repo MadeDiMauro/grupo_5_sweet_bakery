@@ -17,9 +17,10 @@
 
 <body>
     <%- include('../../partials/headerAdmin') %>
+        <!-- include('../../partials/navbarAdmin') -->
         <main>
             <%- include('../../partials/navbarAdmin') %>
-            <section class="admin">
+                <section class="admin">
                     <div class="admin__container">
                         <div class="admin__container__div">
                             <div class="adminTitle">
@@ -32,20 +33,29 @@
                                     </button>
                                 </a>
                             </div>
-                            <hr class="adminTitle__hr">
+                            <!-- <hr class="adminTitle__hr"> -->
 
                             <form class="filter" name="#" method="GET">
                                 <div class="filter__div1">
                                     <select class="filter__select" name="category">
                                         <option hidden selected>Categoría</option>
-                                        <option value="c1">Alfajores</option>
-                                        <option value="c2">Budines</option>
-                                        <option value="c3">Cookies</option>
-                                        <option value="c4">Desayunos y boxes</option>
-                                        <option value="c5">Macarons</option>
-                                        <option value="c6">Mini postres</option>
-                                        <option value="c7">Postres</option>
-                                        <option value="c8">Productos secos</option>
+                                        <% const categories=['Alfajores', 'Budines' , 'Cookies' , 'Desayunos y boxes'
+                                            ,'Macarons', 'Mini postres' , 'Postres' , 'Productos secos' ] %>
+                                            <% for(let category of categories) { %>
+                                                <option value="<%= category%>">
+                                                    <%= category %>
+                                                </option>
+                                                <!-- <%= locals.old && (province == old.province) ? 'selected' : null %> -->
+                                                <% } %>
+
+                                                    <!-- <option value="Alfajores">Alfajores</option>
+                                        <option value="Budines">Budines</option>
+                                        <option value="Cookies">Cookies</option>
+                                        <option value="Desayunos y boxes">Desayunos y boxes</option>
+                                        <option value="Macarons">Macarons</option>
+                                        <option value="Mini postres">Mini postres</option>
+                                        <option value="Postres">Postres</option>
+                                        <option value="Productos secos">Productos secos</option> -->
                                     </select>
                                 </div>
 
@@ -62,7 +72,7 @@
                                 </button>
                             </form>
 
-                            <article class="titles">
+                            <!-- <article class="titles">
                                 <div class="titles__div1">
                                     <input class="titles__checkbox" type="checkbox" name="idProduct" value="idProduct">
                                     <p class="titles__id">ID</p>
@@ -77,9 +87,37 @@
                                     <p class="titles__edit">Editar</p>
                                     <P class="titles__delete">Eliminar</P>
                                 </div>
-                            </article>
+                            </article> -->
 
                             <article class="productsList">
+
+                                <article class="titles">
+                                    <div class="titles__div1">
+                                        <p class="titles__list">Lista de productos</p>
+                                    </div>
+                                </article>
+
+                                <article class="titles">
+                                    <div class="titles__div1">
+                                        <input class="titles__checkbox" type="checkbox" name="idProduct"
+                                            value="idProduct">
+                                        <p class="titles__id">ID</p>
+                                        <p class="titles__product">Producto</p>
+                                    </div>
+                                    <div class="titles__div2">
+                                        <p class="titles__name">Nombre</p>
+                                        <p class="titles__category">Categoría</p>
+                                        <p class="titles__price">Precio</p>
+                                    </div>
+                                    <div class="titles__div5">
+                                        <div class="titles__div3">
+                                            <p class="titles__edit">Editar</p>
+                                        </div>
+                                        <div class="titles__div4">
+                                            <P class="titles__delete">Eliminar</P>
+                                        </div>
+                                    </div>
+                                </article>
 
                                 <% for(let i=0; i < productsList.length; i++) { %>
                                     <div class="productsList__container">
@@ -89,7 +127,8 @@
                                             <p class="productsList__id">
                                                 <%= productsList[i].id %>
                                             </p>
-                                            <img class="productsList__img" src="/images/products/<%= productsList[i].image %>"
+                                            <img class="productsList__img"
+                                                src="/images/products/<%= productsList[i].image %>"
                                                 alt="<%= productsList[i].name %>">
                                         </div>
                                         <div class="productsList__info">
@@ -107,18 +146,21 @@
                                         </div>
                                         <div class="productsList__buttons">
                                             <!-- <div class="productsList__divs"> -->
-                                            <a class="productsList__a-edit" href="/admin/editProduct/<%= productsList[i].id %>">
+                                            <a class="productsList__a-edit"
+                                                href="/admin/editProduct/<%= productsList[i].id %>">
                                                 <button class="productsList__button-edit" type="submit">
                                                     <i class="productsList__icon far fa-edit"></i> <span
                                                         class="productsList__span">Editar</span>
                                                 </button>
                                             </a>
-                                        <form class="productsList__a-delete" action="/admin/deleteProduct/<%= productsList[i].id %>?_method=DELETE" method="POST">
+                                            <form class="productsList__a-delete"
+                                                action="/admin/deleteProduct/<%= productsList[i].id %>?_method=DELETE"
+                                                method="POST">
                                                 <button class="productsList__button-delete" type="submit">
                                                     <i class="productsList__icon far fa-trash-alt"></i> <span
                                                         class="productsList__span">Eliminar</span>
                                                 </button>
-                                        </form>
+                                            </form>
                                         </div>
 
                                     </div>
@@ -127,7 +169,7 @@
 
                         </div>
                     </div>
-            </section>
+                </section>
         </main>
 </body>
 
