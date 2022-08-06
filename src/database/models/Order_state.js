@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "Estado de Orden";  
+    let alias= "order_state";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -14,14 +14,14 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
-            tableName:"Estado de Orden",
+            tableName:"order_state",
             timestamps: false
     }
 
     const Order_state= sequelize.define (alias,cols, config);
     Order_state.associate= function (models) {
         Order_state.hasMany (models.Orders, {
-            as: "Órdenes",
+            as: "orders",
             foreignKey: "state_id"
         });
     }
