@@ -2,9 +2,9 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Usuarios";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER.UNSIGNED,
-        primayKey:true,
-        autoIncrement:true
+            type: dataTypes.INTEGER.UNSIGNED,
+            primayKey:true,
+            autoIncrement:true
         },
         firstname: {
             type: dataTypes.STRING,
@@ -18,18 +18,24 @@ module.exports= (sequelize,dataTypes) => {
         password: {
             type: dataTypes.STRING,
         },
-        category: {
+        phone: {
+            type: dataTypes.DECIMAL, //??
+        },
+        re_password: {
             type: dataTypes.STRING,
         },
+        category_id: {
+            type: dataTypes.INTEGER,
+        },
         avatar: {
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         }
 
     };
 
     let config= {
-        tableName:"Usuarios",
-        timestamps: false
+            tableName:"Usuarios",
+            timestamps: false
     }
 
     const Users= sequelize.define (alias,cols, config);

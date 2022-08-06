@@ -2,25 +2,29 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Entregas";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER,
-        primayKey:true,
-        autoIncrement:true,
-        allowNull:false,
+            type: dataTypes.INTEGER,
+            primayKey:true,
+            autoIncrement:true,
+            allowNull:false,
         },
+        
+        type_id: {
+            type: dataTypes.INTEGER
+        },  
         adress: {
-        type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         location:{
-        type: dataTypes.TEXT,
+            type: dataTypes.STRING,
         },
         comments: {
-        type:dataTypes.TEXT,
+            type:dataTypes.TEXT,
         }
     };
 
     let config= {
-        tableName:"Entregas",
-        timestamps: false
+            tableName:"Entregas",
+            timestamps: false
     }
 
     const Delivery= sequelize.define (alias,cols, config);

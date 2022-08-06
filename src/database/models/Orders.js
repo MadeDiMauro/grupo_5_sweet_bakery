@@ -2,20 +2,37 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Órdenes";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER,
-        primayKey:true,
-        autoIncrement:true,
-        allowNull:false,
+            type: dataTypes.INTEGER,
+            primayKey:true,
+            autoIncrement:true,
+            allowNull:false,
         },
         date: {
-        type: dataTypes.DATEONLY,
-        }
+            type: dataTypes.DATEONLY,
+        },
+        
+        state_id: {
+            type: dataTypes.INTEGER
+        },
+        
+        payment_id: {
+            type: dataTypes.INTEGER
+        },
+        
+        user_id: {
+            type: dataTypes.INTEGER
+        },
+                     
+        delivery_id: {
+            type: dataTypes.INTEGER
+        },
+                    
        
     };
 
     let config= {
-        tableName:"Órdenes",
-        timestamps: false
+            tableName:"Órdenes",
+            timestamps: false
     }
 
     const Orders= sequelize.define (alias,cols, config);

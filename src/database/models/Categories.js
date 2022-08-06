@@ -2,22 +2,22 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Categorías";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER.UNSIGNED,
-        primayKey:true,
-        autoIncrement:true
+            type: dataTypes.INTEGER.UNSIGNED,
+            primayKey:true,
+            autoIncrement:true
         },
         type: {
-        type: dataTypes.STRING
+            type: dataTypes.STRING
         },
         condition: {
-        type: dataTypes.STRING
+            type: dataTypes.STRING
         }
 
     };
 
     let config= {
-        tableName:"Categorías",
-        timestamps: false
+            tableName:"Categorías",
+            timestamps: false
     }
 
     const Categories= sequelize.define (alias,cols, config);

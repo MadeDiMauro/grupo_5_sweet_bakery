@@ -2,20 +2,20 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Estado de Orden";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER,
-        primayKey:true,
-        autoIncrement:true,
-        allowNull:false,
+            type: dataTypes.INTEGER,
+            primayKey:true,
+            autoIncrement:true,
+            allowNull:false,
         },
         type: {
-        type: dataTypes.STRING
+            type: dataTypes.STRING
         }
        
     };
 
     let config= {
-        tableName:"Estado de Orden",
-        timestamps: false
+            tableName:"Estado de Orden",
+            timestamps: false
     }
 
     const Order_state= sequelize.define (alias,cols, config);

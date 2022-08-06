@@ -2,31 +2,32 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Productos";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER,
-        primayKey:true,
-        autoIncrement:true,
-        allowNull:false,
+            type: dataTypes.INTEGER,
+            primayKey:true,
+            autoIncrement:true,
+            allowNull:false,
         },
         name: {
-        type: dataTypes.STRING,
+            type: dataTypes.STRING,
         },
         price:{
-        type: dataTypes.DECIMAL,
+            type: dataTypes.DECIMAL,
         },
         description: {
-        type:dataTypes.TEXT,
+            type:dataTypes.TEXT,
         },
         image: {
-        type: dataTypes.INTEGER,
+            type: dataTypes.STRING, //no falta imagenes en el diagrama, en productos??
         },
-        category: {
-        type:dataTypes.INTEGER,
-        }
+        category_id: {
+            type: dataTypes.INTEGER
+        },
+        
     };
 
     let config= {
-        tableName:"Usuarios",
-        timestamps: false
+            tableName:"Usuarios",
+            timestamps: false
     }
 
     const Products= sequelize.define (alias,cols, config);

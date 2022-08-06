@@ -2,23 +2,23 @@ module.exports= (sequelize,dataTypes) => {
     let alias= "Formas de Pago";  
     let cols= {
         id: {
-        type: dataTypes.INTEGER,
-        primayKey:true,
-        autoIncrement:true,
-        allowNull:false,
+            type: dataTypes.INTEGER,
+            primayKey:true,
+            autoIncrement:true,
+            allowNull:false,
         },
         type: {
-        type: dataTypes.STRING
+            type: dataTypes.STRING
         },
         condition: {
-        type: dataTypes.STRING
+            type: dataTypes.STRING
         }
        
     };
 
     let config= {
-        tableName:"Formas de Pago",
-        timestamps: false
+            tableName:"Formas de Pago",
+            timestamps: false
     }
 
     const Payments= sequelize.define (alias,cols, config);
