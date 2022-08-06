@@ -24,5 +24,20 @@ module.exports= (sequelize,dataTypes) => {
     }
 
     const Delivery= sequelize.define (alias,cols, config);
+    Delivery.associate= function (models) {
+        Delivery.belongsTo (models.Orders, { 
+        as:"Órdenes",
+        foreignKey:"delivery_id"
+
+    });
+    Delivery.belongsTo (models.Delivery_type, { 
+        as:"Tipo de Entrega",
+        foreignKey:"type_id"
+
+        
+    });
+
+}
+
     return Delivery;
 }

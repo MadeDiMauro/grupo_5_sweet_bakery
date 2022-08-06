@@ -22,5 +22,13 @@ module.exports= (sequelize,dataTypes) => {
     }
 
     const Payments= sequelize.define (alias,cols, config);
+
+    Payments.associate= function (models) {
+       Payments.belongsTo (models.Orders, { 
+        as:"Órdenes",
+        foreignKey:"payment_id"
+
+    });
+}
     return Payments;
 }

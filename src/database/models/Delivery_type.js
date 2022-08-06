@@ -18,5 +18,13 @@ module.exports= (sequelize,dataTypes) => {
     }
 
     const Delivery_type= sequelize.define (alias,cols, config);
+
+    Delivery_type.associate= function (models) {
+        Delivery_type.hasMany (models.Delivery, {
+            as: "Entregas",
+            foreignKey: "type_id"
+        });
+    }
+    
     return Delivery_type;
 }

@@ -18,6 +18,13 @@ module.exports= (sequelize,dataTypes) => {
         timestamps: false
     }
 
-    const Order_detail= sequelize.define (alias,cols, config);
-    return Order_detail;
+    const Order_state= sequelize.define (alias,cols, config);
+    Order_state.associate= function (models) {
+        Order_state.hasMany (models.Orders, {
+            as: "Órdenes",
+            foreignKey: "state_id"
+        });
+    }
+
+    return Order_state;
 }
