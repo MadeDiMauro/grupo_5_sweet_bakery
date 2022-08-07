@@ -5,35 +5,21 @@
 }
 
 .main-login {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     background-image: url(../images/delicious-cupcakes3.jpg);
     background-size: cover;
     background-position: top center;
-    /* width: 100%; */
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
     -webkit-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
     box-shadow: inset 0px 3px 33px -3px rgba(0, 0, 0, 0.38);
 }
 
-/* .main-div-box {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 0, 0, 0.4);
-    border: solid 1px red;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-    -webkit-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
-    -moz-box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
-    box-shadow: -3px 5px 10px -4px rgba(0, 0, 0, 1);
-} */
-
 .principal-container {
-    width: 70%;
+    max-width: 450px;
+    width: 90%;
     margin: 0 auto;
     padding: 30px 0px;
     border: 1px rgb(0, 0, 0, 0.4);
@@ -82,12 +68,6 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* .input-box label {
-    width: 90%;
-    margin-top: 7px;
-    color: white;
-} */
-
 .input {
     width: 90%;
     padding: 5px;
@@ -97,11 +77,7 @@
     border: none;
     border-bottom: 1px solid white;
     background-color: transparent;
-    /* border: 1px solid lightgray;
-    border-radius: 3px; */
-    /* max-width: 90%;
-    height: 15%;
-    max-height: 15%; */
+    color: white;
 }
 
 .input:focus {
@@ -123,15 +99,12 @@
     display: flex;
     margin: 0 auto;
     align-items: flex-start;
-    /* margin-top: 5%; */
 }
 
 .checkbox-label {
     padding-left: 5px;
     font-size: 14px;
     color: white;
-    /* margin-left: 10%;
-    font-size: x-large; */
 }
 
 .forgotpass-box {
@@ -140,7 +113,6 @@
     margin-top: 15px;
     margin-bottom: 30px;
     text-align: center;
-    /* padding-top: 5%; */
 }
 
 .forgotpass {
@@ -164,27 +136,7 @@
     border-radius: 3px;
     padding: 7px 0px 5px;
     margin-top: 10px;
-    /* width: 90%;
-    font-size: 18px;
-    border-radius: 0px;
-    border: 0px;
-    padding: 10px 50px; */
 }
-
-/* .final-a-box {
-    margin-bottom: 35px;
-    background-color: #000000;
-    font-size: x-large;
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-bottom: 15%;
-    width: 81%;
-} */
-
-/* .div-center {
-    margin: 0 auto;
-    text-align: center;
-} */
 
 .final-a {
     text-decoration: none;
@@ -196,17 +148,14 @@
     font-weight: 400;
     font-size: 14px;
     color: white;
-    /* width: 80%; */
     background-color: transparent;
     border: none;
-    /* border-radius: 3px;
-    margin: 15px 0px;
-    padding: 7px 0px 5px; */
 }
 
 @media (min-width: 481px) {
-    .principal-container {
-        width: 50%;
+    .main-login {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .title-box {
@@ -226,20 +175,4 @@
     .submit-box {
         margin-top: 55px;
     }
-
-    /* .forgotpass-box {
-        text-align: end;
-        margin-left: 0;
-        padding-top: 2.5%;
-    } */
-
-    /* .checkbox-box {
-        text-align: center;
-        padding-top: 2.5%;
-    } */
-
-    /* .checkbox-label {
-        margin-left: 0%;
-        font-size: 16px;
-    } */
 }

@@ -13,9 +13,10 @@ body {
 }
 
 main {
-    width: 100%;
+    width: 90%;
 }
 .userHeader__div {
+    width:90%;
     display: flex;
     justify-content: space-between;
     padding: 10px 35px;
@@ -61,7 +62,7 @@ li {
 }
 
 .dropdown-item p {
-    color:black;
+    color:white;
     font-size: 16px;
     font-family: 'Catamaran';
     font-weight: 300;
@@ -70,8 +71,15 @@ li {
     padding: 2px;
     border-radius: 5%;
     background-color: rgb(206, 203, 203);  
-    width:40px;
+    width:50px;
     text-align: center;
+    border:double 2px transparent;
+    border-radius:10px;
+    background-origin: border-box;
+    background-clip:content-box,border-box;
+    background-color: rgba(248, 246, 246, 0.3);
+    backdrop-filter:blur(2px);
+    
 }
  
 .dropdown-item {
