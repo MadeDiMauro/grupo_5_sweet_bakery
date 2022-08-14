@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "Productos";  
+    let alias= "products";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -14,10 +14,7 @@ module.exports= (sequelize,dataTypes) => {
             type: dataTypes.DECIMAL,
         },
         description: {
-            type:dataTypes.TEXT,
-        },
-        image: {
-            type: dataTypes.STRING, //no falta imagenes en el diagrama, en productos??
+            type:dataTypes.STRING,
         },
         category_id: {
             type: dataTypes.INTEGER
@@ -26,23 +23,28 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
-            tableName:"Usuarios",
-            timestamps: false
+        createdAt: "created_at",
+        updatedAt: "updated_at",
+        deletedAt: "deleted_at",
+        paranoid: true
     }
 
     const Products= sequelize.define (alias,cols, config);
+
     Products.associate= function (models) {
+
         Products.hasMany (models.Images, {
-            as: "Imágenes",
+            as: "images",
             foreignKey: "product_id"
         });
-    }
-        Products.belongsTo (models.Products_categories, { //tengo dudas sobre este!!
-            as:"Categorías de Productos",
-            foreignKey:"product_id"
+    
+        Products.belongsTo (models.Products_categories, {
+            as:"products_categories",
+            foreignKey:"caregory_id"
 
         });
 
+        /*
         Products.belongsToMany (models.Orders, {
             as:"Órdenes",
             through:"Order_detail",
@@ -50,8 +52,12 @@ module.exports= (sequelize,dataTypes) => {
             otherKey:"order_id",
             timestamps:false
         });
+        */
+        Products.hasMany(models.Order_detail, {
+            as: "order_detail",
+            foreignKey: "product_id"
+        });
 
-
-
+    }
     return Products;
 }

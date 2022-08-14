@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "Formas de Pago";  
+    let alias= "payments";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -9,15 +9,10 @@ module.exports= (sequelize,dataTypes) => {
         },
         type: {
             type: dataTypes.STRING
-        },
-        condition: {
-            type: dataTypes.STRING
-        }
-       
+        }       
     };
 
     let config= {
-            tableName:"Formas de Pago",
             timestamps: false
     }
 
@@ -25,7 +20,7 @@ module.exports= (sequelize,dataTypes) => {
 
     Payments.associate= function (models) {
        Payments.belongsTo (models.Orders, { 
-        as:"Órdenes",
+        as:"orders",
         foreignKey:"payment_id"
 
     });

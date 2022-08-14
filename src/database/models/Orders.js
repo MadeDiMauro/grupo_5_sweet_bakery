@@ -5,7 +5,7 @@ module.exports= (sequelize,dataTypes) => {
             type: dataTypes.INTEGER,
             primayKey:true,
             autoIncrement:true,
-            allowNull:false,
+            allowNull:false
         },
         date: {
             type: dataTypes.DATEONLY,
@@ -31,44 +31,49 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
-            tableName:"orders",
-            timestamps: false
+        createdAt: "created_at",
+        updatedAt: "updated_at",
+        deletedAt: "deleted_at",
+        paranoid: true
     }
 
     const Orders= sequelize.define (alias,cols, config);
+
     Orders.associate= function (models) {
-        Orders.belongsToMany (models.Products, { //revisar
-            as:"Productos",
-            through:"Order_detail",
-            foreignKey:"category_id",
-            otherKey:"order_id",
+        /*Orders.belongsToMany (models.Products, { //revisar
+            as:"order_detail",
+            through:"order_detail",
+            foreignKey:"order_id",
+            otherKey:"product_id",
             timestamps:false
+        });*/
+
+        Orders.hasMany(models.Order_detail, {
+            as: "order_detail",
+            foreignKey: "order_id"
         });
-    }
+
         Orders.belongsTo (models.Payments, { 
-            as:"Formas de Pago",
+            as:"payments",
             foreignKey:"payment_id"
 
         });
 
         Orders.belongsTo (models.Users, {
-            as:"Usuarios",
+            as:"users",
             foreignKey:"user_id"
-
         });
         
         Orders.belongsTo (models.Delivery, {
-            as:"Entregas",
+            as:"delivery",
             foreignKey:"delivery_id"
-
         });
 
         Orders.belongsTo (models.Order_state, {
-            as:"Estado de Entregas",
+            as:"order_state",
             foreignKey:"state_id"
-
         });
     
-
+    }
     return Orders;
 }

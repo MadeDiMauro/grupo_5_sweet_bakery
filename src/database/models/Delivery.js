@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "Entregas";  
+    let alias= "delivery";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -18,30 +18,27 @@ module.exports= (sequelize,dataTypes) => {
             type: dataTypes.STRING,
         },
         comments: {
-            type:dataTypes.TEXT,
+            type:dataTypes.STRING,
         }
     };
 
     let config= {
-            tableName:"Entregas",
             timestamps: false
     }
 
     const Delivery= sequelize.define (alias,cols, config);
-    Delivery.associate= function (models) {
-        Delivery.belongsTo (models.Orders, { 
-        as:"Órdenes",
-        foreignKey:"delivery_id"
+        Delivery.associate= function (models) {
+            Delivery.belongsTo (models.Orders, { 
+            as:"orders",
+            foreignKey:"delivery_id"
+        });
 
-    });
-    Delivery.belongsTo (models.Delivery_type, { 
-        as:"Tipo de Entrega",
-        foreignKey:"type_id"
+        Delivery.belongsTo (models.Delivery_type, { 
+            as:"delivery_type",
+            foreignKey:"type_id"
+        });
 
-        
-    });
-
-}
+    }
 
     return Delivery;
 }

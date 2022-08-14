@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "delivery_type";  
+    let alias= "users_categories";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -7,25 +7,23 @@ module.exports= (sequelize,dataTypes) => {
             autoIncrement:true,
             allowNull:false
         },
-
         type: {
             type: dataTypes.STRING
         }
-
     };
 
     let config= {
             timestamps: false
     }
 
-    const Delivery_type= sequelize.define (alias,cols, config);
-
-    Delivery_type.associate= function (models) {
-        Delivery_type.hasMany (models.Delivery, {
-            as: "delivery",
-            foreignKey: "type_id"
+    const User_categories= sequelize.define (alias,cols, config);
+    User_categories.associate= function (models) {
+        User_categories.hasMany (models.Users, {
+            as: "users",
+            foreignKey: "category_id"
         });
     }
-    
-    return Delivery_type;
+
+
+    return User_categories;
 }

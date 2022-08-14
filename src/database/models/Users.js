@@ -1,25 +1,23 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "Usuarios";  
+    let alias= "users";  
     let cols= {
         id: {
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.INTEGER,
             primayKey:true,
-            autoIncrement:true
+            autoIncrement:true,
+            allowNull:false
         },
-        firstname: {
-            type: dataTypes.STRING,
-        },
-        lastname: {
+        name: {
             type: dataTypes.STRING,
         },
         email: {
             type: dataTypes.STRING,
         },
+        phone: {
+            type: dataTypes.INTEGER,
+        },
         password: {
             type: dataTypes.STRING,
-        },
-        phone: {
-            type: dataTypes.DECIMAL, //??
         },
         re_password: {
             type: dataTypes.STRING,
@@ -34,21 +32,26 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
-            tableName:"Usuarios",
-            timestamps: false
+            createdAt: "created_at",
+            updatedAt: "updated_at",
+            deletedAt: "deleted_at",
+            paranoid: true
     }
 
     const Users= sequelize.define (alias,cols, config);
+    
     Users.associate= function (models) {
+
         Users.hasMany (models.Orders, {
-            as: "Órdenes",
+            as: "orders",
             foreignKey: "user_id"
         });
-    Users.belongsTo (models.Categories, {  //tengo duda sobre este también!
-            as:"Categorías de Usuarios",
+        Users.belongsTo (models.Users_categories, { 
+            as:"users_categories",
             foreignKey:"category_id"
 
         });
+
     }
-    return Usuarios;
+    return Users;
 }
