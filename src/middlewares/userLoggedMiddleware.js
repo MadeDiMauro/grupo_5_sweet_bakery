@@ -7,11 +7,11 @@ function userLoggedMiddleware(req, res, next) {
 
     if (userFromCookie){
         req.session.userLogged = userFromCookie;
-        console.log(req.cookies.userEmail);
+        //console.log(req.cookies.userEmail);
     }
 
     if (req.session && req.session.userLogged) {
-        res.locals.isLogged = true;
+        //res.locals.isLogged = true;
         res.locals.isLogged = req.session.userLogged;  /*paso lo que tengo en session a locals para después usarlo en la vista de nabvaruser*/
     }
 
