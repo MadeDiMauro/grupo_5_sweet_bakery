@@ -3,9 +3,9 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
-            allowNull:false,
+            allowNull:false
         },
         
         type_id: {
@@ -27,16 +27,17 @@ module.exports= (sequelize,dataTypes) => {
     }
 
     const Delivery= sequelize.define (alias,cols, config);
-        Delivery.associate= function (models) {
-            Delivery.belongsTo (models.Orders, { 
-            as:"orders",
-            foreignKey:"delivery_id"
-        });
+        Delivery.associate = function (models) {
+        
+            Delivery.belongsTo(models.orders, { 
+                as:"orders",
+                foreignKey:"delivery_id"
+            });
 
-        Delivery.belongsTo (models.Delivery_type, { 
-            as:"delivery_type",
-            foreignKey:"type_id"
-        });
+            Delivery.belongsTo (models.delivery_type, { 
+                as:"delivery_type",
+                foreignKey:"type_id"
+            });
 
     }
 

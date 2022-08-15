@@ -37,21 +37,11 @@
 
                                     <label class="newProduct__label" for="category">Categoría</label>
                                     <select class="newProduct__select" name="category" required>
-                                       <!-- <% for (let i=0; i< category.length;i++) { %>
+                                       <% for (let i=0; i< category.length;i++) { %>
                                         <option value= "<%= category[i].id %>">
-                                        <%=category [i].type%>
+                                        <%=category[i].type%>
                                         </option>
-                                        <% } %>-->
-
-                                        
-                                        <option value="Alfajores">Alfajores</option>
-                                        <option value="Budines">Budines</option>
-                                        <option value="Cookies">Cookies</option>
-                                        <option value="Desayunos y boxes">Desayunos y boxes</option>
-                                        <option value="Mini postres">Mini postres</option>
-                                        <option value="Macarons">Macarons</option>
-                                        <option value="Productos secos">Productos secos</option>
-                                        <option value="Postres">Postres</option>
+                                        <% } %>
                                     </select>
 
                                     <label class="newProduct__label" for="price">Precio</label>

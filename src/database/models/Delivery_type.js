@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
@@ -21,7 +21,7 @@ module.exports= (sequelize,dataTypes) => {
     const Delivery_type= sequelize.define (alias,cols, config);
 
     Delivery_type.associate= function (models) {
-        Delivery_type.hasMany (models.Delivery, {
+        Delivery_type.hasMany (models.delivery, {
             as: "delivery",
             foreignKey: "type_id"
         });

@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
@@ -20,7 +20,7 @@ module.exports= (sequelize,dataTypes) => {
     const Order_state= sequelize.define (alias,cols, config);
     
     Order_state.associate= function (models) {
-        Order_state.hasMany (models.Orders, {
+        Order_state.hasMany (models.orders, {
             as: "orders",
             foreignKey: "state_id"
         });

@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false,
         },
@@ -33,14 +33,14 @@ module.exports= (sequelize,dataTypes) => {
 
     Products.associate= function (models) {
 
-        Products.hasMany (models.Images, {
+        Products.hasMany (models.images, {
             as: "images",
             foreignKey: "product_id"
         });
     
-        Products.belongsTo (models.Products_categories, {
+        Products.belongsTo (models.products_categories, {
             as:"products_categories",
-            foreignKey:"caregory_id"
+            foreignKey:"category_id"
 
         });
 
@@ -53,7 +53,7 @@ module.exports= (sequelize,dataTypes) => {
             timestamps:false
         });
         */
-        Products.hasMany(models.Order_detail, {
+        Products.hasMany(models.order_detail, {
             as: "order_detail",
             foreignKey: "product_id"
         });

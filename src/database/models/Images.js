@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false,
         },
@@ -22,7 +22,7 @@ module.exports= (sequelize,dataTypes) => {
     const Images = sequelize.define (alias,cols, config);
 
     Images.associate = function (models) {
-        Images.belongsTo (models.Products, {
+        Images.belongsTo (models.products, {
             as: "products",
             foreignKey: "product_id"
         });

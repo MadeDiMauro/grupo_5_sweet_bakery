@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
@@ -48,28 +48,28 @@ module.exports= (sequelize,dataTypes) => {
             timestamps:false
         });*/
 
-        Orders.hasMany(models.Order_detail, {
+        Orders.hasMany(models.order_detail, {
             as: "order_detail",
             foreignKey: "order_id"
         });
 
-        Orders.belongsTo (models.Payments, { 
+        Orders.belongsTo (models.payments, { 
             as:"payments",
             foreignKey:"payment_id"
 
         });
 
-        Orders.belongsTo (models.Users, {
+        Orders.belongsTo (models.users, {
             as:"users",
             foreignKey:"user_id"
         });
         
-        Orders.belongsTo (models.Delivery, {
+        Orders.belongsTo (models.delivery, {
             as:"delivery",
             foreignKey:"delivery_id"
         });
 
-        Orders.belongsTo (models.Order_state, {
+        Orders.belongsTo (models.order_state, {
             as:"order_state",
             foreignKey:"state_id"
         });

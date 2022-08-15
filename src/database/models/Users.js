@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
@@ -42,11 +42,11 @@ module.exports= (sequelize,dataTypes) => {
     
     Users.associate= function (models) {
 
-        Users.hasMany (models.Orders, {
+        Users.hasMany (models.orders, {
             as: "orders",
             foreignKey: "user_id"
         });
-        Users.belongsTo (models.Users_categories, { 
+        Users.belongsTo (models.users_categories, { 
             as:"users_categories",
             foreignKey:"category_id"
 

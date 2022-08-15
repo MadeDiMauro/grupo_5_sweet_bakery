@@ -30,7 +30,7 @@
                             <!-- <hr class="adminTitle__hr"> -->
 
                             <div class="newProduct">
-                                <form class="newProduct_form" action="/admin/<%= product.id %>?_method=PUT"
+                                <form class="newProduct_form" action="/admin/products/<%= product.id %>?_method=PUT"
                                     method="POST" enctype="multipart/form-data">
                                     <label class="newProduct_label" for="name">Nombre</label>
                                     <input class="newProduct_input" type="text" name="name" id="name" required
@@ -38,33 +38,13 @@
 
                                     <label class="newProduct_label" for="category">Categoría</label>
                                     <select class="newProduct_select" name="category" required>
-                                        <option value="Alfajores" <%=product.category=="Alfajores" ? "selected" : null
-                                            %> >Alfajores
-                                        </option>
-                                        <option value="Budines" <%=product.category=="Budines" ? "selected" : null %>
-                                            >Budines
-                                        </option>
-                                        <option value="Cookies" <%=product.category=="Cookies" ? "selected" : null %>
-                                            >Cookies
-                                        </option>
-                                        <option value="Croissant" <%=product.category=="Croissant" ? "selected" : null %>
-                                            >Croissant
-                                        </option>
-                                        <option value="Desayunos y boxes" <%=product.category=="Desayunos y boxes"
-                                            ? "selected" : null %> >Desayunos y
-                                            boxes</option>
-                                        <option value="Mini postres" <%=product.category=="Mini postres" ? "selected" :
-                                            null %> >Mini
-                                            postres</option>
-                                        <option value="Macarons" <%=product.category=="Macarons" ? "selected" : null %>
-                                            >Macarons
-                                        </option>
-                                        <option value="Productos secos" <%=product.category=="Productos secos"
-                                            ? "selected" : null %> >Productos
-                                            secos</option>
-                                        <option value="Postres" <%=product.category=="Postres" ? "selected" : null %>
-                                            >Postres
-                                        </option>
+                                        <% for (let i=0; i< category.length;i++) { %>
+                                            <option value= "<%= category[i].id %>" <%=product.category_id==category[i].id ? "selected" : null
+                                                %> >
+                                            <%=category[i].type%>
+                                            </option>
+                                            <% } %>
+            
                                     </select>
 
                                     <label class="newProduct_label" for="price">Precio</label>
@@ -78,7 +58,7 @@
                                     <div class="newProduct_div-img">
                                         <label class="newProduct_label-img">Agregar imagen de producto</label>
                                         <input class="newProduct_input-file" type="file" name="imgProduct"
-                                            accept=".jpg">
+                                            accept=".jpg" multiple>
                                     </div>
 
                                     <div class="edit">

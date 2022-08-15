@@ -3,7 +3,7 @@ module.exports= (sequelize,dataTypes) => {
     let cols= {
         id: {
             type: dataTypes.INTEGER,
-            primayKey:true,
+            primaryKey:true,
             autoIncrement:true,
             allowNull:false,
         },
@@ -19,7 +19,7 @@ module.exports= (sequelize,dataTypes) => {
     const Payments= sequelize.define (alias,cols, config);
 
     Payments.associate= function (models) {
-       Payments.belongsTo (models.Orders, { 
+       Payments.belongsTo (models.orders, { 
         as:"orders",
         foreignKey:"payment_id"
 

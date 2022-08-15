@@ -9,7 +9,7 @@ router.get('/products', adminController.list);
 router.get('/createProduct', adminController.createProduct);
 router.post('/products', upload.single('imgProduct'), adminController.store);
 router.get('/editProduct/:id', adminController.editProduct);
-router.put('/:id', upload.single('imgProduct'), adminController.update);
+router.put('/products/:id', upload.array('imgProduct', 3), adminController.update);
 router.delete('/deleteProduct/:id', adminController.destroy);
 router.get('/createUser', adminController.createUser);
 router.get('/editUser', adminController.createUser);
