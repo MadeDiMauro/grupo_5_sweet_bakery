@@ -1,9 +1,101 @@
 const fs = require("fs");
 const path = require("path");
-//const db= require ('../database/models'); 
+/*const db= require ('../database/models'); 
+const { Op } = db.sequelize;
 
-//path.join(__dirname, "../database/products.json");
+/*createUser: (req, res) => {
+    db.users.findAll().then((category_id) => {
+      return res.render("users/userProfile", { category_id });
+    }); 
+    
+ store: (req, res) => {
+    db.users
+      .create({
+        name: req.body.name,
+        price: req.body.email,
+        description: req.body.phone,
+        password: req.body.password,
+        re_password: req.body.re_password,
+        category_id:req.body.category_id,
+        avatar: req.file ? req.file.filename : "logo-sweet-bakery-dorado.png",
+      })
+      .then(() => {
+        return res.redirect("users/userProfile");
+      });   
 
+   editUser: (req, res) => {
+    let category = db.category_id.findAll();
+    let user = db.users.findByPk(req.params.id);
+
+    Promise.all([category, user]).then(([c, p]) => {
+      return res.render("users/admin/adminEdit", { category: c, product: p });
+    });
+  
+  },
+  update: async (req, res) => {
+    //return res.json(req.files);
+    
+    if (req.files.length > 0) {
+
+      
+      let images = await db.users.avatar findAll({
+        where: {
+          category_id: req.params.id,
+        },
+      });
+      
+      if (images.length > 0) {
+        for (let i = 0; i < images.length; i++) {
+          let url = path.join(__dirname,"/../../public/images/products/",images[i].url);
+          if (fs.existsSync(url)) {
+            fs.unlinkSync(url);
+          }
+        }
+
+        db.images.destroy({
+          where: {
+            product_id: req.params.id,
+          },
+        });
+      }
+
+      for (let i = 0; i < req.files.length; i++) {
+        db.images.create({
+          url: req.files[i].filename,
+          product_id: req.params.id,
+        });
+      }
+    }
+
+    db.users
+      .update(
+        {
+          name: req.body.name,
+          price: req.body.price,
+          description: req.body.description,
+          category_id: req.body.category,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      )
+      .then(() => {
+        return res.redirect("/admin/products");
+        /*return res.redirect('/products/detail/'+req.params.id);
+      });
+
+      destroy: (req, res) => {
+
+    db.users.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(() => {
+      return res.redirect("/users/userProfile"");
+    });
+    */
 
 const User = {
     fileName: 'src/database/users.json',
