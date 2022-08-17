@@ -74,21 +74,19 @@ const adminController = {
   },
   update: async (req, res) => {
     //return res.json(req.files);
+    
+    if (req.files.length > 0) {
 
-    if (req.files) {
+      
       let images = await db.images.findAll({
         where: {
           product_id: req.params.id,
         },
       });
-
-      if (images) {
+      
+      if (images.length > 0) {
         for (let i = 0; i < images.length; i++) {
-          let url = path.join(
-            __dirname,
-            "/../../public/images/products/",
-            images[i].url
-          );
+          let url = path.join(__dirname,"/../../public/images/products/",images[i].url);
           if (fs.existsSync(url)) {
             fs.unlinkSync(url);
           }
@@ -147,6 +145,15 @@ const adminController = {
         */
   },
   destroy: (req, res) => {
+
+    db.products.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(() => {
+      return res.redirect("/admin/products");
+    });
+    /*
     const products = readJsonFile(productsdbPath);
     const productsUpdate = products.filter(
       (product) => product.id != req.params.id
@@ -154,6 +161,7 @@ const adminController = {
 
     fs.writeFileSync(productsdbPath, JSON.stringify(productsUpdate, null, 2));
     return res.redirect("/admin/products");
+    */
   },
 };
 

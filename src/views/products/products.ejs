@@ -47,17 +47,12 @@
                     </div>
                 </section>
 
-                <form class="categories" name="#" method="GET">
+                <div class="categories" name="#">
                     <label class="categories__label">CATEGORÍAS</label>
-                    <a class="categories__a" href="#"><button class="categories__button">Alfajores</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Budines</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Cookies</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Desayunos y boxes</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Macarons</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Mini postres</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Postres</button></a>
-                    <a class="categories__a" href="#"><button class="categories__button">Productos secos</button></a>
-                </form>
+                    <% for (let i=0; i< categorias.length;i++) { %>
+                        <a class="categories__a" href="/products/list?category=<%=categorias[i].id%>"><button class="categories__button"><%=categorias[i].type%></button></a>
+                    <% } %>
+                </div>
             </section>
 
             <div class="products">

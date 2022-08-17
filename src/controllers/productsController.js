@@ -1,29 +1,23 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models");
+const { Op } = db.sequelize;
 
-const productsdbPath = path.join(__dirname, "../database/products.json");
-
-const readJsonFile = (path) => {
-    const data = fs.readFileSync(path, "utf-8");
-    const dataParsed = JSON.parse(data);
-    return dataParsed;
-}
-
-const productsList = readJsonFile(productsdbPath);
 
 const productsController = {
-    list: (req, res) => {
-        const productsList = readJsonFile(productsdbPath);
-        if (req.params.category) {
-            let productsListCategory = productsList.filter(
-                (item) => item.category == req.params.category
-            );
-            //return res.json(productsList);
-            console.log(productsListCategory);
-            return res.render("products/products", { productsList: productsListCategory });
-        } else {
-            return res.render("products/products", { productsList: productsList });
-        }
+    list: async (req, res) => {
+        let categorias = await db.products_categories.findAll();
+        let productsList = await db.products.findAll();
+
+        if(req.query.category){
+            productsList = await db.products.findAll({
+                where: {
+                    category_id:req.query.category
+                }
+            })
+        } 
+
+        return res.render("products/products", { productsList, categorias });
     },
     detail: (req, res) => {
 			const productsList = readJsonFile(productsdbPath);
