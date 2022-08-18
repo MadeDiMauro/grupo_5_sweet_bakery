@@ -41,10 +41,10 @@
                 </div>
 
                 <section class="search">
-                    <div class="search__div">
-                        <button class="search__button" type="submit"><i class="search__icon fas fa-search"></i></button>
-                        <input class="search__text" type="text" placeholder="Buscar producto">
-                    </div>
+                    <form class="search__div" action="/products/list" method="GET">
+                        <button class="search__button" type="submit" ><i class="search__icon fas fa-search" ></i></button>
+                        <input class="search__text" type="text" placeholder="Buscar producto"  name="search" >
+                    </form>
                 </section>
 
                 <div class="categories" name="#">
