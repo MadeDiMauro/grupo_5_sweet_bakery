@@ -40,23 +40,17 @@ module.exports= (sequelize,dataTypes) => {
     const Orders= sequelize.define (alias,cols, config);
 
     Orders.associate= function (models) {
-        /*Orders.belongsToMany (models.Products, { //revisar
-            as:"order_detail",
-            through:"order_detail",
+        Orders.belongsToMany (models.products, { //revisar
+            as:"products",
+            through:models.order_detail,
             foreignKey:"order_id",
             otherKey:"product_id",
             timestamps:false
-        });*/
-
-        Orders.hasMany(models.order_detail, {
-            as: "order_detail",
-            foreignKey: "order_id"
         });
 
         Orders.belongsTo (models.payments, { 
             as:"payments",
             foreignKey:"payment_id"
-
         });
 
         Orders.belongsTo (models.users, {

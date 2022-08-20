@@ -6,15 +6,23 @@ const { Op } = db.sequelize;
 
 const productsController = {
     list: async (req, res) => {
-        console.log(req.query.search);
+        let productsList = await db.products.findAll();
+        let search = req.query.search;
+
+        // if(search){
+        //     productsList = await db.products.findAll({
+        //         where: {
+        //             name: {[Op.like] }
+        //         }
+        //     }) 
+        // }
 
         let categorias = await db.products_categories.findAll();
-        let productsList = await db.products.findAll();
-
+    
         if(req.query.category){
             productsList = await db.products.findAll({
                 where: {
-                    category_id:req.query.category
+                    category_id: req.query.category
                 }
             })
         } 
