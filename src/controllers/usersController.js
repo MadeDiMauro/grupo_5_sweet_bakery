@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-const User = require('../models/User');
+//const User = require('../models/User');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
+const { Op } = db.sequelize;
 
 /*const usersdbPath = path.join(__dirname, "../database/users.json");
 
@@ -18,7 +20,7 @@ const usersController = {
   register: (req, res) => {
     return res.render('users/register')
   },
-  processRegister: (req, res) => {
+  processRegister: async (req, res) => {
     const validations = validationResult(req);
 
     if(validations.errors.length > 0){
@@ -27,8 +29,13 @@ const usersController = {
         old: req.body
       })
     }
-    
-    let userInDB = User.findByField('email', req.body.email);
+    console.log('+++++++++++' + req.body.email)
+    let userInDB = await db.users.findAll({
+      where: {
+        email: req.body.email
+      }
+    });
+      
     if(userInDB){
       return res.render('users/register', {
         errors: {
@@ -40,7 +47,6 @@ const usersController = {
       })
     }
     
-     
     if (req.body.password !== req.body.re_password) {
       return res.render('users/register', {
         errors: {
@@ -51,23 +57,42 @@ const usersController = {
         old: req.body
       })
     } 
-    let userToCreate = {
+    let userToCreate = await db.users.create ({
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
       re_password: bcryptjs.hashSync(req.body.password, 10),
-      category: "user",
+      category: 2,
       avatar: req.file ? req.file.filename : "avatar1.jpg"
-    }
+    })
+    .then(() => {
+      return res.redirect("/users/login");
+    })
   
-    let userCreated = User.create(userToCreate);
-    return res.redirect('/users/login');
+    //(req, res) => {
+    // db.users.create({
+    //     name: req.body.name,
+    //     email: req.body.email,
+    //     phone: req.body.phone,
+    //     password: req.body.password,
+    //     re_password: req.body.password,
+    //     category_id: 2,
+    //     avatar: req.file ? req.file.filename : "avatar1.jpg",
+    //   })
+    //   .then(() => {
+    //     return res.redirect("/users/login");
+    //   });
+
+
+    //let userCreated = User.create(userToCreate);
+
+    //return res.redirect('/users/login');
   },
 
   login: (req, res) => {
     return res.render('users/login')
   },
 
-  processLogin: (req, res) => {
+  processLogin: async (req, res) => {
    const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render('users/login', {
@@ -76,7 +101,11 @@ const usersController = {
     });
     }
     
-    let userToLogin = User.findByField('email', req.body.email)
+    let userToLogin = await db.users.findAll({
+      where: {
+        email: req.body.email
+      }
+    })
     //let isAdmin = User.findByField('category',req.body.category)
     
     if(userToLogin) {

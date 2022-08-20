@@ -18,7 +18,7 @@ const adminController = {
     return res.render("users/admin/principal");
   },
   // profile: (req, res) => {
-  //     res.render('users/admin/profile');
+  //   res.render('users/admin/profile');
   // },
   createUser: (req, res) => {
     res.render("users/admin/adminCreate");
@@ -74,19 +74,19 @@ const adminController = {
   },
   update: async (req, res) => {
     //return res.json(req.files);
-    
+
     if (req.files.length > 0) {
 
-      
+
       let images = await db.images.findAll({
         where: {
           product_id: req.params.id,
         },
       });
-      
+
       if (images.length > 0) {
         for (let i = 0; i < images.length; i++) {
-          let url = path.join(__dirname,"/../../public/images/products/",images[i].url);
+          let url = path.join(__dirname, "/../../public/images/products/", images[i].url);
           if (fs.existsSync(url)) {
             fs.unlinkSync(url);
           }
