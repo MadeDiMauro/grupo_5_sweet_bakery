@@ -67,25 +67,6 @@ const usersController = {
     .then(() => {
       return res.redirect("/users/login");
     })
-  
-    //(req, res) => {
-    // db.user.create({
-    //     name: req.body.name,
-    //     email: req.body.email,
-    //     phone: req.body.phone,
-    //     password: req.body.password,
-    //     re_password: req.body.password,
-    //     category_id: 2,
-    //     avatar: req.file ? req.file.filename : "avatar1.jpg",
-    //   })
-    //   .then(() => {
-    //     return res.redirect("/users/login");
-    //   });
-
-
-    //let userCreated = User.create(userToCreate);
-
-    //return res.redirect('/users/login');
   },
 
   login: (req, res) => {

@@ -1,8 +1,9 @@
 const { name } = require("ejs");
 const fs = require("fs");
 const path = require("path");
+const { Sequelize } = require("sequelize");
 const db = require("../database/models");
-const { Op } = db.sequelize;
+const Op = Sequelize.Op;
 
 
 const productsController = {
@@ -13,7 +14,9 @@ const productsController = {
         if (search) {
             productsList = await db.products.findAll({
                 where: {
-                    name: search //NO FUNCIONA
+                    name: {
+                        [Op.like]: '%'+search+'%'
+                    } 
                 }
             })
         }
