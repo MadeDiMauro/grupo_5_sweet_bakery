@@ -22,21 +22,21 @@ const usersController = {
   },
   processRegister: async (req, res) => {
     const validations = validationResult(req);
-
     if(validations.errors.length > 0){
       return res.render('users/register', {
         errors: validations.mapped(),
         old: req.body
       })
     }
-    console.log('+++++++++++' + req.body.email)
-    let userInDB = await db.users.findAll({
+  
+    let userInDB= await db.user.findAll({
       where: {
         email: req.body.email
       }
-    });
-      
-    if(userInDB){
+      })
+     
+    if(userInDB.length >0){ 
+
       return res.render('users/register', {
         errors: {
           email: { 
@@ -57,11 +57,11 @@ const usersController = {
         old: req.body
       })
     } 
-    let userToCreate = await db.users.create ({
+    let userToCreate = await db.user.create ({
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
       re_password: bcryptjs.hashSync(req.body.password, 10),
-      category: 2,
+      category_id: 2,
       avatar: req.file ? req.file.filename : "avatar1.jpg"
     })
     .then(() => {
@@ -69,7 +69,7 @@ const usersController = {
     })
   
     //(req, res) => {
-    // db.users.create({
+    // db.user.create({
     //     name: req.body.name,
     //     email: req.body.email,
     //     phone: req.body.phone,
@@ -93,7 +93,7 @@ const usersController = {
   },
 
   processLogin: async (req, res) => {
-   const resultValidation = validationResult(req);
+   /*const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render('users/login', {
         errors: resultValidation.mapped(),
@@ -101,7 +101,7 @@ const usersController = {
     });
     }
     
-    let userToLogin = await db.users.findAll({
+    let userToLogin = await db.user.findAll({
       where: {
         email: req.body.email
       }
@@ -140,14 +140,14 @@ const usersController = {
           }
         }
         })
-    }
+    } */
   },
     
   profile: (req, res) => {
     //console.log(req.cookies.userEmail);
     return res.render('users/userProfile', {
       user: req.session.userLogged  /*usé user en la vista de profile*/
-    })
+    }) 
   },
   logout: (req, res) => { /*para que no se quede logueado continuamente*/
     res.clearCookie('userEmail');

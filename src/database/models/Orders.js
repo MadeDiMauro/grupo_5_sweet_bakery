@@ -31,6 +31,7 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
+        tableName: "orders",
         createdAt: "created_at",
         updatedAt: "updated_at",
         deletedAt: "deleted_at",
@@ -53,8 +54,8 @@ module.exports= (sequelize,dataTypes) => {
             foreignKey:"payment_id"
         });
 
-        Orders.belongsTo (models.users, {
-            as:"users",
+        Orders.belongsTo (models.user, {
+            as:"user",
             foreignKey:"user_id"
         });
         

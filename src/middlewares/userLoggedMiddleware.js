@@ -2,11 +2,11 @@ const db = require('../database/models');
 const { Op } = db.sequelize;
 
 //const User = require('../models/User');
-function userLoggedMiddleware (req, res, next) {
+async function  userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false;
 
-    const emailInCookie = req.cookies.userEmail;
-    const userFromCookie = db.users.findAll({
+    let emailInCookie = req.cookies.userEmail; 
+    let userFromCookie =  await db.user.findAll({
         where: {
             email: req.cookies.userEmail
         }

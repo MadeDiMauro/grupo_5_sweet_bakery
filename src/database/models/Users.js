@@ -1,5 +1,5 @@
 module.exports= (sequelize,dataTypes) => {
-    let alias= "users";  
+    let alias= "user";  
     let cols= {
         id: {
             type: dataTypes.INTEGER,
@@ -32,26 +32,27 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
+            tableName:"user",
             createdAt: "created_at",
             updatedAt: "updated_at",
             deletedAt: "deleted_at",
             paranoid: true
     }
 
-    const Users= sequelize.define (alias,cols, config);
+    const User= sequelize.define (alias,cols, config);
     
-    Users.associate= function (models) {
+    User.associate= function (models) {
 
-        Users.hasMany (models.orders, {
+        User.hasMany (models.orders, {
             as: "orders",
             foreignKey: "user_id"
         });
-        Users.belongsTo (models.users_categories, { 
+        User.belongsTo (models.users_categories, { 
             as:"users_categories",
             foreignKey:"category_id"
 
         });
 
     }
-    return Users;
+    return User;
 }

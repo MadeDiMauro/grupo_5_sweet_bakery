@@ -13,6 +13,7 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
+            tableName: "payments",
             timestamps: false
     }
 

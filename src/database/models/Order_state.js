@@ -14,6 +14,7 @@ module.exports= (sequelize,dataTypes) => {
     };
 
     let config= {
+            tableName: "order_state",
             timestamps: false
     }
 
