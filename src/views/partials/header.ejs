@@ -1,105 +1,128 @@
 <header class="body-header">
-    <div class="header-version-desktop">
-        <nav class="menu-nav">
-            <ul class="menu-listado">
-                <li>
-                    <a href="/"><img class="menu-logo" src="/images/nombre-sweet-bakery-dorado.png"
-                            alt="Logo de Sweet Bakery"></a>
-                </li>
-                <div class="menu-accesos">
-                    <li>
-                        <a href="/">INICIO</a>
-                    </li>
-                    <li>
-                        <a href="/products/list">PRODUCTOS</a>
-                    </li>
-                    <li>
-                        <a href="/contact">CONTACTO</a>
-                    </li>
-                    <li>
-                        <a href="/courses/list">CURSOS</a>
-                    </li>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                </div>
-                <div class="menu-cart">
-                    <li><a href="/users/login"><button>Ingresá</button></a> <a href="/users/register"><button>Registrate</button></a></li>
-                    <li><a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a></li>
-                </div>
-            </ul>
-        </nav>
-    </div>
-    <!--------------------------------------------------------------------------------------------------------------------->
-    <div class="header-version-tablet">
-        <nav class="menu-nav-tablet">
-            <section class="menu-listado-tablet">
-
-                <div class="menu-burger-tablet">
-                    <a href="#">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
-                <div class="menu-cart-tablet">
-                    <div class="menu-button-search-tablet">
-                        <a href="#"><i class="fas fa-search"></i></a>
-                    </div>
-                    <div class="menu-button-user-tablet">
-                        <a href="/users/login"><i class="fas fa-user"></i></a>
-                    </div>
-                    <div class="menu-button-cart-tablet">
-                        <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
-                    </div>
-                </div>
-                <div class="menu-logo-tablet">
-                    <a href="/">
-                        <img src="/images/nombre-sweet-bakery-dorado.png" alt="Logo de Sweet Bakery">
-                    </a>
-                </div>
-
-            </section>
-        </nav>
-    </div>
-    <!-- ------------------------------------------------------------------------------------------------------------------>
-    <div class="header-version-mobile">
-        <div class="menu-nav-mobile">
-            <div class="menu-buttons-mobile">
-                <div class="menu-button-x">
-                    <a href="#"><i class="fas fa-times"></i></a>
-                </div>
-                <div class="menu-button-search">
-                    <a href="#"><i class="fas fa-search"></i></a>
-                </div>
-                <div class="menu-button-user">
-                    <a href="/users/login"><i class="fas fa-user"></i></a>
-                </div>
-                <div class="menu-button-cart">
-                    <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
-                </div>
-            </div>
-            <div class="menu-sections-mobile">
-                <div class="menu-section-inicio">
-                    <a href="/">
-                        <h3>INICIO</h3>
-                    </a>
-                </div>
-                <hr class="menu-divider-mobile">
-                <div class="menu-section-productos">
-                    <a href="/products/list">
-                        <h3>PRODUCTOS</h3>
-                    </a>
-                </div>
-                <hr class="menu-divider-mobile">
-                <div class="menu-section-cursos">
-                    <a href="/courses/list">
-                        <h3>CURSOS</h3>
-                    </a>
-                </div>
-                <hr class="menu-divider-mobile">
-                <div class="menu-section-contacto">
-                    <a href="/contact">
-                        <h3>CONTACTO</h3>
-                    </a>
-                </div>
-            </div>
+  <div class="header-version-desktop">
+    <nav class="menu-nav">
+      <ul class="menu-listado">
+        <li>
+          <a href="/"
+            ><img
+              class="menu-logo"
+              src="/images/nombre-sweet-bakery-dorado.png"
+              alt="Logo de Sweet Bakery"
+          /></a>
+        </li>
+        <div class="menu-accesos">
+          <li>
+            <a href="/">INICIO</a>
+          </li>
+          <li>
+            <a href="/products/list">PRODUCTOS</a>
+          </li>
+          <li>
+            <a href="/contact">CONTACTO</a>
+          </li>
+          <li>
+            <a href="/courses/list">CURSOS</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-search"></i></a>
+          </li>
         </div>
+        <% if (locals.isLogged) { %>
+        <div class="menu-cart">
+          <li>
+            <a href="/users/profile"><button>Ver perfil</button></a>
+          </li>
+          <li>
+            <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+          </li>
+        </div>
+        <% } else { %>
+        <div class="menu-cart">
+          <li>
+            <a href="/users/login"><button>Ingresá</button></a>
+            <a href="/users/register"><button>Registrate</button></a>
+          </li>
+          <li>
+            <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+          </li>
+        </div>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------------->
+  <div class="header-version-tablet">
+    <nav class="menu-nav-tablet">
+      <section class="menu-listado-tablet">
+        <div class="menu-burger-tablet">
+          <a href="#">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+        <div class="menu-cart-tablet">
+          <div class="menu-button-search-tablet">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </div>
+          <div class="menu-button-user-tablet">
+            <a href="/users/login"><i class="fas fa-user"></i></a>
+          </div>
+          <div class="menu-button-cart-tablet">
+            <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </div>
+        <div class="menu-logo-tablet">
+          <a href="/">
+            <img
+              src="/images/nombre-sweet-bakery-dorado.png"
+              alt="Logo de Sweet Bakery"
+            />
+          </a>
+        </div>
+      </section>
+    </nav>
+  </div>
+  <!-- ------------------------------------------------------------------------------------------------------------------>
+  <div class="header-version-mobile">
+    <div class="menu-nav-mobile">
+      <div class="menu-buttons-mobile">
+        <div class="menu-button-x">
+          <a href="#"><i class="fas fa-times"></i></a>
+        </div>
+        <div class="menu-button-search">
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="menu-button-user">
+          <a href="/users/login"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="menu-button-cart">
+          <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+      </div>
+      <div class="menu-sections-mobile">
+        <div class="menu-section-inicio">
+          <a href="/">
+            <h3>INICIO</h3>
+          </a>
+        </div>
+        <hr class="menu-divider-mobile" />
+        <div class="menu-section-productos">
+          <a href="/products/list">
+            <h3>PRODUCTOS</h3>
+          </a>
+        </div>
+        <hr class="menu-divider-mobile" />
+        <div class="menu-section-cursos">
+          <a href="/courses/list">
+            <h3>CURSOS</h3>
+          </a>
+        </div>
+        <hr class="menu-divider-mobile" />
+        <div class="menu-section-contacto">
+          <a href="/contact">
+            <h3>CONTACTO</h3>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </header>

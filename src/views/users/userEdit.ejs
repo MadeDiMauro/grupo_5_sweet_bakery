@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<%- include('../partials/head', { title: "Registrarse" , style: "register" }) %>
+
+  <body>
+    <header>
+
+      <%- include('../partials/header') %>
+
+    </header>
+    <main class="main-login">
+      <!-- <div class="main-div-box"> -->
+      <div class="principal-container">
+        <div class="title-box">
+          <p class="titlep">Editar mis datos</p>
+        </div>
+
+        <form action="/users/edit" method="POST" enctype="multipart/form-data">
+          <div class="input-box">
+            <!-- <label class="input-box__label" for="name">Nombre</label> -->
+            <input class="input" type="text" name="name" id="name" placeholder="Nombre"
+              value="<%= user.name %>">
+            <i class="login-icon fa-solid fa-user"></i>
+            
+          </div>
+
+
+          <div class="input-box">
+            <!-- <label class="input-box__label" for="phone">Teléfono</label><br> -->
+            <input class="input" type="tel" name="phone" id="phone" placeholder="Teléfono"
+              value="<%= user.phone %>">
+            <i class="phone-icon fa-solid fa-phone"></i>
+          </div>
+
+          <div class="box-avatar">
+            <label class="box-avatar__label" for="avatar">Subir nueva foto de perfil</label>
+            <input class="box-avatar__input" type="file" name="avatar" id="avatar">
+            
+          </div>
+
+          <div class="submit-box">
+            <a href="/" class="submit-label">
+              <button class="submit-input" type="submit">Editar</button>
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+    </main>
+    <footer>
+      <%- include('../partials/footer') %>
+
+    </footer>
+  </body>

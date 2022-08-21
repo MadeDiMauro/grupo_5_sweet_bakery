@@ -21,7 +21,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 app.use(cookieParser());
-/*app.use(userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
+app.use(userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
 
 
 const routesProducts = require('./routes/products');
