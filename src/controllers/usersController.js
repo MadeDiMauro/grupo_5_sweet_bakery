@@ -85,11 +85,10 @@ const usersController = {
 
     let userToLogin = await db.user.findOne({
       where: {
-        email: req.body.email
-      }
-    }); 
-    
-    
+        email: req.body.email,
+      },
+    });
+
     if (userToLogin) {
       let passwordOk = bcryptjs.compareSync(
         req.body.password,
@@ -131,24 +130,31 @@ const usersController = {
   edit: async (req, res) => {
     let user = await db.user.findOne({
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
+      },
     });
 
-    return res.render('users/userEdit', {user});
-
+    return res.render("users/userEdit", { user });
   },
   processEdit: async (req, res) => {
-    let user = await db.user.findOne({
-      where: {
-        id: req.body.email
+    db.user.update(
+      {
+        name: req.body.name,
+        phone: req.body.phone,
+        avatar: req.file ? req.file.filename : "avatar1.jpg"
+      },
+      {
+        where: { 
+          email: req.body.email
+        },
       }
+    ).then(() => {
+      return res.redirect('/users/profile');
     });
-    return res.json(user);
+
   },
 
   profile: (req, res) => {
-   
     return res.render("users/userProfile", {
       user: req.session.userLogged /*usé user en la vista de profile*/,
     });

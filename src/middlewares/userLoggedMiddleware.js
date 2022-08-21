@@ -7,22 +7,22 @@ async function  userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail; 
-    let userFromCookie = [];
+    let userFromCookie;
     
     if (emailInCookie){
-        userFromCookie =  await db.user.findAll({
+        userFromCookie =  await db.user.findOne({
             where: {
                 email: emailInCookie
             }
         }).catch(function () {
             console.log("Promise Rejected");
-       });
-       
+        });
+       console.log(userFromCookie.dataValues);
     }
     
 
-    if (userFromCookie.length > 0){
-        req.session.userLogged = userFromCookie;
+    if (userFromCookie){
+        req.session.userLogged = userFromCookie.dataValues;
         //console.log(req.cookies.userEmail);
     }
 
