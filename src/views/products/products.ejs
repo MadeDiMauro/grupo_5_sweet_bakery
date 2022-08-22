@@ -23,7 +23,7 @@
 
             <!-- <div class="reference__location"> -->
             <div class="reference__div">
-                <a class="reference__a" href="/products">
+                <a class="reference__a" href="/products/list">
                     <p>Productos >></p>
                 </a>
                 <p><b>Mini postres</b></p>
@@ -59,7 +59,7 @@
                  <% for (let i=0; i<productsList.length; i ++) { %> 
                     <article class="products__article">
 
-                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/products/<%= productsList[i].image %>' alt='<%= productsList[i].name %>'></a>
+                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/products/<%= productsList[i].images.length > 0 ? productsList[i].images[0].url : null %>' alt='<%= productsList[i].name %>'></a>
                         <div class="products__div-info">
                             <p class="products__name">
                                 <%=productsList[i].name %>

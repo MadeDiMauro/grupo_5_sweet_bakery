@@ -8,9 +8,6 @@
     font-weight: 300;
 }
 
-body {
-    background-color: white;
-}
 
 main {
     width: 90%;
@@ -20,8 +17,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 10px 35px;
-    background-color: rgb(44, 51, 57);
-    border-bottom: 1px solid white;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
     margin: 0 auto;
 }
 
@@ -59,6 +55,12 @@ li {
     justify-content: space-between;
     align-items: center;
    
+}
+
+.fa-sign-out, .fa-home {
+    color:white;
+    margin: 5px;
+    font-size: 2em;
 }
 
 .dropdown-item p {

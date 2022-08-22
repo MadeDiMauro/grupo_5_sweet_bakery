@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
-    <link rel="stylesheet" href="/css/adminProducts.css">
-    <link rel="stylesheet" href="/css/adminHeader.css">
-    <link rel="stylesheet" href="/css/adminNavbar.css">
-    <link rel="stylesheet" href="/css/base-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="/css/adminProducts.css" />
+    <link rel="stylesheet" href="/css/adminHeader.css" />
+    <link rel="stylesheet" href="/css/adminNavbar.css" />
+    <link rel="stylesheet" href="/css/base-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/12c225f38a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <%- include('../../partials/headerAdmin') %>
-        <!-- include('../../partials/navbarAdmin') -->
-        <main>
-            <%- include('../../partials/navbarAdmin') %>
-                <section class="admin">
-                    <div class="admin__container">
-                        <div class="admin__container__div">
-                            <div class="adminTitle">
-                                <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-folder-open"></i>
-                                    Productos</p>
-                                <a class="adminTitle__a" href="/admin/createProduct">
-                                    <button class="adminTitle__button">
-                                        <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i><span
-                                            class="adminTitle__span"> CREAR PRODUCTO</span>
-                                    </button>
-                                </a>
-                            </div>
-                            <!-- <hr class="adminTitle__hr"> -->
+    <!-- include('../../partials/navbarAdmin') -->
+    <main>
+      <%- include('../../partials/navbarAdmin') %>
+      <section class="admin">
+        <div class="admin__container">
+          <div class="admin__container__div">
+            <div class="adminTitle">
+              <p class="adminTitle__p">
+                <i class="adminTitle__icon fa-solid fa-folder-open"></i>
+                Productos
+              </p>
+              <a class="adminTitle__a" href="/admin/createProduct">
+                <button class="adminTitle__button">
+                  <i class="adminTitle__icon-create fa-solid fa-circle-plus"></i
+                  ><span class="adminTitle__span"> CREAR PRODUCTO</span>
+                </button>
+              </a>
+            </div>
+            <!-- <hr class="adminTitle__hr"> -->
 
-                            <form class="filter" name="#" method="GET">
-                                <div class="filter__div1">
-                                    <select class="filter__select" name="category">
-                                        <option hidden selected>Categoría</option>
-                                        <% const categories=['Alfajores', 'Budines' , 'Cookies' , 'Desayunos y boxes'
-                                            ,'Macarons', 'Mini postres' , 'Postres' , 'Productos secos' ] %>
-                                            <% for(let category of categories) { %>
-                                                <option value="<%= category%>">
-                                                    <%= category %>
-                                                </option>
-                                                <!-- <%= locals.old && (province == old.province) ? 'selected' : null %> -->
-                                                <% } %>
+            <form class="filter" method="GET" action="/admin/products">
+              <div class="filter__div1">
+                <select class="filter__select" name="category">
+                  <option hidden selected>Categoría</option>
+                  <% for (let i=0; i< category.length;i++) { %>
+                  <option value="<%= category[i].id %>"  <%= old_values && old_values.category && old_values.category == category[i].id ? "selected" : null %> >
+                    <%=category[i].type%>
+                  </option>
+                  <% } %>
+                  <option value="todas">Todas</option>
+                </select>
+              </div>
 
-                                                    <!-- <option value="Alfajores">Alfajores</option>
-                                        <option value="Budines">Budines</option>
-                                        <option value="Cookies">Cookies</option>
-                                        <option value="Desayunos y boxes">Desayunos y boxes</option>
-                                        <option value="Macarons">Macarons</option>
-                                        <option value="Mini postres">Mini postres</option>
-                                        <option value="Postres">Postres</option>
-                                        <option value="Productos secos">Productos secos</option> -->
-                                    </select>
-                                </div>
+              <div class="filter__div2">
+                <input
+                  class="filter__input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nombre"
+                  value="<%= old_values && old_values.name ? old_values.name : null %>"
+                />
+              </div>
 
-                                <div class="filter__div2">
-                                    <input class="filter__input" type="text" name="name" id="name" placeholder="Nombre">
-                                </div>
+              <div class="filter__div3">
+                <input
+                  class="filter__input"
+                  type="text"
+                  name="id"
+                  id="id"
+                  placeholder="#ID"
+                  value="<%= old_values && old_values.id ? old_values.id : null %>"
+                />
+              </div>
 
-                                <div class="filter__div3">
-                                    <input class="filter__input" type="text" name="id" id="id" placeholder="#ID">
-                                </div>
+              <button class="filter__button" type="submit">
+                <i class="filter__icon fa-solid fa-magnifying-glass"></i>Filtrar
+              </button>
+              
+            </form>
 
-                                <button class="filter__button">
-                                    <i class="filter__icon fa-solid fa-magnifying-glass"></i>Filtrar
-                                </button>
-                            </form>
-
-                            <!-- <article class="titles">
+            <!-- <article class="titles">
                                 <div class="titles__div1">
                                     <input class="titles__checkbox" type="checkbox" name="idProduct" value="idProduct">
                                     <p class="titles__id">ID</p>
@@ -89,88 +99,94 @@
                                 </div>
                             </article> -->
 
-                            <article class="productsList">
+            <article class="productsList">
+              <article class="titles">
+                <div class="titles__div1">
+                  <p class="titles__list">Lista de productos</p>
+                </div>
+              </article>
 
-                                <article class="titles">
-                                    <div class="titles__div1">
-                                        <p class="titles__list">Lista de productos</p>
-                                    </div>
-                                </article>
+              <article class="titles">
+                <div class="titles__div1">
+                  <input
+                    class="titles__checkbox"
+                    type="checkbox"
+                    name="idProduct"
+                    value="idProduct"
+                  />
+                  <p class="titles__id">ID</p>
+                  <p class="titles__product">Producto</p>
+                </div>
+                <div class="titles__div2">
+                  <p class="titles__name">Nombre</p>
+                  <p class="titles__category">Categoría</p>
+                  <p class="titles__price">Precio</p>
+                </div>
+                <div class="titles__div5">
+                  <div class="titles__div3">
+                    <p class="titles__edit">Editar</p>
+                  </div>
+                  <div class="titles__div4">
+                    <P class="titles__delete">Eliminar</P>
+                  </div>
+                </div>
+              </article>
 
-                                <article class="titles">
-                                    <div class="titles__div1">
-                                        <input class="titles__checkbox" type="checkbox" name="idProduct"
-                                            value="idProduct">
-                                        <p class="titles__id">ID</p>
-                                        <p class="titles__product">Producto</p>
-                                    </div>
-                                    <div class="titles__div2">
-                                        <p class="titles__name">Nombre</p>
-                                        <p class="titles__category">Categoría</p>
-                                        <p class="titles__price">Precio</p>
-                                    </div>
-                                    <div class="titles__div5">
-                                        <div class="titles__div3">
-                                            <p class="titles__edit">Editar</p>
-                                        </div>
-                                        <div class="titles__div4">
-                                            <P class="titles__delete">Eliminar</P>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <% for(let i=0; i < productsList.length; i++) { %>
-                                    <div class="productsList__container">
-                                        <div class="productsList__div">
-                                            <input class="productsList__checkbox" type="checkbox" name="idProduct"
-                                                value="idProduct">
-                                            <p class="productsList__id">
-                                                <%= productsList[i].id %>
-                                            </p>
-                                            <img class="productsList__img"
-                                                src="/images/products/<%= productsList[i].image %>"
-                                                alt="<%= productsList[i].name %>">
-                                        </div>
-                                        <div class="productsList__info">
-                                            <p class="productsList__name">
-                                                <%= productsList[i].name %>
-                                            </p>
-                                            <!-- <div class="productsList__ div-info"> -->
-                                            <span class="productsList__category">
-                                                <%= productsList[i].category %>
-                                            </span>
-                                            <span class="productsList__price">
-                                                $ <%= productsList[i].price %>
-                                            </span>
-                                            <!-- </div> -->
-                                        </div>
-                                        <div class="productsList__buttons">
-                                            <!-- <div class="productsList__divs"> -->
-                                            <a class="productsList__a-edit"
-                                                href="/admin/editProduct/<%= productsList[i].id %>">
-                                                <button class="productsList__button-edit" type="submit">
-                                                    <i class="productsList__icon far fa-edit"></i> <span
-                                                        class="productsList__span">Editar</span>
-                                                </button>
-                                            </a>
-                                            <form class="productsList__a-delete"
-                                                action="/admin/deleteProduct/<%= productsList[i].id %>?_method=DELETE"
-                                                method="POST">
-                                                <button class="productsList__button-delete" type="submit">
-                                                    <i class="productsList__icon far fa-trash-alt"></i> <span
-                                                        class="productsList__span">Eliminar</span>
-                                                </button>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                    <% } %>
-                            </article>
-
-                        </div>
-                    </div>
-                </section>
-        </main>
-</body>
-
+              <% for(let i=0; i < productsList.length; i++) { %>
+              <div class="productsList__container">
+                <div class="productsList__div">
+                  <input
+                    class="productsList__checkbox"
+                    type="checkbox"
+                    name="idProduct"
+                    value="idProduct"
+                  />
+                  <p class="productsList__id"><%= productsList[i].id %></p>
+                  <img
+                    class="productsList__img"
+                    src="/images/products/<%= productsList[i].images.length > 0 ? productsList[i].images[0].url : null %>"
+                    alt="<%= productsList[i].name %>"
+                  />
+                </div>
+                <div class="productsList__info">
+                  <p class="productsList__name"><%= productsList[i].name %></p>
+                  <!-- <div class="productsList__ div-info"> -->
+                  <span class="productsList__category">
+                    <%= productsList[i].category %>
+                  </span>
+                  <span class="productsList__price">
+                    $ <%= productsList[i].price %>
+                  </span>
+                  <!-- </div> -->
+                </div>
+                <div class="productsList__buttons">
+                  <!-- <div class="productsList__divs"> -->
+                  <a
+                    class="productsList__a-edit"
+                    href="/admin/editProduct/<%= productsList[i].id %>"
+                  >
+                    <button class="productsList__button-edit" type="submit">
+                      <i class="productsList__icon far fa-edit"></i>
+                      <span class="productsList__span">Editar</span>
+                    </button>
+                  </a>
+                  <form
+                    class="productsList__a-delete"
+                    action="/admin/deleteProduct/<%= productsList[i].id %>?_method=DELETE"
+                    method="POST"
+                  >
+                    <button class="productsList__button-delete" type="submit">
+                      <i class="productsList__icon far fa-trash-alt"></i>
+                      <span class="productsList__span">Eliminar</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <% } %>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

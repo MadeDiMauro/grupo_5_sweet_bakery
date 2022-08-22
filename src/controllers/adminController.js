@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const { Sequelize } = require("sequelize");
 const db = require("../database/models");
-const { Op } = db.sequelize;
+const Op = Sequelize.Op;
 
 const productsdbPath = path.join(__dirname, "../database/products.json");
 
@@ -26,10 +27,47 @@ const adminController = {
   editUser: (req, res) => {
     res.render("users/admin/adminEdit");
   },
-  list: (req, res) => {
-    db.products.findAll().then((productsList) => {
-      res.render("users/admin/adminProducts", { productsList });
+  list: async (req, res) => {
+    let category = await db.products_categories.findAll();
+    let productsList = await db.products.findAll({
+      include: [
+        {
+          model: db.images,
+          as: "images",
+        },
+      ],
     });
+    let ban = (req.query.category !== 'Categoría' && req.query.category  && req.query.category !== 'todas') || req.query.id || req.query.name;
+    console.log(ban)
+    if (ban) {
+      productsList = await db.products.findAll({
+        where: {
+          [Op.or]: [
+            { category_id: req.query.category ? req.query.category : null },
+            { id: req.query.id ? req.query.id : null },
+            { 
+              name: {
+                [Op.like]: req.query.name ? '%'+req.query.name+'%' : null
+              }  
+            }
+          ]
+        },
+        include: [
+          {
+            model: db.images,
+            as: "images",
+          },
+        ],
+      });
+    }
+
+    
+    return res.render("users/admin/adminProducts", { productsList, category, old_values: ban ? { 
+      category: req.query.category, 
+      id: req.query.id,
+      name: req.query.name
+    } : ""});
+      
   },
   createProduct: (req, res) => {
     db.products_categories.findAll().then((category) => {
@@ -76,8 +114,6 @@ const adminController = {
     //return res.json(req.files);
 
     if (req.files.length > 0) {
-
-
       let images = await db.images.findAll({
         where: {
           product_id: req.params.id,
@@ -86,7 +122,11 @@ const adminController = {
 
       if (images.length > 0) {
         for (let i = 0; i < images.length; i++) {
-          let url = path.join(__dirname, "/../../public/images/products/", images[i].url);
+          let url = path.join(
+            __dirname,
+            "/../../public/images/products/",
+            images[i].url
+          );
           if (fs.existsSync(url)) {
             fs.unlinkSync(url);
           }
@@ -145,14 +185,15 @@ const adminController = {
         */
   },
   destroy: (req, res) => {
-
-    db.products.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(() => {
-      return res.redirect("/admin/products");
-    });
+    db.products
+      .destroy({
+        where: {
+          id: req.params.id,
+        },
+      })
+      .then(() => {
+        return res.redirect("/admin/products");
+      });
     /*
     const products = readJsonFile(productsdbPath);
     const productsUpdate = products.filter(

@@ -13,7 +13,10 @@ body {
     margin: 0 auto;
     width: 90%;
     max-width:1200px;
-  
+    background-size: cover;
+    background-image: url(../images/postre-frutillas.jpg);
+    background-size: cover;
+    background-position: top center;
    
 }
 
@@ -22,11 +25,8 @@ main {
         height:90vh;
         max-width: 1200px;
         margin: 0 auto;
-        background-size: cover;
-        background-image: url(../images/fondo-home.jpg);
-        background-size: cover;
-        background-position: top center;
         
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6951155462184874) 51%, rgba(0, 0, 0, 0) 100%);
         
         /*box-shadow: inset;
         
@@ -47,7 +47,7 @@ main {
     padding-bottom: 5px;
     padding-top:5px;
     padding-left: 40px;
-    background-color: lightgray;
+    background-color: rgb(207, 148, 0);
    
 }
 

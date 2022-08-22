@@ -45,6 +45,10 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 - Tablet: 481px a 768px
 - Desktop: 769px a 1200px
 
+### Usuario administrador
+- E-mail: admin@gmail.com
+- Password: 1234
+
 ### Índice y rutas del proyecto
 - Home: http://localhost:3000/
 - Listado de productos: http://localhost:3000/products/list

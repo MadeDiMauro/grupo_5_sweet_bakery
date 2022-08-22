@@ -86,7 +86,7 @@ const usersController = {
     let userToLogin = await db.user.findOne({
       where: {
         email: req.body.email,
-      },
+      }
     });
 
     if (userToLogin) {
@@ -103,7 +103,7 @@ const usersController = {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
         }
 
-        if (userToLogin.category == "admin") {
+        if (userToLogin.category_id === 1) {
           return res.redirect("/admin/");
         }
         return res.redirect("/users/profile");

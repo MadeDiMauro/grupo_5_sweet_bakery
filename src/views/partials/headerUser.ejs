@@ -9,16 +9,15 @@
     <div class= "userNabvar_profile">
        <div class="userHeader__profile">
        <img class="userHeader__avatar" src="/images/avatars/<%=locals.isLogged.avatar%>" alt="Profile avatar">
-       <span class="userHeader__span"> ¡Hola <%=locals.isLogged.name%> ! </span>
+       <p class="userHeader__span"> ¡Hola <%=locals.isLogged.name%> ! </p>
         </div>
-        
-        <br>
-        <br>
-        <br>
-        
         <div class="nav-itemdropdown">
-         <a class="dropdown-item" href="/users/logout"><p>Salir </p> <i class="userHeader__icon fa-solid fa-caret-down"></i></a>
+            <a class="dropdown-item" href="/"><i class="fas fa-home"></i></a>
+            </div>
+        <div class="nav-itemdropdown">
+         <a class="dropdown-item" href="/users/logout"><i class="fas fa-sign-out"></i></a>
         </div>
+        
     </div>
 
         <% } else { %>

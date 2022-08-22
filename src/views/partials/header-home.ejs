@@ -17,14 +17,30 @@
                     </div>
                     <div class="menuh-search"><a href="#"><i class="fas fa-search"></i></a></div>
                 </div>
-                <div class="menuh-cart">
-                    <div class="menu-button-user-tablet">
-                        <a href="/users/login"><i class="fas fa-user"></i></a>
-                    </div>
-                    <div class="menu-button-cart-tablet">
+                <% if (locals.isLogged) { %>
+                    <div class="menu-cart">
+                      <div>
+                        <% if (locals.isLogged.category_id === 2) { %>
+                            <a href="/users/profile"><i class="fas fa-user"></i></a>
+                        <% } else { %>
+                            <a href="/admin"><i class="fas fa-user"></i></a>
+                        <% } %>
+                      </div>
+                      <div>
                         <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+                      </div>
                     </div>
-                </div>
+                <% } else { %>
+                    <div class="menu-cart">
+                      <div>
+                        <a href="/users/login"><button>Ingresá</button></a>
+                        <a href="/users/register"><button>Registrate</button></a>
+                      </div>
+                      <div>
+                        <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>
+                      </div>
+                    </div>
+                <% } %>
 
             </div>
             <div class="menuh-logo">
