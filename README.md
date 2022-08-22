@@ -49,12 +49,18 @@ Link: https://trello.com/b/DVWsCEdJ/proyecto-pasteleria-digital-house
 - E-mail: admin@gmail.com
 - Password: 1234
 
+### Base de datos y diagrama entidad relación
+- Ubicados dentro de la carpeta /src/database/ del proyecto:
+    - Script creación y carga de datos -> sweet_bakery.sql
+    - Diagrama entidad relación -> der_sweet_bakery.pdf
+
 ### Índice y rutas del proyecto
 - Home: http://localhost:3000/
 - Listado de productos: http://localhost:3000/products/list
 - Detalle de producto: http://localhost:3000/products/detail
 - Carrito de compras: 
 Paso 1: http://localhost:3000/cart/paso-uno | Paso 2: http://localhost:3000/cart/paso-dos | Paso 3: http://localhost:3000/cart/paso-tres |
-- Login: http://localhost:3000/users/login
-- Registro: http://localhost:3000/users/register
-- Administración: http://localhost:3000/admin/principal |  http://localhost:3000/admin/create | http://localhost:3000/admin/edit
+- Login usuario: http://localhost:3000/users/login
+- Registro usuario: http://localhost:3000/users/register
+- Editar usuario: http://localhost:3000/users/edit
+- Administración: http://localhost:3000/admin/  |  http://localhost:3000/admin/products  |  http://localhost:3000/admin/createProduct  |  http://localhost:3000/admin/editProduct/:id
