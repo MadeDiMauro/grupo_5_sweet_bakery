@@ -163,8 +163,12 @@
     text-decoration: none;
 }
 
-div .errors ul {
+div .is-invalid {
     color:red;
+}
+
+div .is-valid {
+    color:blue
 }
 
 @media (min-width: 481px) {
