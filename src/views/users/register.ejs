@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%- include('../partials/head', { title: "Registrarse" , style: "register" }) %>
+<%- include('../partials/head', { title: "Registrarse" , style: "register"}) %> 
 
   <body>
     <header>
@@ -13,7 +13,10 @@
         <div class="title-box">
           <p class="titlep">Registrarse</p>
         </div>
-
+        <div class="mostrarFormulario">
+          <ul class="errores">
+          </ul>
+        </div>
         <form action="/users/register" method="POST" enctype="multipart/form-data">
           <div class="input-box">
             <!-- <label class="input-box__label" for="name">Nombre</label> -->
@@ -105,4 +108,5 @@
       <%- include('../partials/footer') %>
 
     </footer>
+    <script src="/js/validations/register.js"></script>
   </body>
