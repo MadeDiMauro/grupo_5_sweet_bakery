@@ -1,44 +1,51 @@
+
+    /*let listadoErrores = document.querySelector(".errores");*/
 window.addEventListener ('load', function (){
     let form= document.querySelector ('form')
+   
+    form.addEventListener ('submit', function (e) {
+    e.preventDefault();
+    let errors=[]
+
     let inputName=document.getElementById ('name')
-    let inputEmail=document.getElementById ('email')
-    let inputPassword=document.getElementById ('password')
-    let inputAvatar=document.getElementById ('avatar')
-    /*let listadoErrores = document.querySelector(".errores");*/
-    let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    let acceptedExtensions = ['.jpg', '.png', '.gif'];
-    let errores=[]
-
-
-    if(errores.length > 0){
-        e.preventDefault();
-
     if (inputName.value=""){
-        errores.push ('Debes ingresar un nombre');
-    } else if (inputNombre.value.lenght>2) {
-        errores.push ('Debes ingresar al menos dos caracteres')
+        errors.push ('Debes ingresar un nombre');
+    } else if (inputName.value.lenght>2) {
+        errors.push ('Debes ingresar al menos dos caracteres')
     }
 
+    let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    let inputEmail=document.getElementById ('email')
     if (inputEmail.value=""){
-        errores.push ('Debes ingresar un email');
-    }
-    
-    if ( !expression.test(email) ){
-        errores.push ('Debes ingresar un email válido')
+        errors.push ('Debes ingresar un email');
+    } else if ( !expression.test(email) ){
+        errors.push ('Debes ingresar un email válido')
     }
 
+    let inputPassword=document.getElementById ('password')
     if (inputPassword.value=""){
-        errores.push ('Debes ingresar una contraseña')
+        errors.push ('Debes ingresar una contraseña')
     } else if (inputPassword.value>8) {
-        errores.push ('Debes ingresar al menos ocho caracteres')
-
+        errors.push ('Debes ingresar al menos ocho caracteres')
     }
 
+    let inputAvatar=document.getElementById ('avatar')
+    let acceptedExtensions = ['.jpg', '.png', '.gif'];
     if (inputAvatar.value!==acceptedExtensions) {
-        errores.push ('Debes ingresar' + acceptedExtensions)
+        errors.push ('Debes ingresar' + acceptedExtensions)
     }
-    
-}
-    
 
+    if (errors.length>0) {
+        e.preventDefault();
+        let ulErrors=document.querySelector ('div.errors ul')
+    
+    for (let i=0; i<errors.length; i++) {
+        ulErrors.innerHTML+= '<li>' + errors [i] + '</li>'
+        
+    }
+
+    }
+        
+    
+})
 })

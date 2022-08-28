@@ -163,6 +163,10 @@
     text-decoration: none;
 }
 
+div .errors ul {
+    color:red;
+}
+
 @media (min-width: 481px) {
     .main-login {
         padding-top: 50px;
