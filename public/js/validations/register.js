@@ -13,13 +13,13 @@ window.addEventListener ('load', function (){
          
    const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
   
-    let errores = 0;
+    let errors = 0;
     form.addEventListener ('submit', function (e) {
     e.preventDefault();
         
         arrayInputs.forEach(function(input) {
             if(input.value == ""){
-                errores++;
+                errors++;
                 listErrors.innerHTML += "<li>El campo "+ input.dataset.nombre + " no puede estar vacío</li>";
             }
         })
