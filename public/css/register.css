@@ -163,6 +163,18 @@
     text-decoration: none;
 }
 
+div .is-invalid {
+    color:red;
+}
+
+div .is-valid {
+    color:blue
+}
+.errors {
+    color:red;
+    align-items: center;
+}
+
 @media (min-width: 481px) {
     .main-login {
         padding-top: 50px;
