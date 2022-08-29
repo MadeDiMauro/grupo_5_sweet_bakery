@@ -1,60 +1,75 @@
 
 window.addEventListener ('load', function (){
     let form= document.querySelector ('.form')
-    let inputName=document.querySelector ('name')
+    let inputName=document.getElementById ('name')
     let inputEmail=document.getElementById ('email')
     let inputPassword=document.getElementById ('password')
     let inputAvatar=document.getElementById ('avatar')
-
-    const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
+    let listErrors = document.querySelector(".errors")
+    let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    const db = require("../database/models");
+   
+         
+   const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
   
-
+    let errores = 0;
     form.addEventListener ('submit', function (e) {
-        e.preventDefault();
+    e.preventDefault();
         
         arrayInputs.forEach(function(input) {
-        input.addEventListener("blur", function() {
-                    if(inputName.value === ""){
-                    input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    input.classList.add("is-invalid")
-                    input.classList.remove("is-valid")
-                    input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un nombre";
-                } else if  (inputName.value.lenght>2) {
-                    input. nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
-                    input.classList.add("is-invalid")
-                    input.classList.remove("is-valid")
-                }
-            })
+            if(input.value == ""){
+                errores++;
+                listErrors.innerHTML += "<li>El campo "+ input.dataset.nombre + " no puede estar vacío</li>";
+            }
         })
+
     })
+    
+    arrayInputs.forEach(function(input) {
+        input.addEventListener("blur", function() {
+                    if(inputName.value==""){
+                    inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputName.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un nombre";
+                    inputName.classList.remove("is-valid")
+                    } else if (inputName.value.length<2) {
+                    inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputName.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
+                    inputName.classList.remove("is-valid")
+                    }
+                    if (inputEmail.value==""){
+                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email";
+                    inputEmail.classList.remove("is-valid")
+                    } else if (!expression.test(email)) { //(valid==false) let valid=expression.test(email)
+                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
+                    } else if (inputEmail=="") {
+                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Este email ya se encuentra registrado";
+                    }
+                    if (inputPassword.value=""){ //no me lee este
+                    inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una contraseña";
+                    inputPassword.classList.remove("is-valid")
+                    } else if (inputPassword.value<8){
+                    inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
+                    }
+                    if (inputAvatar.value=""){
+                    inputAvatar.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputAvatar.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una imagen";
+                    inputAvatar.classList.remove("is-valid")
+                    } else if (inputAvatar.value!==acceptedExtensions){
+                    inputAvatar.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    inputAvatar.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
+                    }
+                })          
+    })
+
 })
+
 /*
-    if (inputName.value=""){
-        errors.push ('Debes ingresar un nombre');
-    } else if (inputName.value.lenght>2) {
-        errors.push ('Debes ingresar al menos dos caracteres')
-    }
-
-    let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    
-    if (inputEmail.value=""){
-        errors.push ('Debes ingresar un email');
-    } else if ( !expression.test(email) ){
-        errors.push ('Debes ingresar un email válido')
-    }
-
-    
-    if (inputPassword.value=""){
-    errors.push ('Debes ingresar una contraseña')
-    } else if (inputPassword.value>8) {
-        errors.push ('Debes ingresar al menos ocho caracteres')
-    }
-
-    let acceptedExtensions = ['.jpg', '.png', '.gif'];
-    if (inputAvatar.value!==acceptedExtensions) {
-        errors.push ('Debes ingresar' + acceptedExtensions)
-    }
-
     if (errors.length>0) {
         e.preventDefault();
         let ulErrors=document.querySelector ('div.errors ul')

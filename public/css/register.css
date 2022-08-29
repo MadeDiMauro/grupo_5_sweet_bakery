@@ -170,6 +170,10 @@ div .is-invalid {
 div .is-valid {
     color:blue
 }
+.errors {
+    color:red;
+    align-items: center;
+}
 
 @media (min-width: 481px) {
     .main-login {
