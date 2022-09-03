@@ -168,8 +168,10 @@ div .is-invalid {
 }
 
 div .is-valid {
+ 
     color:blue
 }
+
 .errors {
     color:red;
     align-items: center;

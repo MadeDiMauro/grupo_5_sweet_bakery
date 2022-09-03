@@ -8,7 +8,7 @@ window.addEventListener ('load', function (){
     let listErrors = document.querySelector(".errors")
     let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
     let acceptedExtensions = ['.jpg', '.png', '.gif'];
-    const db = require("../database/models");
+    
    
          
    const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
