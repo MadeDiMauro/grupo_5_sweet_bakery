@@ -11,10 +11,10 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', validationsLogin, usersController.processLogin);
 
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register',  uploadAvatar.single('avatar'), validationsRegister,  usersController.processRegister);
+router.post('/register', uploadAvatar.single('avatar'), validationsRegister, usersController.processRegister);
 
 router.get('/edit/:id', authMiddleware, usersController.edit);
-router.post('/edit',  uploadAvatar.single('avatar'), /*validationsRegister,*/ usersController.processEdit);
+router.post('/edit', uploadAvatar.single('avatar'), /*validationsRegister,*/ usersController.processEdit);
 
 router.get('/profile', authMiddleware, usersController.profile); 
 router.get ('/logout', usersController.logout);

@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
             errors.push('El nombre debe contener al menos 5 caracteres');
         }
 
-        /*let category = document.getElementById('category');
+        let category = document.getElementById('category');
 
         if(category.value == ""){
             errors.push('Debes seleccionar una categoría');
@@ -27,18 +27,18 @@ window.addEventListener('load', function(){
 
         if(description.value.length < 20){
             errors.push('La descripción debe contener al menos 20 caracteres');
-        }*/
+        }
 
-        
-
+        //VALIDAR IMAGEN        
 
         if(errors.length > 0){
             e.preventDefault();
-
+            
             let errorList = document.querySelector('.errorList');
 
+            errorList.innerHTML = "";
             for(let i = 0; i < errors.length; i++){
-                errorList.innerHTML += errors[i];
+                errorList.innerHTML += '<li>' + errors[i] + '</li>';
             }
         }
     })
