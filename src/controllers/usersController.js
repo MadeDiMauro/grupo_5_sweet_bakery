@@ -135,8 +135,17 @@ const usersController = {
     });
 
     return res.render("users/userEdit", { user });
+                        
   },
   processEdit: async (req, res) => {
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("users/login", {
+        errors: resultValidation.mapped(),
+        old: req.body,
+      })
+      }
+
     db.user.update(
       {
         name: req.body.name,

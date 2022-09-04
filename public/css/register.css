@@ -49,7 +49,6 @@
 .input-box {
     margin: 0 auto;
     width: 90%;
-    display: flex;
     /* flex-direction: column; */
     align-items: center;
     position: relative;
@@ -163,18 +162,21 @@
     text-decoration: none;
 }
 
-div .is-invalid {
+div.is-invalid {
     color:red;
+    font-size: 14px;
+    display:flex;
+    margin-bottom: 15px;
+
+}ul.errors{
+    align-items:center;
 }
 
-div .is-valid {
- 
-    color:blue
-}
-
-.errors {
+ul.errors li,
+.errorList {
     color:red;
-    align-items: center;
+    align-items:center;
+    font-size: 14px;
 }
 
 @media (min-width: 481px) {

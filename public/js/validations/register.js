@@ -7,16 +7,16 @@ window.addEventListener ('load', function (){
     let inputAvatar=document.getElementById ('avatar')
     let listErrors = document.querySelector(".errors")
     let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
-    let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    let acceptedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+     
     
-   
-         
    const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
   
-    let errors = 0;
+   
     form.addEventListener ('submit', function (e) {
-    e.preventDefault();
         
+    e.preventDefault();
+    let errors = [];
         arrayInputs.forEach(function(input) {
             if(input.value == ""){
                 errors++;
@@ -26,45 +26,47 @@ window.addEventListener ('load', function (){
 
     })
     
-    arrayInputs.forEach(function(input) {
-        input.addEventListener("blur", function() {
-                    if(inputName.value==""){
+    arrayInputs.forEach(function(inputs) {
+        inputs.addEventListener("blur", function() {
+        
+                    if(inputName.value===""){
                     inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputName.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un nombre";
-                    inputName.classList.remove("is-valid")
+                    inputName.classList.remove("is-invalid")
                     } else if (inputName.value.length<2) {
                     inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputName.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
-                    inputName.classList.remove("is-valid")
+                    inputName.classList.remove("is-invalid")
                     }
                     if (inputEmail.value==""){
                     inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email";
-                    inputEmail.classList.remove("is-valid")
+                    inputEmail.classList.remove("is-invalid")
                     } else if (!expression.test(email)) { //(valid==false) let valid=expression.test(email)
                     inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
-                    } else if (inputEmail=="") {
-                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Este email ya se encuentra registrado";
+                    inputEmail.classList.remove("is-invalid")
                     }
                     if (inputPassword.value=""){ //no me lee este
                     inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una contraseña";
-                    inputPassword.classList.remove("is-valid")
+                    inputPassword.classList.remove("is-invalid")
                     } else if (inputPassword.value<8){
                     inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
-                    }
-                    if (inputAvatar.value=""){
+                    inputPassword.classList.remove("is-invalid")
+                                    
+                    if (inputAvatar.value!==acceptedExtensions){
+                    inputAvatar.nextElementSibling.classList.add("is-invalid");
+                    inputAvatar.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
+                    inputAvatar.remove("is-invalid")
+                    } else if (inputAvatar.value="") {
                     inputAvatar.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     inputAvatar.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una imagen";
-                    inputAvatar.classList.remove("is-valid")
-                    } else if (inputAvatar.value!==acceptedExtensions){
-                    inputAvatar.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputAvatar.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
+                    inputAvatar.classList.remove("is-invalid")
                     }
-                })          
+                }
+            })          
     })
 
 })
@@ -75,7 +77,8 @@ window.addEventListener ('load', function (){
         let ulErrors=document.querySelector ('div.errors ul')
     
     for (let i=0; i<errors.length; i++) {
-        ulErrors.innerHTML+= "<li>" + errors [i] + "</li>"
+        ulErrors.innerHTML+= "<li>" + ulErrors [i] + "</li>"
 
     }
-}*/
+}
+*/
