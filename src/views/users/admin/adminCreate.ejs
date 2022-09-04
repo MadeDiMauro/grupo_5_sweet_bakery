@@ -31,19 +31,18 @@
                                 </div>
                                 <hr class="adminTitle__hr">
 
-                                <div class="errorList">
-                                    <ul>
-                                        
+                                <div>
+                                    <ul class="errorList">
                                     </ul>
                                 </div>
                                 
                                 <form class="newProduct__form" action="/admin/products" method="POST" enctype="multipart/form-data">
 
                                     <label class="newProduct__label" for="name">Nombre</label>
-                                    <input class="newProduct__input name" type="text" name="name" id="name" required>
+                                    <input class="newProduct__input name" type="text" name="name" id="name">
                                     
                                     <label class="newProduct__label" for="category">Categoría</label>
-                                    <select class="newProduct__select category" name="category" id="category" required>
+                                    <select class="newProduct__select category" name="category" id="category">
                                     <option hidden selected>Selecionar</option>
                                        <% for (let i=0; i< category.length;i++) { %>
                                         <option value= "<%= category[i].id %>">
@@ -53,7 +52,7 @@
                                     </select>
                                     
                                     <label class="newProduct__label" for="price">Precio</label>
-                                    <input class="newProduct__input price" type="text" name="price" id="price" required>
+                                    <input class="newProduct__input price" type="text" name="price" id="price">
                                     
                                     <label class="newProduct__label" for="description">Descripción</label>
                                     <textarea class="newProduct__input" id="description" name="description" rows="4"></textarea>

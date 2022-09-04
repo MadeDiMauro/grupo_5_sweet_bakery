@@ -57,6 +57,7 @@ const usersController = {
         old: req.body,
       });
     }
+    
     let userToCreate = await db.user
       .create({
         ...req.body,
