@@ -7,69 +7,87 @@ window.addEventListener ('load', function (){
     let inputAvatar=document.getElementById ('avatar')
     let listErrors = document.querySelector(".errors")
     let expression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
-    let acceptedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
      
     
-   const arrayInputs =  [inputName, inputEmail, inputPassword, inputAvatar];
+   const arrayInputs =  [inputName, inputEmail, inputPassword];
   
    
     form.addEventListener ('submit', function (e) {
-        
-    e.preventDefault();
-    let errors = [];
+    let errors = 0;
+    
+    if(!allowedExtensions.exec(inputAvatar.value)){
+    errors ++;
+    }
+
         arrayInputs.forEach(function(input) {
             if(input.value == ""){
                 errors++;
-                listErrors.innerHTML += "<li>El campo "+ input.dataset.nombre + " no puede estar vacío</li>";
+                
             }
+            if(input.name === "name" && input.value.length<2){
+                errors++;
+            }
+            if(!expression.test(input.value) && input.name === "email"){
+                errors++;
+            }
+            if(input.name === "password" && input.value.length<8){
+                errors++;
+                
+            }
+           
         })
 
+        if(errors == 0){
+           form.submit();
+            } else if (errors>0) {
+            e.preventDefault ();
+            listErrors.innerHTML += "Debes completar el formulario"; 
+        }
+
     })
-    
-    arrayInputs.forEach(function(inputs) {
-        inputs.addEventListener("blur", function() {
+    inputAvatar.addEventListener ("change", function () {
+        if(!allowedExtensions.exec(inputAvatar.value)){
+            inputAvatar.nextElementSibling.classList.add("is-invalid");
+            inputAvatar.nextElementSibling.innerHTML = 'Debes subir archivos con extensión .jpeg/.jpg/.png/.gif';
+            inputAvatar.classList.remove("is-invalid")
+        }
+
+    })
+        arrayInputs.forEach(function(input) {
+        input.addEventListener("blur", function() {
         
-                    if(inputName.value===""){
-                    inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputName.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un nombre";
-                    inputName.classList.remove("is-invalid")
-                    } else if (inputName.value.length<2) {
-                    inputName.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputName.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
-                    inputName.classList.remove("is-invalid")
+                    if(input.value===""){
+                    input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un " + input.dataset.nombre;
+                    input.classList.remove("is-invalid")
                     }
-                    if (inputEmail.value==""){
-                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email";
-                    inputEmail.classList.remove("is-invalid")
-                    } else if (!expression.test(email)) { //(valid==false) let valid=expression.test(email)
-                    inputEmail.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputEmail.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
-                    inputEmail.classList.remove("is-invalid")
+                   
+                    if (input.name === "name" && input.value.length<2) {
+                    input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
+                    input.classList.remove("is-invalid")
                     }
-                    if (inputPassword.value=""){ //no me lee este
-                    inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una contraseña";
-                    inputPassword.classList.remove("is-invalid")
-                    } else if (inputPassword.value<8){
-                    inputPassword.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputPassword.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
-                    inputPassword.classList.remove("is-invalid")
-                                    
-                    if (inputAvatar.value!==acceptedExtensions){
-                    inputAvatar.nextElementSibling.classList.add("is-invalid");
-                    inputAvatar.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
-                    inputAvatar.remove("is-invalid")
-                    } else if (inputAvatar.value="") {
-                    inputAvatar.nextElementSibling.nextElementSibling.classList.add("is-invalid");
-                    inputAvatar.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar una imagen";
-                    inputAvatar.classList.remove("is-invalid")
+                    if (!expression.test(input.value) && input.name === "email") { //(valid==false) let valid=expression.test(email)
+                    input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
+                    input.classList.remove("is-invalid")
                     }
-                }
+                    if (input.name === "password" && input.value.length<8){
+                    input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
+                    input.classList.remove("is-invalid")
+                    }               
+                     /*if (input.value!==acceptedExtensions){
+                    input.nextElementSibling.classList.add("is-invalid");
+                    input.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
+                    input.remove("is-invalid")
+                    }*/
+                })
             })          
     })
 
-})
+
 
 /*
     if (errors.length>0) {
