@@ -142,11 +142,10 @@ const usersController = {
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
       return res.render("users/login", {
-        errors: resultValidation.mapped(),
+       errors: resultValidation.mapped(),
         old: req.body,
       })
       }
-
     db.user.update(
       {
         name: req.body.name,

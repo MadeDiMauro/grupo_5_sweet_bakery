@@ -14,7 +14,7 @@
           <p class="titlep">Editar mis datos</p>
         </div>
         <div>
-          <ul class="errorList">
+          <ul class="errors">
           </ul>
         </div>
         <form class="form" action="/users/edit" method="POST" enctype="multipart/form-data">
@@ -24,17 +24,7 @@
               value="<%= locals.old ? old.name : null %>" data-nombre="name"> 
               <div></div>
             <i class="login-icon fa-solid fa-user"></i>
-            <% if (locals.errors && errors.name) { %>
-              <div>
-                <%= errors.name.msg %>
-              </div>
-              <% } %>
-                <% if (locals.errors && errors.generico) { %>
-                  <div>
-                    <%= errors.generico.msg %>
-                  </div>
-                  <% } %>
-                </div>
+            </div>
 
           <div class="input-box" style="display: none">
             <!-- <label class="input-box__label" for="email">Correo Electrónico</label> -->
@@ -48,7 +38,7 @@
               value="<%= user.phone %>" data-nombre="phone">
               <div></div>
             <i class="phone-icon fa-solid fa-phone"></i>
-          </div>
+            </div>
 
           <div class="box-avatar">
             <label class="box-avatar__label" for="avatar">Subir nueva foto de perfil</label>
@@ -68,7 +58,7 @@
     </main>
     <footer>
       <%- include('../partials/footer') %>
-
+      <!-- <script src="/js/validations/userEdit.js"></script>-->
     </footer>
-    <script src="/js/validations/userEdit.js"></script>
+    
   </body>

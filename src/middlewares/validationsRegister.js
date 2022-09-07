@@ -5,7 +5,7 @@ const db = require("../database/models");
 
 const validationsRegister = [
     body('name').notEmpty().withMessage('Debes ingresar un nombre').bail()
-        .isLength({ min: 2 }).withMessage('Debe contener al menos 2 caracteres'),
+        .isLength({ min: 2}).withMessage('Debe contener al menos 2 caracteres'),
     body('email').notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un email válido').bail()
         .custom(async (value, { req }) => {

@@ -68,7 +68,7 @@ window.addEventListener ('load', function (){
                     input.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
                     input.classList.remove("is-invalid")
                     }
-                    if (!expression.test(input.value) && input.name === "email") { //(valid==false) let valid=expression.test(email)
+                    if (!expression.test(input.value) && input.name === "email") { 
                     input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
                     input.classList.remove("is-invalid")
@@ -77,26 +77,7 @@ window.addEventListener ('load', function (){
                     input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
                     input.classList.remove("is-invalid")
-                    }               
-                     /*if (input.value!==acceptedExtensions){
-                    input.nextElementSibling.classList.add("is-invalid");
-                    input.nextElementSibling.innerHTML = 'Debes ingresar' + acceptedExtensions;
-                    input.remove("is-invalid")
-                    }*/
+                     }               
                 })
             })          
     })
-
-
-
-/*
-    if (errors.length>0) {
-        e.preventDefault();
-        let ulErrors=document.querySelector ('div.errors ul')
-    
-    for (let i=0; i<errors.length; i++) {
-        ulErrors.innerHTML+= "<li>" + ulErrors [i] + "</li>"
-
-    }
-}
-*/

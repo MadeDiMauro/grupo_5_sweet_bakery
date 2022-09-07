@@ -170,6 +170,8 @@ div.is-invalid {
 
 }ul.errors{
     align-items:center;
+    color:red;
+    font-size: 14px;
 }
 
 ul.errors li,
