@@ -141,9 +141,10 @@ const usersController = {
   processEdit: async (req, res) => {
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0) {
-      return res.render("users/login", {
+      /*return res.json (resultValidation.mapped())*/
+      return res.render("users/userEdit", {
        errors: resultValidation.mapped(),
-        old: req.body,
+        user: req.body,
       })
       }
     db.user.update(

@@ -3,8 +3,8 @@ const { body } = require('express-validator');
 const fs = require('fs');
 
 const validationsUser = [
-    body('email').notEmpty().withMessage('Ingresa un email').bail().isEmail().withMessage('Debes ingresar un email válido'),
-    body('phone').notEmpty().withMessage('Ingresa tu teléfono').isLength({ min: 2 ,max:9}).withMessage('Debe contener al menos 2 caracteres y no superar los 9 caracteres'),
+    body('name').notEmpty().withMessage('Ingresa un nombre'),
+    body('phone').notEmpty().withMessage('Ingresa tu teléfono').bail().isLength({ min: 2, max:9}).withMessage('Debe contener al menos 2 caracteres y no superar los 9 caracteres'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
