@@ -152,6 +152,15 @@
     border: none;
 }
 
+.is-invalid{
+    color:red;
+    font-size: 14px;
+}
+
+.is-valid {
+    color:blue
+}
+
 @media (min-width: 481px) {
     .main-login {
         padding-top: 50px;

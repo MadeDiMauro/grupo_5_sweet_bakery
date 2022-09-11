@@ -15,12 +15,18 @@
             <a class="final-a" href="/users/register">Registrate</a>
           <!-- </div> -->
         </div>
+        <div >
+          <ul class="errors">
+          </ul>
+        </div>
         <!-- </div> -->
 
-        <form method="POST" action="/users/login">
+        <form class="form" method="POST" action="/users/login">
           <div class="input-box">
             <!-- <label for="email">Usuario</label> -->
-            <input class="input" type="email" name="email" id="email" placeholder="Usuario" value="<%= locals.old ? old.email : null %>">
+            <input class="input" type="email" name="email" id="email" placeholder="Usuario"    value="<%= locals.old ? old.email : null %>" data-nombre="email">
+            <br>
+              <span></span>
             <i class="login-icon fa-solid fa-user"></i>
             <% if (locals.errors && errors.email) { %>
               <div>
@@ -36,7 +42,9 @@
 
           <div class="input-box">
             <!-- <label for="password">Contraseña</label> -->
-            <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+            <input class="input" type="password" name="password" id="password" placeholder="Contraseña" data-nombre="password">
+            <br>
+              <span></span>
             <i class="pass-icon fa-solid fa-key"></i>
             <% if (locals.errors && errors.password) { %>
               <div>
@@ -84,4 +92,6 @@
       <%- include('../partials/footer') %>
 
     </footer>
+
+    <script src="/js/validations/login.js"></script>
   </body>
