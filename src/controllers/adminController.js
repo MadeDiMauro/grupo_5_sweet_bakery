@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
 const { Sequelize } = require("sequelize");
 const db = require("../database/models");
 const Op = Sequelize.Op;
@@ -74,7 +75,20 @@ const adminController = {
       return res.render("users/admin/adminCreate", { category });
     });
   },
-  store: (req, res) => {
+  store: async (req, res) => {
+    
+    const resultValidation = validationResult(req);
+    return res.json(resultValidation.errors);
+    if (resultValidation.errors.length > 0) {
+      let category = await db.products_categories.findAll();
+
+      return res.render("users/admin/adminCreate", {
+        errors: resultValidation.mapped(),
+        old: req.body,
+        category,
+      });
+    }
+
     db.products
       .create({
         name: req.body.name,
@@ -111,7 +125,21 @@ const adminController = {
     //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
   },
   update: async (req, res) => {
-    //return res.json(req.files);
+    
+    
+
+    const resultValidation = validationResult(req);
+   
+    if (resultValidation.errors.length > 0) {
+      return res.json(resultValidation.mapped())
+      let category = await db.products_categories.findAll();
+      return res.render("users/admin/adminEdit", {
+        errors: resultValidation.mapped(),
+        old: req.body,
+        id: req.params.id, 
+        category: category
+      });
+    }
 
     if (req.files.length > 0) {
       let images = await db.images.findAll({
