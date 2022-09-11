@@ -17,8 +17,9 @@ main {
     justify-content: center;
 }
 
-.errorList {
+div ul li {
     color: red;
+    margin-left: 20px;
 }
 
 .admin {

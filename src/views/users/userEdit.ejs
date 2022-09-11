@@ -13,15 +13,23 @@
         <div class="title-box">
           <p class="titlep">Editar mis datos</p>
         </div>
-
-        <form action="/users/edit" method="POST" enctype="multipart/form-data">
+        <div>
+          <ul class="errors">
+          </ul>
+        </div>
+        <form class="form" action="/users/edit" method="POST" enctype="multipart/form-data">
           <div class="input-box">
             <!-- <label class="input-box__label" for="name">Nombre</label> -->
             <input class="input" type="text" name="name" id="name" placeholder="Nombre"
-              value="<%= user.name %>">
+              value="<%= user.name %>" data-nombre="name"> 
+              <div></div>
             <i class="login-icon fa-solid fa-user"></i>
-            
-          </div>
+            <% if(locals.errors && errors.name) { %>
+              <div>
+                <%= errors.name.msg %>
+              </div>
+              <% } %>
+            </div>
 
           <div class="input-box" style="display: none">
             <!-- <label class="input-box__label" for="email">Correo Electrónico</label> -->
@@ -29,23 +37,32 @@
               value="<%= user.email %>">
             <i class="email-icon fa-solid fa-envelope"></i>
           </div>
-
-
           <div class="input-box">
             <!-- <label class="input-box__label" for="phone">Teléfono</label><br> -->
             <input class="input" type="tel" name="phone" id="phone" placeholder="Teléfono"
-              value="<%= user.phone %>">
+              value="<%=  user.phone %>" data-nombre="phone">
+              <div></div>
             <i class="phone-icon fa-solid fa-phone"></i>
-          </div>
+            <% if(locals.errors && errors.phone) { %>
+              <div>
+                <%= errors.phone.msg %>
+              </div>
+              <% } %>
+            </div>
 
           <div class="box-avatar">
             <label class="box-avatar__label" for="avatar">Subir nueva foto de perfil</label>
-            <input class="box-avatar__input" type="file" name="avatar" id="avatar">
-            
+            <input class="box-avatar__input" type="file" name="avatar" id="avatar" value="<%= user.avatar %>" data-nombre="avatar">
+            <div></div> 
+            <% if(locals.errors && errors.avatar) { %>
+              <div>
+                <%= errors.avatar.msg %>
+              </div>
+              <% } %>
           </div>
 
           <div class="submit-box">
-            <a href="/" class="submit-label">
+            <a class="submit-label">
               <button class="submit-input" type="submit">Editar</button>
             </a>
           </div>
@@ -56,6 +73,7 @@
     </main>
     <footer>
       <%- include('../partials/footer') %>
-
+      <script src="/js/validations/userEdit.js"></script>
     </footer>
+    
   </body>

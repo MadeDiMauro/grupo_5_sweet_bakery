@@ -57,6 +57,7 @@ const usersController = {
         old: req.body,
       });
     }
+    
     let userToCreate = await db.user
       .create({
         ...req.body,
@@ -135,8 +136,17 @@ const usersController = {
     });
 
     return res.render("users/userEdit", { user });
+                        
   },
   processEdit: async (req, res) => {
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      /*return res.json (resultValidation.mapped())*/
+      return res.render("users/userEdit", {
+       errors: resultValidation.mapped(),
+        user: req.body,
+      })
+      }
     db.user.update(
       {
         name: req.body.name,
