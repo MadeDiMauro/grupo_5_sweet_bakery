@@ -24,6 +24,7 @@ app.use(cookieParser());
 app.use(userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
 
 
+const routesApi = require('./routes/api');
 const routesProducts = require('./routes/products');
 const routesCart = require('./routes/cart');
 const routesUsers = require('./routes/users');
@@ -32,6 +33,7 @@ const routesCourses = require('./routes/courses');
 const routesGiftcard = require('./routes/giftcard');
 const routesMain = require('./routes/main');
 
+app.use('/api', routesApi);
 app.use('/products', routesProducts);
 app.use('/cart', routesCart);
 app.use('/users', routesUsers);
