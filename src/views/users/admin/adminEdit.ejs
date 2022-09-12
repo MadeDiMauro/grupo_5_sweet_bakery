@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+    <script src="/js/validations/updateProduct.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,10 @@
                                 <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-file-pen"></i> Editar
                                     producto</p>
                             </div>
-                            <!-- <hr class="adminTitle__hr"> -->
+                            <div>
+                                <ul class="errorList">
+                                </ul>
+                            </div>
 
                             <div class="newProduct">
                                 <form class="newProduct_form" action="/admin/products/<%= locals.old ? id : product.id%>?_method=PUT"
@@ -43,7 +47,7 @@
                                     <% } %>
 
                                     <label class="newProduct_label" for="category">Categoría</label>
-                                    <select class="newProduct_select" name="category" required>
+                                    <select class="newProduct_select" name="category" id="category"  required>
                                         <% for (let i=0; i< category.length;i++) { %>
                                             <option value= "<%= category[i].id %>"  <%= locals.old && old.category == category[i].id ? "selected" : null %>
                                                 <%= !locals.old && product.category_id == category[i].id ? "selected" : null %>>
@@ -79,7 +83,7 @@
 
                                     <div class="newProduct_div-img">
                                         <label class="newProduct_label-img">Agregar imagen de producto</label>
-                                        <input class="newProduct_input-file" type="file" name="imgProduct"
+                                        <input class="newProduct_input-file" type="file" id="imgProduct" name="imgProduct"
                                             accept=".jpg" multiple>
                                     </div>
                                     <% if(locals.errors && errors.imgProduct) { %>

@@ -17,6 +17,11 @@ main {
     justify-content: center;
 }
 
+div ul.errorList li {
+    color: red;
+    list-style: none;
+}
+
 .admin {
     width: 90%;
     background-color: white;

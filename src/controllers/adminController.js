@@ -78,7 +78,7 @@ const adminController = {
   store: async (req, res) => {
     
     const resultValidation = validationResult(req);
-    return res.json(resultValidation.errors);
+    //return res.json(resultValidation.errors);
     if (resultValidation.errors.length > 0) {
       let category = await db.products_categories.findAll();
 
@@ -125,13 +125,10 @@ const adminController = {
     //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
   },
   update: async (req, res) => {
-    
-    
-
     const resultValidation = validationResult(req);
    
     if (resultValidation.errors.length > 0) {
-      return res.json(resultValidation.mapped())
+      //return res.json(resultValidation.mapped())
       let category = await db.products_categories.findAll();
       return res.render("users/admin/adminEdit", {
         errors: resultValidation.mapped(),
