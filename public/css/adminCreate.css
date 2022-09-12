@@ -22,6 +22,13 @@ div ul li {
     margin-left: 20px;
 }
 
+
+.error {
+    color:red;
+    align-items:center;
+    font-size: 14px;
+}
+
 .admin {
     width: 90%;
     background-color: white;

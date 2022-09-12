@@ -179,6 +179,7 @@ ul.errors li,
     color:red;
     align-items:center;
     font-size: 14px;
+    list-style: none;
 }
 
 @media (min-width: 481px) {

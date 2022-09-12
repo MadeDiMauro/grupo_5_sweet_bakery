@@ -36,30 +36,57 @@
                                     </ul>
                                 </div>
                                 
+                            
                                 <form class="newProduct__form" action="/admin/products" method="POST" enctype="multipart/form-data">
 
                                     <label class="newProduct__label" for="name">Nombre</label>
                                     <input class="newProduct__input name" type="text" name="name" id="name">
                                     
+                                    <% if(locals.errors && errors.name) { %>
+                                        <div class="error">
+                                          <%= errors.name.msg %>
+                                        </div>
+                                    <% } %>
+
                                     <label class="newProduct__label" for="category">Categoría</label>
                                     <select class="newProduct__select category" name="category" id="category">
                                     <option hidden selected>Selecionar</option>
                                        <% for (let i=0; i< category.length;i++) { %>
-                                        <option value= "<%= category[i].id %>">
+                                        <option value= "<%= category[i].id %>" <%= locals.old && old.category == category[i].id ? "selected" : null %>>
                                         <%=category[i].type%>
                                         </option>
                                         <% } %>
                                     </select>
-                                    
+                                    <% if(locals.errors && errors.category_id) { %>
+                                        <div class="error">
+                                          <%= errors.category_id.msg %>
+                                        </div>
+                                    <% } %>
+
                                     <label class="newProduct__label" for="price">Precio</label>
                                     <input class="newProduct__input price" type="text" name="price" id="price">
-                                    
+                                    <% if(locals.errors && errors.price) { %>
+                                        <div class="error">
+                                          <%= errors.price.msg %>
+                                        </div>
+                                    <% } %>
+
+
                                     <label class="newProduct__label" for="description">Descripción</label>
                                     <textarea class="newProduct__input" id="description" name="description" rows="4"></textarea>
+                                    <% if(locals.errors && errors.descripcion) { %>
+                                        <div class="error">
+                                          <%= errors.descripcion.msg %>
+                                        </div>
+                                    <% } %>
 
                                     <label class="newProduct__label-img">Agregar imagen de producto</label>
                                     <input class="newProduct__input-file" type="file" name="imgProduct" accept=".jpg">
-
+                                    <% if(locals.errors && errors.imgProduct) { %>
+                                        <div class="error">
+                                          <%= errors.imgProduct.msg %>
+                                        </div>
+                                    <% } %>
                                     <div class="create">
                                         <a class="create__a" href="#">
                                             <button class="create__button-clean" type="reset">Limpiar</button>

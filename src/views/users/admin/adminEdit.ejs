@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
+    <script src="/js/validations/updateProduct.js"></script>
 </head>
 
 <body>
@@ -27,45 +28,76 @@
                                 <p class="adminTitle__p"><i class="adminTitle__icon fa-solid fa-file-pen"></i> Editar
                                     producto</p>
                             </div>
-                            <!-- <hr class="adminTitle__hr"> -->
+                            <div>
+                                <ul class="errorList">
+                                </ul>
+                            </div>
 
                             <div class="newProduct">
-                                <form class="newProduct_form" action="/admin/products/<%= product.id %>?_method=PUT"
+                                <form class="newProduct_form" action="/admin/products/<%= locals.old ? id : product.id%>?_method=PUT"
                                     method="POST" enctype="multipart/form-data">
                                     <label class="newProduct_label" for="name">Nombre</label>
                                     <input class="newProduct_input" type="text" name="name" id="name" required
-                                        value="<%= product.name %>">
+                                    value="<%= locals.old ? old.name : product.name %>">
+
+                                    <% if(locals.errors && errors.name) { %>
+                                        <div style="color: red;">
+                                          <%= errors.name.msg %>
+                                        </div>
+                                    <% } %>
 
                                     <label class="newProduct_label" for="category">Categoría</label>
-                                    <select class="newProduct_select" name="category" required>
+                                    <select class="newProduct_select" name="category" id="category"  required>
                                         <% for (let i=0; i< category.length;i++) { %>
-                                            <option value= "<%= category[i].id %>" <%=product.category_id==category[i].id ? "selected" : null
-                                                %> >
-                                            <%=category[i].type%>
+                                            <option value= "<%= category[i].id %>"  <%= locals.old && old.category == category[i].id ? "selected" : null %>
+                                                <%= !locals.old && product.category_id == category[i].id ? "selected" : null %>>
+                                                <%= category[i].type %>
                                             </option>
-                                            <% } %>
+                                        <% } %>
             
                                     </select>
 
+                                    <% if(locals.errors && errors.category_id) { %>
+                                        <div style="color: red;">
+                                          <%= errors.category_id.msg %>
+                                        </div>
+                                    <% } %>
+
                                     <label class="newProduct_label" for="price">Precio</label>
                                     <input class="newProduct_input" type="text" name="price" id="price" required
-                                        value="<%= product.price %>">
-
+                                        value="<%= locals.old ? old.price : product.price %>">
+                                        <% if(locals.errors && errors.price) { %>
+                                            <div style="color: red;">
+                                              <%= errors.price.msg %>
+                                            </div>
+                                        <% } %>
                                     <label class="newProduct_label" for="description">Descripción</label>
                                     <textarea class="newProduct_input" id="description" name="description"
-                                        rows="4"><%= product.description %></textarea>
+                                        rows="4"><%= locals.old ? old.description : product.description %></textarea>
+                                        
+                                        <% if(locals.errors && errors.description) { %>
+                                            <div style="color: red;">
+                                              <%= errors.description.msg %>
+                                            </div>
+                                        <% } %>
 
                                     <div class="newProduct_div-img">
                                         <label class="newProduct_label-img">Agregar imagen de producto</label>
-                                        <input class="newProduct_input-file" type="file" name="imgProduct"
+                                        <input class="newProduct_input-file" type="file" id="imgProduct" name="imgProduct"
                                             accept=".jpg" multiple>
                                     </div>
+                                    <% if(locals.errors && errors.imgProduct) { %>
+                                        <div style="color: red;">
+                                          <%= errors.imgProduct.msg %>
+                                        </div>
+                                    <% } %>
+                                    
 
                                     <div class="edit">
                                         <button class="edit_a edit_button-clean" type="submit">EDITAR</button>
                                     </div>
                                 </form>
-                                <!-- <form class="newProduct_form" action="/admin/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                <!-- <form class="newProduct_form" action="/admin/<%# product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                                         <button class="edit_a edit_button" type="delete">EDITAR</button>
                                 </form>  -->
                             </div>
