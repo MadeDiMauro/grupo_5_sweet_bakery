@@ -5,13 +5,47 @@ const Op = Sequelize.Op;
 
 const usersApiController = {
     usersList: async (req, res) => {
-        //Hacer consulta a la BD
-      return res.json("Hola :) soy la api");
-    },
-    userId: async (req, res) => {
-        //Hacer consulta a la BD
-      return res.json("Hola :) soy la api");
-    }
+        db.user.findAll ()
+        .then (users => {
+          let array= [];
+          users.forEach ((users)=> {
+          array.push ({
+            id:users.id,
+            name:users.name,
+            email:users.email,
+            avatar: "/images/avatars/" + users.avatar
+          })
+          }) 
+          return res.status(200).json ({
+            meta: {
+              code:res.statusCode, // status: 200, 
+              total:users.length,
+              data: array
+            }
+            })
+          })
+        
+      }, 
+    }/*
+   userId: async (req, res) => {
+      db.user.findByPk(req.params.id)
+      .then(user => {
+       return res.status(200).json({
+                  meta: {
+                    code: res.statusCode,
+                    /*id:,
+                    name:,
+                    email:,
+                    phone:,
+                    url: req.protocol + "://" + req.get("host") + req.originalUrl
+                  },
+                  data: user
+              })
+          });
+          }
 };
-
+/*Deberá devolver un objeto literal con la siguiente estructura:
+■ Una propiedad por cada campo en base.
+■ Una URL para la imagen de perfil (para mostrar la imagen).
+■ Sin información sensible (ej: password y categoría).*/
 module.exports = usersApiController;
