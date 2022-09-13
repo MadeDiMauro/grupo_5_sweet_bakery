@@ -4,6 +4,7 @@ const Op = Sequelize.Op;
 
 const productsApiController = {
     productsList: async (req, res) => {
+      let categories= 
         db.products.findAll ()
         .then (products => {
           return res.status (200).json ({
