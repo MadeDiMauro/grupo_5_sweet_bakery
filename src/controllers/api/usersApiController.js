@@ -26,24 +26,26 @@ const usersApiController = {
           })
         
       }, 
-    }/*
-   userId: async (req, res) => {
-      db.user.findByPk(req.params.id)
-      .then(user => {
-       return res.status(200).json({
-                  meta: {
-                    code: res.statusCode,
-                    /*id:,
-                    name:,
-                    email:,
-                    phone:,
-                    url: req.protocol + "://" + req.get("host") + req.originalUrl
-                  },
-                  data: user
-              })
-          });
-          }
-};
+      userId: async (req, res) => {
+        db.user.findByPk(req.params.id)
+        .then(user => {          
+         return res.status(200).json({
+                    meta: {
+                      code: res.statusCode,
+                      id: user.id,
+                      name: user.name,
+                      email: user.email,
+                      phone: user.phone,
+                      avatar: "/images/avatars/" + user.avatar
+                    }
+                    
+                    
+                })
+            });
+            }
+  };      
+ 
+   
 /*Deberá devolver un objeto literal con la siguiente estructura:
 ■ Una propiedad por cada campo en base.
 ■ Una URL para la imagen de perfil (para mostrar la imagen).

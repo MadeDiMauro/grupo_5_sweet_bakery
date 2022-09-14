@@ -4,17 +4,38 @@ const Op = Sequelize.Op;
 
 const productsApiController = {
     productsList: async (req, res) => {
-      let categories= 
-        db.products.findAll ()
+      let products = db.products.findAll();
+      let categories = db.products_categories.findAll(); 
+
+      
+      Promise.all([products, categories])
+      /*.then( res.json(products, categories))
+
+        /*db.products.findAll()*/
         .then (products => {
-          return res.status (200).json ({
+          let array= [];
+          products[0].forEach ((products)=> {
+          array.push ({
+            id:products.id,
+            })
+            })
+            return res.status (200).json ({
             meta: {
               code:res.statusCode, // status: 200, 
-              total:products.length,
-            }
+              total:array.length,
+            }            
+            })
+            .then (categories => {
+              return res.status (200).json ({
+                meta: {
+                  code:res.statusCode,
+                  categories: categories
+                },
+                data: categories
+              })
             })
           });
-        db.products_categories.findAll()
+       /* db.products_categories.findAll()
         .then (products=> {
             return res.status(200).json({
             meta: {
