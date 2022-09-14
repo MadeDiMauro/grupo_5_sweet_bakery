@@ -64,14 +64,11 @@ const productsApiController = {
               name: product.name,
               price: product.price,
               description: product.description,
-              //avatar: "/images/avatars/" + product.avatar
+              //url: req.protocol + "://" + req.get("host") + req.originalUrl
             }
           })
         })
         .then (images => {
-
-        
-          
           db.images.findAll({
             where: {
               product_id
