@@ -9,10 +9,7 @@ const productsApiController = {
 
       
       Promise.all([products, categories])
-      /*.then( res.json(products, categories))
-
-        /*db.products.findAll()*/
-        .then (products => {
+         .then ((products=> {
           let array= [];
           products[0].forEach ((products)=> {
           array.push ({
@@ -22,19 +19,19 @@ const productsApiController = {
             return res.status (200).json ({
             meta: {
               code:res.statusCode, // status: 200, 
-              total:array.length,
-            }            
-            })
-            .then (categories => {
-              return res.status (200).json ({
-                meta: {
-                  code:res.statusCode,
-                  categories: categories
-                },
-                data: categories
-              })
-            })
-          });
+              total:products.length,
+            },
+          })
+        }))
+        /*.then (categories => {
+         return res.status (200).json ({
+          meta: {
+          code:res.statusCode,
+          categories: categories.length,
+           },
+        })
+         
+     })
        /* db.products_categories.findAll()
         .then (products=> {
             return res.status(200).json({
@@ -45,17 +42,6 @@ const productsApiController = {
             },
            })
           })
-  
-/*let categorias = await db.products_categories.findAll();
-if (req.query.category) {
-    productsList = await db.products.findAll({
-        where: {
-            category_id: req.query.category
-        },
-        include: [{
-            model: db.images,
-            as: 'images'*/
-    
       /*countByCategory → objeto literal con una propiedad por categoría
       con el total de productos.
       ■ products → array con la colección de productos, cada uno con:
@@ -69,8 +55,43 @@ if (req.query.category) {
       
     },
     productId: async (req, res) => {
+     await db.products.findByPk(req.params.id)
+      .then(product => {          
+       return res.status(200).json({
+            meta: {
+              code: res.statusCode,
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              description: product.description,
+              //avatar: "/images/avatars/" + product.avatar
+            }
+          })
+        })
+        .then (images => {
+
+        
+          
+          db.images.findAll({
+            where: {
+              product_id
+            },
+            include: [{
+                model: db.images,
+                as: 'images'
+            }]
+          })}
+        )
+          
+  
+   /*   ● api/products/:id
+○ Deberá devolver un objeto literal con la siguiente estructura:
+■ una propiedad por cada campo en base.
+■ un array por cada relación de uno a muchos (categories, colors,
+sizes, etc).
+■ Una URL para la imagen del producto (para mostrar la imagen).
         //Hacer consulta a la BD
-      return res.json("Hola :) soy la api");
+      return res.json("Hola :) soy la api");*/
     }
 };
 
