@@ -125,6 +125,7 @@ const adminController = {
     //validacion y son objeto (en el ejs, entre llaves solo comparto el item filtrado, se filtra aantes del render)
   },
   update: async (req, res) => {
+    
     const resultValidation = validationResult(req);
    
     if (resultValidation.errors.length > 0) {

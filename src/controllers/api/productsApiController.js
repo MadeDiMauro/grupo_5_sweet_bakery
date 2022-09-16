@@ -37,31 +37,28 @@ const productsApiController = {
     });
   },
   productId: async (req, res) => {
-    await db.products.findByPk(req.params.id)
-      .then(product => {
-        return res.status(200).json({
-          meta: {
-            code: res.statusCode,
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            description: product.description,
-            //url: req.protocol + "://" + req.get("host") + req.originalUrl
-          }
-        })
-      })
-      .then(images => {
-        db.images.findAll({
-          where: {
-            product_id
-          },
-          include: [{
-            model: db.images,
-            as: 'images'
-          }]
-        })
+    let product = await db.products.findByPk(req.params.id, {
+      include: [{
+        model: db.products_categories,
+        as: 'products_categories',
+        attributes: [],
+      },{
+        model: db.images,
+        as: 'images',
+        attributes: ['id', 'url', [Sequelize.fn('CONCAT', "http://localhost:3000/images/products/", Sequelize.col('images.url')), 'url_image']]
+      }],
+      attributes: [
+        'id', 'name', 'price', 'description', [Sequelize.col('products_categories.type'), "categoria"],
+        
+      ]
+    })
+    
+    return res.status(200).json({
+      meta: {
+        code: res.statusCode, // status: 200, 
+        product
       }
-      )
+    })     
 
 
     /*   ● api/products/:id
@@ -70,8 +67,7 @@ const productsApiController = {
  ■ un array por cada relación de uno a muchos (categories, colors,
  sizes, etc).
  ■ Una URL para la imagen del producto (para mostrar la imagen).
-         //Hacer consulta a la BD
-       return res.json("Hola :) soy la api");*/
+  */
   }
 };
 
