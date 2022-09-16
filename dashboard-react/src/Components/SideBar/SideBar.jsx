@@ -8,7 +8,7 @@ function SideBar() {
 
 			{/* <!-- Sidebar - Brand --> */}
 			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-				<div className="sidebar-brand-icon">
+				<div className="sidebar-brand-icon ">
 					<img className="w-100" src={Logo} alt="Sweet Bakery" />
 				</div>
 			</a>
@@ -20,7 +20,7 @@ function SideBar() {
 			<li className="nav-item active">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span></a>
+					<span>Dashboard</span></a>
 			</li>
 
 			{/* <!-- Divider --> */}
@@ -33,7 +33,7 @@ function SideBar() {
 			<li className="nav-item">
 				<a className="nav-link collapsed" href="/">
 					<i className="fas fa-fw fa-folder"></i>
-					<span>Pages</span>
+					<span>Últimos</span>
 				</a>
 			</li>
 
@@ -41,14 +41,14 @@ function SideBar() {
 			<li className="nav-item">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span></a>
+					<span>Categorias</span></a>
 			</li>
 
 			{/* <!-- Nav Item - Tables --> */}
 			<li className="nav-item">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span></a>
+					<span>Productos</span></a>
 			</li>
 
 			{/* <!-- Divider --> */}

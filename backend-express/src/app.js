@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
@@ -22,7 +23,7 @@ app.use(session({
 }));
 app.use(cookieParser());
 app.use(userLoggedMiddleware);  /*middleware de aplicación que tienen que colocarse después de session*/
-
+app.use(cors());
 
 const routesApi = require('./routes/api');
 const routesProducts = require('./routes/products');

@@ -1,7 +1,38 @@
 import React from "react";
-import Avatar from '../../Assets/images/jordan-walke.png';
+import { useEffect, useState } from 'react';
+import Logo from '../../Assets/images/nombre-sweet-bakery-dorado.png';
+import Cookies from 'js-cookie';
 
 function Topbar() {
+    let [userLogin, setUserLogin] = useState({
+        meta: {
+            name: "anonimo",
+            avatar: Logo
+        }
+    });
+
+    console.log("Cookie de sesión usuario: " + Cookies.get('idUserSession'));
+    useEffect(() => {
+        if (Cookies.get('idUserSession') == undefined) {
+            setUserLogin({
+                meta: {
+                    name: "anonimo",
+                    avatar: Logo
+                }
+            });
+        } else {
+            fetch('http://localhost:3000/api/users/' + Cookies.get('idUserSession'))
+                .then((response) => response.json())
+                .then((user) => {
+                    console.log(user);
+                    setUserLogin(user);
+                }).catch((error) => {
+                    console.log(error);
+
+                });
+        }
+
+    }, []);
     return (
         <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -36,8 +67,8 @@ function Topbar() {
                 {/* <!-- Nav Item - User Information --> */}
                 <li className="nav-item dropdown no-arrow">
                     <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Jordan Walke</span>
-                        <img className="img-profile rounded-circle" src={Avatar} alt="Jordan Walke - Creador de React" width="60" />
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">{userLogin.meta.name}</span>
+                        <img className="img-profile rounded-circle" src={userLogin.meta.avatar} alt={userLogin.meta.name} width="60" />
                     </a>
                 </li>
 

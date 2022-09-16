@@ -99,7 +99,7 @@ const usersController = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
-
+        res.cookie('idUserSession', userToLogin.id);
         if (req.body.check_login) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
         }
@@ -171,6 +171,7 @@ const usersController = {
   },
   logout: (req, res) => {
     res.clearCookie("userEmail");
+    res.clearCookie("idUserSession");
     req.session.destroy();
     return res.redirect("/");
   },

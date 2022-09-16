@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ContentRowMovies(props) {
+function ContentRowProducts(props) {
  
     const { 
         title = "No Title",
@@ -31,11 +31,11 @@ function ContentRowMovies(props) {
     )
 }
 
-ContentRowMovies.propTypes = {
+ContentRowProducts.propTypes = {
     title: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
     icons: PropTypes.array
 }
 
 
-export default ContentRowMovies;
+export default ContentRowProducts;

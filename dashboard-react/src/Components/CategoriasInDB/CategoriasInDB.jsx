@@ -1,22 +1,20 @@
 import React, { Component } from "react";
-import Genre from "./Subcomponents/Genre";
+import Categoria from "./Subcomponents/Categoria";
 
-class GenresInDB extends Component {
+class CategoriasInDB extends Component {
 
     constructor() {
         super();
         this.state = {
-            genres: []
+            categorias: []
         }
     }
 
 
     async componentDidMount() {
-        const response = await fetch("http://localhost:3001/api/genres");
+        const response = await fetch("http://localhost:3000/api/products");
         const data = await response.json();
-        
-            this.setState({genres: data.data});
-
+           this.setState({categorias: data.meta.countByCategory});
     }    
 
    /*  handleMouse = () => {
@@ -28,16 +26,16 @@ class GenresInDB extends Component {
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={ (e) => e.target.parentNode.nextElementSibling.classList.add("bg-secondary") } >Genres in Data Base</h5>
+                        <h5 className="m-0 font-weight-bold text-gray-800" /*onMouseOver={ (e) => e.target.parentNode.nextElementSibling.classList.add("bg-secondary") }*/ >Cantidad de productos por categoría</h5>
                     </div>
                     <div className="card-body">
                         <div className="row">
 
                             {
-                                this.state.genres.length == 0 && <h3>Cargando...</h3>
+                                this.state.categorias.length === 0 && <h3>Cargando...</h3>
                             }
                             {
-                               this.state.genres.map(genre => <Genre key={genre.name} name={genre.name} />)
+                               this.state.categorias.map(categoria => <Categoria key={categoria.categoria} name={categoria.categoria} cantidad={categoria.cantidad} />)
                             }
                             
 
@@ -49,4 +47,4 @@ class GenresInDB extends Component {
     }
 }
 
-export default GenresInDB;
+export default CategoriasInDB;

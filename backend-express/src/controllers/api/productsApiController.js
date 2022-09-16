@@ -49,6 +49,7 @@ const productsApiController = {
       }],
       attributes: [
         'id', 'name', 'price', 'description', [Sequelize.col('products_categories.type'), "categoria"],
+        [Sequelize.fn('CONCAT', "http://localhost:3000/products/detail/", Sequelize.col('products.id')), 'url_detail']
         
       ]
     })

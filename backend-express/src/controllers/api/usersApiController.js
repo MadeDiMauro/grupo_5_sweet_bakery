@@ -36,13 +36,13 @@ const usersApiController = {
                       name: user.name,
                       email: user.email,
                       phone: user.phone,
-                      avatar: "/images/avatars/" + user.avatar
+                      avatar: "http://localhost:3000/images/avatars/" + user.avatar
                     }
                     
                     
                 })
             });
-            }
+        }
   };      
  
    

@@ -9,18 +9,18 @@ class ContentWrapper extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			movies: [],
+			products: [],
 			columnTables: []
 		}
 	}
 
-	async componentDidMount() {
-		const response = await fetch("http://localhost:3001/api/movies");
-		const data = await response.json();
-		console.log(data.data)
-		let columnas = [ "genre", "length", "title", "rating", "awards"];
-		this.setState({ movies: data.data, columnTables: columnas })
-	}
+	// async componentDidMount() {
+	// 	const response = await fetch("http://localhost:3001/api/products");
+	// 	const data = await response.json();
+	// 	console.log(data.meta)
+	// 	let columnas = [ "Producto", "Nombre", "Precio", "Descripción", "Categoria"];
+	// 	this.setState({ movies: data.meta, columnTables: columnas })
+	// }
 
 	render() {
 
