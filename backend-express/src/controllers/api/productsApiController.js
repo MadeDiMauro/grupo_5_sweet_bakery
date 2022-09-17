@@ -9,7 +9,8 @@ const productsApiController = {
         model: db.products_categories,
         as: 'products_categories',
         attributes: []
-      }],
+      }
+      ],
       attributes: [
         [Sequelize.col('products_categories.type'), "categoria"],
         [Sequelize.fn("COUNT", Sequelize.col("category_id")), "cantidad"]
@@ -21,7 +22,13 @@ const productsApiController = {
       include: [{
         model: db.products_categories,
         as: 'products_categories',
-      }],
+      },
+      {
+        model: db.images,
+        as: 'images',
+        attributes: ['id', 'url', [Sequelize.fn('CONCAT', "http://localhost:3000/images/products/", Sequelize.col('images.url')), 'url_image']]
+      }
+    ],
       attributes: [
         "id", "name", "price", "description",
         [Sequelize.fn('CONCAT', "http://localhost:3000/products/detail/", Sequelize.col('products.id')), 'url_detail'],

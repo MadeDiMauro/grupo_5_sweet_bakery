@@ -34,7 +34,7 @@
                 </div>
                 <div class="product-detail">
                     <img src='/images/products/<%= productItem.images.length > 0 ? productItem.images[0].url : null %>' alt='<%=productItem.name %>'> 
-                    <img src='/images/products/<%= productItem.images.length > 1 ? productItem.images[1].url : null %>' alt='<%=productItem.name %>'> 
+                    
                 </div>
             </div>
 
@@ -64,8 +64,8 @@
 
                 <% for (let i=0; i < (productsRelated.length <= 2 ? productsRelated.length : 3 ); i ++) { %>
                     <article>
-                        <a href='/products/detail/<%= productsRelated[i].id %>' style="width: 100%"><img class="img-product"
-                                src='/images/products/<%= productsRelated[i].images.length > 0 ? productsRelated[i].images[0].url : null%>' alt='<%= productsRelated[i].name %>'></a>
+                        <a href='/products/detail/<%= productsRelated[i].id %>' style="width: 100%">
+                            <img class="img-product"src='/images/products/<%= productsRelated[i].images.length > 0 ? productsRelated[i].images[0].url : null%>' alt='<%= productsRelated[i].name %>'></a>
                         <div class="product-info">
                             <p class="products__name">
                                 <%= productsRelated[i].name %>
