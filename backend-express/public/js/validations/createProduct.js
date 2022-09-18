@@ -1,5 +1,16 @@
 window.addEventListener('load', function(){
-    let form = document.querySelector('.newProduct__form');
+    let form = document.querySelector('.newProduct_form');
+    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    let inputAvatar=document.getElementById ('imgProduct');
+    let ban = false;
+    
+    inputAvatar.addEventListener ("change", function () {
+        if(!allowedExtensions.exec(inputAvatar.value)){
+            ban = true;
+        }else{
+            ban = false;
+        }
+    })
 
     form.addEventListener('submit', function(e){
         let errors = [];
@@ -29,11 +40,14 @@ window.addEventListener('load', function(){
             errors.push('La descripción debe contener al menos 20 caracteres');
         }
 
-        //VALIDAR IMAGEN        
+        if(ban == true) {
+            errors.push('Debes subir archivos con extensión .jpeg/.jpg/.png/.gif');
+        }
+               
 
         if(errors.length > 0){
             e.preventDefault();
-            
+            console.log(errors);
             let errorList = document.querySelector('.errorList');
 
             errorList.innerHTML = "";

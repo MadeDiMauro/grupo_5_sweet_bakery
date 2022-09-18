@@ -4,12 +4,12 @@ const fs = require('fs');
 
 const validationsCreateProduct = [
     body('name').notEmpty().withMessage('Debes ingresar un nombre').bail().isLength({ min: 5}).withMessage('Mínimo de 5 carácteres'),
-    body('descripcion').notEmpty().withMessage('Debes ingresar una descripción').bail().isLength({ min: 20 }).withMessage('Máximo de 20 carácteres'),
+    body('description').notEmpty().withMessage('Debes ingresar una descripción').bail().isLength({ min: 20 }).withMessage('Máximo de 20 carácteres'),
     body('price').notEmpty().withMessage('Debes ingresar un precio').bail().isInt({ min:0}).withMessage('Número mayor a cero'),
-    body('category_id').notEmpty().withMessage('Debes ingresar una categoria'),
+    body('category').notEmpty().withMessage('Debes ingresar una categoria'),
     body('imgProduct').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpeg','.jpg', '.png', '.gif'];
 
         if (file) {
             let fileExtension = path.extname(file.originalname);

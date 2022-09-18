@@ -28,7 +28,7 @@
                     </p>
                     <div class="price1">
                         <p>
-                            <%=productItem.price %>
+                            $<%=productItem.price %>
                         </p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <button><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="payment">VER MEDIOS DE PAGO</div>
-                <div class="product-buy"><a href="/cart1"><button type="submit">AGREGAR AL CARRITO</button></a>
+                <div class="product-buy"><a href="#"><button type="submit">AGREGAR AL CARRITO</button></a>
                 </div>
             </div>
             </div>
@@ -71,9 +71,9 @@
                                 <%= productsRelated[i].name %>
                             </p>
                             <p class="products__price">
-                                <%= productsRelated[i].price %>
+                                $<%= productsRelated[i].price %>
                             </p>
-                            <a href="/cart1"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
+                            <a href="#"><button type="submit">AGREGAR <i class="fas fa-cart-plus"></i></button></a>
                         </div>
                     </article>
                 <% } %>

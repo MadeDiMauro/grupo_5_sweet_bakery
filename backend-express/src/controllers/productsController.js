@@ -18,12 +18,17 @@ const productsController = {
 
         if (search) {
             productsList = await db.products.findAll({
+                include: [{
+                    model: db.images,
+                    as: 'images'
+                }],
                 where: {
                     name: {
                         [Op.like]: '%'+search+'%'
                     } 
                 }
             })
+            //return res.json(productsList[0].images[0].url);
         }
 
         let categorias = await db.products_categories.findAll();
@@ -39,7 +44,7 @@ const productsController = {
                 }]
             })
         }
-        //return res.json([productsList[0].images[0].url, categorias]);
+        
         return res.render("products/products", { productsList, categorias });
     },
     detail: async (req, res) => {

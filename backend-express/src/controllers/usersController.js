@@ -147,21 +147,31 @@ const usersController = {
         user: req.body,
       })
       }
-    db.user.update(
-      {
-        name: req.body.name,
-        phone: req.body.phone,
-        avatar: req.file ? req.file.filename : "avatar1.jpg"
-      },
-      {
+
+      let user = await db.user.findOne({
         where: { 
           email: req.body.email
-        },
-      }
-    ).then(() => {
-      return res.redirect('/users/profile');
-    });
+        }
+      });
 
+      //return res.json([user,req.body, req.file])
+
+    
+      db.user.update(
+        {
+          name: req.body.name,
+          phone: req.body.phone,
+          avatar: req.file ? req.file.filename : "avatar1.jpg"
+        },
+        {
+          where: { 
+            email: req.body.email
+          },
+        }
+      ).then(() => {
+        return res.redirect('/users/profile');
+      });
+ 
   },
 
   profile: (req, res) => {

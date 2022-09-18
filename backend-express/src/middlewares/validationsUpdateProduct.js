@@ -9,7 +9,7 @@ const validationsUpdateProduct = [
     body('category').notEmpty().withMessage('Debes ingresar una categoria válida'),
     body('imgProduct').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpeg','.jpg', '.png', '.gif'];
 
         if (file) {
             let fileExtension = path.extname(file.originalname);

@@ -59,7 +59,8 @@
                  <% for (let i=0; i<productsList.length; i ++) { %> 
                     <article class="products__article">
 
-                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/products/<%= productsList[i].images.length > 0 ? productsList[i].images[0].url : null %>' alt='<%= productsList[i].name %>'></a>
+                        <a href="/products/detail/<%= productsList[i].id %>"><img class="products__img" src='/images/products/<%= productsList[i].images && productsList[i].images.length > 0 ? productsList[i].images[0].url : null %>' alt='<%= productsList[i].name %>'></a>
+                                                                                                                                    
                         <div class="products__div-info">
                             <p class="products__name">
                                 <%=productsList[i].name %>
@@ -67,7 +68,7 @@
                             <p class="products__price">
                                 $ <%=productsList[i].price %>
                             </p>
-                            <a class="products__a" href="/cart1">
+                            <a class="products__a" href="#">
                                 <button class="products__button-add" type="submit">
                                     AGREGAR <i class="pruducts__icon-cart fas fa-cart-plus"></i>
                                 </button>

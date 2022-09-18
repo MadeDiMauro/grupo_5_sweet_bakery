@@ -66,7 +66,7 @@ function Topbar() {
 
                 {/* <!-- Nav Item - User Information --> */}
                 <li className="nav-item dropdown no-arrow">
-                    <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
+                    <a className="nav-link dropdown-toggle" href="http://localhost:3000/" id="userDropdown">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small">{userLogin.meta.name}</span>
                         <img className="img-profile rounded-circle" src={userLogin.meta.avatar} alt={userLogin.meta.name} width="60" />
                     </a>

@@ -31,7 +31,7 @@ const validationsRegister = [
     body('re_password').notEmpty().withMessage('Debes ingresar una contraseña'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpeg','.jpg', '.png', '.gif'];
 
         if (file) {
             let fileExtension = path.extname(file.originalname);

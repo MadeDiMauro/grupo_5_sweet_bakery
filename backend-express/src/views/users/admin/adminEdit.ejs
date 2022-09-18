@@ -37,7 +37,7 @@
                                 <form class="newProduct_form" action="/admin/products/<%= locals.old ? id : product.id%>?_method=PUT"
                                     method="POST" enctype="multipart/form-data">
                                     <label class="newProduct_label" for="name">Nombre</label>
-                                    <input class="newProduct_input" type="text" name="name" id="name" required
+                                    <input class="newProduct_input" type="text" name="name" id="name" 
                                     value="<%= locals.old ? old.name : product.name %>">
 
                                     <% if(locals.errors && errors.name) { %>
@@ -47,7 +47,7 @@
                                     <% } %>
 
                                     <label class="newProduct_label" for="category">Categoría</label>
-                                    <select class="newProduct_select" name="category" id="category"  required>
+                                    <select class="newProduct_select" name="category" id="category"  >
                                         <% for (let i=0; i< category.length;i++) { %>
                                             <option value= "<%= category[i].id %>"  <%= locals.old && old.category == category[i].id ? "selected" : null %>
                                                 <%= !locals.old && product.category_id == category[i].id ? "selected" : null %>>
@@ -64,7 +64,7 @@
                                     <% } %>
 
                                     <label class="newProduct_label" for="price">Precio</label>
-                                    <input class="newProduct_input" type="text" name="price" id="price" required
+                                    <input class="newProduct_input" type="text" name="price" id="price" 
                                         value="<%= locals.old ? old.price : product.price %>">
                                         <% if(locals.errors && errors.price) { %>
                                             <div style="color: red;">

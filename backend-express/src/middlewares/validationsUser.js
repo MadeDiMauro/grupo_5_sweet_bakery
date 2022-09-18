@@ -7,7 +7,7 @@ const validationsUser = [
     body('phone').notEmpty().withMessage('Ingresa tu teléfono').bail().isLength({ min: 2, max:9}).withMessage('Debe contener al menos 2 caracteres y no superar los 9 caracteres'),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpeg','.jpg', '.png', '.gif'];
         if (file) {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)) {

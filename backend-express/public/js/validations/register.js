@@ -40,8 +40,10 @@ window.addEventListener ('load', function (){
 
         if(errors == 0){
            form.submit();
-            } else if (errors>0) {
+        } 
+        else if (errors>0) {
             e.preventDefault ();
+            listErrors.innerHTML = "";
             listErrors.innerHTML += "Debes completar el formulario"; 
         }
 
@@ -61,6 +63,8 @@ window.addEventListener ('load', function (){
                     input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un " + input.dataset.nombre;
                     input.classList.remove("is-invalid")
+                    }else {
+                        input.nextElementSibling.nextElementSibling.innerHTML = "";  
                     }
                    
                     if (input.name === "name" && input.value.length<2) {
@@ -68,16 +72,19 @@ window.addEventListener ('load', function (){
                     input.nextElementSibling.nextElementSibling.innerHTML = 'Debes ingresar al menos dos caracteres'
                     input.classList.remove("is-invalid")
                     }
+
                     if (!expression.test(input.value) && input.name === "email") { 
                     input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar un email válido";
                     input.classList.remove("is-invalid")
                     }
+
                     if (input.name === "password" && input.value.length<8){
                     input.nextElementSibling.nextElementSibling.classList.add("is-invalid");
                     input.nextElementSibling.nextElementSibling.innerHTML = "Debes ingresar al menos ocho caracteres";
                     input.classList.remove("is-invalid")
-                     }               
+                    }
+                                 
                 })
             })          
     })

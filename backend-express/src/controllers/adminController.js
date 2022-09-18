@@ -89,15 +89,21 @@ const adminController = {
       });
     }
 
+    //return res.json([res.file, res.files]) 
+
     db.products
       .create({
         name: req.body.name,
         price: req.body.price,
         description: req.body.description,
-        category_id: req.body.category,
-        image: req.file ? req.file.filename : "logo-sweet-bakery-dorado.png",
+        category_id: req.body.category
       })
-      .then(() => {
+      .then((product) => {
+        db.images.create({
+          url: "logo-sweet-bakery-dorado.png",
+          product_id: product.id,
+        });
+        //return res.json(product);
         return res.redirect("/admin/products");
       });
 
