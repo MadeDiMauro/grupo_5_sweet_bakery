@@ -14,13 +14,13 @@ class ContentWrapper extends React.Component {
 		}
 	}
 
-	// async componentDidMount() {
-	// 	const response = await fetch("http://localhost:3001/api/products");
-	// 	const data = await response.json();
-	// 	console.log(data.meta)
-	// 	let columnas = [ "Producto", "Nombre", "Precio", "Descripción", "Categoria"];
-	// 	this.setState({ movies: data.meta, columnTables: columnas })
-	// }
+	async componentDidMount() {
+		const response = await fetch("http://localhost:3000/api/products");
+		const data = await response.json();
+		console.log(data.meta)
+		let columnas = ["Id", "Imagen", "Nombre", "Precio", "Descripción", "Categoria", "Detalle"];
+		this.setState({ products: data.meta.products, columnTables: columnas })
+	 }
 
 	render() {
 
@@ -41,7 +41,7 @@ class ContentWrapper extends React.Component {
 				{/* <!-- End of MainContent --> */}
 	
 	
-				<Table data={ this.state.movies } columns={this.state.columnTables} />
+				<Table data={ this.state.products } columns={this.state.columnTables} />
 	
 				{/* <!-- Footer --> */}
 				<Footer />

@@ -7,7 +7,7 @@ function SideBar() {
         <ul className="navbar-nav bg-dark text-white sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			{/* <!-- Sidebar - Brand --> */}
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/"> 
 				<div className="sidebar-brand-icon ">
 					<img className="w-100" src={Logo} alt="Sweet Bakery" />
 				</div>

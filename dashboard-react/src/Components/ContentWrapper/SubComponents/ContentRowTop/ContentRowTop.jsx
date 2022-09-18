@@ -25,11 +25,11 @@ function ContentRowTop() {
 				//console.log("últimoproducto: "+products.meta.products[products.meta.products.length-1].name)
 				setCountProducts(products.meta.count);
 				setCountCategories(products.meta.countByCategory.length);
-				setIdLastProduct(products.meta.products.length);
+				let lengthArray= products.meta.products.length;
+				setIdLastProduct(products.meta.products[lengthArray-1].id);
 				console.log("Id: " + idLastProduct);
 				setIsLoading(false);
 			});
-
 	});
 
 	useEffect(() => {
@@ -89,7 +89,7 @@ function ContentRowTop() {
 				<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 			</div>
 
-			{/* <!-- Content Row Movies--> */}
+			{/* <!-- Content Row Products--> */}
 			<div className="row">
 				{
 					isLoading && <h3>Cargando...</h3>
@@ -100,12 +100,12 @@ function ContentRowTop() {
 					})
 				}
 			</div>
-			{/* <!-- End movies in Data Base --> */}
+			{/* <!-- End Products in Data Base --> */}
 
 
-			{/* <!-- Content Row Last Movie in Data Base --> */}
+			{/* <!-- Content Row Last Product in Data Base --> */}
 			<div className="row">
-				{/* <!-- Last Movie in DB --> */}
+				{/* <!-- Last Product in DB --> */}
 				<div className="col-lg-6 mb-4">
 					<div className="card shadow mb-4">
 						<div className="card-header py-3">
@@ -122,7 +122,7 @@ function ContentRowTop() {
 						</div>
 					</div>
 				</div>
-				{/* <!-- End content row last movie in Data Base --> */}
+				{/* <!-- End content row last product in Data Base --> */}
 				{/* <!-- Categorias in DB --> */}
 			<CategoriasInDB />
 

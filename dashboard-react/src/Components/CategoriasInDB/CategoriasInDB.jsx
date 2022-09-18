@@ -26,7 +26,7 @@ class CategoriasInDB extends Component {
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800" /*onMouseOver={ (e) => e.target.parentNode.nextElementSibling.classList.add("bg-secondary") }*/ >Cantidad de productos por categoría</h5>
+                        <h5 className="m-0 font-weight-bold text-gray-800" >Cantidad de productos por categoría</h5>
                     </div>
                     <div className="card-body">
                         <div className="row">
