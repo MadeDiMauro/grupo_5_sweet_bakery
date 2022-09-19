@@ -99,12 +99,13 @@ const usersController = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
-        res.cookie('idUserSession', userToLogin.id);
+        //res.cookie('idUserSession', userToLogin.id);
         if (req.body.check_login) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 5 });
         }
 
         if (userToLogin.category_id === 1) {
+          res.cookie('idUserSession', userToLogin.id);
           return res.redirect("/admin/");
         }
         return res.redirect("/users/profile");

@@ -30,7 +30,11 @@
         <% if (locals.isLogged) { %>
         <div class="menu-cart">
           <li>
-            <a href="/users/profile"><button>Ver perfil</button></a>
+            <% if (locals.isLogged.category_id == 1) { %>
+            <a href="/admin"><button>Ver perfil</button></a>
+            <% } else { %>
+              <a href="/users/profile"><button>Ver perfil</button></a>
+            <% } %>
           </li>
           <li>
             <a href="/cart/paso-uno"><i class="fas fa-shopping-bag"></i></a>

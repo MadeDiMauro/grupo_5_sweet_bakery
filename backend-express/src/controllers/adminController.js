@@ -103,7 +103,7 @@ const adminController = {
           url: "logo-sweet-bakery-dorado.png",
           product_id: product.id,
         });
-        //return res.json(product);
+        //return res.json(product.id);
         return res.redirect("/admin/products");
       });
 
